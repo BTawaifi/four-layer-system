@@ -1,0 +1,241 @@
+---
+alwaysApply: false
+description: "Step-by-step guide for using quality checklists in content creation and review processes"
+template_type: "quality-assurance"
+template_purpose: "process-guidance"
+---
+
+# Quality Review Process Guide
+
+This guide provides step-by-step instructions for using the quality checklists to ensure consistent content standards across the Four-Layer Rules System.
+
+## Quick Reference
+
+### When to Use Checklists
+- **Content Creation**: Planning and drafting new rules
+- **Content Updates**: Modifying existing rules
+- **Quality Reviews**: Validating content before publication
+- **Maintenance Audits**: Regular content health checks
+
+### Checklist Selection
+| Content Type | Primary Checklist | Secondary Checklists |
+|--------------|-------------------|---------------------|
+| Specialists | `quality-checklist-specialists.mdc` | IDE compatibility |
+| Workflows | `quality-checklist-workflows.mdc` | IDE compatibility |
+| Modifiers | `quality-checklist-modifiers.mdc` *[Planned]* | IDE compatibility |
+| Contexts | `quality-checklist-contexts.mdc` *[Planned]* | IDE compatibility |
+
+## Content Creation Process
+
+### Phase 1: Planning (15-30 minutes)
+1. **Select Appropriate Checklist**
+   - Review available checklists in `quality-standards/` directory
+   - Choose primary checklist based on content type
+   - Note any secondary checklists (e.g., IDE compatibility)
+
+2. **Review Checklist Structure**
+   - Read through all checklist sections
+   - Note required vs recommended items
+   - Identify sections requiring most attention
+
+3. **Plan Content Structure**
+   - Use checklist to outline content sections
+   - Identify cross-references and integrations
+   - Plan file naming and organization
+
+### Phase 2: Drafting (Content Development Time)
+1. **Address Each Checklist Section**
+   - Work through checklist systematically
+   - Ensure all required elements included
+   - Add quality enhancements where beneficial
+
+2. **Cross-Reference Integration**
+   - Identify related rules in other layers
+   - Add appropriate cross-reference sections
+   - Validate reference accuracy
+
+3. **IDE Compatibility Considerations**
+   - Review Cursor IDE limitations
+   - Add compatibility markers if needed
+   - Consider session-based workflow design
+
+### Phase 3: Self-Review (30-60 minutes)
+1. **Apply Full Checklist**
+   - Go through checklist item by item
+   - Mark completion status for each requirement
+   - Note any deviations with rationale
+
+2. **Score Content Quality**
+   - Use provided scoring rubric
+   - Calculate quality score across dimensions
+   - Identify areas needing improvement
+
+3. **Address Gaps**
+   - Fix any missing required elements
+   - Enhance weak sections
+   - Validate technical accuracy
+
+## Quality Review Process
+
+### Reviewer Preparation (10-15 minutes)
+1. **Understand Content Context**
+   - Review content type and intended use
+   - Understand target audience and use cases
+   - Check for special requirements or constraints
+
+2. **Select Review Checklist**
+   - Choose appropriate primary checklist
+   - Gather any secondary checklists
+   - Prepare scoring rubric and evaluation criteria
+
+3. **Review Process Setup**
+   - Set aside adequate time for thorough review
+   - Prepare feedback collection format
+   - Ensure access to reference materials
+
+### Structured Review Execution (45-90 minutes)
+
+#### Step 1: Structural Assessment (10 minutes)
+- [ ] YAML frontmatter complete and accurate
+- [ ] Overall structure follows expected patterns
+- [ ] Section organization logical and consistent
+- [ ] Cross-references properly formatted
+
+#### Step 2: Content Depth Review (15-20 minutes)
+- [ ] Required sections present with appropriate depth
+- [ ] Technical information accurate and current
+- [ ] Practical examples included where beneficial
+- [ ] Edge cases and error conditions addressed
+
+#### Step 3: Quality Validation (15-20 minutes)
+- [ ] Writing clear and appropriate for audience
+- [ ] Terminology consistent and correct
+- [ ] Information verifiable and well-supported
+- [ ] Integration with other rules appropriate
+
+#### Step 4: IDE Compatibility Check (5-10 minutes)
+- [ ] Content designed for Cursor IDE constraints
+- [ ] Session boundaries appropriately managed
+- [ ] Token efficiency considerations included
+- [ ] Multi-agent scenarios supported where applicable
+
+### Review Documentation (10-15 minutes)
+1. **Complete Checklist Scoring**
+   - Mark each checklist item as pass/fail/partial
+   - Calculate overall quality score
+   - Note critical issues requiring immediate attention
+
+2. **Prepare Feedback Report**
+   - Summarize strengths and areas for improvement
+   - Provide specific recommendations for each issue
+   - Suggest priority order for fixes
+   - Include positive feedback and encouragement
+
+3. **Quality Score Assignment**
+   - Use provided scoring rubric
+   - Document reasoning for score
+   - Note any special circumstances affecting score
+
+## Common Quality Issues & Solutions
+
+### Structural Issues
+**Missing Required Sections**
+- **Detection**: Checklist shows incomplete requirements
+- **Solution**: Add missing sections with appropriate content depth
+- **Prevention**: Use checklist during planning phase
+
+**Poor Organization**
+- **Detection**: Content hard to navigate or understand
+- **Solution**: Restructure using standard section formats
+- **Prevention**: Follow established content templates
+
+### Content Depth Issues
+**Insufficient Detail**
+- **Detection**: Checklist items marked as superficial
+- **Solution**: Add specific examples, steps, or explanations
+- **Prevention**: Include concrete examples during drafting
+
+**Overly Generic Content**
+- **Detection**: Content too high-level for practical use
+- **Solution**: Add specific tools, commands, or approaches
+- **Prevention**: Focus on actionable guidance from start
+
+### Technical Accuracy Issues
+**Outdated Information**
+- **Detection**: Technology versions or practices no longer current
+- **Solution**: Update with current best practices and versions
+- **Prevention**: Include version awareness in content planning
+
+**Incorrect Technical Details**
+- **Detection**: Technical information contradicts known facts
+- **Solution**: Verify against authoritative sources and correct
+- **Prevention**: Include technical review in creation process
+
+### Integration Issues
+**Missing Cross-References**
+- **Detection**: No connections to related rules in other layers
+- **Solution**: Add appropriate related rules section
+- **Prevention**: Consider integration during content planning
+
+**Inappropriate References**
+- **Detection**: Cross-references don't make logical sense
+- **Solution**: Replace with more appropriate rule relationships
+- **Prevention**: Validate references against actual rule content
+
+## Quality Score Interpretation
+
+### Score Ranges and Actions
+- **90-100% (Excellent)**: Approve for publication
+  - Minor edits only if needed
+  - Consider for featured content
+
+- **75-89% (Good)**: Approve with minor revisions
+  - Author addresses specific checklist items
+  - Quick review of changes
+
+- **60-74% (Needs Improvement)**: Require significant revision
+  - Author substantially revises content
+  - Full re-review required
+
+- **0-59% (Insufficient)**: Reject and rewrite
+  - Content needs complete restructuring
+  - Consider starting over with checklist guidance
+
+### Score Dimension Analysis
+**Completeness**: Are all required sections present?
+**Depth**: Is detail level appropriate for the content type?
+**Accuracy**: Is technical information correct and current?
+**Usability**: Is content structured for practical application?
+**Integration**: Does content effectively connect to other rules?
+
+## Automation and Tooling
+
+### Recommended Tools
+- **Checklist Templates**: Use provided markdown checklists
+- **Cross-Reference Validators**: Automated link checking tools
+- **Quality Scoring Scripts**: Automated scoring calculations
+- **Content Analysis Tools**: Readability and consistency checkers
+
+### Integration Opportunities
+- **Pre-commit Hooks**: Automatic quality validation
+- **CI/CD Integration**: Quality gates in deployment pipelines
+- **Review Dashboards**: Centralized quality tracking
+- **Analytics Integration**: Usage data for quality insights
+
+## Continuous Improvement
+
+### Process Feedback Collection
+- **Author Surveys**: Gather experiences with checklist usage
+- **Reviewer Feedback**: Collect suggestions for checklist improvements
+- **Quality Trend Analysis**: Track scores across content types
+- **User Impact Assessment**: Measure real-world content effectiveness
+
+### Checklist Evolution
+- **Quarterly Reviews**: Assess checklist effectiveness
+- **Content Type Analysis**: Identify category-specific needs
+- **Technology Updates**: Ensure checklists reflect current practices
+- **User Research**: Validate against actual usage patterns
+
+---
+
+This guide ensures consistent application of quality standards across all content in the Four-Layer Rules System, maintaining high quality while enabling efficient content creation and review processes.

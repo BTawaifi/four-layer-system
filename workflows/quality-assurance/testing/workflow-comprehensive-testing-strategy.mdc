@@ -1,0 +1,145 @@
+---
+alwaysApply: false
+description: "Comprehensive testing strategy workflow covering unit tests, integration tests, E2E tests, and performance testing"
+---
+
+**Action:** Develop Comprehensive Testing Strategy
+
+**Please provide the testing context:**
+- **Application Type:** [Web App / Mobile App / API / Microservices / Desktop Application]
+- **Technology Stack:** [Frontend / Backend / Full-stack technologies]
+- **Testing Goals:** [Code quality / Regression prevention / Performance validation / User experience]
+- **Team Size:** [Individual / Small team / Large team / Enterprise]
+- **Timeline:** [Sprint-based / Release-based / Continuous deployment]
+
+**Instruction for the AI:**
+Act as a Senior QA Engineer and Testing Architect. Your task is to develop a comprehensive testing strategy that ensures high-quality software delivery through systematic testing at all levels.
+
+**Testing Strategy Framework:**
+
+1. **Unit Testing Strategy**
+   - Test individual functions, classes, and components in isolation
+   - Aim for 80%+ code coverage for business logic
+   - Use mocking and stubbing for external dependencies
+   - Implement test-driven development (TDD) practices
+   - Use mutation testing to ensure test quality
+   - Implement proper test data management
+
+2. **Integration Testing Strategy**
+   - Test interactions between components and services
+   - Validate API contracts and data flow
+   - Test database operations and migrations
+   - Verify third-party service integrations
+   - Use contract testing for microservices
+   - Implement service virtualization for external dependencies
+
+3. **End-to-End Testing Strategy**
+   - Test complete user workflows and journeys
+   - Validate cross-browser and cross-device compatibility
+   - Test real user scenarios and edge cases
+   - Implement visual regression testing
+   - Use data-driven testing for scenario coverage
+   - Test accessibility compliance (WCAG 2.1 AA)
+
+4. **Performance Testing Strategy**
+   - Define performance benchmarks and SLAs
+   - Implement load testing for expected traffic
+   - Conduct stress testing to identify breaking points
+   - Test scalability with increasing user loads
+   - Monitor resource utilization (CPU, memory, network)
+   - Implement performance regression testing
+
+5. **Security Testing Strategy**
+   - Conduct vulnerability scanning and penetration testing
+   - Test authentication and authorization mechanisms
+   - Validate input sanitization and SQL injection prevention
+   - Test for common security vulnerabilities (OWASP Top 10)
+   - Implement API security testing
+   - Test data encryption and secure transmission
+
+6. **Accessibility Testing Strategy**
+   - Ensure WCAG 2.1 AA compliance
+   - Test with screen readers and assistive technologies
+   - Validate keyboard navigation and focus management
+   - Test color contrast and visual design
+   - Implement automated accessibility testing
+   - Conduct user testing with disabled users
+
+**Testing Tools & Technologies:**
+
+**Unit Testing:**
+- Jest, Mocha, Jasmine (JavaScript/TypeScript)
+- JUnit, TestNG (Java)
+- pytest, unittest (Python)
+- xUnit, NUnit (.NET)
+- XCTest, Quick (Swift)
+
+**Integration Testing:**
+- Postman, Insomnia (API testing)
+- TestContainers (database testing)
+- WireMock, Mountebank (service virtualization)
+- Supertest, Axios (HTTP testing)
+
+**E2E Testing:**
+- Cypress, Playwright, Selenium (web applications)
+- Appium, Detox (mobile applications)
+- TestCafe, Nightwatch.js (cross-browser testing)
+
+**Performance Testing:**
+- JMeter, k6, Artillery (load testing)
+- Lighthouse, WebPageTest (web performance)
+- New Relic, DataDog (application monitoring)
+
+**Security Testing:**
+- OWASP ZAP, Burp Suite (vulnerability scanning)
+- Snyk, npm audit (dependency scanning)
+- SonarQube, Checkmarx (SAST)
+
+**Test Management:**
+- TestRail, Zephyr (test case management)
+- Allure, ExtentReports (test reporting)
+- Jira, Azure DevOps (test tracking)
+
+**Implementation Roadmap:**
+
+**Phase 1: Foundation (Weeks 1-2)**
+- Set up testing frameworks and configurations
+- Implement basic unit test structure
+- Configure CI/CD pipeline integration
+- Set up test reporting and dashboards
+
+**Phase 2: Core Testing (Weeks 3-6)**
+- Develop comprehensive unit test suite
+- Implement integration tests for core functionality
+- Set up automated E2E test framework
+- Configure performance testing baseline
+
+**Phase 3: Advanced Testing (Weeks 7-10)**
+- Implement security testing automation
+- Develop comprehensive E2E test scenarios
+- Set up performance monitoring and alerting
+- Implement accessibility testing
+
+**Phase 4: Optimization (Weeks 11-12)**
+- Optimize test execution time
+- Implement parallel test execution
+- Set up cross-browser testing matrix
+- Configure test data management
+
+**Quality Gates:**
+- Code coverage threshold (80% minimum)
+- All unit tests passing before merge
+- Integration tests passing in CI/CD pipeline
+- E2E tests passing before deployment
+- Performance benchmarks met
+- Security vulnerabilities addressed
+- Accessibility compliance verified
+
+**Continuous Improvement:**
+- Regular test review and maintenance
+- Test automation ROI tracking
+- Defect analysis and prevention
+- Testing best practices adoption
+- Team training and knowledge sharing
+
+Acknowledge that a comprehensive testing strategy has been developed with systematic coverage across all testing levels.

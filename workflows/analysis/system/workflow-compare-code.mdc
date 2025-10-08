@@ -1,0 +1,29 @@
+---
+alwaysApply: false
+description: "Compares two versions of code and provides detailed analysis of changes and differences"
+---
+
+**Action:** Code Comparison and Analysis
+
+**Please provide the versions to compare:**
+
+- **The "Base" Version (Original):**
+
+  - [Specify the source, e.g., "The 'main' git branch," "@[path/to/old_file.ext]," or paste the code block below]
+
+  ```
+
+  ```
+
+- **The "Target" Version (New):**
+
+  - [Specify the source, e.g., "The current working branch," "@[path/to/new_file.ext]," or paste the code block below]
+
+  ```
+
+  ```
+
+- **Analysis Focus:** [What should I look for? e.g., "Summarize functional changes," "Identify potential breaking changes," "List only stylistic differences."]
+
+**Instruction for the AI:**
+Provide a concise summary of the key differences based on the specified focus. Follow the summary with a detailed, diff-like breakdown of the changes.

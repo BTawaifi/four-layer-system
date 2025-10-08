@@ -1,0 +1,32 @@
+---
+alwaysApply: false
+description: "Factory workflow for creating post-action verification hooks that ensure quality checks after code modifications"
+---
+
+This workflow helps you create new, modular verification steps that can be injected after any code modification.
+
+prompt:
+**Action:** Initiate the Post-Action Hook Creation Factory
+
+**Please describe the new hook:**
+
+- **The Hook's Purpose:** [What specific check do you want to perform after an action? e.g., "To verify that no new external dependencies were added," "To ensure the relevant documentation was updated."]
+- **The Verification Logic:** [Describe the steps the AI should take to perform this check. What does it need to analyze?]
+
+**Instruction for the AI:**
+You will now generate a new `.cursorrules` file for a "Post-Action Hook."
+
+---
+
+**Phase 1: Hook Design**
+
+- **Define the Trigger:** The hook is triggered after a code modification.
+- **Structure the Verification Steps:** Convert the verification logic into a clear, numbered list of actions for the AI to perform.
+- **Add a Checkpoint:** The hook must end with a `[STOP AND WAIT FOR MY ACKNOWLEDGEMENT]` to ensure the check is complete before the main workflow continues.
+
+---
+
+**Phase 2: Rule File Generation**
+
+- **Generate the File:** Create a new file named `hook-[purpose_slug].cursorrules` containing the designed hook prompt.
+- **Provide a Usage Example:** In your response, show an example of a main workflow and where this hook would be injected to add the verification step.

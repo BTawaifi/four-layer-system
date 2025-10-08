@@ -1,0 +1,294 @@
+---
+alwaysApply: false
+description: "Progressive API documentation workflow that builds comprehensive documentation incrementally across multiple Cursor IDE sessions"
+---
+
+**Action:** Build Comprehensive API Documentation Progressively
+
+**Please define the API documentation scope:**
+
+- **API Name:** [Name of the API or service]
+- **API Type:** [REST API / GraphQL API / gRPC Service / WebSocket API]
+- **Documentation Format:** [OpenAPI/Swagger / API Blueprint / Custom Markdown]
+- **Target Audience:** [Developers / Product Managers / External Partners / Internal Teams]
+- **Current Documentation State:** [None / Basic / Partial / Outdated]
+
+**Instruction for the AI:**
+You will build comprehensive API documentation through a series of progressive sessions. Each session focuses on a specific aspect of documentation, allowing for deep focus while maintaining continuity across Cursor IDE sessions. Use file-based state management to preserve progress between sessions.
+
+---
+
+## Session 1: Foundation & Structure (45-60 minutes)
+**Focus:** Establish documentation foundation and structure
+**Deliverable:** `api_[name]_foundation_[date].md`
+
+### Phase 1.1: API Overview & Context
+**STOP AND WAIT:** Complete API foundation before proceeding
+
+**Documentation Tasks:**
+1. **API Purpose & Business Value**
+   - What problem does this API solve?
+   - Who are the primary consumers?
+   - What business value does it deliver?
+
+2. **Technical Foundation**
+   - Base URL and environment endpoints
+   - Authentication and authorization methods
+   - Rate limiting and usage policies
+   - Data formats and content types
+
+3. **Architecture Overview**
+   - High-level system architecture
+   - Component relationships
+   - Data flow patterns
+   - Integration points
+
+**Quality Checkpoint:**
+- [ ] Business context clearly articulated
+- [ ] Technical foundation documented
+- [ ] Architecture conceptually sound
+- [ ] File saved with session state preserved
+
+---
+
+## Session 2: Endpoint Inventory & Basics (45-60 minutes)
+**Focus:** Catalog all endpoints with basic information
+**Deliverable:** `api_[name]_endpoints_basic_[date].md`
+**Dependencies:** Session 1 foundation document
+
+### Phase 2.1: Endpoint Discovery & Classification
+**STOP AND WAIT:** Complete endpoint inventory before detailed documentation
+
+**Documentation Tasks:**
+1. **Endpoint Inventory**
+   - List all API endpoints with HTTP methods
+   - Group endpoints by functional area
+   - Identify deprecated or legacy endpoints
+   - Note authentication requirements per endpoint
+
+2. **Basic Request/Response Structure**
+   - Common request headers and parameters
+   - Standard response formats and status codes
+   - Error response patterns
+   - Pagination approaches (if applicable)
+
+3. **Data Model Overview**
+   - Core entity definitions
+   - Relationship mappings
+   - Data validation rules
+   - Type definitions and constraints
+
+**Incremental Progress Tracking:**
+- [ ] 25% of endpoints documented with basic information
+- [ ] Request/response patterns established
+- [ ] Data models outlined
+- [ ] Session state updated in foundation document
+
+---
+
+## Session 3: Detailed Endpoint Documentation (60-90 minutes)
+**Focus:** Deep-dive into high-priority endpoints
+**Deliverable:** `api_[name]_endpoints_detailed_[date].md`
+**Dependencies:** Session 2 endpoint inventory
+
+### Phase 3.1: Priority Endpoint Deep-Dive
+**STOP AND WAIT:** Complete priority endpoints before secondary endpoints
+
+**Documentation Tasks:**
+1. **High-Priority Endpoints (Top 20% usage)**
+   - Complete request/response specifications
+   - Parameter definitions with examples
+   - Success and error scenarios
+   - Code examples in multiple languages
+
+2. **Authentication & Security Patterns**
+   - Authentication flow documentation
+   - Security best practices
+   - Common security pitfalls
+   - Compliance requirements
+
+3. **Error Handling & Troubleshooting**
+   - Comprehensive error code reference
+   - Troubleshooting guides for common issues
+   - Debugging approaches
+   - Support contact information
+
+**Progressive Enhancement:**
+- [ ] Priority endpoints 100% documented
+- [ ] Authentication patterns documented
+- [ ] Error handling reference complete
+- [ ] Code examples functional and tested
+
+---
+
+## Session 4: Advanced Features & Edge Cases (45-60 minutes)
+**Focus:** Document complex scenarios and advanced usage
+**Deliverable:** `api_[name]_advanced_features_[date].md`
+**Dependencies:** Session 3 detailed documentation
+
+### Phase 4.1: Advanced Usage Patterns
+**STOP AND WAIT:** Complete advanced features before integration documentation
+
+**Documentation Tasks:**
+1. **Bulk Operations & Batch Processing**
+   - Batch endpoint specifications
+   - Rate limiting considerations
+   - Error handling for partial failures
+   - Performance optimization tips
+
+2. **Real-time Features (if applicable)**
+   - WebSocket connection handling
+   - Event streaming patterns
+   - Connection lifecycle management
+   - Error recovery mechanisms
+
+3. **Integration Scenarios**
+   - Third-party integration examples
+   - Webhook implementation guides
+   - Callback handling patterns
+   - Data synchronization approaches
+
+**Quality Validation:**
+- [ ] Advanced features documented with examples
+- [ ] Edge cases and error scenarios covered
+- [ ] Integration patterns explained
+- [ ] Performance considerations addressed
+
+---
+
+## Session 5: Testing, Examples & Validation (45-60 minutes)
+**Focus:** Provide practical usage examples and testing guidance
+**Deliverable:** `api_[name]_examples_testing_[date].md`
+**Dependencies:** All previous sessions
+
+### Phase 5.1: Practical Examples & Testing
+**STOP AND WAIT:** Complete examples and testing guides
+
+**Documentation Tasks:**
+1. **Comprehensive Code Examples**
+   - End-to-end integration examples
+   - Authentication flow implementations
+   - Error handling demonstrations
+   - Testing utility libraries
+
+2. **Testing Strategies & Tools**
+   - Unit testing approaches for API consumers
+   - Integration testing frameworks
+   - Load testing considerations
+   - Monitoring and observability setup
+
+3. **SDKs and Helper Libraries**
+   - Official SDK availability and usage
+   - Community library recommendations
+   - Custom client implementation guides
+   - Best practices for API consumption
+
+**Final Quality Review:**
+- [ ] All examples functional and tested
+- [ ] Testing guidance comprehensive
+- [ ] SDK information current and accurate
+- [ ] Documentation ready for publication
+
+---
+
+## Session 6: Publication & Maintenance Setup (30-45 minutes)
+**Focus:** Prepare documentation for publication and establish maintenance processes
+**Deliverable:** `api_[name]_publication_maintenance_[date].md`
+**Dependencies:** All documentation sessions complete
+
+### Phase 6.1: Documentation Publication
+**STOP AND WAIT:** Complete publication preparation
+
+**Finalization Tasks:**
+1. **Documentation Review & Validation**
+   - Cross-reference accuracy verification
+   - Link validation and functionality testing
+   - Readability and clarity assessment
+   - Technical accuracy confirmation
+
+2. **Publication Preparation**
+   - Format conversion for target platforms
+   - Version control and release tagging
+   - Access control and permission setup
+   - Search indexing and discoverability
+
+3. **Maintenance Process Establishment**
+   - Documentation update triggers and schedules
+   - Change management procedures
+   - Review and approval workflows
+   - Quality monitoring and metrics
+
+**Publication Readiness:**
+- [ ] Documentation validated and approved
+- [ ] Publication platform configured
+- [ ] Maintenance processes documented
+- [ ] Team trained on update procedures
+
+---
+
+## Progressive Documentation Benefits
+
+### Session Management Advantages
+- **Focused Work Sessions:** Each session has clear scope and time limits
+- **Context Preservation:** File-based state maintains continuity across Cursor sessions
+- **Incremental Quality:** Each session includes quality checkpoints
+- **Flexible Scheduling:** Work can be paused and resumed without loss
+
+### Quality Improvement Features
+- **Layered Information:** Basic information first, details progressively added
+- **Cross-Session Validation:** Each session reviews and builds upon previous work
+- **Practical Examples:** Real-world usage examples developed incrementally
+- **Error Prevention:** Early identification and correction of documentation issues
+
+### Cursor IDE Optimization
+- **Token Management:** Smaller sessions prevent context window exhaustion
+- **Memory Efficiency:** File-based context reduces conversation memory burden
+- **Session Recovery:** Clear state preservation enables seamless continuation
+- **Quality Monitoring:** Built-in checkpoints ensure consistent progress
+
+## Session State Management
+
+### File-Based Progress Tracking
+Each session updates a central state file:
+```markdown
+# API Documentation Progress State
+**API:** [API Name]
+**Last Session:** [Session Number]
+**Completion Percentage:** [X%]
+**Next Session Focus:** [Brief description]
+**Open Items:** [Bullet list of remaining work]
+**Quality Score:** [X/10]
+```
+
+### Session Transition Protocol
+**End of Session:**
+1. Save all work to dated files
+2. Update progress state
+3. Document next session objectives
+4. Note any blocking issues or dependencies
+
+**Start of Session:**
+1. Review previous session state
+2. Load relevant context files
+3. Verify environment and tools
+4. Begin work with clear objectives
+
+## Customization Guidelines
+
+### Adapting for Different API Types
+- **REST APIs:** Emphasize HTTP methods, status codes, HATEOAS
+- **GraphQL APIs:** Focus on schema documentation, query optimization
+- **gRPC Services:** Include protobuf definitions, streaming patterns
+- **WebSocket APIs:** Document connection lifecycle, event handling
+
+### Scaling for API Complexity
+- **Simple APIs (<10 endpoints):** Combine sessions 2-4 into 2 sessions
+- **Complex APIs (50+ endpoints):** Split session 3 into multiple focused sessions
+- **Enterprise APIs:** Add sessions for compliance, security, and governance
+
+### Team Collaboration Enhancement
+- **Multiple Contributors:** Use clear file naming and session ownership
+- **Review Integration:** Include peer review checkpoints in session structure
+- **Version Control:** Implement branching strategy for documentation changes
+
+This progressive workflow ensures comprehensive API documentation while working effectively within Cursor IDE's session-based constraints and token limitations.

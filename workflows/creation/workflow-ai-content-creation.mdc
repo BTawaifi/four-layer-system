@@ -1,0 +1,144 @@
+---
+alwaysApply: false
+description: "End-to-end workflow for AI-generated content creation with quality gates and validation"
+---
+
+**Action:** Execute AI Content Creation Pipeline
+
+**Please define the AI content creation task:**
+
+- **Content Type:** [code / documentation / design-spec / api-schema / test-cases / other]
+- **Content Purpose:** [Brief description of what this content will be used for]
+- **Quality Requirements:** [specific criteria, constraints, or schemas to follow]
+- **Source Context:** @[path/to/relevant/source/files] or [reference materials]
+- **Target Output:** [file path and format for the generated content]
+
+**Instruction for the AI:**
+Act as an AI content generation specialist with quality assurance focus. This workflow ensures AI-generated content meets professional standards through systematic validation and refinement.
+
+---
+
+**Phase 1: Content Generation Planning**
+
+**STOP AND WAIT:** Analyze requirements and plan the AI generation approach.
+
+**Planning Activities:**
+1. **Requirements Analysis:** Parse and validate all content requirements and constraints
+2. **Context Gathering:** Review all reference materials and source context
+3. **Generation Strategy:** Determine optimal AI generation approach and parameters
+4. **Quality Criteria Definition:** Establish measurable quality standards
+5. **Success Metrics:** Define what constitutes acceptable output quality
+
+**Deliverables:** Generation plan with approach, parameters, and quality benchmarks
+
+---
+
+**Phase 2: AI Content Generation**
+
+**STOP AND WAIT:** Generate the initial AI content based on the approved plan.
+
+**Generation Process:**
+1. **Prompt Engineering:** Craft effective prompts based on requirements
+2. **Content Creation:** Generate content using appropriate AI capabilities
+3. **Initial Validation:** Perform basic sanity checks on generated content
+4. **Format Compliance:** Ensure output matches required format and structure
+
+**Expected Outcome:** Initial AI-generated content ready for quality verification
+
+---
+
+**Phase 3: Content Quality Verification**
+
+**STOP AND WAIT:** Perform comprehensive quality assessment of generated content.
+
+**Quality Checks:**
+1. **Completeness:** Content is functionally complete and production-ready
+2. **Relevance & Customization:** Content is highly tailored to specific requirements
+3. **Schema & Constraint Compliance:** All specified schemas and constraints are met
+4. **Technical Accuracy:** Content contains no factual errors or hallucinations
+5. **Consistency:** Content is internally consistent and aligns with existing codebase
+
+**Quality Verdict:**
+- ✅ **High-Quality:** Ready for use
+- ⚠️ **Needs Refinement:** Minor issues requiring targeted improvements
+- ❌ **Low-Quality:** Major issues requiring regeneration
+
+---
+
+**Phase 4: Content Refinement (if needed)**
+
+**STOP AND WAIT:** If quality issues were identified, perform targeted improvements.
+
+**Refinement Process:**
+1. **Issue Analysis:** Categorize and prioritize identified quality issues
+2. **Targeted Improvements:** Address specific problems without full regeneration
+3. **Iterative Validation:** Re-verify quality after each refinement cycle
+4. **Scope Control:** Ensure refinements don't introduce new issues
+
+**Refinement Limit:** Maximum 3 refinement cycles before requiring full regeneration
+
+---
+
+**Phase 5: Domain-Specific Validation**
+
+**STOP AND WAIT:** Perform content-type-specific validation based on the content category.
+
+**Validation by Content Type:**
+
+**For Code Generation:**
+- Syntax validation and linting
+- Logic correctness verification
+- Integration compatibility checks
+
+**For Documentation:**
+- Readability and clarity assessment
+- Technical accuracy verification
+- Completeness against requirements
+
+**For API Schemas:**
+- Schema validity and compliance
+- Consistency with existing APIs
+- Documentation completeness
+
+**For Test Cases:**
+- Test coverage verification
+- Test logic validation
+- Integration with existing test suites
+
+---
+
+**Phase 6: Final Quality Assurance**
+
+**STOP AND WAIT:** Perform final comprehensive quality review.
+
+**Final Checks:**
+1. **Requirements Compliance:** All original requirements are fully satisfied
+2. **Production Readiness:** Content is ready for immediate use in production
+3. **Maintenance Considerations:** Content is maintainable and extensible
+4. **Stakeholder Acceptance:** Content meets stakeholder expectations and standards
+
+**Final Verdict:**
+- ✅ **APPROVED:** Content meets all quality standards and is production-ready
+- ⚠️ **CONDITIONAL APPROVAL:** Content is acceptable with noted limitations
+- ❌ **REJECTED:** Content does not meet minimum quality standards
+
+---
+
+**Phase 7: Content Delivery & Documentation**
+
+**STOP AND WAIT:** Prepare content for delivery and document the generation process.
+
+**Delivery Activities:**
+1. **Content Packaging:** Format and package content for delivery
+2. **Usage Documentation:** Provide clear usage instructions and examples
+3. **Maintenance Guidelines:** Document how to maintain and update the content
+4. **Quality Metrics:** Record quality metrics for future reference
+5. **Generation Log:** Document the generation process and decisions made
+
+**Deliverables:**
+- Production-ready content in specified format
+- Usage and maintenance documentation
+- Quality assessment report
+- Generation process log for reproducibility
+
+**[WORKFLOW COMPLETE - CONTENT READY FOR PRODUCTION USE]**

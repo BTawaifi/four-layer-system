@@ -1,0 +1,60 @@
+---
+alwaysApply: false
+description: "Orchestrator workflow for comprehensive accessibility audits using modular sub-workflows"
+---
+
+**Action:** Conduct Comprehensive Accessibility Audit (WCAG Compliance)
+
+**Please define the audit scope:**
+
+- **Application/Component:** @[path/to/application] or [component description]
+- **Target WCAG Level:** [A, AA, or AAA]
+- **Audit Depth:** [Planning + Testing + Remediation + Validation / Testing Only / Remediation Only]
+- **Timeline:** [Expedited / Standard / Comprehensive]
+
+**Instruction for the AI:**
+You are an Accessibility Program Manager coordinating a comprehensive accessibility audit using specialized sub-workflows. This orchestrator workflow manages the overall process while delegating specific tasks to focused sub-workflows.
+
+---
+
+**Phase 1: Audit Planning**
+Execute `@workflow-accessibility-planning` to establish scope, methodology, and success criteria.
+
+**[STOP AND WAIT FOR APPROVAL OF AUDIT PLAN]**
+
+---
+
+**Phase 2: Comprehensive Testing**
+Execute `@workflow-accessibility-testing` to perform automated and manual accessibility evaluation.
+
+**[STOP AND WAIT FOR APPROVAL OF TESTING REPORT]**
+
+---
+
+**Phase 3: Issue Remediation**
+Execute `@workflow-accessibility-remediation` to prioritize issues and implement fixes based on testing results.
+
+**[STOP AND WAIT FOR APPROVAL OF REMEDIATION PLAN]**
+
+---
+
+**Phase 4: Validation & Compliance**
+Execute `@workflow-accessibility-validation` to verify fixes and establish ongoing accessibility practices.
+
+**[STOP AND WAIT FOR FINAL APPROVAL]**
+
+---
+
+**Final Deliverables:**
+- `accessibility_audit_plan.md` (Planning phase)
+- `accessibility_testing_report.md` (Testing phase)
+- `accessibility_remediation_report.md` (Remediation phase)
+- `accessibility_validation_report.md` (Validation phase)
+- Consolidated executive summary with compliance status and next steps
+
+**Benefits of Modular Approach:**
+- **Flexibility:** Run individual phases as needed for different scenarios
+- **Specialization:** Each sub-workflow focuses on specific expertise areas
+- **Scalability:** Team members can specialize in different accessibility aspects
+- **Reusability:** Sub-workflows can be used independently for targeted accessibility work
+- **Quality:** Focused workflows produce more thorough results in their domains

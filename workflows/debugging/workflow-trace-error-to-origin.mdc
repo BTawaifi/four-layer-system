@@ -1,0 +1,47 @@
+---
+alwaysApply: false
+description: "Multi-phase error tracing workflow that identifies root causes by following the chain of problematic data or logic"
+---
+
+prompt:
+**Action:** Initiate a "Trace-to-Origin" Error Investigation
+
+**Please provide the context for the error:**
+
+- **The Full Error Message & Stack Trace:**
+  ```
+  [Paste the complete, unedited error message and stack trace here.]
+  ```
+- **The Point of Failure:** [Which file/function is throwing the error? e.g., "The `evaluation.py` script is failing during the backtest."]
+- **The Suspected "Bad Data" or "Flawed Logic":** [What do you think is the immediate cause? e.g., "The `forecast` dataframe seems to have `NaN` values," "The `model` object is `None`."]
+
+**Instruction for the AI:**
+You are now a Systems Debugging Expert. Your goal is not just to fix the immediate error, but to trace its root cause back to the origin. You will conduct this investigation in a series of steps. You must stop and wait for my input at designated checkpoints.
+
+---
+
+**Phase 1: Local Analysis & Symptom Confirmation**
+
+- **Analyze the Stack Trace:** Based on the provided stack trace, confirm the exact line of code where the error occurs.
+- **Inspect Local State:** Analyze the code at the point of failure. What is the state of the relevant variables (`forecast`, `model`, etc.) that is causing the crash?
+- **Propose a "Hotfix" (Symptom-level Fix):** Propose a minimal, local change that would prevent the crash (e.g., adding a `null` check, filling `NaN` values). **State clearly that this is a temporary hotfix that does not address the root cause.**
+
+**[STOP AND WAIT FOR MY APPROVAL OF THE LOCAL ANALYSIS BEFORE PROCEEDING]**
+
+---
+
+**Phase 2: Upstream Tracing (The "Who Sent This?")**
+
+- **Identify the Source:** Trace backwards from the point of failure. Which upstream component, function, or file is responsible for creating and passing the "bad data" or "flawed logic" to the failing component?
+- **Load and Analyze the Source:** Load the source component into your context. Analyze its logic. Why is it producing this problematic output? Is it a bug in its own logic, or is it receiving bad input from _its_ upstream source?
+
+**[STOP AND WAIT FOR ME TO CONFIRM THE IDENTIFIED UPSTREAM SOURCE AND YOUR ANALYSIS]**
+
+---
+
+**Phase 3: Root Cause Identification & The "True Fix"**
+
+- **Continue Tracing (if necessary):** Repeat the upstream tracing process until you have reached the absolute origin of the problem (e.g., the initial data ingestion, a faulty configuration, the feature engineering pipeline).
+- **State the Root Cause:** Clearly articulate the fundamental, root cause of the error. (e.g., "The root cause is that the `TwelveData` API client does not correctly handle holiday dates, leading to `NaN` values being introduced during initial data ingestion.")
+- **Propose the "True Fix":** Propose the specific, targeted code change that needs to be made at the **origin** of the problem to prevent the error from ever occurring.
+- **Recommend Hotfix Removal:** Recommend the removal of the temporary "hotfix" from Phase 1, as the true fix makes it redundant.

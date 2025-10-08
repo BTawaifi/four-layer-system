@@ -1,0 +1,16 @@
+---
+alwaysApply: false
+description: "Generates missing data files with realistic placeholder content to unblock downstream processes"
+---
+
+**Action:** Generate Missing Data Files
+
+**Please provide the context:**
+- **The Missing Files:** [List the filenames that are missing, e.g., "regime_garch_forecast.csv," "lightgbm_quantile_forecast.csv."]
+- **The Goal:** A downstream process is failing because these files are missing. We need to create valid placeholder files to unblock the process.
+
+**Instruction for the AI:**
+For each missing file:
+1.  Analyze the codebase to understand the expected schema and data format.
+2.  Generate a new file with that name.
+3.  Populate it with a small amount of realistic, well-formatted placeholder data that matches the expected schema.

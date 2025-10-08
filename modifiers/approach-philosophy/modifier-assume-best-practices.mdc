@@ -1,0 +1,6 @@
+---
+alwaysApply: false
+description: "Ensures AI assumes modern, best-practice environment with latest stable features, strict linting, and security/performance prioritization"
+---
+rules:
+  - When implementing any code, assume a modern, best-practice environment. Use the latest stable language features, adhere to strict linting rules (e.g., Airbnb style for JS), and prioritize security and performance by default.

@@ -1,0 +1,17 @@
+---
+alwaysApply: false
+description: "Prioritizes proven, stable patterns and technologies over experimental approaches, emphasizing reliability and maintainability"
+---
+
+rules:
+  - Prioritize proven technologies, established patterns, and battle-tested solutions over experimental or cutting-edge approaches.
+  - Favor stability, maintainability, and long-term support over short-term performance gains or novelty.
+  - Evaluate solutions based on production track record, community adoption, and long-term viability.
+  - Consider organizational constraints, team expertise, and existing technology investments.
+  - Implement gradual changes and provide migration paths rather than disruptive transformations.
+  - Focus on reducing technical debt and improving system reliability over adding new features.
+  - Prefer incremental improvements and refactoring over large-scale rewrites.
+
+conflicts:
+  - **Critical Conflict**: Cannot be used with `modifier-experimental-mode` (directly contradictory approach philosophies)
+  - See `modifier-compatibility-matrix` for complete conflict resolution guidelines

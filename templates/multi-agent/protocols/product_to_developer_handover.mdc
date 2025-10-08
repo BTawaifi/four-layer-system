@@ -1,0 +1,279 @@
+---
+alwaysApply: false
+description: "Standardized handover protocol from product management to development team"
+template_type: "agent-transition-protocol"
+template_purpose: "product-to-dev-transition"
+---
+
+# Product Manager to Developer Handover Protocol
+**Transition Type:** Product Requirements → Development Implementation
+**Typical Duration:** 1-2 hours for initial handover, ongoing collaboration
+**Quality Gate:** Requirements Approved → Development Ready
+
+## Protocol Overview
+
+This protocol ensures product requirements are clearly communicated to development teams, establishing shared understanding of business objectives, user needs, and acceptance criteria.
+
+## Pre-Handover Product Manager Responsibilities
+
+### Requirements Documentation Completion
+**Deliverable Checklist:**
+- [ ] Product requirements document (PRD) finalized and approved
+- [ ] User stories written with acceptance criteria
+- [ ] Wireframes, mockups, or prototypes completed
+- [ ] Business rules and logic clearly defined
+- [ ] Success metrics and KPIs specified
+- [ ] Dependencies and constraints documented
+
+### Stakeholder Alignment
+**Validation Checklist:**
+- [ ] Business stakeholders approve requirements
+- [ ] Design team validates UX/UI specifications
+- [ ] Technical feasibility reviewed with architects
+- [ ] Legal/compliance requirements addressed
+- [ ] Budget and timeline constraints confirmed
+
+### Development Readiness Assessment
+**Preparation Checklist:**
+- [ ] Development team capacity assessed
+- [ ] Technical spike results available (if needed)
+- [ ] Third-party integrations identified and approved
+- [ ] Data requirements and sources specified
+- [ ] Security and privacy requirements defined
+
+## Structured Handover Process
+
+### Phase 1: Business Context (20-30 minutes)
+
+#### Product Vision and Strategy
+**Product Manager Presents:**
+- Business problem and market opportunity
+- Product strategy and competitive positioning
+- Success metrics and business impact
+- Risk and opportunity assessment
+
+#### User and Customer Context
+**User Understanding:**
+- Target user personas and characteristics
+- User journey and pain points addressed
+- Business value proposition clearly articulated
+- User acceptance criteria and validation methods
+
+### Phase 2: Feature Deep Dive (30-45 minutes)
+
+#### Functional Requirements Review
+**Detailed Specifications:**
+- Feature functionality and user workflows
+- Business rules and validation requirements
+- Data inputs, processing, and outputs
+- Error states and edge cases
+- Integration requirements and APIs
+
+#### Non-Functional Requirements
+**Quality Attributes:**
+- Performance requirements and benchmarks
+- Security and privacy requirements
+- Accessibility and usability standards
+- Scalability and reliability needs
+- Compatibility and platform requirements
+
+### Phase 3: Acceptance Criteria and Priorities (20-30 minutes)
+
+#### Success Definition
+**Clear Acceptance Criteria:**
+- Definition of done for each feature
+- Testing scenarios and validation methods
+- Quality standards and acceptance thresholds
+- Business value validation approach
+
+#### Prioritization and Dependencies
+**Implementation Guidance:**
+- Feature priority and implementation order
+- Dependencies between features or components
+- Risk mitigation and fallback strategies
+- MVP scope vs future enhancements
+
+### Phase 4: Q&A and Next Steps (15-20 minutes)
+
+#### Open Discussion
+**Clarification Session:**
+- Technical feasibility questions and concerns
+- Requirement clarification and edge cases
+- Implementation approach discussions
+- Timeline and resource planning
+
+#### Action Items and Follow-up
+**Immediate Next Steps:**
+- Development team planning and estimation
+- Design refinement or clarification needs
+- Technical spike or prototyping requirements
+- Communication cadence establishment
+
+## Post-Handover Collaboration Model
+
+### Development Sprint Planning
+**Sprint 1 Planning Session:**
+- User story breakdown and task estimation
+- Technical approach validation
+- Sprint goal and commitment setting
+- Risk and dependency identification
+
+### Ongoing Collaboration Structure
+**Regular Cadence:**
+- **Daily Standups:** Quick progress updates and blocker identification
+- **Sprint Reviews:** Feature demonstration and feedback collection
+- **Sprint Retrospectives:** Process improvement and lesson learned
+- **Backlog Refinement:** Upcoming feature clarification and prioritization
+
+## Communication Protocols
+
+### Issue Resolution Framework
+**For Requirements Questions:**
+1. Developer → Product Manager (direct communication)
+2. Clarification within 24 hours
+3. If needed → Follow-up discussion with design/technical team
+
+**For Scope Change Requests:**
+1. Developer identifies need with business impact
+2. Product Manager evaluates against priorities
+3. If approved → Update requirements and acceptance criteria
+4. Notify all stakeholders of change
+
+### Decision-Making Framework
+**Product Decisions (Product Manager Leads):**
+- Feature scope and priority changes
+- User experience and design modifications
+- Business rule and logic adjustments
+- Success criteria and acceptance standards
+
+**Technical Decisions (Development Team Leads):**
+- Implementation approach and technology choices
+- Architecture and design pattern selection
+- Performance optimization strategies
+- Technical debt and refactoring priorities
+
+**Collaborative Decisions:**
+- Sprint planning and commitment
+- Risk mitigation strategies
+- Process improvement initiatives
+- Team workflow and communication norms
+
+## Quality Assurance Integration
+
+### Acceptance Criteria Validation
+**Development Completion Check:**
+- [ ] All user stories meet acceptance criteria
+- [ ] Business rules implemented correctly
+- [ ] Performance requirements achieved
+- [ ] Security standards met
+- [ ] Accessibility requirements satisfied
+
+### User Acceptance Testing
+**Business Validation:**
+- [ ] Business stakeholder approval obtained
+- [ ] User acceptance testing completed
+- [ ] Business metrics validation performed
+- [ ] Production readiness confirmed
+
+## Risk Management and Mitigation
+
+### Common Transition Risks
+**Risk: Requirements misunderstood**
+- **Mitigation:** Detailed handover with examples and clarification
+- **Detection:** Early development questions and prototype reviews
+- **Recovery:** Requirements clarification sessions and documentation updates
+
+**Risk: Scope creep during development**
+- **Mitigation:** Clear acceptance criteria and change request process
+- **Detection:** Regular scope validation in sprint reviews
+- **Recovery:** Scope adjustment meetings with stakeholder approval
+
+**Risk: Business context lost in technical implementation**
+- **Mitigation:** Business value reminders and user story references
+- **Detection:** Feature validation against business objectives
+- **Recovery:** Business alignment sessions and value reassessment
+
+## Success Metrics and Feedback
+
+### Handover Quality Metrics
+- **Understanding Verification:** >95% of developers can explain feature business value
+- **Question Resolution:** <24 hours average response time
+- **Requirements Stability:** <10% change in acceptance criteria during development
+- **Development Satisfaction:** >4.0/5 developer satisfaction with requirements clarity
+
+### Collaboration Quality Metrics
+- **Sprint Predictability:** >80% sprint goals achieved
+- **Defect Rate:** <5% of features require rework due to requirements issues
+- **Time to Market:** <10% deviation from planned release dates
+- **Business Value Delivery:** >90% of features meet business success criteria
+
+## Template Adaptation Guidelines
+
+### Project Size Considerations
+**Small Projects (1-3 month timeline):**
+- Streamlined handover with more informal communication
+- Combined product and design roles possible
+- Focus on working software over comprehensive documentation
+
+**Large Projects (6+ month timeline):**
+- Formal handover with comprehensive documentation
+- Dedicated product management resources
+- Structured governance and change control processes
+
+### Team Maturity Levels
+**Early-Stage Teams:**
+- More detailed handover with examples and walkthroughs
+- Additional training and guidance on product processes
+- Closer collaboration and mentoring relationships
+
+**Mature Teams:**
+- Efficient handover with focus on changes and deltas
+- Self-service access to requirements and context
+- Emphasis on autonomous decision-making within frameworks
+
+## Continuous Improvement
+
+### Handover Retrospective
+**After Each Major Feature Handover:**
+- What information was most valuable to development
+- What clarification was needed most frequently
+- How to improve requirements documentation
+- Process efficiency and effectiveness assessment
+
+### Product-Development Collaboration Review
+**Monthly Assessment:**
+- Communication effectiveness and satisfaction
+- Requirements quality and implementation alignment
+- Process efficiency and bottleneck identification
+- Tool and practice improvement opportunities
+
+## Troubleshooting Guide
+
+### Common Issues and Solutions
+
+**Issue: Developers not understanding business context**
+- **Root Cause:** Insufficient business problem explanation
+- **Solution:** Include business case and user problem validation
+- **Prevention:** Start all handovers with business context
+
+**Issue: Acceptance criteria not measurable**
+- **Root Cause:** Vague or subjective success definitions
+- **Solution:** Use specific, testable acceptance criteria
+- **Prevention:** Include examples and edge cases in criteria
+
+**Issue: Scope changes disrupting development**
+- **Root Cause:** Uncontrolled requirements evolution
+- **Solution:** Formal change request and impact assessment process
+- **Prevention:** Clear scope boundaries and change thresholds
+
+**Issue: Communication breakdown during development**
+- **Root Cause:** Inadequate communication cadence
+- **Solution:** Establish regular check-in and status update rhythms
+- **Prevention:** Define communication expectations in handover
+
+---
+
+**Protocol Version:** 1.0
+**Applicability:** Feature development, product enhancement, new capability delivery
+**Customization:** Adapt for different development methodologies (agile, waterfall, etc.)
+**Integration:** Works with user story and acceptance criteria templates

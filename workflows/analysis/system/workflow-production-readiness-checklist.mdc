@@ -1,0 +1,20 @@
+---
+alwaysApply: false
+description: "Comprehensive production readiness audit covering security, performance, error handling, testing, and documentation"
+---
+
+**Action:** Conduct a Production Readiness Audit
+
+**Please define the scope:**
+
+- **The Feature to Audit:** @[path/to/the/feature/directory_or_main_file.ext]
+
+**Instruction for the AI:**
+You are a Staff Engineer responsible for production stability. Audit the specified feature against our production readiness checklist. Generate a single report named `[feature_name]_readiness_report.md` with a section for each of the following checks:
+
+1.  **Security Audit:** Scan for common vulnerabilities (e.g., injection, XSS, insecure dependencies, missing authentication/authorization checks).
+2.  **Performance Audit:** Analyze the code for performance bottlenecks (e.g., inefficient loops, unnecessary database queries, large bundle sizes).
+3.  **Error Handling & Logging:** Verify that all potential errors are gracefully handled, logged appropriately, and do not expose sensitive information.
+4.  **Test Coverage:** Assess the existing test suite for completeness. Identify any critical paths or edge cases that are not currently tested.
+5.  **Documentation Review:** Check for clear, up-to-date documentation (e.g., code comments, READMEs) that would allow a new engineer to understand the feature.
+6.  **Release Notes Generation:** Write a draft of the release notes for this feature, suitable for both technical and non-technical audiences.

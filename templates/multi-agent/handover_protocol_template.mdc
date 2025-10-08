@@ -1,0 +1,202 @@
+---
+alwaysApply: false
+description: "Standardized protocol template for agent-to-agent work transitions in Cursor IDE"
+template_type: "multi-agent-communication"
+template_purpose: "agent-transition"
+---
+
+# Agent Handover Protocol Template
+**Session ID:** [SESSION_ID]
+**From Agent:** [CURRENT_AGENT_NAME_OR_ROLE]
+**To Agent:** [NEXT_AGENT_NAME_OR_ROLE]
+**Handover Type:** [Clean/Escalation/Collaborative/Recovery]
+**Timestamp:** [YYYY-MM-DDTHH:MM:SSZ]
+
+## Handover Overview
+
+### Context Summary
+**Session Goal:** [Brief restatement of overall objective]
+**Current Phase:** [What phase of work is being handed over]
+**Progress Status:** [Percentage complete or milestone achieved]
+**Time Elapsed:** [Duration of current agent's work on this phase]
+
+### Work Completed
+**Major Deliverables:**
+- [ ] Deliverable 1: [Brief description and file location]
+- [ ] Deliverable 2: [Brief description and file location]
+- [ ] Deliverable 3: [Brief description and file location]
+
+**Key Decisions Made:**
+- [Decision 1]: [Brief explanation and rationale]
+- [Decision 2]: [Brief explanation and rationale]
+
+**Quality Achievements:**
+- [ ] All acceptance criteria met
+- [ ] Testing completed successfully
+- [ ] Documentation updated
+- [ ] Peer review completed (if applicable)
+
+## Current State Assessment
+
+### Work in Progress
+**Incomplete Items:** [Tasks that are partially done but need continuation]
+**Blockers Identified:** [Issues preventing completion of remaining work]
+**Dependencies Outstanding:** [External factors or other work needed]
+
+### Knowledge Transfer Requirements
+**Domain Expertise Needed:** [Specialized knowledge required by next agent]
+**Technical Context:** [Complex technical details to understand]
+**Business Context:** [Project-specific business rules or constraints]
+
+## Next Agent Instructions
+
+### Immediate Priorities (Next 1-2 hours)
+1. **Priority Task 1:** [Specific, actionable instruction]
+   - **Why important:** [Brief rationale]
+   - **Expected outcome:** [What success looks like]
+   - **Time estimate:** [How long this should take]
+
+2. **Priority Task 2:** [Specific, actionable instruction]
+   - **Why important:** [Brief rationale]
+   - **Expected outcome:** [What success looks like]
+   - **Time estimate:** [How long this should take]
+
+### Phase Objectives (Next 1-2 days)
+**Primary Goal:** [What should be achieved in this phase]
+**Success Criteria:** [Measurable outcomes for phase completion]
+**Quality Standards:** [How to validate work quality]
+
+### Long-term Context (Full session)
+**Overall Contribution:** [How this phase fits into the bigger picture]
+**Integration Points:** [How work connects to other session components]
+**Final Deliverables Expected:** [End results for this work stream]
+
+## Resource Access Instructions
+
+### Required Files to Review
+**Immediate Reading (Before starting work):**
+- `session_[session_id]_context.md`: Core requirements and constraints
+- `findings_[current_agent]_summary.md`: Key analysis results
+- `artifacts/`: Generated code, configs, or documentation
+
+**Reference Materials:**
+- `[specific/file/path.md]`: [Purpose and what's contained]
+- `[specific/file/path.md]`: [Purpose and what's contained]
+
+### Tool and Environment Setup
+**Required Access:**
+- [ ] Repository access and permissions
+- [ ] Development environment configuration
+- [ ] Testing framework access
+- [ ] Documentation platform credentials
+
+**Recommended Tools:**
+- [ ] Code editor with specific extensions
+- [ ] Testing frameworks or tools
+- [ ] Documentation tools
+- [ ] Communication platforms
+
+## Communication Protocols
+
+### Status Updates
+**Frequency:** [Daily/Every few hours/As needed]
+**Format:** [Brief email/update message format]
+**Escalation Path:** [Who to contact for issues]
+
+### Question Resolution
+**Primary Contact:** [Current agent or session coordinator]
+**Response Time:** [Expected response time for questions]
+**Backup Contact:** [Alternative contact if primary unavailable]
+
+### Quality Assurance
+**Review Process:** [How work will be validated]
+**Feedback Timeline:** [When to expect feedback on deliverables]
+**Revision Process:** [How to handle requested changes]
+
+## Risk and Contingency Planning
+
+### Identified Risks
+**Technical Risks:**
+- [Risk 1]: [Description and mitigation strategy]
+- [Risk 2]: [Description and mitigation strategy]
+
+**Schedule Risks:**
+- [Risk 1]: [Description and mitigation strategy]
+- [Risk 2]: [Description and mitigation strategy]
+
+### Contingency Plans
+**If Primary Approach Fails:**
+1. [Alternative approach description]
+2. [Resources needed for alternative]
+3. [Timeline impact assessment]
+
+**If Timeline Slipped:**
+1. [Reduced scope options]
+2. [Parallel work opportunities]
+3. [Additional resource options]
+
+## Quality Gates and Checkpoints
+
+### Pre-Handover Validation
+- [ ] All priority tasks clearly documented
+- [ ] File references verified and accessible
+- [ ] Contact information current and available
+- [ ] Risk assessment completed and documented
+
+### Handover Confirmation
+**Next Agent Acknowledgment:**
+- [ ] Instructions understood and questions clarified
+- [ ] Required files located and reviewed
+- [ ] Environment setup completed
+- [ ] Work plan developed and approved
+
+### Progress Monitoring
+**Check-in Schedule:**
+- [ ] Day 1: Initial progress and blocking issues
+- [ ] Mid-phase: Progress update and adjustment needs
+- [ ] Phase end: Completion validation and handover preparation
+
+## Handover Completion Checklist
+
+### Current Agent Responsibilities
+- [ ] All deliverables documented and accessible
+- [ ] Knowledge transfer completed effectively
+- [ ] Questions from next agent answered
+- [ ] Session state updated appropriately
+- [ ] Handover protocol signed off
+
+### Next Agent Responsibilities
+- [ ] Handover protocol reviewed and understood
+- [ ] Required files accessed and reviewed
+- [ ] Questions asked and answered
+- [ ] Work plan developed and communicated
+- [ ] Handover protocol acknowledgment provided
+
+### Session Coordinator Responsibilities (if applicable)
+- [ ] Handover process monitored and facilitated
+- [ ] Both agents supported during transition
+- [ ] Quality standards maintained across transition
+- [ ] Overall project timeline protected
+
+## Sign-off and Acknowledgment
+
+### Current Agent Confirmation
+**Agent Name:** __________________________
+**Date:** __________________________
+**Confirmation:** I have completed all handover responsibilities and ensured smooth transition of work.
+
+### Next Agent Acknowledgment
+**Agent Name:** __________________________
+**Date:** __________________________
+**Confirmation:** I have reviewed the handover protocol, understand the work requirements, and am prepared to proceed.
+
+### Session Coordinator Approval (if applicable)
+**Coordinator Name:** __________________________
+**Date:** __________________________
+**Confirmation:** Handover process completed successfully and transition approved.
+
+---
+
+**Handover Protocol Version:** 1.0
+**Cursor IDE Compatibility:** ✅ Designed for seamless multi-agent transitions
+**Quality Assurance:** Includes validation checkpoints and risk management

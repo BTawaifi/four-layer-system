@@ -1,0 +1,72 @@
+---
+alwaysApply: false
+description: "Multi-phase workflow that conducts comprehensive system audits and implements approved remediation fixes"
+---
+
+**Action:** Initiate a Full Audit & Remediation Workflow
+
+**Please define the scope:**
+
+- **The System to Audit:** [e.g., "The entire ML pipeline," "The user authentication service."]
+- **The Primary Goal of the Audit:** [e.g., "Find and fix all data consistency issues between training and backtesting," "Identify and patch security vulnerabilities."]
+
+**Instruction for the AI:**
+You will now execute a multi-phase audit and remediation workflow. You must stop and wait for my explicit approval before proceeding to each subsequent phase.
+
+---
+
+**Phase 1: Comprehensive Investigation & Report Generation**
+
+- Conduct a deep, exploratory investigation of the system to identify all issues related to the primary goal.
+- Generate a comprehensive report in a new file named `[system_name]_audit_report.md`. The report must detail all findings, categorize them by severity (Critical, High, Medium, Low), and provide concrete evidence for each.
+
+**[STOP AND WAIT FOR MY APPROVAL OF THE REPORT BEFORE PROCEEDING TO PHASE 2]**
+
+---
+
+**Phase 2: Implement Remedies**
+
+- Based on the approved report, implement the minimal, safest remedies for all "Critical" and "High" severity issues.
+- For each fix, provide a summary of the code changes you made.
+
+**[STOP AND WAIT FOR MY APPROVAL OF THE FIXES BEFORE PROCEEDING TO PHASE 3]**
+
+---
+
+**Phase 3: Update and Distill Report**
+
+- Modify the `[system_name]_audit_report.md` file.
+- Mark all the fixed issues as "✅ RESOLVED" and add a note explaining the fix.
+- Distill the report, removing all resolved and low-priority items, leaving only the remaining issues that require further attention.
+- Present the final, cleaned-up report.```
+
+#### 2. The "Safe Technical Debt Refactor" Workflow
+
+This workflow is for safely refactoring a complex or legacy piece of code without breaking anything. It prioritizes creating a safety net of tests _before_ making changes.
+
+**File:** `workflow-safe-refactor.cursorrules`
+
+```.cursorrules
+prompt:
+**Action:** Initiate a Safe Refactoring Workflow
+
+**Please define the scope:**
+- **The Code to Refactor:** @[path/to/the/problematic_code.ext]
+- **The Reason for Refactoring:** [e.g., "The code is difficult to maintain and has a high cyclomatic complexity," "We need to improve its performance," "It has a known bug that needs a structural fix."]
+
+**Instruction for the AI:**
+You will now execute a safe refactoring workflow. Stop and wait for my approval at the designated checkpoint.
+
+---
+**Phase 1: Analysis & Test Generation**
+- **Dependency Analysis:** Analyze the target code and identify all other parts of the codebase that depend on it. List any potential breaking changes.
+- **Characterization Test Generation:** Generate a comprehensive suite of "characterization tests." These tests should not judge the code's correctness, but simply capture its *current* behavior, including any existing bugs. This creates a safety net. The test framework should be [Jest/Pytest/etc.].
+
+**[STOP AND WAIT FOR MY APPROVAL OF THE TESTS AND DEPENDENCY ANALYSIS BEFORE PROCEEDING TO PHASE 2]**
+
+---
+**Phase 2: Refactoring & Verification**
+- **Propose a Refactoring Plan:** Briefly outline your strategy for refactoring the code to achieve the stated goal.
+- **Implement the Refactor:** Rewrite the code, improving its structure, performance, or clarity.
+- **Verify with Tests:** Run the characterization tests generated in Phase 1 against the newly refactored code. All tests must pass, proving that the external behavior has not changed. Report the results.
+```

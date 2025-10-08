@@ -1,0 +1,19 @@
+---
+alwaysApply: false
+description: "Post-action hook that verifies code modifications with linting, type checking, and logic confirmation"
+---
+
+prompt:
+
+---
+
+**[POST-ACTION HOOK: VERIFY & LINT]**
+
+**Instruction for the AI:**
+The previous action involved a code modification. Before we proceed, you must perform the following verification steps on the file(s) you just edited:
+
+1.  **Run a Linter:** Analyze the modified code for any linting errors or style guide violations. Report the results (e.g., "✅ Lint check passed" or "❌ Lint check failed with the following errors...").
+2.  **Run a Type-Checker (if applicable):** If this is a typed language (like TypeScript or Python with type hints), analyze the modified code for any type errors. Report the results.
+3.  **Confirm Core Logic:** Briefly re-read the changes you made and confirm in one sentence that they directly address the original goal of the modification.
+
+**[STOP AND WAIT FOR MY ACKNOWLEDGEMENT BEFORE CONTINUING THE MAIN WORKFLOW]**

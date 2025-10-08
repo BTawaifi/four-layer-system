@@ -1,0 +1,11 @@
+---
+alwaysApply: false
+description: "Establishes absolute source of truth files that take precedence over other information in the session"
+---
+prompt:
+  **Action:** Set Ground Truth Source
+
+  **Instruction for the AI:**
+  For the remainder of this session, the following file(s) must be treated as the **absolute source of truth**. If my questions or the codebase seem to contradict what is in these files, you must prioritize the information from these ground truth sources and highlight the inconsistency.
+
+  - **The Ground Truth File(s):** @[path/to/the/architectural_decision_record.md], @[path/to/the/api_schema.json]

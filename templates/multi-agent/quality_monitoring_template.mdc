@@ -1,0 +1,254 @@
+---
+alwaysApply: false
+description: "Quality monitoring template for maintaining standards across multi-agent Cursor IDE workflows"
+template_type: "multi-agent-communication"
+template_purpose: "quality-assurance"
+---
+
+# Quality Monitoring Template
+**Session ID:** [SESSION_ID]
+**Monitoring Level:** [Session/Agent/Phase]
+**Timestamp:** [YYYY-MM-DDTHH:MM:SSZ]
+**Quality Gate:** [Pre-agent/Post-agent/Phase-end/Session-end]
+
+## Quality Overview
+
+### Session Context
+**Primary Goal:** [Brief restatement of session objective]
+**Quality Standards:** [Applicable quality frameworks or standards]
+**Risk Tolerance:** [Acceptable quality threshold for this work]
+**Stakeholder Expectations:** [Key quality requirements from stakeholders]
+
+### Current Quality Status
+**Overall Score:** [X/10] - [Brief justification]
+**Trend:** [Improving/Stable/Declining] - [Compared to previous assessment]
+**Critical Issues:** [Number of open critical quality issues]
+**Action Items:** [Number of open quality action items]
+
+## Quality Assessment Framework
+
+### Code Quality Metrics
+
+#### Standards Compliance
+- [ ] Naming conventions followed consistently
+- [ ] Code formatting standards applied
+- [ ] Documentation requirements met
+- [ ] Security best practices implemented
+- [ ] Performance standards achieved
+
+#### Code Review Results
+- **Automated Checks:** [Pass/Fail] - [Tool used and results]
+- **Manual Review:** [Pass/Fail] - [Reviewer and findings]
+- **Coverage:** [Percentage] - [Test coverage achieved]
+- **Complexity:** [Score] - [Cyclomatic complexity rating]
+
+### Documentation Quality Metrics
+
+#### Completeness
+- [ ] All functions/methods documented
+- [ ] API endpoints documented
+- [ ] Configuration options explained
+- [ ] Deployment instructions provided
+- [ ] Troubleshooting guides included
+
+#### Accuracy
+- [ ] Technical information verified
+- [ ] Code examples functional
+- [ ] File paths correct and accessible
+- [ ] Version dependencies accurate
+
+### Process Quality Metrics
+
+#### Agent Transition Quality
+- [ ] Handover protocols followed
+- [ ] Context transfer complete
+- [ ] File references accurate
+- [ ] Knowledge transfer effective
+- [ ] Timeline maintained
+
+#### Session Management Quality
+- [ ] Status updates timely
+- [ ] Risk management proactive
+- [ ] Issue resolution efficient
+- [ ] Stakeholder communication clear
+- [ ] Documentation maintained
+
+## Detailed Quality Findings
+
+### Critical Issues (Must Fix)
+| Issue ID | Description | Impact | Assigned To | Due Date | Status |
+|----------|-------------|--------|-------------|----------|--------|
+| QCR-001 | [Issue description] | [High/Medium/Low] | [Agent/Team] | [Date] | [Open/In Progress/Resolved] |
+| QCR-002 | [Issue description] | [High/Medium/Low] | [Agent/Team] | [Date] | [Open/In Progress/Resolved] |
+
+### Major Issues (Should Fix)
+| Issue ID | Description | Impact | Assigned To | Due Date | Status |
+|----------|-------------|--------|-------------|----------|--------|
+| QMJ-001 | [Issue description] | [High/Medium/Low] | [Agent/Team] | [Date] | [Open/In Progress/Resolved] |
+| QMJ-002 | [Issue description] | [High/Medium/Low] | [Agent/Team] | [Date] | [Open/In Progress/Resolved] |
+
+### Minor Issues (Consider Fix)
+| Issue ID | Description | Impact | Assigned To | Due Date | Status |
+|----------|-------------|--------|-------------|----------|--------|
+| QMN-001 | [Issue description] | [High/Medium/Low] | [Agent/Team] | [Date] | [Open/In Progress/Resolved] |
+
+## Quality Improvement Actions
+
+### Immediate Actions (Next 24 hours)
+1. **Action:** [Specific quality improvement step]
+   - **Owner:** [Responsible agent]
+   - **Rationale:** [Why this action is needed]
+   - **Expected Impact:** [How this improves quality]
+
+2. **Action:** [Specific quality improvement step]
+   - **Owner:** [Responsible agent]
+   - **Rationale:** [Why this action is needed]
+   - **Expected Impact:** [How this improves quality]
+
+### Short-term Actions (Next 1-3 days)
+1. **Action:** [Specific quality improvement step]
+   - **Owner:** [Responsible agent]
+   - **Timeline:** [Specific deadline]
+   - **Success Criteria:** [How to measure completion]
+
+2. **Action:** [Specific quality improvement step]
+   - **Owner:** [Responsible agent]
+   - **Timeline:** [Specific deadline]
+   - **Success Criteria:** [How to measure completion]
+
+### Preventive Actions (Ongoing)
+1. **Process Improvement:** [Systemic change to prevent future issues]
+   - **Implementation:** [How to roll out the improvement]
+   - **Monitoring:** [How to track effectiveness]
+
+2. **Training Enhancement:** [Knowledge or skill development needed]
+   - **Target Audience:** [Which agents need training]
+   - **Delivery Method:** [How training will be provided]
+
+## Quality Assurance Evidence
+
+### Test Results
+**Automated Testing:**
+- **Unit Tests:** [Pass/Fail] - [Coverage percentage] - [Details]
+- **Integration Tests:** [Pass/Fail] - [Coverage percentage] - [Details]
+- **Performance Tests:** [Pass/Fail] - [Benchmarks met] - [Details]
+
+**Manual Testing:**
+- **Functionality:** [Pass/Fail] - [Test scenarios covered] - [Details]
+- **Usability:** [Pass/Fail] - [User feedback summary] - [Details]
+- **Compatibility:** [Pass/Fail] - [Platforms/environments tested] - [Details]
+
+### Review Artifacts
+**Code Review:**
+- **Reviewer:** [Name and role]
+- **Date:** [Review completion date]
+- **Findings:** [Summary of major findings]
+- **Resolution:** [How issues were addressed]
+
+**Security Review:**
+- **Reviewer:** [Name and role]
+- **Date:** [Review completion date]
+- **Vulnerabilities Found:** [Count and severity]
+- **Remediation:** [How issues were fixed]
+
+## Risk-Based Quality Decisions
+
+### Quality-Adjusted Decisions
+**When to Accept Lower Quality:**
+- **Condition:** [Specific circumstances where reduced quality is acceptable]
+- **Threshold:** [Maximum acceptable quality reduction]
+- **Mitigation:** [How to offset quality reduction]
+- **Monitoring:** [How to track impact of decision]
+
+**When to Invest in Higher Quality:**
+- **Condition:** [When extra quality investment is warranted]
+- **Investment:** [Additional effort or resources required]
+- **Benefit:** [Expected quality improvement or risk reduction]
+- **ROI Assessment:** [Cost-benefit analysis]
+
+## Continuous Quality Monitoring
+
+### Quality Metrics Dashboard
+**Daily Tracking:**
+- Code quality scores
+- Test pass rates
+- Documentation completeness
+- Issue resolution time
+
+**Weekly Reporting:**
+- Quality trend analysis
+- Process efficiency metrics
+- Team performance indicators
+- Stakeholder satisfaction feedback
+
+**Monthly Review:**
+- Quality maturity assessment
+- Process improvement opportunities
+- Training and development needs
+- Tool and automation evaluation
+
+## Quality Escalation Procedures
+
+### Escalation Triggers
+**Immediate Escalation (Same Day):**
+- Critical security vulnerability discovered
+- Production system stability threatened
+- Legal or compliance requirement violated
+- Stakeholder satisfaction critically low
+
+**Fast Escalation (Next Business Day):**
+- Multiple quality issues in same component
+- Team velocity significantly impacted
+- Customer-facing quality concerns
+- Budget or timeline significantly affected
+
+### Escalation Process
+1. **Initial Assessment:** Quality monitor documents issue and impact
+2. **Stakeholder Notification:** Relevant parties informed of issue
+3. **Action Planning:** Cross-functional team assembles to address
+4. **Resolution Implementation:** Coordinated fix deployment
+5. **Lessons Learned:** Process improvement identification and implementation
+
+## Quality Recognition and Rewards
+
+### Positive Reinforcement
+**Individual Recognition:**
+- Quality champion of the month
+- Exceptional quality improvement contribution
+- Innovative quality process enhancement
+
+**Team Recognition:**
+- Zero-defect delivery achievement
+- Quality maturity level advancement
+- Customer quality satisfaction milestone
+
+### Quality Improvement Incentives
+**Hackathon/Improvement Days:** Dedicated time for quality process enhancement
+**Training Budget:** Investment in quality-related skill development
+**Tool Upgrades:** Resources for quality automation and monitoring tools
+
+## Template Usage Guidelines
+
+### For Quality Monitors
+1. Complete all assessment sections thoroughly
+2. Use evidence-based evaluations, not opinions
+3. Escalate issues that exceed acceptable thresholds
+4. Focus on actionable improvement recommendations
+
+### For Development Teams
+1. Review quality findings promptly and acknowledge issues
+2. Implement corrective actions within agreed timelines
+3. Participate in root cause analysis for systemic issues
+4. Contribute to continuous quality improvement initiatives
+
+### For Stakeholders
+1. Use quality metrics to inform decision-making
+2. Provide feedback on quality expectations and priorities
+3. Support quality improvement initiatives and investments
+4. Recognize and reward quality excellence
+
+---
+
+**Quality Monitoring Version:** 1.0
+**Cursor IDE Compatibility:** ✅ Designed for continuous quality tracking across agent boundaries
+**Integration:** Works with session state and handover protocols

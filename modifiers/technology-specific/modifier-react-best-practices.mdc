@@ -1,0 +1,81 @@
+---
+alwaysApply: false
+description: "Enforces React-specific best practices, patterns, and performance optimizations"
+---
+
+rules:
+- **Component Design & Architecture:**
+  - Use functional components with hooks over class components unless class-specific features are required
+  - Implement proper component composition and separation of concerns
+  - Use custom hooks for reusable logic and side effects
+  - Follow the single responsibility principle for component design
+  - Prefer presentational components over container components with clear separation
+
+- **Hooks Usage & Rules:**
+  - Follow the Rules of Hooks strictly (only call hooks at the top level, never in loops/conditions/nested functions)
+  - Use useEffect for side effects with proper dependency arrays
+  - Implement useCallback for expensive computations passed as props
+  - Use useMemo for expensive calculations that don't need to run on every render
+  - Avoid creating new functions/objects in render without memoization
+
+- **State Management:**
+  - Lift state up only when necessary for shared state between components
+  - Use useReducer for complex state logic instead of multiple useState calls
+  - Implement proper state initialization and avoid unnecessary re-renders
+  - Consider context API or state management libraries (Redux, Zustand) for global state
+  - Use immer or similar immutable update patterns for complex state changes
+
+- **Performance Optimization:**
+  - Implement React.memo for components that re-render frequently with same props
+  - Use React.lazy and Suspense for code splitting and dynamic imports
+  - Optimize list rendering with proper key props and virtualization when needed
+  - Avoid inline functions and objects in JSX that cause unnecessary re-renders
+  - Implement proper error boundaries for graceful error handling
+
+- **Data Fetching & API Integration:**
+  - Use modern data fetching with React Query, SWR, or similar libraries
+  - Implement proper loading states and error handling
+  - Avoid fetching data directly in components; use custom hooks or context
+  - Implement optimistic updates for better user experience
+  - Handle race conditions and request cancellation properly
+
+- **Accessibility (a11y):**
+  - Use semantic HTML elements and proper ARIA attributes
+  - Ensure keyboard navigation support for all interactive elements
+  - Implement proper focus management and visible focus indicators
+  - Use screen reader friendly text and alt attributes for images
+  - Test with accessibility tools and follow WCAG guidelines
+
+- **Styling & CSS-in-JS:**
+  - Choose consistent styling approach (CSS modules, styled-components, emotion, tailwind)
+  - Implement responsive design with mobile-first approach
+  - Use CSS-in-JS libraries effectively with theme support
+  - Avoid inline styles except for dynamic values
+  - Implement proper CSS organization and naming conventions
+
+- **Testing Strategy:**
+  - Write unit tests for custom hooks and utility functions
+  - Implement integration tests for component behavior
+  - Use React Testing Library for user-centric testing approaches
+  - Test accessibility features and keyboard navigation
+  - Implement visual regression testing for UI components
+
+- **Code Organization & Structure:**
+  - Use feature-based folder structure over type-based organization
+  - Implement barrel exports (index.js) for clean imports
+  - Follow consistent naming conventions for files and components
+  - Use TypeScript for better type safety and developer experience
+  - Implement proper prop validation with PropTypes or TypeScript interfaces
+
+- **Build & Deployment:**
+  - Configure proper webpack/babel settings for React optimization
+  - Implement bundle analysis and code splitting strategies
+  - Set up proper environment configurations (development/staging/production)
+  - Implement CI/CD pipelines with automated testing and linting
+  - Use tools like ESLint, Prettier, and Husky for code quality
+
+## Related Rules
+- **Specialists:** @specialist-frontend-developer (complementary React expertise)
+- **Modifiers:** @modifier-mobile-first (responsive design), @modifier-performance-critical (optimization focus)
+- **Workflows:** @workflow-fullstack-web-development (complete React application development)
+- **Contexts:** @context-workflow-progress-tracker (for complex React project management)

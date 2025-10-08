@@ -1,0 +1,17 @@
+---
+alwaysApply: false
+description: "Creates centralized testing structure by organizing test files into logical directories and updating imports"
+---
+
+**Action:** Create a Centralized Testing Structure
+
+**Please provide the context:**
+- **The Problem:** Test files are scattered throughout the codebase, making them hard to find and run.
+- **The Goal:** Move all testing-related files into a single, well-organized top-level directory.
+
+**Instruction for the AI:**
+1.  Create a new top-level directory named `tests/`.
+2.  Inside `tests/`, create subdirectories for different categories of tests (e.g., `ai/`, `ecommerce/`, `unit/`).
+3.  Find all test-related files in the codebase (e.g., `*.js`, `*.py`) and move them into the appropriate new subdirectories.
+4.  Update all import paths within the moved test files to reflect their new location.
+5.  Create a `tests/README.md` file explaining the new structure and how to run the tests.

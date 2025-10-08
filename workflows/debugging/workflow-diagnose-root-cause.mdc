@@ -1,0 +1,21 @@
+---
+alwaysApply: false
+description: "Performs root cause analysis and proposes systemic preventative measures for recurring bugs"
+---
+
+**Action:** Perform a Root Cause Analysis (RCA) and Propose Preventative Measures
+
+**Please provide the context:**
+- **The Initial Bug:** [Describe the original problem, e.g., "The UI was creating products from single characters of a string."]
+- **The Fix We Implemented:** [Briefly describe the solution, e.g., "We added data sanitization and filtering on the frontend to handle corrupted data from the database."]
+- **The Entry Point:** @[path/to/the/file/that/was/fixed.ext]
+
+**Instruction for the AI:**
+The immediate fix is a reactive solution. Your task is to think like a systems architect and answer the following:
+1.  **Root Cause:** Why did this bug happen in the first place? Was it a flaw in data validation, a race condition, a faulty data migration, or something else?
+2.  **Systemic Weakness:** What does this bug reveal about a potential weakness in our overall architecture or development process?
+3.  **Preventative Measures:** Propose a set of proactive, long-term changes to prevent this entire class of bug from recurring. Suggestions could include:
+  -   Adding a new database constraint.
+  -   Implementing a server-side validation layer.
+  -   Creating a new linting rule.
+  -   Updating our team's coding conventions.

@@ -1,0 +1,23 @@
+---
+alwaysApply: false
+description: "Apply proper sanitization and validation rules for forms, input handling, and data processing"
+---
+
+**Action:** Apply Sanitization and Validation Rules
+
+**Please provide the context:**
+- **Input Type:** [forms / user input / API data / file uploads / database records]
+- **Security Requirements:** [XSS prevention / SQL injection / CSRF / data validation]
+- **Validation Rules:** [required fields / data types / length limits / format constraints]
+
+**Instruction for the AI:**
+Apply appropriate sanitization and validation rules based on the context. Use the validation rules documented in: docs\VALIDATION_SANITIZATION_RULES.md
+
+**Implementation Guidelines:**
+1. **Input Sanitization:** Remove or escape dangerous characters and scripts
+2. **Data Validation:** Ensure data meets required formats and constraints
+3. **Security Best Practices:** Apply OWASP security guidelines
+4. **Error Handling:** Provide clear feedback for validation failures
+5. **Performance Considerations:** Balance security with user experience
+
+Acknowledge that sanitization and validation rules have been applied.

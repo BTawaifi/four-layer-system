@@ -1,0 +1,6 @@
+---
+alwaysApply: false
+description: "Ensures responses contain only raw code blocks without explanations, introductions, or markdown formatting"
+---
+rules:
+  - Your final response must contain **only** the requested code block. Do not include any explanations, introductory text, or markdown formatting around the code. The output should be raw code, ready to be copied and pasted.

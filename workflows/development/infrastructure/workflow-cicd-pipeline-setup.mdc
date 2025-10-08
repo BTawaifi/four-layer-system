@@ -1,0 +1,172 @@
+---
+alwaysApply: false
+description: "Comprehensive CI/CD pipeline setup and optimization workflow covering build, test, deployment, and monitoring automation"
+---
+
+**Action:** Design and Implement CI/CD Pipeline
+
+**Please provide the pipeline context:**
+
+- **Application Type:** [Web App / API / Mobile App / Desktop App / Library]
+- **Technology Stack:** [Language, Framework, Database, e.g., "Node.js/React/PostgreSQL"]
+- **Target Environments:** [Development / Staging / Production / Multi-region]
+- **Deployment Strategy:** [Blue-Green / Canary / Rolling / Immutable Infrastructure]
+- **Cloud Provider:** [AWS / Azure / GCP / On-premise / Hybrid]
+- **Current CI/CD Status:** [None / Basic / Advanced / Needs Optimization]
+
+**Instruction for the AI:**
+Act as a Senior DevOps Engineer and CI/CD Specialist. Your task is to design, implement, and optimize a complete CI/CD pipeline that ensures reliable, secure, and efficient software delivery. This workflow covers the entire pipeline lifecycle from code commit to production deployment.
+
+---
+
+**Phase 1: Pipeline Architecture & Requirements Analysis**
+
+**STOP AND WAIT:** Complete pipeline requirements gathering and architecture design.
+
+**Current State Assessment:**
+1. **Codebase Analysis:** Review application structure, dependencies, and build requirements
+2. **Existing Infrastructure:** Document current deployment environments and constraints
+3. **Team Workflow:** Understand development processes and release cadences
+4. **Security Requirements:** Identify compliance needs and security scanning requirements
+5. **Performance Goals:** Define acceptable build times, deployment frequency, and reliability targets
+
+**Pipeline Design Principles:**
+- **Automation First:** Every manual process becomes automated
+- **Fail Fast:** Catch issues early in the pipeline
+- **Immutable Artifacts:** Build once, deploy everywhere
+- **Infrastructure as Code:** All environments defined as code
+- **Security by Design:** Security checks integrated throughout pipeline
+
+---
+
+**Phase 2: Build & Test Automation**
+
+**STOP AND WAIT:** Implement comprehensive build and testing automation.
+
+**Build Stage Configuration:**
+1. **Dependency Management:** Automated dependency installation and caching
+2. **Multi-Platform Builds:** Cross-compilation and platform-specific builds
+3. **Artifact Generation:** Docker images, packages, binaries, and deployment artifacts
+4. **Build Optimization:** Parallel builds, caching strategies, and build time reduction
+
+**Testing Strategy Implementation:**
+1. **Unit Testing:** Automated test execution with coverage reporting
+2. **Integration Testing:** API testing, database integration, and service communication
+3. **End-to-End Testing:** Full user journey testing and UI automation
+4. **Performance Testing:** Load testing and performance regression checks
+5. **Security Testing:** SAST, DAST, dependency scanning, and vulnerability assessment
+
+**Quality Gates:**
+- Test coverage thresholds and quality metrics
+- Security vulnerability blocking criteria
+- Performance regression detection
+- Code quality and style enforcement
+
+---
+
+**Phase 3: Deployment Automation**
+
+**STOP AND WAIT:** Design and implement deployment strategies for all environments.
+
+**Environment Strategy:**
+1. **Development Environment:** Fast feedback loops with automated deployments
+2. **Staging Environment:** Production-like testing with full integration
+3. **Production Environment:** Zero-downtime deployments with rollback capabilities
+4. **Disaster Recovery:** Backup environments and failover procedures
+
+**Deployment Patterns:**
+1. **Container Deployments:** Kubernetes, Docker Swarm, or cloud container services
+2. **Serverless Deployments:** Lambda, Functions, or cloud serverless platforms
+3. **Traditional Deployments:** Blue-green, canary, and rolling update strategies
+4. **Hybrid Approaches:** Multi-cloud and hybrid cloud deployments
+
+**Release Management:**
+- Semantic versioning and automated versioning
+- Release notes generation and changelog management
+- Feature flags and gradual rollouts
+- Rollback procedures and emergency response
+
+---
+
+**Phase 4: Monitoring & Observability**
+
+**STOP AND WAIT:** Implement comprehensive monitoring and alerting.
+
+**Observability Stack:**
+1. **Application Metrics:** Response times, error rates, throughput monitoring
+2. **Infrastructure Metrics:** CPU, memory, disk, network utilization
+3. **Business Metrics:** User engagement, conversion rates, feature usage
+4. **Custom Metrics:** Application-specific KPIs and performance indicators
+
+**Logging Strategy:**
+1. **Structured Logging:** Consistent log formats across all components
+2. **Log Aggregation:** Centralized logging with search and filtering
+3. **Log Retention:** Configurable retention policies and archival
+4. **Log Analysis:** Automated anomaly detection and pattern recognition
+
+**Alerting & Incident Response:**
+1. **Alert Rules:** Threshold-based and anomaly-based alerting
+2. **Escalation Policies:** Multi-level alerting with appropriate response times
+3. **Incident Playbooks:** Automated remediation and response procedures
+4. **Post-Mortem Analysis:** Automated incident reporting and improvement tracking
+
+---
+
+**Phase 5: Security & Compliance**
+
+**STOP AND WAIT:** Integrate security and compliance checks throughout the pipeline.
+
+**Security Integration:**
+1. **Static Analysis:** Code security scanning and vulnerability detection
+2. **Dependency Scanning:** Third-party library security assessment
+3. **Container Security:** Image scanning and runtime security
+4. **Infrastructure Security:** Cloud configuration and access control validation
+
+**Compliance Automation:**
+1. **Policy as Code:** Automated compliance checking and reporting
+2. **Audit Trails:** Complete audit logging of all pipeline activities
+3. **Access Controls:** Role-based access and approval workflows
+4. **Regulatory Compliance:** Industry-specific compliance automation (GDPR, HIPAA, etc.)
+
+---
+
+**Phase 6: Optimization & Maintenance**
+
+**STOP AND WAIT:** Establish pipeline optimization and maintenance procedures.
+
+**Performance Optimization:**
+1. **Build Time Reduction:** Caching, parallelization, and incremental builds
+2. **Cost Optimization:** Resource utilization and cloud cost management
+3. **Feedback Loop Improvement:** Faster feedback through pipeline optimization
+4. **Scalability Planning:** Handling increased load and team growth
+
+**Maintenance Procedures:**
+1. **Pipeline Health Monitoring:** Automated checks for pipeline reliability
+2. **Regular Updates:** Tool and dependency version management
+3. **Documentation:** Pipeline documentation and runbook maintenance
+4. **Training:** Team training on pipeline usage and troubleshooting
+
+**Continuous Improvement:**
+- Regular pipeline performance reviews and optimization
+- Adoption of new tools and practices as they emerge
+- Feedback collection from development teams
+- Benchmarking against industry standards
+
+---
+
+**Deliverables:**
+1. **Pipeline Configuration:** Complete CI/CD pipeline definition files
+2. **Infrastructure Code:** Environment definitions and deployment configurations
+3. **Documentation:** Pipeline documentation, runbooks, and troubleshooting guides
+4. **Monitoring Dashboard:** Observability setup with alerts and reporting
+5. **Security Policies:** Security scanning and compliance automation
+6. **Performance Metrics:** Pipeline efficiency and reliability measurements
+7. **Maintenance Procedures:** Ongoing pipeline management and improvement processes
+
+**Success Criteria:**
+- Automated deployment capability to all environments
+- Comprehensive test coverage with fast feedback loops
+- Security and compliance checks integrated throughout
+- Monitoring and alerting for production issues
+- Rollback capability for failed deployments
+- Documentation for team adoption and maintenance

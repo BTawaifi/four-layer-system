@@ -1,0 +1,10 @@
+---
+alwaysApply: false
+description: "Ensures responses are as concise as possible, omitting conversational filler and unnecessary explanations"
+---
+rules:
+  - Your final response must be as concise as possible. Omit all conversational filler, apologies, and unnecessary explanations. Provide only the direct answer to the request.
+
+conflicts:
+  - **Critical Conflict**: Cannot be used with `modifier-verbose-output` (directly contradictory output styles)
+  - See `modifier-compatibility-matrix` for complete conflict resolution guidelines

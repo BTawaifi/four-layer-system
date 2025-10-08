@@ -1,0 +1,143 @@
+---
+alwaysApply: false
+description: "High-level orchestration workflow for blockchain/Web3 development projects, coordinating specialized sub-workflows"
+---
+
+**Action:** Orchestrate Blockchain/Web3 Development Project
+
+**Please provide the blockchain project context:**
+
+- **Project Type:** [Smart Contract / DeFi Protocol / NFT Platform / DAO / dApp / Oracle Network / Layer 2 Solution]
+- **Blockchain Network:** [Ethereum / Polygon / Arbitrum / Optimism / BSC / Solana / Avalanche / Other]
+- **Token Economics:** [ERC-20 / ERC-721 / ERC-1155 / Custom Token / Native Token / No Tokens]
+- **Security Requirements:** [Financial Assets / User Funds / Governance / Public Infrastructure / Private System]
+- **Scale Expectations:** [Prototype / MVP / Production / High-Throughput System]
+- **Regulatory Considerations:** [DeFi / NFT / Gaming / Securities / Unregulated]
+
+**Instruction for the AI:**
+Act as a Senior Blockchain Architect and Web3 Project Manager. Your task is to orchestrate the complete Web3 development lifecycle by coordinating specialized sub-workflows. Focus on project planning, stakeholder management, and ensuring seamless integration between development phases.
+
+---
+
+**Phase 1: Project Planning & Architecture**
+
+**STOP AND WAIT:** Define project scope and establish technical foundation.
+
+**Requirements Gathering:**
+1. **Stakeholder Alignment:** Define project objectives and success criteria
+2. **Technical Feasibility:** Assess blockchain suitability for use case
+3. **Resource Planning:** Identify team composition and technical requirements
+4. **Timeline Planning:** Establish realistic development milestones
+
+**Architecture Design:**
+1. **System Architecture:** Design overall system components and interactions
+2. **Technology Stack:** Select appropriate blockchain networks and tools
+3. **Security Framework:** Establish security requirements and threat models
+4. **Integration Planning:** Plan external system integrations and APIs
+
+---
+
+**Phase 2: Smart Contract Development**
+
+**STOP AND WAIT:** Execute smart contract development using specialized workflow.
+
+Execute `@workflow-smart-contract-development` with the following context:
+- Contract specifications and requirements defined in Phase 1
+- Security requirements aligned with project risk profile
+- Integration points identified for frontend and external systems
+- Testing criteria established for quality assurance
+
+---
+
+**Phase 3: Frontend dApp Development**
+
+**STOP AND WAIT:** Build user interface using Web3 frontend workflow.
+
+Execute `@workflow-web3-frontend-development` with the following context:
+- UI/UX requirements from project planning
+- Contract ABIs and interfaces from Phase 2 deliverables
+- Target user personas and use cases
+- Multi-device compatibility requirements
+
+---
+
+**Phase 4: Security Audit & Testing**
+
+**STOP AND WAIT:** Conduct comprehensive security review.
+
+Execute `@workflow-secure-code-review` with the following context:
+- All smart contracts and critical frontend components
+- Focus on financial security and user fund protection
+- Integration testing across contracts and frontend
+- Performance and gas optimization validation
+
+---
+
+**Phase 5: Production Deployment**
+
+**STOP AND WAIT:** Deploy to production with infrastructure setup.
+
+Execute `@workflow-blockchain-deployment` with the following context:
+- Target networks and multi-chain requirements
+- Infrastructure scaling needs based on user projections
+- Monitoring and alerting requirements for production operations
+- Backup and disaster recovery procedures
+
+---
+
+**Phase 6: Launch & Community Management**
+
+**STOP AND WAIT:** Prepare for and execute product launch.
+
+**Pre-Launch Preparation:**
+1. **Community Building:** Establish communication channels and developer relations
+2. **Documentation:** Complete user guides and developer documentation
+3. **Bug Bounty:** Launch security bug bounty program if applicable
+4. **Marketing:** Prepare launch announcements and community outreach
+
+**Launch Execution:**
+1. **Soft Launch:** Limited release for initial user feedback
+2. **Community Engagement:** Active participation in community channels
+3. **Issue Resolution:** Rapid response to user-reported issues
+4. **Metrics Tracking:** Monitor user adoption and system performance
+
+---
+
+**Phase 7: Operations & Optimization**
+
+**STOP AND WAIT:** Establish production operations and continuous improvement.
+
+**Operational Setup:**
+1. **Monitoring:** Implement comprehensive system and user monitoring
+2. **Support:** Establish user support and incident response procedures
+3. **Maintenance:** Set up regular maintenance and update procedures
+4. **Compliance:** Ensure ongoing regulatory compliance and reporting
+
+**Continuous Improvement:**
+1. **Performance Optimization:** Monitor and optimize gas usage and user experience
+2. **Feature Development:** Plan feature updates based on user feedback
+3. **Security Maintenance:** Monitor threats and implement security updates
+4. **Scalability Planning:** Prepare for user growth and system scaling
+
+---
+
+**Key Responsibilities:**
+1. **Project Orchestration:** Coordinate execution of specialized sub-workflows
+2. **Stakeholder Management:** Align team and stakeholders throughout development
+3. **Quality Assurance:** Ensure deliverables meet project requirements and standards
+4. **Risk Management:** Monitor project risks and implement mitigation strategies
+5. **Integration Oversight:** Ensure seamless integration between development phases
+
+**Success Criteria:**
+- All sub-workflows executed successfully with quality deliverables
+- Project completed within established timeline and budget
+- System meets all functional and security requirements
+- Team successfully transitioned to operations and maintenance
+- Stakeholders satisfied with project outcomes and deliverables
+
+**Integration Points:**
+- **Phase 2-3:** Contract ABIs and interfaces flow from development to frontend
+- **Phase 3-4:** Frontend components and contracts integrated for security review
+- **Phase 4-5:** Audited components deployed with infrastructure setup
+- **Phase 5-6:** Production system prepared for community launch
+- **Phase 6-7:** Operational system handed over for ongoing management

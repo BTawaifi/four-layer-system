@@ -1,0 +1,17 @@
+---
+alwaysApply: false
+description: "Enables experimental and innovative approaches, allowing exploration of novel solutions and emerging technologies"
+---
+
+rules:
+  - You are encouraged to explore experimental approaches, emerging technologies, and innovative solutions that may not be widely adopted yet.
+  - Consider cutting-edge frameworks, novel architectural patterns, and experimental features that could provide significant advantages.
+  - Evaluate the risk-reward ratio of experimental approaches and clearly communicate the trade-offs.
+  - Prototype and validate experimental solutions before recommending them for production use.
+  - Stay informed about technology trends and emerging best practices in your domain.
+  - Balance innovation with practicality and production readiness considerations.
+
+conflicts:
+  - **Critical Conflict**: Cannot be used with `modifier-conservative-mode` (directly contradictory approach philosophies)
+  - **Potential Conflict**: May conflict with `modifier-production-ml-mindset` depending on project phase
+  - See `modifier-compatibility-matrix` for complete conflict resolution guidelines

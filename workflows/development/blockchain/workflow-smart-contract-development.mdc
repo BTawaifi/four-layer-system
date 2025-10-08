@@ -1,0 +1,122 @@
+---
+alwaysApply: false
+description: "Focused workflow for developing secure, audited smart contracts following blockchain best practices"
+---
+
+**Action:** Develop Secure Smart Contracts
+
+**Please provide the smart contract context:**
+
+- **Contract Type:** [ERC-20 / ERC-721 / ERC-1155 / DeFi Protocol / DAO / Custom Logic / Oracle]
+- **Blockchain Network:** [Ethereum / Polygon / Arbitrum / BSC / Solana / Other]
+- **Security Level:** [Basic / Financial / Critical Infrastructure]
+- **Upgradeability:** [Immutable / Upgradeable Proxy / Diamond Pattern]
+
+**Instruction for the AI:**
+Act as a Senior Smart Contract Developer and Security Auditor. Your task is to guide the development of secure, efficient smart contracts following industry best practices and security standards.
+
+---
+
+**Phase 1: Contract Design & Architecture**
+
+**STOP AND WAIT:** Establish solid contract foundation and architecture.
+
+**Requirements Analysis:**
+1. **Functional Requirements:** Define contract capabilities and user interactions
+2. **Security Requirements:** Identify security boundaries and threat models
+3. **Gas Optimization Goals:** Establish performance and cost targets
+4. **Integration Points:** Define external contract and oracle dependencies
+
+**Architecture Design:**
+1. **Modular Structure:** Break down complex logic into focused, testable contracts
+2. **State Management:** Design efficient storage patterns and data structures
+3. **Access Control:** Implement role-based permissions and ownership patterns
+4. **Event Design:** Plan comprehensive event emission for transparency
+
+**Security Framework:**
+1. **Threat Modeling:** Identify potential attack vectors and security boundaries
+2. **Input Validation:** Design input sanitization and bounds checking
+3. **Reentrancy Protection:** Plan checks-effects-interactions patterns
+4. **Access Patterns:** Design proper authorization and permission systems
+
+---
+
+**Phase 2: Development Environment & Implementation**
+
+**STOP AND WAIT:** Implement contract logic following security best practices.
+
+**Environment Setup:**
+1. **Development Tools:** Configure Hardhat/Truffle, testing frameworks, and deployment scripts
+2. **Local Testing:** Set up local blockchain environments and testing infrastructure
+3. **Code Standards:** Establish Solidity/Vyper style guides and documentation standards
+4. **Version Control:** Implement proper versioning and upgrade mechanisms
+
+**Contract Implementation:**
+1. **Core Logic:** Implement primary contract functionality with security checks
+2. **Helper Functions:** Add utility functions for complex operations
+3. **Modifiers:** Implement access control and validation modifiers
+4. **Libraries:** Integrate or create secure, tested libraries
+
+**Security Implementation:**
+1. **Input Validation:** Implement comprehensive bounds checking and sanitization
+2. **State Consistency:** Ensure atomic operations and state invariants
+3. **Reentrancy Guards:** Apply mutexes and reentrancy protection patterns
+4. **Overflow Protection:** Use SafeMath or built-in overflow checks
+
+---
+
+**Phase 3: Testing & Verification**
+
+**STOP AND WAIT:** Conduct comprehensive testing and prepare for audit.
+
+**Unit Testing:**
+1. **Function Testing:** Test all public and external functions
+2. **Edge Cases:** Test boundary conditions and error scenarios
+3. **Access Control:** Verify permission systems and role restrictions
+4. **State Transitions:** Test complex state changes and invariants
+
+**Integration Testing:**
+1. **Contract Interactions:** Test multi-contract communication and dependencies
+2. **Oracle Integration:** Verify external data source interactions
+3. **Gas Estimation:** Test and optimize gas consumption patterns
+4. **Network Compatibility:** Test across different network conditions
+
+**Security Testing:**
+1. **Static Analysis:** Run automated tools (Slither, Mythril) for vulnerability detection
+2. **Fuzz Testing:** Implement property-based testing for complex logic
+3. **Formal Verification:** Apply mathematical proofs for critical functions
+4. **Economic Analysis:** Review incentive structures for potential exploits
+
+---
+
+**Phase 4: Audit Preparation & Deployment**
+
+**STOP AND WAIT:** Prepare for production deployment with audit readiness.
+
+**Audit Preparation:**
+1. **Documentation:** Complete comprehensive contract specifications and comments
+2. **Test Coverage:** Achieve >95% code coverage with comprehensive test suites
+3. **Code Review:** Conduct internal security review and peer programming
+4. **Gas Optimization:** Final review and optimization of gas consumption
+
+**Deployment Preparation:**
+1. **Network Selection:** Choose appropriate mainnet and testnet deployment targets
+2. **Proxy Setup:** Implement upgradeable patterns if required
+3. **Verification Scripts:** Prepare contract verification and source code disclosure
+4. **Monitoring Integration:** Plan on-chain monitoring and alerting systems
+
+---
+
+**Deliverables:**
+1. **Smart Contracts:** Fully tested, documented, and audit-ready contracts
+2. **Test Suites:** Comprehensive unit and integration test coverage
+3. **Security Analysis:** Static analysis reports and security documentation
+4. **Deployment Scripts:** Automated deployment and verification scripts
+5. **Technical Documentation:** Contract specifications and integration guides
+
+**Success Criteria:**
+- All contracts pass static analysis tools without critical vulnerabilities
+- Test coverage exceeds 95% with comprehensive edge case testing
+- Gas optimization meets performance targets
+- Contracts ready for external security audit
+- Clear documentation enables third-party integration

@@ -1,0 +1,119 @@
+---
+alwaysApply: false
+description: "Template for agent-specific findings and analysis results in multi-agent workflows"
+template_type: "multi-agent-communication"
+template_purpose: "analysis-documentation"
+---
+
+# Agent Findings Template
+**Session ID:** [SESSION_ID]
+**Agent Role:** [AGENT_NAME_OR_ROLE]
+**Topic/Area:** [ANALYSIS_TOPIC]
+**Timestamp:** [YYYY-MM-DDTHH:MM:SSZ]
+**Quality Score:** [X/10]
+
+## Executive Summary
+[2-3 sentence overview of key findings and recommendations]
+
+## Analysis Scope
+**What was analyzed:** [Brief description of analysis scope and methodology]
+**Key questions addressed:** [List of primary questions or objectives]
+**Constraints considered:** [Any limitations or assumptions]
+
+## Key Findings
+
+### Critical Issues
+[High-priority findings that require immediate attention]
+
+### Important Observations
+[Significant findings that impact the project but aren't critical]
+
+### Minor Notes
+[Additional observations and recommendations for consideration]
+
+## Detailed Analysis
+
+### [Finding Category 1]
+**Description:** [Detailed explanation of the finding]
+**Evidence:** [File paths, line numbers, logs, or other supporting data]
+**Impact:** [How this affects the project or system]
+**Recommendation:** [Specific actionable steps to address]
+
+### [Finding Category 2]
+**Description:** [Detailed explanation of the finding]
+**Evidence:** [File paths, line numbers, logs, or other supporting data]
+**Impact:** [How this affects the project or system]
+**Recommendation:** [Specific actionable steps to address]
+
+## Recommendations Summary
+
+### Immediate Actions (Priority: High)
+1. [Action item with timeline and responsible party]
+2. [Action item with timeline and responsible party]
+3. [Action item with timeline and responsible party]
+
+### Short-term Improvements (Priority: Medium)
+1. [Action item with timeline and responsible party]
+2. [Action item with timeline and responsible party]
+
+### Long-term Considerations (Priority: Low)
+1. [Action item with timeline and responsible party]
+
+## Risk Assessment
+**Risk Level:** [Low/Medium/High/Critical]
+**Likelihood:** [Low/Medium/High/Certain]
+**Impact:** [Description of potential consequences]
+**Mitigation:** [Strategies to reduce or eliminate the risk]
+
+## Quality Validation
+
+### Analysis Quality Checks
+- [ ] Methodology appropriate for the problem domain
+- [ ] Evidence-based conclusions with supporting data
+- [ ] Recommendations are specific and actionable
+- [ ] Assumptions clearly stated and reasonable
+- [ ] Peer review completed (if applicable)
+
+### Evidence Preservation
+- [ ] All file references are accurate and accessible
+- [ ] Screenshots or logs included where helpful
+- [ ] Test results documented with methodology
+- [ ] Code examples functional and complete
+
+## Related Files and References
+
+### Input Files Analyzed
+- `[path/to/file1.ext]`: [Brief description of relevance]
+- `[path/to/file2.ext]`: [Brief description of relevance]
+- `[path/to/file3.ext]`: [Brief description of relevance]
+
+### Generated Artifacts
+- `[path/to/artifact1.ext]`: [Description of what was created]
+- `[path/to/artifact2.ext]`: [Description of what was created]
+
+### Cross-References
+- **Session State:** `session_[session_id]_state.md`
+- **Related Findings:** [Links to other agent findings in this session]
+- **Quality Checks:** `quality/session_[session_id]_checks.md`
+
+## Agent Handover Notes
+
+### For Next Agent
+[Specific information the next agent should know about these findings]
+
+### Questions for Clarification
+[Any aspects that need further investigation or clarification]
+
+### Dependencies Identified
+[Other work that should be completed before or after these recommendations]
+
+## Change History
+- **[YYYY-MM-DD]** [Agent]: Initial analysis completed
+- **[YYYY-MM-DD]** [Agent]: Recommendations refined based on additional data
+- **[YYYY-MM-DD]** [Agent]: Quality validation completed
+
+---
+
+**Template Version:** 1.0
+**Cursor IDE Compatibility:** ✅ Optimized for file-based agent communication
+**Quality Standards:** Meets multi-agent workflow requirements

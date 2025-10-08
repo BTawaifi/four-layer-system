@@ -1,0 +1,23 @@
+---
+globs: *.py
+description: "Ensures all ML operations maintain production readiness and statistical rigor"
+---
+
+rules:
+- **Production ML Mindset**: All ML operations must demonstrate production readiness through:
+  1. **Statistical Validation**: Include appropriate statistical tests (stationarity, heteroscedasticity, autocorrelation) before model selection
+  2. **Temporal Integrity**: Ensure no data leakage between train/validation/test splits and respect temporal ordering
+  3. **Error Resilience**: Implement proper error handling, circuit breakers, and graceful degradation
+  4. **Performance Monitoring**: Include metrics collection, alerting thresholds, and performance tracking
+  5. **Resource Awareness**: Consider memory usage, computational efficiency, and scalability
+  6. **Documentation Standards**: Provide clear documentation of assumptions, limitations, and uncertainty quantification
+  7. **Validation Rigor**: Use appropriate cross-validation strategies (walk-forward, time series split) and multiple evaluation metrics
+  8. **Risk Assessment**: Quantify uncertainty, provide confidence intervals, and assess model stability
+
+- **Evidence-Based Decisions**: Always provide statistical evidence for architectural choices, hyperparameter selections, and model comparisons
+
+- **Trade-off Analysis**: Explicitly discuss complexity vs interpretability, performance vs maintainability, and accuracy vs robustness
+
+- **Production Constraints**: Consider deployment requirements, monitoring capabilities, and operational maintenance needs in all recommendations
+
+- **Statistical Skepticism**: Question assumptions, demand evidence, and prefer simple explanations over complex ones when statistically justified

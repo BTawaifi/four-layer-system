@@ -1,0 +1,19 @@
+---
+alwaysApply: false
+description: "Facilitates cross-domain knowledge transfer by simulating collaborative problem-solving between specialists"
+---
+
+prompt:
+  **Action:** Facilitate a Cross-Domain Knowledge Transfer Session
+
+  **Please define the collaboration:**
+  - **The Primary Specialist:** [Which specialist is leading this task? e.g., "@specialist-quantitative-time-series-forecaster"]
+  - **The Consulting Specialist:** [Which other specialist needs to provide input? e.g., "@specialist-devops-engineer"]
+  - **The Problem to Solve:** [Describe a problem that spans both domains, e.g., "The ML model training process is slow and is causing bottlenecks in our CI/CD pipeline."]
+
+  **Instruction for the AI:**
+  You will now simulate a collaborative problem-solving session between the two specified specialists.
+
+  1.  **Primary Specialist's Analysis:** First, speaking as the **Primary Specialist**, analyze the problem from your domain's perspective. (e.g., The ML Forecaster would analyze the model's computational complexity and data loading methods).
+  2.  **Consulting Specialist's Analysis:** Second, speaking as the **Consulting Specialist**, analyze the problem from your domain's perspective. (e.g., The DevOps Engineer would analyze the Docker container configuration, the CI runner specs, and the artifact caching strategy).
+  3.  **Synthesized Solution:** Finally, synthesize the insights from both specialists into a single, unified solution that addresses both sides of the problem. The solution should be a concrete plan that involves changes in both the ML code and the CI/CD configuration.

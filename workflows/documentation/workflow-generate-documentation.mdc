@@ -1,0 +1,17 @@
+---
+alwaysApply: false
+description: "Generates technical documentation from source code in various formats including JSDoc, README, and OpenAPI specs"
+---
+
+**Action:** Generate Technical Documentation from Source Code
+
+**Please define the documentation:**
+- **The Source Code:** @[path/to/the/file_or_directory/to_document.ext]
+- **The Desired Format:** [e.g., "JSDoc comments," "A project README.md file," "An OpenAPI (Swagger) specification for this API endpoint," "Python Docstrings"]
+- **The Target Audience:** [e.g., "New developers joining the team," "External API consumers," "Future me"]
+
+**Instruction for the AI:**analyze the provided source code and generate clear, concise, and accurate documentation in the specified format. The documentation should cover:
+- The overall purpose of the code.
+- Descriptions for public functions/methods, including parameters and return values.
+- Examples of how to use the code.
+- Any important notes on dependencies or environment setup.

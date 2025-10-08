@@ -1,0 +1,338 @@
+---
+alwaysApply: false
+description: "Comprehensive workflow for session recovery, continuation, and state management across Cursor IDE interruptions"
+---
+
+**Action:** Initialize Session Recovery and Continuation Management
+
+**Please define the session recovery context:**
+
+- **Recovery Scenario:** [Planned Continuation / Unexpected Interruption / IDE Crash / Context Overflow]
+- **Workflow Complexity:** [Simple/Moderate/Complex/Critical - affects recovery strategy]
+- **Time Since Interruption:** [Minutes/Hours/Days - affects recovery approach]
+- **Data Loss Risk:** [None/Low/Medium/High/Critical - determines recovery priority]
+- **Continuation Urgency:** [Low/Medium/High/Critical - affects recovery speed vs thoroughness]
+
+**Instruction for the AI:**
+You will execute a comprehensive session recovery and continuation workflow specifically designed for Cursor IDE's session-based constraints. This workflow ensures minimal work loss and seamless continuation of complex multi-session activities.
+
+---
+
+## Recovery Assessment Phase (5-10 minutes)
+**STOP AND WAIT:** Complete assessment before proceeding with recovery
+
+### 1. Session State Analysis
+**Critical Assessment Tasks:**
+- [ ] Identify last known stable state before interruption
+- [ ] Evaluate data loss extent and impact on workflow
+- [ ] Assess context preservation effectiveness
+- [ ] Determine recovery approach based on interruption type
+
+**State Location Check:**
+- Primary: `cursor_sessions/[session_id]/recovery_points/`
+- Secondary: `cursor_sessions/[session_id]/session_state.md`
+- Tertiary: File-based artifacts in workspace
+- Emergency: User recollection and documentation review
+
+### 2. Recovery Priority Classification
+**Impact Assessment:**
+- **Critical Loss:** Core deliverables or decisions compromised
+- **Major Loss:** Significant progress lost, timeline impact
+- **Minor Loss:** Small amount of work lost, easily recoverable
+- **No Loss:** Complete state preservation, normal continuation
+
+**Recovery Urgency Matrix:**
+| Data Loss | Workflow Criticality | Recovery Priority |
+|-----------|---------------------|-------------------|
+| Critical | Critical | Emergency (< 30 min) |
+| Major | High | Urgent (< 2 hours) |
+| Minor | Medium | Standard (< 4 hours) |
+| None | Low | Routine (< 24 hours) |
+
+---
+
+## State Reconstruction Phase (15-30 minutes)
+**STOP AND WAIT:** Achieve stable state before workflow continuation
+
+### 1. State File Recovery
+**Automated Recovery Process:**
+- Load most recent recovery point automatically
+- Validate state file integrity and completeness
+- Cross-reference with file-based artifacts
+- Reconstruct missing state from available evidence
+
+**Recovery Point Structure:**
+```
+recovery_point_[timestamp].json:
+{
+  "session_id": "workflow_2025_0922_001",
+  "timestamp": "2025-09-22T14:30:00Z",
+  "recovery_type": "auto/manual/emergency",
+  "state_quality": "complete/partial/minimal",
+  "context_size": "original/compressed/minimal",
+  "recovery_confidence": "high/medium/low"
+}
+```
+
+### 2. Context Reconstruction
+**Context Restoration Strategies:**
+- **Complete State:** Direct restoration from recovery point
+- **Partial State:** Reconstruct from artifacts and user input
+- **Minimal State:** Bootstrap from documentation and goals
+- **Progressive Reconstruction:** Build context incrementally
+
+**Context Validation:**
+- [ ] Core objectives and constraints restored
+- [ ] Critical decisions and architectural choices preserved
+- [ ] Active work context reconstructed
+- [ ] File references and dependencies verified
+
+### 3. Work Loss Assessment
+**Detailed Loss Analysis:**
+- **Completed Work:** Successfully preserved and accessible
+- **In-Progress Work:** Partially complete, requires continuation
+- **Lost Work:** Cannot be recovered, needs re-creation
+- **Impact Assessment:** Effect on timeline and deliverables
+
+**Recovery Planning:**
+- Prioritize critical path items for immediate attention
+- Schedule re-creation of lost work based on dependencies
+- Adjust timeline expectations based on recovery requirements
+- Communicate impact to stakeholders if necessary
+
+---
+
+## Workflow Continuation Phase (Core Session Time)
+**STOP AND WAIT:** Establish stable continuation before full productivity
+
+### 1. Session Reinitialization
+**Environment Restoration:**
+- Reapply relevant contexts and modifiers
+- Restore tool configurations and preferences
+- Reconnect to external resources and dependencies
+- Validate development environment readiness
+
+**Context Optimization:**
+- Apply appropriate compression for recovered context
+- Optimize loading for continuation priorities
+- Balance context size with information needs
+- Establish monitoring for context stability
+
+### 2. Work Recovery Execution
+**Systematic Recovery Approach:**
+- **Phase 1:** Restore completed work verification (10-15 min)
+- **Phase 2:** Reconstruct in-progress work (20-40 min)
+- **Phase 3:** Recreate lost work based on priorities (30-60 min)
+- **Phase 4:** Validate recovered state and quality (15-30 min)
+
+**Recovery Quality Gates:**
+- [ ] All critical decisions and architectural choices verified
+- [ ] Active work context fully reconstructed
+- [ ] Development environment properly configured
+- [ ] Quality standards re-established for continued work
+
+### 3. Productivity Ramp-Up
+**Gradual Resumption:**
+- Start with familiar, low-risk tasks to rebuild confidence
+- Gradually increase complexity as recovery stabilizes
+- Monitor productivity metrics and quality indicators
+- Adjust approach based on recovery effectiveness
+
+---
+
+## Prevention Enhancement Phase (5-10 minutes)
+**STOP AND WAIT:** Implement prevention measures before full workflow resumption
+
+### 1. Recovery Point Strategy
+**Enhanced Prevention:**
+- Increase recovery point frequency for critical workflows
+- Implement multiple recovery point types (auto/manual/quality-gate)
+- Establish recovery point naming conventions
+- Create recovery point validation procedures
+
+**Recovery Point Types:**
+- **Auto:** Every 10 minutes during active work
+- **Manual:** At natural work boundaries (phase completion)
+- **Quality:** After major decisions or deliverables
+- **Emergency:** Before high-risk operations
+
+### 2. Session Management Improvements
+**Prevention Measures:**
+- Implement session health monitoring and alerts
+- Establish session time limit warnings and break recommendations
+- Create session summary protocols for clean transitions
+- Develop session interruption preparation procedures
+
+**Session Health Indicators:**
+- Context usage percentage and trend
+- Token consumption rate and budget status
+- Work completion velocity and quality metrics
+- Session duration and fatigue indicators
+
+### 3. Backup Strategy Enhancement
+**Robust Backup Approach:**
+- Multiple backup locations (local/cloud/external)
+- Automated backup verification and integrity checking
+- Backup encryption for sensitive information
+- Backup restoration testing and validation
+
+**Backup Frequency Guidelines:**
+- **Critical Workflows:** Real-time or every 5 minutes
+- **High-Importance:** Every 15-30 minutes
+- **Standard Workflows:** Every 30-60 minutes
+- **Low-Importance:** Every 2-4 hours
+
+---
+
+## Quality Assurance Phase (10-15 minutes)
+**STOP AND WAIT:** Validate recovery quality before workflow continuation
+
+### 1. Recovery Quality Validation
+**Comprehensive Assessment:**
+- [ ] Recovered state accuracy and completeness verified
+- [ ] Work quality maintained through recovery process
+- [ ] File integrity and reference validity confirmed
+- [ ] Development environment functionality tested
+
+**Quality Metrics:**
+- **State Completeness:** Percentage of original context successfully recovered
+- **Work Quality Preservation:** Quality maintained vs pre-interruption baseline
+- **Recovery Time Efficiency:** Time to recovery vs data loss extent
+- **Future Prevention:** Effectiveness of implemented prevention measures
+
+### 2. Session Readiness Confirmation
+**Final Validation:**
+- [ ] All recovery objectives achieved
+- [ ] Workflow can proceed without recovery-related blockers
+- [ ] Quality standards re-established and monitored
+- [ ] Prevention measures active and validated
+
+**Readiness Checklist:**
+- Recovery state stable and fully functional
+- Development environment ready for continued work
+- Quality monitoring active and calibrated
+- Prevention measures implemented and tested
+
+---
+
+## Long-Term Recovery Planning (Optional - 5-10 minutes)
+**Consider for complex or critical workflows**
+
+### 1. Recovery Process Documentation
+**Institutional Learning:**
+- Document recovery process and lessons learned
+- Update recovery procedures based on experience
+- Share recovery patterns with team members
+- Contribute to organizational recovery knowledge base
+
+### 2. Process Improvement Identification
+**Continuous Enhancement:**
+- Identify recovery process inefficiencies
+- Propose automation opportunities
+- Suggest prevention measure improvements
+- Plan training enhancements for team members
+
+### 3. Risk Mitigation Strategy
+**Future Prevention:**
+- Update risk assessments based on recovery experience
+- Implement additional safeguards for similar scenarios
+- Review insurance or backup strategies if applicable
+- Plan for scale considerations in recovery processes
+
+---
+
+## Recovery Success Metrics
+
+### Time-Based Metrics
+- **Recovery Time Objective (RTO):** Time to restore operational capability
+- **Recovery Point Objective (RPO):** Maximum acceptable data loss
+- **Mean Time Between Failures (MTBF):** Session stability measurement
+- **Mean Time To Recovery (MTTR):** Average recovery duration
+
+### Quality-Based Metrics
+- **Recovery Completeness:** Percentage of work successfully recovered
+- **Quality Preservation:** Maintenance of work quality through recovery
+- **User Satisfaction:** Stakeholder satisfaction with recovery process
+- **Process Efficiency:** Recovery time vs complexity of interruption
+
+### Prevention Effectiveness Metrics
+- **Prevention Measure Adoption:** Percentage of recommended measures implemented
+- **Incident Reduction:** Decrease in similar interruption frequency
+- **Recovery Time Improvement:** Reduction in future recovery durations
+- **Cost Efficiency:** Cost-benefit analysis of prevention investments
+
+## Recovery Scenario Playbooks
+
+### Scenario 1: Planned Session Continuation
+**Characteristics:** Expected end-of-session, clean state preservation
+**Recovery Approach:** Standard continuation with state restoration
+**Time Expectation:** 5-15 minutes
+**Prevention Focus:** Session boundary optimization
+
+### Scenario 2: Unexpected IDE Interruption
+**Characteristics:** Sudden crash or forced closure, partial state loss
+**Recovery Approach:** State reconstruction with artifact analysis
+**Time Expectation:** 15-45 minutes
+**Prevention Focus:** Auto-save frequency and crash recovery
+
+### Scenario 3: Context Overflow Interruption
+**Characteristics:** Token/context limits exceeded, controlled interruption
+**Recovery Approach:** Context optimization and selective restoration
+**Time Expectation:** 20-60 minutes
+**Prevention Focus:** Context monitoring and optimization strategies
+
+### Scenario 4: Extended Interruption (Days)
+**Characteristics:** Multi-day gap, significant context refresh needed
+**Recovery Approach:** Comprehensive state reconstruction and validation
+**Time Expectation:** 45-120 minutes
+**Prevention Focus:** Long-term state preservation and documentation
+
+## Emergency Recovery Protocols
+
+### Critical Situation Response
+**When Recovery is Impossible:**
+1. **Isolate Impact:** Contain damage to affected workflow only
+2. **Alternative Approaches:** Identify workaround solutions
+3. **Stakeholder Communication:** Transparent impact communication
+4. **Learning Capture:** Document causes for future prevention
+
+### Crisis Management
+**Severe Interruption Scenarios:**
+- Multiple workflow impacts requiring coordinated recovery
+- Critical deadline implications requiring accelerated recovery
+- Data loss affecting multiple stakeholders or systems
+- Recovery process itself encountering failures
+
+**Crisis Response Framework:**
+1. **Assessment:** Rapid impact and priority evaluation
+2. **Communication:** Stakeholder notification and expectation setting
+3. **Resource Allocation:** Emergency resource deployment for recovery
+4. **Recovery Execution:** Accelerated recovery with parallel processing
+5. **Review:** Post-recovery analysis and improvement planning
+
+---
+
+## Integration with IDE Optimization Contexts
+
+### Recommended Context Combinations
+**For Recovery Scenarios:**
+```
+Primary: @context-cursor-session-workflow-manager
+Supporting: @context-progressive-context-loader
+Quality: @context-token-efficiency-manager
+```
+
+**Context Coordination:**
+- Session manager provides overall coordination
+- Progressive loader handles context reconstruction
+- Token manager ensures efficient recovery operations
+- Quality monitoring validates recovery effectiveness
+
+### Automated Recovery Triggers
+**Context Integration:**
+- Automatic recovery point creation during workflow execution
+- Context-aware interruption detection and response
+- Progressive context reconstruction based on recovery needs
+- Quality validation integrated with recovery verification
+
+This comprehensive recovery and continuation workflow ensures robust session management and minimal work loss, enabling reliable execution of complex workflows within Cursor IDE's session-based constraints.

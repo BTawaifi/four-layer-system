@@ -1,0 +1,15 @@
+---
+alwaysApply: false
+description: "Generates step-by-step workflow documentation by tracing user journeys through the codebase"
+---
+
+**Action:** Generate Workflow Documentation from Code
+
+**Please provide the context:**
+
+- **The User Persona:** [Who is performing the action? e.g., "An Administrator," "A first-time user."]
+- **The Goal/Task:** [What are they trying to achieve? e.g., "How do they publish a new article?"]
+- **The Starting Point (Optional but helpful):** @[path/to/the/start/of/the/workflow.ext]
+
+**Instruction for the AI:**
+Trace the user's journey through the codebase, starting from the entry point if provided. Generate a clear, step-by-step guide explaining how the user accomplishes the specified goal. The guide should be written for a non-technical or semi-technical audience.

@@ -1,0 +1,36 @@
+---
+alwaysApply: false
+description: "Generates idempotent data migration scripts that transform data from old schemas to new schemas"
+---
+
+**Action:** Generate a Data Migration Script
+
+**Please define the migration:**
+
+- **The Source Schema:**
+
+```
+[Provide the SQL `CREATE TABLE`, JSON schema, or class definition for the OLD data structure.]
+```
+
+- **The Destination Schema:**
+
+```
+[Provide the SQL `CREATE TABLE`, JSON schema, or class definition for the NEW data structure.]
+```
+
+- **The Transformation Logic (as a list of rules):**
+- [e.g., - The `users.fullName` field should be split into `profiles.firstName` and `profiles.lastName`.]
+- [e.g., - The `orders.status` enum ('PENDING', 'SHIPPED') should be mapped to an integer (`0`, `1`).]
+- [e.g., - `products.price_cents` should be converted to a float `products.price_dollars` by dividing by 100.]
+- **The Target Language/Framework:** [e.g., "Python with SQLAlchemy," "Node.js with Knex.js," "Plain SQL"]
+
+**Instruction for the AI:**
+Generate a complete, idempotent data migration script that:
+
+1.  Connects to a source and destination database (with placeholder credentials).
+2.  Selects all data from the source table.
+3.  Iterates through each record, applying the specified transformation logic to map it to the new schema.
+4.  Inserts the transformed data into the destination table.
+5.  Includes logging to report its progress and any errors encountered.
+6.  Is designed to be safely re-runnable (idempotent).

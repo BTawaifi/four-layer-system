@@ -1,0 +1,24 @@
+---
+alwaysApply: false
+description: "Guiding principle that requires global pattern analysis before implementing features to maintain codebase consistency"
+---
+
+prompt:
+
+---
+
+**[GUIDING PRINCIPLE: ADHERE TO GLOBAL PATTERNS]**
+
+**Instruction for the AI:**
+Before you implement any new feature or fix any bug, you must first perform a "Global Pattern Analysis." Do not write any implementation code until this analysis is complete.
+
+1.  **Identify the Core Task:** What is the fundamental nature of the task I am asking you to do? (e.g., "Add a new ML model," "Implement a new data loading source," "Create a new API endpoint.")
+2.  **Scan for Precedent:** Scan the entire codebase to find existing, established patterns for this exact type of task.
+3.  **Synthesize the "Golden Path":** Based on your scan, explicitly state the established, "golden path" or architectural pattern for this task in our codebase. Your summary should answer:
+    - **Where does the code live?** (e.g., "New ML models are always implemented as classes in the `/ml_models` directory.")
+    - **What is the required interface?** (e.g., "All models must have a `.train()` and `.predict()` method with these specific signatures.")
+    - **How is it configured?** (e.g., "All configurable parameters must be loaded from `config.py`.")
+    - **How is it integrated?** (e.g., "The new model must be registered in the `model_factory` in `main.py` to be used by the pipeline.")
+4.  **Confirm the Plan:** State that your proposed implementation will strictly follow this identified "golden path."
+
+**[STOP AND WAIT FOR MY APPROVAL OF YOUR IDENTIFIED GLOBAL PATTERN BEFORE YOU BEGIN WRITING CODE]**

@@ -1,0 +1,15 @@
+---
+alwaysApply: false
+description: "Enhances investigation prompts by identifying and incorporating missing architectural components and failure modes"
+---
+
+**Action:** Enhance an Investigation Prompt
+
+**Please review the following:**
+- **The Base Prompt/Scope:**
+```
+[Paste the initial investigation scope or prompt here.]
+```
+- **The Codebase Context:** [Provide the root directory or key files the investigation will target, e.g., "The entire ML pipeline in `/src`."]
+
+**Instruction for the AI:**analyze the base prompt and compare its scope against the provided codebase context. Identify any critical architectural components, potential failure modes, or unique implementation details in the code that are **not** covered by the base prompt. Respond with an "Enhanced Prompt" that incorporates these missing areas, making the investigation more comprehensive and tailored to this specific system.

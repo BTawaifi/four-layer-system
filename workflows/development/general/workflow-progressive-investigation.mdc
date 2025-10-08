@@ -1,0 +1,40 @@
+---
+alwaysApply: false
+description: "Multi-phase progressive investigation workflow with iterative deep-dives based on initial findings"
+---
+
+**Action:** Initiate a Progressive Deep-Dive Investigation
+
+**Please define the investigation:**
+
+- **The System Under Investigation:** [e.g., "The Gold Price Prediction ML Pipeline."]
+- **The Initial Scope:** [Provide a high-level prompt or a set of initial questions, e.g., "Conduct a comprehensive, end-to-end investigation to find any mismatches between training and backtesting datasets."]
+
+**Instruction for the AI:**
+You will now conduct a multi-stage investigation. The process is designed to allow for progressive deep-dives based on initial findings.
+
+---
+
+**Phase 1: High-Level Scan & Initial Report**
+
+- Based on the initial scope, conduct a high-level scan of the entire system.
+- Generate a preliminary report that identifies potential areas of concern, inconsistencies, or architectural patterns that require closer inspection. Do not do a deep-dive yet.
+
+**[STOP AND WAIT FOR ME TO REVIEW THE PRELIMINARY REPORT AND PROVIDE A LIST OF SPECIFIC AREAS FOR DEEP-DIVE ANALYSIS]**
+
+---
+
+**Phase 2: Targeted Deep-Dive**
+
+- For each of the specific areas I select from your initial report, conduct a thorough, evidence-based investigation.
+- Your analysis must be backed by concrete evidence (file paths, line numbers, log snippets, etc.).
+- Present the deep-dive findings for each area separately.
+
+**[STOP AND WAIT FOR ME TO REVIEW THE DEEP-DIVE FINDINGS AND CONFIRM THEIR VALIDITY]**
+
+---
+
+**Phase 3: Final Report Synthesis**
+
+- Synthesize all the confirmed findings from the deep-dive into a single, comprehensive final report.
+- The report should include an executive summary, a detailed breakdown of the real issues, root cause analysis, and actionable recommendations.

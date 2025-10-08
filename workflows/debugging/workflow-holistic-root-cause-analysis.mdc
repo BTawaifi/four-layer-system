@@ -1,0 +1,40 @@
+---
+alwaysApply: false
+description: "Multi-phase holistic root cause analysis that identifies systemic issues rather than just symptoms"
+---
+
+prompt:
+**Action:** Initiate a Holistic Root Cause Analysis
+
+**Please provide the context:**
+
+- **The Primary Failure:** [Paste the main error message and stack trace that is causing the system to fail.]
+- **The System's Goal:** [What is the overall goal of the system that is failing? e.g., "To run an integration test suite," "To process a data pipeline."]
+- **The Failing Component's Role:** [What is the specific job of the component that is throwing the error? e.g., "It's a test fixture in `conftest.py` designed to generate synthetic data."]
+
+**Instruction for the AI:**
+You are a Principal Systems Engineer. Your task is not just to find the line that threw the error, but to understand the _systemic reason_ for the failure. Do not assume the failing component is the broken component.
+
+---
+
+**Phase 1: Intent Analysis & Symptom Diagnosis**
+
+- **Analyze Intent:** Based on the failing component's role, what is its intended purpose? What is it _supposed_ to guarantee or check? (e.g., "This `AssertionError` in `conftest.py` is intended to guarantee that the synthetic test data has realistic, low-drift properties.")
+- **Diagnose the Symptom:** What does the immediate failure tell us? (e.g., "The synthetic data being generated is statistically unrealistic and has a high drift.")
+- **Formulate the Real Question:** Re-frame the problem. Instead of "Why is this line failing?", the question is now "**What other part of the system could be causing this guardrail to fail?**"
+
+**[STOP AND WAIT FOR MY APPROVAL OF YOUR INTENT ANALYSIS]**
+
+---
+
+**Phase 2: Cross-System Investigation**
+
+- **Investigate Dependencies:** Look for dependencies or inputs that the failing component relies on. (e.g., "The `conftest.py` fixture depends on configuration from `test_config` and libraries like `numpy`.")
+- **Investigate Callers:** How is this failing component being used by the rest of the system? Is it being called with incorrect parameters or in an unexpected state?
+- **Propose a Hypothesis:** Formulate a hypothesis about the true root cause, which may be in a different file or system entirely. (e.g., "My hypothesis is that recent changes to the `numpy` library or the `test_config` parameters are interacting in a way that makes the data generation unstable.")
+
+---
+
+**Phase 3: Propose a Systemic Fix**
+
+- Based on your cross-system investigation, propose a "systemic fix" that addresses the true root cause, not just the symptom. (e.g., "The `mu` parameter for drift in `conftest.py` is too sensitive to the random seed. The fix is to use a more stable random number generation process or to adjust the assertion threshold to be more tolerant.")

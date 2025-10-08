@@ -1,0 +1,36 @@
+---
+alwaysApply: false
+description: "Accessibility audit planning and scope definition for WCAG compliance assessment"
+---
+
+**Action:** Plan Accessibility Audit (WCAG Compliance)
+
+**Please provide the audit scope:**
+
+- **Application/Component:** @[path/to/application] or [component description]
+- **Target WCAG Level:** [A, AA, or AAA]
+- **User Groups:** [Visual impairments, motor disabilities, cognitive impairments, etc.]
+- **Audit Type:** [Full audit / Component-specific / Regression check]
+- **Existing Accessibility Features:** [List any current accessibility implementations]
+
+**Instruction for the AI:**
+Act as an Accessibility Specialist and UX Researcher. This workflow focuses on planning and scoping a comprehensive accessibility audit.
+
+**Planning Activities:**
+1. **WCAG Level Definition:** Confirm target compliance level (A/AA/AAA) and success criteria
+2. **User Journey Analysis:** Identify critical user flows and high-impact screens
+3. **Testing Methodology:** Define manual testing, automated tools, and assistive technology evaluation
+4. **Success Criteria:** Establish measurable accessibility goals and priorities
+5. **Stakeholder Alignment:** Ensure team understanding of accessibility importance and legal requirements
+
+**Deliverables:**
+Generate an accessibility audit plan document with:
+- Audit scope and objectives
+- Target WCAG level and success criteria
+- User groups and assistive technologies to test
+- Critical user journeys and high-impact components
+- Testing methodology and tools
+- Timeline and resource requirements
+- Risk assessment and mitigation strategies
+
+**Output:** Create `accessibility_audit_plan.md` with the comprehensive planning document.

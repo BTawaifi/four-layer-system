@@ -1,0 +1,13 @@
+---
+alwaysApply: false
+description: "Primes AI for new tasks by establishing persona, objective, and end deliverable for the session"
+---
+
+**Action:** Prime AI for a New Task
+
+**Please define the session:**
+- **Your Persona:** [How should the AI act? e.g., "A meticulous QA Tester," "A Senior DevOps Engineer," "A Product Manager reviewing a feature," "A code historian."]
+- **The High-Level Objective:** [What is the ultimate goal of this entire conversation? e.g., "To diagnose and fix a critical production bug," "To plan the architecture for a new microservice," "To document the entire user authentication flow."]
+- **The End Deliverable:** [What should be the final output of our work? e.g., "A patched code file and a summary of the fix," "A markdown file with the architectural plan," "A set of generated test files."]
+
+**Instruction for the AI:**acknowledge this persona and objective. All your subsequent responses in this conversation should align with this role and work towards the final deliverable. Wait for me to provide the necessary context before you begin your analysis.

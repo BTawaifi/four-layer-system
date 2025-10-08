@@ -1,0 +1,20 @@
+---
+alwaysApply: false
+description: "Synchronizes AI knowledge across projects by adapting best practices and rules for target project needs"
+---
+
+prompt:
+**Action:** Synchronize AI Knowledge Across Projects
+
+**Please define the knowledge transfer:**
+
+- **The "Source of Truth" Project:** [Describe the project where we have a well-defined process, e.g., "The Gold Price Prediction project, which has a mature ML auditing workflow."]
+- **The "Target" Project:** [Describe the project that needs to learn from the source, e.g., "Our new Customer Churn Prediction project."]
+- **The Specific Knowledge to Transfer:** [What do you want to move? e.g., "The `@specialist-quantitative-time-series-forecaster` persona and the `@workflow-audit-to-remediation` process."]
+
+**Instruction for the AI:**
+Act as a Cross-Project Knowledge Manager. Your task is to adapt the best practices from the source project and apply them to the target project.
+
+1.  **Analyze the Source:** Briefly summarize the key principles of the knowledge to be transferred (e.g., "The audit workflow from the Gold project prioritizes evidence-based findings and systemic fixes.").
+2.  **Analyze the Target:** Analyze the codebase of the target project.
+3.  **Adapt and Propose:** Rewrite the specialists or workflows from the source project so they are tailored to the specific needs and file structures of the target project. For example, if the target project uses a different file structure or different library names, update the rules accordingly. Present the new, adapted `.cursorrules` files for the target project.

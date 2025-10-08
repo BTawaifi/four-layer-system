@@ -1,0 +1,33 @@
+---
+alwaysApply: false
+description: "Post-action hook that verifies systemic consistency by scanning for old patterns and validating new implementations"
+---
+
+prompt:
+
+---
+
+**[POST-ACTION HOOK: Systemic Consistency Verification]**
+
+**Instruction for the AI:**
+The change you just made was intended to be applied system-wide. Before we proceed, you must prove that the codebase is now in a consistent state.
+
+Perform the following verification steps:
+
+1.  **Identify the "Old" and "New" Patterns:**
+
+    - **The "Old" Pattern:** [Clearly state the old code pattern that should now be obsolete, e.g., "Calling the deprecated function `getUserLegacy()`."]
+    - **The "New" Pattern:** [Clearly state the new code pattern that should be used everywhere, e.g., "Calling the new function `fetchUserProfile()`."]
+
+2.  **Scan for Lingering "Old" Patterns:**
+
+    - Perform a **full, codebase-wide search** for any remaining instances of the "Old" pattern.
+    - **Report the Findings:**
+      - If the scan finds **zero** remaining instances, state: "✅ **Consistency Confirmed:** The old pattern has been completely eliminated from the codebase."
+      - If the scan finds **any** remaining instances, state: "❌ **Inconsistency Detected:** I have found the following lingering instances of the old pattern that I missed:" and provide a bulleted list of the file paths and line numbers.
+
+3.  **Validate "New" Pattern Usage:**
+    - Briefly review a few of the places where you implemented the "New" pattern.
+    - Confirm that it was implemented correctly and consistently in all locations (e.g., correct arguments, handling the return value properly).
+
+**[STOP AND WAIT FOR MY ACKNOWLEDGEMENT OF THE CONSISTENCY REPORT]**

@@ -1,0 +1,682 @@
+---
+alwaysApply: false
+description: "Automated quality validation script for continuous content quality assurance"
+template_type: "automation-script"
+template_purpose: "quality-validation"
+---
+
+# Quality Validation Automation Script
+
+**Purpose:** Automated validation of Four-Layer Rules System content quality with scoring and improvement suggestions
+
+**Usage:**
+```bash
+# Run full quality validation
+python quality_validation.py --comprehensive
+
+# Run specific layer validation
+python quality_validation.py --layer workflows
+
+# Run real-time validation on file changes
+python quality_validation.py --watch --file path/to/file.mdc
+
+# Generate quality report
+python quality_validation.py --report --output quality_report_2025-09-22.json
+```
+
+---
+
+## Script Architecture
+
+### Core Components
+
+#### 1. Quality Validator Class
+```python
+class QualityValidator:
+    def __init__(self, config_path="quality_config.json"):
+        self.config = self.load_config(config_path)
+        self.validators = self.initialize_validators()
+        self.scorer = QualityScorer()
+        self.reporter = QualityReporter()
+
+    def validate_file(self, file_path):
+        """Validate single file and return quality assessment"""
+        content = self.load_content(file_path)
+        layer_type = self.identify_layer(file_path)
+
+        results = {}
+        for validator in self.validators[layer_type]:
+            results.update(validator.validate(content))
+
+        score = self.scorer.calculate_score(results, layer_type)
+        suggestions = self.generate_improvements(results, layer_type)
+
+        return {
+            'file': file_path,
+            'layer': layer_type,
+            'results': results,
+            'score': score,
+            'suggestions': suggestions,
+            'timestamp': datetime.now().isoformat()
+        }
+
+    def validate_directory(self, directory_path, recursive=True):
+        """Validate all files in directory"""
+        results = []
+        for file_path in self.find_mdc_files(directory_path, recursive):
+            result = self.validate_file(file_path)
+            results.append(result)
+            self.log_validation(result)
+
+        return self.aggregate_results(results)
+```
+
+#### 2. Layer-Specific Validators
+
+##### Specialist Validator
+```python
+class SpecialistValidator:
+    def validate(self, content):
+        results = {}
+
+        # YAML Frontmatter Validation
+        results['yaml_completeness'] = self.validate_yaml_frontmatter(content)
+        results['yaml_accuracy'] = self.validate_yaml_fields(content)
+
+        # Persona Validation
+        results['persona_completeness'] = self.validate_persona_section(content)
+        results['persona_depth'] = self.validate_persona_depth(content)
+
+        # Core Competencies Validation
+        results['competencies_structure'] = self.validate_competencies_structure(content)
+        results['competencies_completeness'] = self.validate_competencies_completeness(content)
+        results['competencies_depth'] = self.validate_competencies_depth(content)
+
+        # Development Approach Validation
+        results['approach_structure'] = self.validate_approach_structure(content)
+        results['approach_completeness'] = self.validate_approach_completeness(content)
+
+        # Key Guidelines Validation
+        results['guidelines_structure'] = self.validate_guidelines_structure(content)
+        results['guidelines_quality'] = self.validate_guidelines_quality(content)
+
+        # Technology Awareness Validation
+        results['technology_currency'] = self.validate_technology_currency(content)
+        results['version_awareness'] = self.validate_version_awareness(content)
+
+        # Cross-References Validation
+        results['cross_references_completeness'] = self.validate_cross_references(content)
+        results['cross_references_accuracy'] = self.validate_cross_reference_accuracy(content)
+
+        return results
+```
+
+##### Workflow Validator
+```python
+class WorkflowValidator:
+    def validate(self, content):
+        results = {}
+
+        # YAML Frontmatter Validation
+        results['yaml_completeness'] = self.validate_yaml_frontmatter(content)
+        results['yaml_accuracy'] = self.validate_yaml_fields(content)
+
+        # Action Statement Validation
+        results['action_clarity'] = self.validate_action_statement(content)
+        results['parameter_completeness'] = self.validate_parameters(content)
+        results['parameter_quality'] = self.validate_parameter_quality(content)
+
+        # AI Instruction Validation
+        results['instruction_clarity'] = self.validate_instruction_clarity(content)
+        results['instruction_completeness'] = self.validate_instruction_completeness(content)
+        results['success_criteria'] = self.validate_success_criteria(content)
+
+        # Phase Structure Validation
+        results['phase_logic'] = self.validate_phase_logic(content)
+        results['phase_completeness'] = self.validate_phase_completeness(content)
+        results['phase_quality'] = self.validate_phase_quality(content)
+
+        # Content Depth Validation
+        results['task_specificity'] = self.validate_task_specificity(content)
+        results['deliverable_clarity'] = self.validate_deliverable_clarity(content)
+        results['practical_value'] = self.validate_practical_value(content)
+
+        # IDE Compatibility Validation
+        results['session_management'] = self.validate_session_management(content)
+        results['context_handling'] = self.validate_context_handling(content)
+        results['token_optimization'] = self.validate_token_optimization(content)
+
+        # Cross-Layer Integration Validation
+        results['specialist_integration'] = self.validate_specialist_integration(content)
+        results['modifier_usage'] = self.validate_modifier_usage(content)
+        results['context_usage'] = self.validate_context_usage(content)
+
+        return results
+```
+
+#### 3. Quality Scorer
+```python
+class QualityScorer:
+    def __init__(self):
+        self.weights = {
+            'completeness': 0.25,
+            'depth': 0.25,
+            'accuracy': 0.20,
+            'usability': 0.15,
+            'integration': 0.15
+        }
+
+        self.layer_weights = {
+            'specialists': {
+                'yaml_completeness': 'completeness',
+                'persona_completeness': 'completeness',
+                'competencies_completeness': 'depth',
+                'guidelines_quality': 'usability',
+                'cross_references_accuracy': 'integration'
+            },
+            'workflows': {
+                'action_clarity': 'usability',
+                'phase_completeness': 'completeness',
+                'task_specificity': 'depth',
+                'context_usage': 'integration'
+            }
+            # Additional layer mappings...
+        }
+
+    def calculate_score(self, results, layer_type):
+        """Calculate weighted quality score"""
+        dimension_scores = {}
+
+        for dimension in self.weights.keys():
+            dimension_score = 0
+            dimension_checks = 0
+
+            for check_name, check_result in results.items():
+                if check_name in self.layer_weights.get(layer_type, {}):
+                    if self.layer_weights[layer_type][check_name] == dimension:
+                        dimension_score += 1 if check_result['passed'] else 0
+                        dimension_checks += 1
+
+            dimension_scores[dimension] = dimension_score / dimension_checks if dimension_checks > 0 else 0
+
+        total_score = sum(dimension_scores[dimension] * self.weights[dimension]
+                         for dimension in dimension_scores.keys())
+
+        return {
+            'total_score': round(total_score * 10, 1),  # Convert to 0-10 scale
+            'dimension_scores': {k: round(v * 10, 1) for k, v in dimension_scores.items()},
+            'max_score': 10.0,
+            'grade': self.get_grade(total_score * 10)
+        }
+
+    def get_grade(self, score):
+        """Convert score to letter grade"""
+        if score >= 9.0: return 'A'
+        elif score >= 8.0: return 'B'
+        elif score >= 7.0: return 'C'
+        elif score >= 6.0: return 'D'
+        else: return 'F'
+```
+
+#### 4. Improvement Generator
+```python
+class ImprovementGenerator:
+    def generate_improvements(self, results, layer_type):
+        """Generate specific improvement suggestions"""
+        improvements = {
+            'critical': [],    # Must fix immediately
+            'high': [],        # Should fix soon
+            'medium': [],      # Consider fixing
+            'low': []          # Nice to have
+        }
+
+        for check_name, check_result in results.items():
+            if not check_result['passed']:
+                suggestion = self.get_suggestion(check_name, check_result, layer_type)
+                priority = self.determine_priority(check_name, check_result, layer_type)
+                improvements[priority].append(suggestion)
+
+        return improvements
+
+    def get_suggestion(self, check_name, check_result, layer_type):
+        """Generate specific improvement suggestion"""
+        suggestions = {
+            'yaml_completeness': "Add missing required YAML fields (alwaysApply, description)",
+            'cross_references_accuracy': "Fix broken cross-references to valid rules",
+            'phase_completeness': "Ensure all workflow phases have clear objectives and completion criteria",
+            'task_specificity': "Replace high-level tasks with specific, actionable steps",
+            # Additional suggestions...
+        }
+
+        return suggestions.get(check_name, f"Review and improve {check_name.replace('_', ' ')}")
+
+    def determine_priority(self, check_name, check_result, layer_type):
+        """Determine improvement priority"""
+        critical_checks = ['yaml_completeness', 'cross_references_accuracy']
+        high_checks = ['phase_completeness', 'task_specificity']
+
+        if check_name in critical_checks:
+            return 'critical'
+        elif check_name in high_checks:
+            return 'high'
+        else:
+            return 'medium'
+```
+
+---
+
+## Validation Rules and Checks
+
+### YAML Frontmatter Validation
+
+#### Required Fields Check
+```python
+def validate_yaml_frontmatter(self, content):
+    """Validate required YAML frontmatter fields"""
+    required_fields = ['alwaysApply', 'description']
+
+    try:
+        frontmatter = self.extract_frontmatter(content)
+
+        missing_fields = []
+        for field in required_fields:
+            if field not in frontmatter:
+                missing_fields.append(field)
+
+        return {
+            'passed': len(missing_fields) == 0,
+            'details': f"Missing required fields: {missing_fields}" if missing_fields else "All required fields present",
+            'missing_fields': missing_fields
+        }
+    except Exception as e:
+        return {
+            'passed': False,
+            'details': f"YAML parsing error: {str(e)}",
+            'error': str(e)
+        }
+```
+
+#### Field Type Validation
+```python
+def validate_yaml_field_types(self, content):
+    """Validate YAML field types and formats"""
+    expected_types = {
+        'alwaysApply': bool,
+        'description': str
+    }
+
+    try:
+        frontmatter = self.extract_frontmatter(content)
+
+        type_errors = []
+        for field, expected_type in expected_types.items():
+            if field in frontmatter:
+                if not isinstance(frontmatter[field], expected_type):
+                    type_errors.append(f"{field}: expected {expected_type.__name__}, got {type(frontmatter[field]).__name__}")
+
+        return {
+            'passed': len(type_errors) == 0,
+            'details': f"Type errors: {type_errors}" if type_errors else "All field types correct",
+            'type_errors': type_errors
+        }
+    except Exception as e:
+        return {
+            'passed': False,
+            'details': f"Validation error: {str(e)}",
+            'error': str(e)
+        }
+```
+
+### Content Structure Validation
+
+#### Markdown Syntax Check
+```python
+def validate_markdown_syntax(self, content):
+    """Validate markdown syntax and structure"""
+    issues = []
+
+    # Check for proper header hierarchy
+    headers = re.findall(r'^(#{1,6})\s+(.+)$', content, re.MULTILINE)
+    for level, text in headers:
+        level_num = len(level)
+        if level_num > 6:
+            issues.append(f"Header level {level_num} exceeds maximum of 6")
+
+    # Check for proper link syntax
+    links = re.findall(r'\[([^\]]+)\]\(([^)]+)\)', content)
+    for text, url in links:
+        if not url.startswith(('http', 'https', '#', '@')):
+            issues.append(f"Invalid link URL format: {url}")
+
+    return {
+        'passed': len(issues) == 0,
+        'details': f"Found {len(issues)} markdown issues" if issues else "Markdown syntax valid",
+        'issues': issues
+    }
+```
+
+#### Cross-Reference Validation
+```python
+def validate_cross_references(self, content):
+    """Validate cross-references to other rules"""
+    references = re.findall(r'@([a-z-]+)', content)
+    invalid_refs = []
+
+    for ref in references:
+        if not self.is_valid_rule_reference(ref):
+            invalid_refs.append(ref)
+
+    return {
+        'passed': len(invalid_refs) == 0,
+        'details': f"Found {len(invalid_refs)} invalid cross-references" if invalid_refs else "All cross-references valid",
+        'invalid_references': invalid_refs
+    }
+```
+
+### Layer-Specific Validation
+
+#### Specialist Content Validation
+```python
+def validate_specialist_competencies(self, content):
+    """Validate specialist competencies section"""
+    # Check for required competency categories
+    required_categories = ['Core Competencies', 'Key Guidelines']
+
+    content_sections = self.extract_sections(content)
+    missing_sections = []
+
+    for category in required_categories:
+        if category.lower() not in [s.lower() for s in content_sections]:
+            missing_sections.append(category)
+
+    # Check competency depth
+    competencies_section = self.extract_section(content, 'Core Competencies')
+    competency_count = len(re.findall(r'^- ', competencies_section))
+
+    return {
+        'passed': len(missing_sections) == 0 and competency_count >= 8,
+        'details': f"Missing sections: {missing_sections}, Found {competency_count} competencies (need 8+)" if missing_sections or competency_count < 8 else "Competencies section complete and comprehensive",
+        'missing_sections': missing_sections,
+        'competency_count': competency_count
+    }
+```
+
+#### Workflow Structure Validation
+```python
+def validate_workflow_phases(self, content):
+    """Validate workflow phase structure"""
+    # Extract phase information
+    phases = re.findall(r'### Phase \d+', content)
+    phase_count = len(phases)
+
+    # Check for STOP AND WAIT patterns
+    stop_wait_count = len(re.findall(r'STOP AND WAIT', content))
+
+    # Validate phase completeness
+    complete_phases = 0
+    for phase in phases:
+        phase_content = self.extract_phase_content(content, phase)
+        if self.is_phase_complete(phase_content):
+            complete_phases += 1
+
+    return {
+        'passed': phase_count >= 3 and stop_wait_count >= 2 and complete_phases == phase_count,
+        'details': f"Found {phase_count} phases, {stop_wait_count} STOP AND WAIT statements, {complete_phases}/{phase_count} complete phases",
+        'phase_count': phase_count,
+        'stop_wait_count': stop_wait_count,
+        'complete_phases': complete_phases
+    }
+```
+
+---
+
+## Quality Scoring Algorithm
+
+### Dimension-Based Scoring
+```python
+def calculate_quality_score(self, validation_results, layer_type):
+    """Calculate comprehensive quality score"""
+
+    # Initialize dimension scores
+    dimensions = {
+        'completeness': {'score': 0, 'max': 0},
+        'depth': {'score': 0, 'max': 0},
+        'accuracy': {'score': 0, 'max': 0},
+        'usability': {'score': 0, 'max': 0},
+        'integration': {'score': 0, 'max': 0}
+    }
+
+    # Map validation results to dimensions
+    dimension_mapping = self.get_dimension_mapping(layer_type)
+
+    for check_name, check_result in validation_results.items():
+        if check_name in dimension_mapping:
+            dimension = dimension_mapping[check_name]
+            dimensions[dimension]['max'] += 1
+            if check_result['passed']:
+                dimensions[dimension]['score'] += 1
+
+    # Calculate dimension percentages
+    dimension_scores = {}
+    for dimension, scores in dimensions.items():
+        if scores['max'] > 0:
+            dimension_scores[dimension] = (scores['score'] / scores['max']) * 10
+        else:
+            dimension_scores[dimension] = 0
+
+    # Apply dimension weights
+    weights = {
+        'completeness': 0.25,
+        'depth': 0.25,
+        'accuracy': 0.20,
+        'usability': 0.15,
+        'integration': 0.15
+    }
+
+    total_score = sum(dimension_scores[dimension] * weights[dimension]
+                     for dimension in dimension_scores.keys())
+
+    return {
+        'total_score': round(total_score, 1),
+        'dimension_scores': {k: round(v, 1) for k, v in dimension_scores.items()},
+        'weights': weights,
+        'grade': self.get_grade(total_score)
+    }
+```
+
+---
+
+## Reporting and Output
+
+### Validation Report Generation
+```python
+def generate_validation_report(self, results, output_format='json'):
+    """Generate comprehensive validation report"""
+
+    report = {
+        'summary': {
+            'total_files': len(results),
+            'timestamp': datetime.now().isoformat(),
+            'validation_version': '1.0'
+        },
+        'quality_distribution': self.calculate_quality_distribution(results),
+        'top_issues': self.identify_top_issues(results),
+        'improvement_suggestions': self.aggregate_improvements(results),
+        'detailed_results': results
+    }
+
+    if output_format == 'json':
+        return json.dumps(report, indent=2)
+    elif output_format == 'markdown':
+        return self.generate_markdown_report(report)
+    else:
+        return report
+```
+
+### Quality Distribution Analysis
+```python
+def calculate_quality_distribution(self, results):
+    """Analyze quality score distribution"""
+    scores = [result['score']['total_score'] for result in results]
+
+    distribution = {
+        'excellent': len([s for s in scores if s >= 9.0]),  # 9.0-10.0
+        'good': len([s for s in scores if 8.0 <= s < 9.0]),  # 8.0-8.9
+        'satisfactory': len([s for s in scores if 7.0 <= s < 8.0]),  # 7.0-7.9
+        'needs_improvement': len([s for s in scores if 6.0 <= s < 7.0]),  # 6.0-6.9
+        'insufficient': len([s for s in scores if s < 6.0])  # 0.0-5.9
+    }
+
+    return {
+        'distribution': distribution,
+        'average_score': round(sum(scores) / len(scores), 1),
+        'median_score': sorted(scores)[len(scores) // 2],
+        'score_range': {
+            'min': min(scores),
+            'max': max(scores)
+        }
+    }
+```
+
+---
+
+## Integration and Automation
+
+### CI/CD Integration
+```bash
+# GitHub Actions example
+name: Quality Validation
+on: [push, pull_request]
+
+jobs:
+  quality-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    - name: Install dependencies
+      run: pip install pyyaml markdown
+    - name: Run quality validation
+      run: python quality_validation.py --comprehensive --report
+    - name: Upload quality report
+      uses: actions/upload-artifact@v2
+      with:
+        name: quality-report
+        path: quality_report.json
+```
+
+### Pre-commit Hook Integration
+```bash
+#!/bin/bash
+# .git/hooks/pre-commit
+
+# Run quality validation on staged files
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep "\.mdc$")
+
+if [ -n "$STAGED_FILES" ]; then
+    echo "Running quality validation on staged .mdc files..."
+
+    for file in $STAGED_FILES; do
+        python quality_validation.py --file "$file" --quiet
+        if [ $? -ne 0 ]; then
+            echo "❌ Quality validation failed for $file"
+            exit 1
+        fi
+    done
+
+    echo "✅ All quality validations passed"
+fi
+```
+
+### Watch Mode for Development
+```python
+def watch_mode(self, directory_path):
+    """Monitor directory for file changes and validate automatically"""
+    import time
+    from watchdog.observers import Observer
+    from watchdog.events import FileSystemEventHandler
+
+    class ValidationHandler(FileSystemEventHandler):
+        def on_modified(self, event):
+            if event.src_path.endswith('.mdc'):
+                print(f"Validating {event.src_path}...")
+                result = validator.validate_file(event.src_path)
+                if result['score']['total_score'] < 7.0:
+                    print(f"⚠️  Quality issues detected in {event.src_path}")
+                    print(f"   Score: {result['score']['total_score']}/10")
+                else:
+                    print(f"✅ {event.src_path} passed quality validation")
+
+    observer = Observer()
+    observer.schedule(ValidationHandler(), directory_path, recursive=True)
+    observer.start()
+
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        observer.stop()
+
+    observer.join()
+```
+
+---
+
+## Configuration and Customization
+
+### Quality Configuration File
+```json
+{
+  "validation_rules": {
+    "yaml_required_fields": ["alwaysApply", "description"],
+    "description_length": {"min": 20, "max": 60},
+    "cross_reference_pattern": "@[a-z-]+",
+    "header_max_depth": 6
+  },
+  "quality_weights": {
+    "completeness": 0.25,
+    "depth": 0.25,
+    "accuracy": 0.20,
+    "usability": 0.15,
+    "integration": 0.15
+  },
+  "layer_specific_rules": {
+    "specialists": {
+      "min_competencies": 8,
+      "required_sections": ["Core Competencies", "Key Guidelines"]
+    },
+    "workflows": {
+      "min_phases": 3,
+      "required_stop_wait": 2
+    }
+  },
+  "automation_settings": {
+    "auto_fix_enabled": true,
+    "auto_fix_safe_only": true,
+    "watch_mode_enabled": false,
+    "ci_integration": true
+  }
+}
+```
+
+### Usage Examples
+```bash
+# Basic validation
+python quality_validation.py --file specialist-python-developer.mdc
+
+# Comprehensive validation with report
+python quality_validation.py --comprehensive --report --output report.json
+
+# Watch mode for development
+python quality_validation.py --watch --directory four-layer-system
+
+# CI/CD validation
+python quality_validation.py --ci --junit-output results.xml
+```
+
+---
+
+This automated quality validation script provides comprehensive, programmable quality assurance for the Four-Layer Rules System, enabling continuous quality monitoring, automated improvements, and integration with development workflows.

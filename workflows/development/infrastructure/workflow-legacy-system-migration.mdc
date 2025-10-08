@@ -1,0 +1,232 @@
+---
+alwaysApply: false
+description: "Systematic approach to migrating legacy systems with minimal risk and downtime"
+---
+
+**Action:** Execute Legacy System Migration
+
+**Please define the migration scope:**
+
+- **Legacy System:** @[path/to/legacy/system] or [system description]
+- **Target Architecture:** [Modernized platform, cloud migration, technology upgrade]
+- **Migration Strategy:** [Big Bang / Phased / Parallel Run / Strangler Pattern]
+- **Business Constraints:** [Downtime limits, budget, timeline, risk tolerance]
+- **Success Criteria:** [Performance targets, functionality preservation, cost improvements]
+
+**Instruction for the AI:**
+Act as a Senior Migration Architect managing the complex process of modernizing legacy systems. This workflow provides a structured approach to legacy system migration with risk mitigation, stakeholder management, and technical implementation guidance.
+
+---
+
+**Phase 1: Migration Planning & Assessment**
+
+**STOP AND WAIT:** Complete comprehensive legacy system assessment and migration planning.
+
+**Legacy System Analysis:**
+1. **Architecture Assessment:** Document current system architecture, technologies, and dependencies
+2. **Technical Debt Evaluation:** Identify outdated technologies, security vulnerabilities, and maintenance issues
+3. **Business Value Analysis:** Assess which features are critical, obsolete, or need modernization
+4. **Data Assessment:** Analyze data volume, complexity, quality, and migration requirements
+5. **Integration Analysis:** Map external system dependencies and integration points
+
+**Migration Strategy Selection:**
+- **Big Bang Migration:** Complete system replacement (high risk, high disruption)
+- **Phased Migration:** Incremental component migration (moderate risk, staged approach)
+- **Parallel Run:** Run old and new systems simultaneously (low risk, high cost)
+- **Strangler Pattern:** Gradually replace system components (recommended for complex systems)
+
+---
+
+**Phase 2: Target Architecture Design**
+
+**STOP AND WAIT:** Design the modernized system architecture and migration roadmap.
+
+**Architecture Modernization:**
+1. **Technology Stack Selection:** Choose modern frameworks, languages, and platforms
+2. **Cloud Migration Planning:** Design cloud-native architecture with scalability and resilience
+3. **Microservices Design:** Break down monolithic systems into manageable services
+4. **Data Architecture:** Design modern data storage, processing, and analytics capabilities
+5. **Security Architecture:** Implement modern security practices and compliance requirements
+
+**Migration Roadmap:**
+- Component migration priority and sequencing
+- Data migration strategy and timeline
+- Testing and validation approach
+- Rollback and contingency plans
+
+---
+
+**Phase 3: Data Migration Planning**
+
+**STOP AND WAIT:** Develop comprehensive data migration strategy and implementation plan.
+
+**Data Assessment & Planning:**
+1. **Data Inventory:** Catalog all data sources, volumes, and data types
+2. **Data Quality Analysis:** Assess data accuracy, completeness, and consistency
+3. **Schema Transformation:** Design target data models and transformation rules
+4. **Migration Tooling:** Select appropriate ETL tools, migration frameworks, and validation tools
+
+**Migration Execution Strategy:**
+- **Extract Phase:** Data extraction from legacy systems with minimal impact
+- **Transform Phase:** Data cleansing, standardization, and format conversion
+- **Load Phase:** Data loading into target systems with validation and error handling
+- **Verification Phase:** Data integrity checks, reconciliation, and business rule validation
+
+---
+
+**Phase 4: Incremental Migration Execution**
+
+**STOP AND WAIT:** Execute migration in controlled phases with comprehensive testing.
+
+**Migration Execution:**
+1. **Pilot Migration:** Test migration approach with non-critical data and systems
+2. **Component Migration:** Migrate individual system components following the roadmap
+3. **Integration Testing:** Validate component interactions and data flow
+4. **User Acceptance Testing:** Validate business functionality and user workflows
+5. **Performance Testing:** Ensure target system meets performance requirements
+
+**Risk Mitigation:**
+- **Rollback Procedures:** Tested rollback mechanisms for each migration phase
+- **Data Backup:** Comprehensive backups before each major migration step
+- **Monitoring:** Real-time monitoring of system health and data integrity
+- **Communication:** Regular stakeholder updates and issue resolution
+
+---
+
+**Phase 5: Go-Live & Optimization**
+
+**STOP AND WAIT:** Complete final migration and optimize the modernized system.
+
+**Go-Live Preparation:**
+1. **Production Readiness:** Final system validation and performance optimization
+2. **Operational Readiness:** Train support teams and establish monitoring procedures
+3. **Business Readiness:** Prepare users and business processes for the new system
+4. **Contingency Planning:** Final review of emergency procedures and rollback plans
+
+**Post-Migration Activities:**
+- **Hypercare Support:** Intensive monitoring and support during initial production period
+- **Performance Optimization:** Fine-tune system performance based on production usage
+- **User Training:** Complete user adoption and training programs
+- **Legacy System Decommissioning:** Safe removal of legacy systems after successful migration
+
+---
+
+**Final Assessment: Migration Completion Report**
+
+Generate a comprehensive migration assessment report with:
+
+## Executive Summary
+- **Migration Status:** Success/failure assessment and key outcomes
+- **Business Impact:** Achieved benefits and ROI realization
+- **Lessons Learned:** Key insights and improvement opportunities
+- **Future Roadmap:** Next steps for system evolution
+
+## Migration Overview
+### Legacy System Assessment
+- Original system architecture and technology stack
+- Identified limitations and modernization drivers
+- Business criticality and migration urgency assessment
+
+### Migration Strategy & Execution
+- Selected migration approach and rationale
+- Timeline adherence and milestone achievements
+- Risk management effectiveness and incident handling
+
+## Technical Implementation
+### Architecture Modernization
+- Target architecture design and implementation
+- Technology stack upgrades and modernization
+- Infrastructure changes and cloud migration
+
+### Data Migration Results
+- Data volume migrated and migration accuracy
+- Data quality improvements and issue resolution
+- Performance improvements and optimization achieved
+
+### System Integration
+- External system integrations and API modernization
+- Third-party service migrations and compatibility
+- Cross-system data consistency and synchronization
+
+## Business Outcomes
+### Functionality Preservation
+- Feature parity assessment and gap analysis
+- User workflow improvements and usability enhancements
+- Business process optimization and automation gains
+
+### Performance Improvements
+- Response time improvements and user experience enhancements
+- Scalability gains and capacity improvements
+- Reliability improvements and downtime reduction
+
+### Cost Optimization
+- Infrastructure cost reductions and efficiency gains
+- Maintenance cost savings and support optimization
+- ROI analysis and business value realization
+
+## Quality Assurance & Testing
+### Testing Coverage
+- Unit testing, integration testing, and system testing results
+- User acceptance testing and business validation
+- Performance testing and load testing outcomes
+
+### Issue Management
+- Critical issues identified and resolution status
+- Non-functional requirement compliance (security, performance, scalability)
+- Quality metrics and defect density analysis
+
+## Risk Management & Contingency
+### Risk Assessment
+- Identified risks and their probability/impact ratings
+- Risk mitigation strategies and effectiveness
+- Contingency plan activation and outcomes
+
+### Incident Management
+- Migration incidents and their resolution
+- Downtime impact and business disruption management
+- Communication effectiveness and stakeholder management
+
+## Operational Readiness
+### Support & Maintenance
+- Operations team training and knowledge transfer
+- Monitoring and alerting implementation
+- Incident response procedures and escalation paths
+
+### Documentation & Knowledge
+- System documentation completeness and accuracy
+- Runbook creation and operational procedures
+- Knowledge base development and team enablement
+
+## Lessons Learned & Recommendations
+### Technical Lessons
+- Technology selection insights and recommendations
+- Architecture decision analysis and alternatives considered
+- Tool and process effectiveness evaluation
+
+### Process Lessons
+- Migration methodology effectiveness and improvements
+- Team collaboration and communication insights
+- Stakeholder management and change management lessons
+
+### Future Considerations
+- System evolution roadmap and next modernization phases
+- Technology refresh planning and obsolescence management
+- Continuous improvement opportunities and monitoring needs
+
+## Success Metrics & KPIs
+### Technical Metrics
+- System availability and uptime improvements
+- Performance benchmark achievements
+- Scalability and capacity utilization
+
+### Business Metrics
+- User adoption rates and satisfaction scores
+- Business process efficiency improvements
+- Cost savings and ROI achievement
+
+### Operational Metrics
+- Incident reduction and MTTR improvements
+- Support ticket volume and resolution times
+- System reliability and error rate reductions
+
+**Deliverable:** `legacy_migration_report_[system]_[date].md` with complete migration assessment, outcomes, and future recommendations.

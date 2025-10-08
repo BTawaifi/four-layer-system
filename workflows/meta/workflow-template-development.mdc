@@ -1,0 +1,194 @@
+---
+alwaysApply: false
+description: "Template for development workflows - provides consistent structure for implementing new features, systems, or applications"
+---
+
+**Action:** [Specific Development Task - e.g., "Implement User Authentication System"]
+
+**Please provide the development context:**
+
+- **Scope:** [Feature / System / Application / Integration / Refactor]
+- **Technology Stack:** [Languages, frameworks, databases, infrastructure]
+- **Requirements:** [Functional requirements, constraints, success criteria]
+- **Timeline:** [Sprint duration, milestones, deadlines]
+- **Quality Standards:** [Code coverage, performance targets, security requirements]
+- **Stakeholders:** [Product owner, end users, system dependencies]
+
+**Instruction for the AI:**
+Act as a Senior [Domain] Developer and Technical Lead. Guide the development process from requirements to production deployment, ensuring high-quality, maintainable code that meets all requirements.
+
+---
+
+**Phase 1: Requirements Analysis & Planning**
+
+**STOP AND WAIT:** Complete detailed analysis and create implementation plan.
+
+**[Context-Specific Analysis]**
+1. **Requirements Breakdown:** Decompose high-level requirements into actionable tasks
+2. **Technical Feasibility:** Assess technical constraints and solution approaches
+3. **Architecture Impact:** Evaluate impact on existing system architecture
+4. **Dependencies:** Identify internal and external system dependencies
+
+**[Planning Activities]**
+1. **Task Breakdown:** Create detailed task list with acceptance criteria
+2. **Timeline Planning:** Establish realistic development timeline and milestones
+3. **Risk Assessment:** Identify potential risks and mitigation strategies
+4. **Resource Planning:** Determine required team resources and skills
+
+**Deliverables:**
+- Detailed implementation plan with task breakdown
+- Architecture decisions and design documents
+- Risk assessment and mitigation plan
+- Timeline with milestones and deliverables
+
+---
+
+**Phase 2: Design & Architecture**
+
+**STOP AND WAIT:** Finalize technical design and architectural decisions.
+
+**[Technical Design]**
+1. **System Design:** Design system components, interfaces, and interactions
+2. **Data Design:** Design data structures, storage, and access patterns
+3. **API Design:** Define APIs, contracts, and integration points
+4. **Security Design:** Design security measures and access controls
+
+**[Architecture Validation]**
+1. **Scalability Assessment:** Ensure design supports required scale
+2. **Performance Analysis:** Validate performance requirements can be met
+3. **Maintainability Review:** Ensure design supports long-term maintenance
+4. **Compliance Check:** Verify design meets regulatory and standards requirements
+
+**Deliverables:**
+- System architecture diagrams and documentation
+- API specifications and data contracts
+- Security design and threat model
+- Design validation results and trade-off analysis
+
+---
+
+**Phase 3: Implementation**
+
+**STOP AND WAIT:** Complete core implementation following established patterns.
+
+**[Development Process]**
+1. **Incremental Development:** Implement features in small, testable increments
+2. **Code Quality:** Follow established coding standards and best practices
+3. **Testing Integration:** Write tests alongside code (TDD/BDD approach)
+4. **Documentation:** Maintain up-to-date code documentation and comments
+
+**[Quality Assurance]**
+1. **Unit Testing:** Comprehensive unit test coverage for all logic
+2. **Integration Testing:** Test component interactions and data flow
+3. **Code Reviews:** Peer review of all code changes
+4. **Static Analysis:** Automated code quality and security scanning
+
+**Deliverables:**
+- Fully implemented feature/system with comprehensive tests
+- Updated documentation and API specifications
+- Code review results and quality metrics
+- Integration test results and coverage reports
+
+---
+
+**Phase 4: Integration & Testing**
+
+**STOP AND WAIT:** Integrate with existing systems and validate end-to-end functionality.
+
+**[System Integration]**
+1. **Component Integration:** Integrate new components with existing systems
+2. **Data Integration:** Ensure proper data flow and consistency
+3. **API Integration:** Validate all API contracts and interactions
+4. **Infrastructure Integration:** Deploy and configure required infrastructure
+
+**[Comprehensive Testing]**
+1. **End-to-End Testing:** Validate complete user journeys and workflows
+2. **Performance Testing:** Verify performance meets established targets
+3. **Security Testing:** Conduct security validation and vulnerability assessment
+4. **User Acceptance Testing:** Validate functionality meets user requirements
+
+**Deliverables:**
+- Fully integrated system with all components working together
+- Comprehensive test results and quality metrics
+- Performance test results and optimization recommendations
+- Security assessment results and remediation plan
+
+---
+
+**Phase 5: Deployment & Validation**
+
+**STOP AND WAIT:** Deploy to production and validate system performance.
+
+**[Deployment Preparation]**
+1. **Release Planning:** Plan deployment strategy and rollback procedures
+2. **Environment Setup:** Configure production environment and dependencies
+3. **Data Migration:** Plan and execute any required data migrations
+4. **Monitoring Setup:** Configure production monitoring and alerting
+
+**[Production Validation]**
+1. **Deployment Execution:** Execute deployment following established procedures
+2. **System Validation:** Verify all functionality works in production environment
+3. **Performance Validation:** Confirm production performance meets requirements
+4. **Monitoring Validation:** Ensure monitoring systems are operational
+
+**Deliverables:**
+- Successfully deployed system in production environment
+- Deployment report with any issues encountered and resolutions
+- Production validation results and performance metrics
+- Monitoring system operational with appropriate alerts configured
+
+---
+
+**Phase 6: Documentation & Handover**
+
+**STOP AND WAIT:** Complete documentation and knowledge transfer.
+
+**[Documentation Completion]**
+1. **Technical Documentation:** Complete API docs, architecture docs, and runbooks
+2. **User Documentation:** Create user guides and operational procedures
+3. **Maintenance Documentation:** Document maintenance procedures and troubleshooting
+4. **Knowledge Base:** Update team knowledge base with lessons learned
+
+**[Knowledge Transfer]**
+1. **Team Training:** Train operations and support teams on new system
+2. **Handover Sessions:** Conduct formal handover to maintenance teams
+3. **Support Setup:** Establish support procedures and escalation paths
+4. **Continuous Improvement:** Document improvement opportunities for future releases
+
+**Deliverables:**
+- Complete documentation package for all stakeholders
+- Trained operations and support teams
+- Established support and maintenance procedures
+- Retrospective report with lessons learned and improvement recommendations
+
+---
+
+**Success Criteria:**
+- ✅ All functional requirements implemented and tested
+- ✅ Performance requirements met or exceeded
+- ✅ Security requirements validated and compliant
+- ✅ Code quality standards maintained (coverage, style, documentation)
+- ✅ Successful production deployment with monitoring
+- ✅ Complete documentation and knowledge transfer
+- ✅ Stakeholder acceptance and approval obtained
+
+**Quality Gates:**
+- **Code Review:** All code reviewed and approved by peers
+- **Testing:** >80% test coverage with all critical tests passing
+- **Security:** Security review completed with no critical vulnerabilities
+- **Performance:** Performance requirements validated in staging environment
+- **Documentation:** All documentation reviewed and approved
+
+**Risk Mitigation:**
+- Regular check-ins and progress validation at each phase
+- Early identification and resolution of technical challenges
+- Comprehensive testing to catch issues before production
+- Rollback procedures prepared for deployment issues
+- Monitoring and alerting configured for post-deployment issues
+
+**Template Customization Notes:**
+- Replace [Context-Specific Analysis] with domain-appropriate analysis activities
+- Adapt phase activities to match specific development domain requirements
+- Modify deliverables based on project size and complexity
+- Adjust success criteria to match project-specific requirements
+- Update quality gates based on organizational standards

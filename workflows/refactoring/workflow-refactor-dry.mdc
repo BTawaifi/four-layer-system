@@ -1,0 +1,18 @@
+---
+alwaysApply: false
+description: "Refactors code to eliminate duplication by applying the DRY principle with data structures and dynamic approaches"
+---
+
+**Action:** Refactor Code to Adhere to the DRY Principle
+
+**Please provide the context:**
+
+- **The Target Code:** @[path/to/the/repetitive/code.ext]
+- **The Repetitive Elements:** [Describe the repeating code structures, e.g., "The multiple `if/else if` blocks that check user types," "The series of hardcoded dictionary initializations."]
+
+**Instruction for the AI:**
+Rewrite the specified component to eliminate duplication and adhere to the DRY (Don't Repeat Yourself) principle.
+
+1.  Abstract the repetitive logic or data into a more suitable data structure (e.g., a list of objects, a dictionary/map, a configuration object).
+2.  Replace the repetitive code with a dynamic approach (e.g., a loop, a factory function, a lookup from the data structure).
+3.  The final code should be more maintainable and easily extendable.

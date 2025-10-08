@@ -1,0 +1,190 @@
+---
+alwaysApply: false
+description: "High-level orchestration workflow for AI/ML projects, coordinating specialized sub-workflows across the ML lifecycle"
+ide_compatibility: "⚠️ COMPLEX ORCHESTRATION - Multi-phase workflow may require session management. Consider @context-workflow-progress-tracker for coordination."
+cursor_limitations: "Extended ML development sessions may accumulate significant context. Use progressive phases to manage token usage."
+---
+
+**Action:** Orchestrate AI/ML Development Project
+
+**Please provide the ML project context:**
+
+- **Problem Type:** [Classification / Regression / Clustering / NLP / Computer Vision / Time Series / Recommendation / Other]
+- **Data Characteristics:** [Structured / Unstructured / Time Series / Images / Text / Mixed]
+- **Scale Requirements:** [Small Dataset (<100K) / Medium (100K-1M) / Large (1M-100M) / Massive (100M+)]
+- **Deployment Target:** [Batch Processing / Real-time API / Edge Device / Mobile / Web Application]
+- **Business Constraints:** [Latency Requirements / Accuracy Targets / Compute Budget / Timeline]
+- **Regulatory Requirements:** [GDPR / HIPAA / Financial Compliance / None]
+
+**Instruction for the AI:**
+Act as a Senior ML Engineering Lead and AI Project Manager. Your task is to orchestrate the complete machine learning lifecycle by coordinating specialized sub-workflows. Focus on project planning, technical oversight, and ensuring seamless integration between ML development phases.
+
+---
+
+**Phase 1: Project Planning & Problem Definition**
+
+**STOP AND WAIT:** Establish project foundation and success criteria.
+
+**Problem Formulation:**
+1. **Business Objective Translation:** Convert business requirements into measurable ML objectives
+2. **Success Metrics Definition:** Establish quantitative success criteria and evaluation metrics
+3. **Technical Feasibility:** Assess ML approach suitability and resource requirements
+4. **Risk Assessment:** Identify technical risks, ethical considerations, and mitigation strategies
+
+**Project Planning:**
+1. **Resource Planning:** Identify team composition and infrastructure needs
+2. **Timeline Planning:** Establish realistic development and deployment timelines
+3. **Budget Planning:** Define compute, storage, and tooling budget requirements
+4. **Success Criteria:** Define measurable project success metrics and KPIs
+
+**Architecture Design:**
+1. **ML Pipeline Design:** Design end-to-end ML pipeline and data flow
+2. **Technology Stack:** Select appropriate ML frameworks, tools, and infrastructure
+3. **Scalability Planning:** Design for current and future scale requirements
+4. **Integration Planning:** Plan integration with existing systems and workflows
+
+---
+
+**Phase 2: Data Preparation Pipeline**
+
+**STOP AND WAIT:** Execute comprehensive data preparation using specialized workflow.
+
+Execute `@workflow-ml-data-preparation` with the following context:
+- Data sources and characteristics defined in Phase 1
+- Quality requirements aligned with model accuracy targets
+- Scalability requirements based on data volume projections
+- Compliance requirements for sensitive data handling
+- Feature engineering scope based on problem complexity
+
+**Data Validation:**
+1. **Quality Metrics:** Verify data meets quality thresholds established in planning
+2. **Completeness Check:** Ensure all required data sources are properly ingested
+3. **Consistency Validation:** Confirm data transformations maintain integrity
+4. **Documentation Review:** Validate data lineage and transformation documentation
+
+---
+
+**Phase 3: Model Development & Training**
+
+**STOP AND WAIT:** Execute model development using established experimentation practices.
+
+**Experimentation Planning:**
+1. **Hypothesis Formulation:** Define clear hypotheses for model improvements based on problem analysis
+2. **Baseline Models:** Establish simple baseline models for performance comparison
+3. **Model Family Selection:** Choose appropriate algorithms based on problem type and data characteristics
+4. **Success Criteria:** Define target performance metrics and experimental success thresholds
+
+**Development Execution:**
+1. **Iterative Refinement:** Develop models with increasing complexity using data from Phase 2
+2. **Regularization:** Apply appropriate techniques to prevent overfitting
+3. **Ensemble Methods:** Implement ensemble approaches for improved performance when appropriate
+4. **Interpretability:** Ensure models meet interpretability requirements for the use case
+
+**Model Validation:**
+1. **Cross-Validation:** Perform robust cross-validation using prepared data splits
+2. **Statistical Testing:** Conduct statistical significance testing between model variants
+3. **Error Analysis:** Perform detailed analysis of model failures and edge cases
+4. **Business Metrics:** Evaluate models against business KPIs and success criteria
+
+**Experiment Documentation:**
+1. **Version Control:** Track all model versions, hyperparameters, and results
+2. **Reproducibility:** Ensure all experiments can be reproduced with identical results
+3. **Collaboration:** Enable effective knowledge sharing across team members
+4. **Decision Rationale:** Document reasoning behind model selection and trade-offs
+
+---
+
+**Phase 4: Model Packaging & Deployment**
+
+**STOP AND WAIT:** Execute production deployment using MLOps workflow.
+
+Execute `@workflow-mlops-deployment` with the following context:
+- Final model selected from Phase 3 experimentation
+- Deployment requirements defined in project planning (API, batch, edge)
+- Scalability requirements based on usage projections
+- Compliance requirements for production deployment
+- Monitoring requirements for production operations
+
+**Deployment Validation:**
+1. **Performance Verification:** Confirm deployed model meets latency and throughput requirements
+2. **Accuracy Validation:** Verify production performance matches offline evaluation
+3. **Integration Testing:** Validate integration with existing systems and workflows
+4. **Security Review:** Ensure deployment meets security and compliance requirements
+
+---
+
+**Phase 5: Operations & Maintenance**
+
+**STOP AND WAIT:** Establish production operations and hand over to maintenance team.
+
+**Production Monitoring:**
+1. **Performance Tracking:** Monitor model performance against established baselines
+2. **System Health:** Track infrastructure utilization and system reliability
+3. **User Experience:** Monitor user satisfaction and system usability
+4. **Business Impact:** Track business metrics and model business value
+
+**Continuous Improvement:**
+1. **Feedback Integration:** Collect and analyze user feedback and model performance
+2. **Retraining Assessment:** Evaluate need for model retraining based on monitoring data
+3. **Optimization Opportunities:** Identify performance and efficiency improvement opportunities
+4. **Version Updates:** Plan for model version updates and feature enhancements
+
+**Knowledge Transfer:**
+1. **Operations Training:** Train operations team on monitoring and maintenance procedures
+2. **Documentation Handover:** Transfer complete documentation package to operations
+3. **Support Structure:** Establish support channels and escalation procedures
+4. **Continuous Learning:** Set up processes for ongoing team knowledge development
+
+**Project Closure:**
+1. **Success Validation:** Confirm all project objectives and success criteria are met
+2. **Lessons Learned:** Document project insights and improvement opportunities
+3. **Future Planning:** Identify opportunities for model enhancement and expansion
+4. **Stakeholder Handoff:** Complete formal handover to operations and business teams
+
+---
+
+**Key Responsibilities:**
+1. **Project Orchestration:** Coordinate execution of specialized ML sub-workflows
+2. **Technical Oversight:** Ensure technical quality and alignment across all phases
+3. **Stakeholder Management:** Maintain communication with business and technical stakeholders
+4. **Quality Assurance:** Validate deliverables meet project requirements and standards
+5. **Risk Management:** Monitor project risks and implement mitigation strategies
+
+## Token Efficiency Guidelines
+
+**Cursor IDE Context Management:**
+- Break complex ML development into focused sessions (data prep, modeling, deployment)
+- Use file-based state management for long-running experiments
+- Leverage @context-workflow-progress-tracker for multi-session continuity
+- Save model artifacts and results to files to reduce memory burden
+
+**Optimization Strategies:**
+- Execute data preparation and EDA in separate sessions
+- Focus modeling efforts on specific algorithms per session
+- Use incremental evaluation rather than comprehensive testing in single sessions
+- Document decisions in files rather than maintaining in conversation memory
+
+**Token Consumption Estimates:**
+- **Data Preparation Phase:** ~3,000-5,000 tokens (exploratory analysis)
+- **Modeling Phase:** ~4,000-7,000 tokens (algorithm selection and training)
+- **Evaluation Phase:** ~2,000-4,000 tokens (metrics and validation)
+- **Deployment Phase:** ~3,000-5,000 tokens (production pipeline setup)
+
+**Session Management Tips:**
+- Use @context-flush-and-focus when transitioning between major phases
+- Save intermediate results and model states to persistent files
+- Reference previous work through file links rather than detailed recall
+- Consider multi-agent execution for parallel model evaluation
+
+**Success Criteria:**
+- All sub-workflows executed successfully with high-quality deliverables
+- ML system meets all functional, performance, and business requirements
+- Project completed within established timeline and budget constraints
+- Operations team fully trained and capable of system maintenance
+- Stakeholders satisfied with system performance and business value
+
+**Integration Points:**
+- **Phase 1-2:** Problem definition and data requirements flow to data preparation
+- **Phase 2-3:** Prepared datasets and features enable effective model development
+- **Phase 3-4:** Trained models and requirements guide deployment architecture
+- **Phase 4-5:** Production system handed over for ongoing operations and monitoring

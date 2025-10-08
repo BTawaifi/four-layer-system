@@ -1,0 +1,192 @@
+---
+alwaysApply: false
+description: "Template for analysis workflows - provides consistent structure for evaluating systems, code, architecture, or processes"
+---
+
+**Action:** [Specific Analysis Task - e.g., "Conduct Security Architecture Review"]
+
+**Please provide the analysis context:**
+
+- **Analysis Scope:** [System / Component / Process / Codebase / Architecture / Security / Performance]
+- **Analysis Type:** [Audit / Assessment / Review / Evaluation / Benchmarking]
+- **Source Material:** [Code repositories, system documentation, requirements, metrics]
+- **Analysis Framework:** [Industry standards, internal guidelines, regulatory requirements]
+- **Stakeholders:** [Technical leads, product owners, security teams, compliance officers]
+- **Deliverable Format:** [Report / Presentation / Dashboard / Recommendations Document]
+
+**Instruction for the AI:**
+Act as a Senior [Domain] Analyst and Subject Matter Expert. Conduct a thorough, methodical analysis following industry best practices and providing actionable insights with clear prioritization and implementation guidance.
+
+---
+
+**Phase 1: Scope Definition & Preparation**
+
+**STOP AND WAIT:** Establish clear analysis scope and gather required information.
+
+**[Scope Definition]**
+1. **Objective Clarification:** Define specific analysis goals and success criteria
+2. **Boundary Setting:** Clearly define what is and isn't included in the analysis
+3. **Methodology Selection:** Choose appropriate analysis frameworks and techniques
+4. **Resource Assessment:** Identify required tools, access, and expertise
+
+**[Information Gathering]**
+1. **Data Collection:** Gather all relevant source materials and data sources
+2. **Stakeholder Interviews:** Conduct interviews with key stakeholders and users
+3. **System Access:** Obtain necessary access to systems, code, and documentation
+4. **Baseline Establishment:** Establish current state baselines for comparison
+
+**Deliverables:**
+- Detailed analysis scope document with objectives and boundaries
+- Information gathering plan and data collection checklist
+- Stakeholder communication plan and interview schedule
+- Analysis methodology and framework documentation
+
+---
+
+**Phase 2: Data Collection & Initial Assessment**
+
+**STOP AND WAIT:** Complete comprehensive data collection and initial findings.
+
+**[Systematic Data Collection]**
+1. **Automated Analysis:** Run automated tools and scripts for data collection
+2. **Manual Inspection:** Conduct manual reviews and examinations where required
+3. **Pattern Recognition:** Identify recurring patterns, issues, and opportunities
+4. **Comparative Analysis:** Compare current state against benchmarks and standards
+
+**[Initial Assessment]**
+1. **Gap Analysis:** Identify gaps between current state and desired state
+2. **Risk Identification:** Flag potential risks and areas of concern
+3. **Opportunity Recognition:** Identify improvement opportunities and strengths
+4. **Prioritization:** Initial prioritization of findings by impact and urgency
+
+**Deliverables:**
+- Comprehensive data collection results and analysis artifacts
+- Initial findings report with preliminary assessments
+- Risk register with identified issues and concerns
+- Opportunity assessment with potential improvements identified
+
+---
+
+**Phase 3: Deep Analysis & Validation**
+
+**STOP AND WAIT:** Conduct thorough analysis and validate findings.
+
+**[Detailed Analysis]**
+1. **Root Cause Analysis:** Investigate underlying causes of identified issues
+2. **Impact Assessment:** Evaluate the broader impact of findings on the system
+3. **Trend Analysis:** Identify patterns and trends over time
+4. **Comparative Benchmarking:** Compare against industry standards and best practices
+
+**[Validation Process]**
+1. **Cross-Verification:** Validate findings through multiple analysis methods
+2. **Stakeholder Validation:** Confirm findings with relevant stakeholders
+3. **Expert Review:** Consult subject matter experts for complex assessments
+4. **Statistical Validation:** Apply statistical methods to validate quantitative findings
+
+**Deliverables:**
+- Detailed analysis report with root cause identification
+- Impact assessment with quantified effects and implications
+- Validation results confirming or refining initial findings
+- Statistical analysis and benchmarking results
+
+---
+
+**Phase 4: Solution Development & Recommendations**
+
+**STOP AND WAIT:** Develop actionable recommendations with implementation guidance.
+
+**[Solution Exploration]**
+1. **Option Generation:** Develop multiple solution approaches for each finding
+2. **Feasibility Analysis:** Assess technical, operational, and economic feasibility
+3. **Risk-Benefit Analysis:** Evaluate costs, benefits, and risks of each option
+4. **Prioritization Framework:** Develop clear prioritization criteria and methodology
+
+**[Recommendation Development]**
+1. **Actionable Recommendations:** Create specific, implementable recommendations
+2. **Implementation Roadmap:** Develop phased implementation plans with timelines
+3. **Success Metrics:** Define measurable success criteria for recommendations
+4. **Resource Requirements:** Specify required resources and dependencies
+
+**Deliverables:**
+- Comprehensive recommendations document with solution options
+- Implementation roadmap with prioritized action items
+- Cost-benefit analysis for major recommendations
+- Success metrics and measurement framework
+
+---
+
+**Phase 5: Reporting & Communication**
+
+**STOP AND WAIT:** Deliver final analysis results and recommendations.
+
+**[Report Development]**
+1. **Executive Summary:** High-level overview for executive stakeholders
+2. **Technical Details:** Comprehensive technical findings and analysis
+3. **Visualizations:** Charts, graphs, and diagrams to illustrate key points
+4. **Appendices:** Detailed data, methodologies, and supporting information
+
+**[Stakeholder Communication]**
+1. **Presentation Preparation:** Develop presentations for different stakeholder groups
+2. **Q&A Preparation:** Prepare responses to anticipated questions and concerns
+3. **Feedback Integration:** Incorporate stakeholder feedback into final deliverables
+4. **Follow-up Planning:** Plan for ongoing communication and implementation support
+
+**Deliverables:**
+- Final analysis report in requested format and detail level
+- Executive summary and key findings presentation
+- Implementation guide with step-by-step action plans
+- Communication plan for stakeholder engagement
+
+---
+
+**Phase 6: Implementation Support & Follow-up**
+
+**STOP AND WAIT:** Provide support for recommendation implementation and track progress.
+
+**[Implementation Support]**
+1. **Detailed Planning:** Work with implementation teams to develop detailed plans
+2. **Resource Coordination:** Help coordinate required resources and dependencies
+3. **Risk Monitoring:** Monitor implementation risks and provide mitigation guidance
+4. **Progress Tracking:** Establish progress tracking and milestone validation
+
+**[Continuous Improvement]**
+1. **Effectiveness Monitoring:** Track the effectiveness of implemented recommendations
+2. **Lesson Learning:** Document lessons learned from implementation process
+3. **Methodology Refinement:** Refine analysis methodologies based on experience
+4. **Knowledge Sharing:** Share insights and best practices with broader organization
+
+**Deliverables:**
+- Implementation support documentation and templates
+- Progress tracking dashboard and reporting framework
+- Lessons learned report and methodology improvements
+- Updated organizational knowledge base and best practices
+
+---
+
+**Success Criteria:**
+- ✅ Analysis objectives met with comprehensive coverage of scope
+- ✅ Findings validated through multiple methods and stakeholder confirmation
+- ✅ Recommendations are actionable, prioritized, and implementation-ready
+- ✅ Deliverables meet stakeholder requirements for format and detail level
+- ✅ Implementation support provided with measurable progress tracking
+- ✅ Continuous improvement process established for future analyses
+
+**Quality Assurance:**
+- **Methodological Rigor:** Analysis follows established frameworks and best practices
+- **Data Quality:** All data sources verified for accuracy, completeness, and timeliness
+- **Bias Mitigation:** Multiple validation methods used to ensure objective findings
+- **Stakeholder Validation:** Key findings validated with relevant subject matter experts
+- **Documentation Quality:** All deliverables reviewed for clarity, accuracy, and completeness
+
+**Risk Management:**
+- **Scope Creep Prevention:** Regular scope validation and change control process
+- **Timeline Management:** Regular progress checks and milestone validation
+- **Resource Contingency:** Backup resources identified for critical analysis activities
+- **Communication Plan:** Regular stakeholder updates and issue escalation procedures
+
+**Template Customization Notes:**
+- Replace [Scope Definition] with domain-specific scoping activities
+- Adapt analysis phases to match specific analysis domain requirements
+- Modify deliverables based on organizational reporting standards
+- Update success criteria to match analysis-specific requirements
+- Adjust quality assurance criteria based on industry standards

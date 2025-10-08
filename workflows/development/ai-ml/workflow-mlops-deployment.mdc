@@ -1,0 +1,167 @@
+---
+alwaysApply: false
+description: "Focused workflow for ML model deployment, monitoring, and production operations (MLOps)"
+---
+
+**Action:** Deploy and Operate ML Models in Production
+
+**Please provide the MLOps deployment context:**
+
+- **Model Type:** [Classification / Regression / NLP / Computer Vision / Recommendation / Other]
+- **Deployment Pattern:** [Batch Prediction / Real-time API / Edge Deployment / Streaming]
+- **Scale Requirements:** [Low (100 req/day) / Medium (10K req/day) / High (100K+ req/day)]
+- **Infrastructure:** [Cloud (AWS/GCP/Azure) / On-premises / Hybrid / Edge]
+- **Compliance Needs:** [GDPR / HIPAA / Financial / None / Custom]
+
+**Instruction for the AI:**
+Act as a Senior MLOps Engineer and ML Platform Architect. Your task is to design and implement production-ready ML deployment pipelines with comprehensive monitoring, security, and operational excellence.
+
+---
+
+**Phase 1: Model Packaging & Containerization**
+
+**STOP AND WAIT:** Prepare model artifacts for production deployment.
+
+**Model Serialization:**
+1. **Model Format Selection:** Choose appropriate serialization format (Pickle, ONNX, TensorFlow SavedModel)
+2. **Dependency Management:** Capture all model dependencies and versions
+3. **Model Validation:** Verify model loads correctly and produces expected outputs
+4. **Size Optimization:** Optimize model size for deployment constraints
+
+**Containerization Strategy:**
+1. **Base Image Selection:** Choose appropriate base images for ML workloads
+2. **Dependency Installation:** Optimize dependency installation and caching
+3. **Security Hardening:** Implement security best practices for container images
+4. **Multi-Architecture:** Support multiple CPU/GPU architectures if needed
+
+**Artifact Management:**
+1. **Model Registry:** Implement model versioning and artifact storage
+2. **Metadata Tracking:** Track model performance, training data, and parameters
+3. **Approval Workflows:** Set up model review and approval processes
+4. **Rollback Capability:** Enable quick rollback to previous model versions
+
+---
+
+**Phase 2: API Development & Serving**
+
+**STOP AND WAIT:** Build and deploy model serving infrastructure.
+
+**API Design:**
+1. **Endpoint Specification:** Design REST/gRPC API endpoints for model predictions
+2. **Request/Response Format:** Define standardized input/output schemas
+3. **Error Handling:** Implement comprehensive error handling and validation
+4. **Documentation:** Generate OpenAPI/Swagger documentation automatically
+
+**Serving Infrastructure:**
+1. **Serving Framework:** Choose appropriate serving framework (TensorFlow Serving, TorchServe, FastAPI)
+2. **Load Balancing:** Implement load balancing for high-availability deployments
+3. **Auto-scaling:** Configure horizontal and vertical scaling based on load
+4. **Resource Optimization:** Optimize CPU/GPU resource allocation
+
+**Performance Optimization:**
+1. **Model Optimization:** Apply model compression, quantization, and optimization techniques
+2. **Caching Strategy:** Implement prediction caching for repeated requests
+3. **Batch Processing:** Optimize for batch prediction workloads
+4. **Async Processing:** Implement async processing for long-running predictions
+
+---
+
+**Phase 3: Deployment Pipeline & CI/CD**
+
+**STOP AND WAIT:** Establish automated deployment and testing pipelines.
+
+**CI/CD Pipeline Setup:**
+1. **Automated Testing:** Implement comprehensive model and integration testing
+2. **Deployment Automation:** Set up automated deployment to staging and production
+3. **Environment Management:** Configure staging, production, and rollback environments
+4. **Security Scanning:** Integrate security scanning for containers and dependencies
+
+**Canary Deployment:**
+1. **Traffic Splitting:** Implement gradual traffic shifting to new model versions
+2. **Performance Monitoring:** Monitor new version performance during canary deployment
+3. **Automated Rollback:** Set up automated rollback triggers based on performance metrics
+4. **A/B Testing:** Enable A/B testing capabilities for model comparison
+
+**Infrastructure as Code:**
+1. **Infrastructure Definition:** Define infrastructure using Terraform/CloudFormation
+2. **Configuration Management:** Implement configuration management and secrets handling
+3. **Cost Optimization:** Set up cost monitoring and optimization rules
+4. **Disaster Recovery:** Configure backup and disaster recovery procedures
+
+---
+
+**Phase 4: Monitoring & Observability**
+
+**STOP AND WAIT:** Implement comprehensive production monitoring and alerting.
+
+**Model Performance Monitoring:**
+1. **Prediction Quality:** Monitor model accuracy, precision, recall, and other metrics
+2. **Data Drift Detection:** Implement automated data drift and concept drift detection
+3. **Prediction Distribution:** Monitor prediction distribution and outlier detection
+4. **Business Metrics:** Track business impact and model business value
+
+**System Performance Monitoring:**
+1. **Latency Tracking:** Monitor prediction latency and response times
+2. **Throughput Metrics:** Track request rates and system throughput
+3. **Resource Utilization:** Monitor CPU, memory, GPU, and network usage
+4. **Error Rates:** Track and alert on prediction and system errors
+
+**Operational Monitoring:**
+1. **Availability Monitoring:** Set up uptime monitoring and SLA tracking
+2. **Security Monitoring:** Implement security event detection and alerting
+3. **Cost Monitoring:** Track infrastructure and serving costs
+4. **User Experience:** Monitor API usage patterns and user satisfaction
+
+**Alerting Strategy:**
+1. **Critical Alerts:** Immediate alerts for system failures and security incidents
+2. **Performance Alerts:** Warnings for performance degradation and anomalies
+3. **Business Alerts:** Notifications for business metric changes
+4. **Predictive Alerts:** Early warning systems for potential issues
+
+---
+
+**Phase 5: Model Maintenance & Retraining**
+
+**STOP AND WAIT:** Establish continuous model improvement and maintenance procedures.
+
+**Retraining Strategy:**
+1. **Trigger Definition:** Define when and how to trigger model retraining
+2. **Data Pipeline:** Set up automated data collection for model retraining
+3. **Retraining Pipeline:** Implement automated model retraining workflows
+4. **Validation Process:** Automated validation of retrained models
+
+**Model Governance:**
+1. **Version Control:** Maintain comprehensive model version history
+2. **Audit Trails:** Track all model changes, deployments, and performance
+3. **Compliance Logging:** Ensure compliance with regulatory requirements
+4. **Documentation:** Maintain up-to-date model documentation and lineage
+
+**Continuous Improvement:**
+1. **Performance Tracking:** Continuous monitoring of model performance over time
+2. **Feedback Integration:** Incorporate user feedback and business requirements
+3. **Research Integration:** Integrate latest ML research and techniques
+4. **Cost-Benefit Analysis:** Regular evaluation of model business value
+
+**Disaster Recovery:**
+1. **Backup Strategy:** Regular model and data backups
+2. **Recovery Procedures:** Documented procedures for model recovery
+3. **Failover Systems:** Implement redundant systems for high availability
+4. **Incident Response:** Define procedures for model failure incidents
+
+---
+
+**Deliverables:**
+1. **Production API:** Scalable, monitored model serving API
+2. **Deployment Pipeline:** Automated CI/CD pipeline for model deployment
+3. **Monitoring System:** Comprehensive monitoring and alerting infrastructure
+4. **Model Registry:** Versioned model artifacts with metadata tracking
+5. **Documentation:** Complete operational and maintenance documentation
+6. **Retraining Pipeline:** Automated model retraining and deployment system
+
+**Success Criteria:**
+- API handles expected load with <100ms latency for 95% of requests
+- Model performance degrades <5% from offline evaluation metrics
+- Deployment pipeline enables <1 hour deployment cycles
+- Monitoring detects >95% of performance and quality issues
+- System maintains >99.9% uptime with automated failover
+- Retraining pipeline successfully updates models based on triggers

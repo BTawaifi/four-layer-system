@@ -1,0 +1,13 @@
+---
+alwaysApply: false
+description: "Validates claims and findings in technical reports against the actual codebase with evidence-based verification"
+---
+
+**Action:** Validate Claims in a Report
+
+  **Please provide the context:**
+  - **The Report to Validate:** @[path/to/the/report.md]
+  - **Architectural Hints (Optional):** [Point to key directories or files that are central to the report's claims, e.g., "Focus on the data loading pipeline in `/data`."]
+
+  **Instruction for the AI:**
+  Act as an independent auditor. For each distinct claim or finding in the provided report, perform a deep-dive into the codebase to verify its accuracy. Respond with a bulleted list, stating each claim and marking it as **✅ VERIFIED** or **❌ INACCURATE**, followed by concrete code evidence (file paths, line numbers, or function names) to support your conclusion.

@@ -1,0 +1,89 @@
+---
+alwaysApply: false
+description: "Enforces Angular-specific best practices, architectural patterns, and performance optimizations"
+---
+
+rules:
+- **Component Architecture & Design:**
+  - Use Angular CLI for project scaffolding and follow official Angular style guide
+  - Implement smart/dumb component pattern with clear separation of concerns
+  - Use Angular modules for proper code organization and lazy loading
+  - Follow component lifecycle best practices and proper cleanup
+  - Implement OnPush change detection strategy for performance optimization
+
+- **Reactive Programming with RxJS:**
+  - Use RxJS operators effectively (map, filter, switchMap, combineLatest, etc.)
+  - Implement proper subscription management and unsubscribe patterns
+  - Use async pipe in templates to automatically handle subscriptions
+  - Implement proper error handling with catchError and retry operators
+  - Use Subjects and BehaviorSubjects appropriately for component communication
+
+- **State Management:**
+  - Use NgRx or Akita for complex application state management
+  - Implement proper action/reducer/effect patterns for NgRx
+  - Use services with BehaviorSubjects for simple state management
+  - Implement immutable state updates and avoid direct state mutations
+  - Use selectors for computed state and performance optimization
+
+- **Dependency Injection & Services:**
+  - Use Angular's DI system effectively with proper provider configuration
+  - Implement singleton services at the application level when appropriate
+  - Use injection tokens for better testability and flexibility
+  - Follow service layer patterns for API communication and business logic
+  - Implement proper error handling and retry logic in services
+
+- **Forms & Validation:**
+  - Use reactive forms for complex form scenarios and better testability
+  - Implement custom validators and async validation properly
+  - Use FormBuilder for reactive form creation and validation
+  - Implement proper form state management and error handling
+  - Use template-driven forms only for simple scenarios
+
+- **Performance Optimization:**
+  - Implement lazy loading for feature modules and routing
+  - Use trackBy function in *ngFor directives for better performance
+  - Implement virtual scrolling for large lists with cdk-virtual-scroll-viewport
+  - Use Angular's built-in change detection optimizations
+  - Implement proper bundle splitting and code splitting strategies
+
+- **Testing Strategy:**
+  - Write unit tests for services, components, and pipes using Jasmine/Karma
+  - Implement integration tests with TestBed and Angular testing utilities
+  - Use Spectator or Angular Testing Library for better testing ergonomics
+  - Test component interactions, async operations, and error scenarios
+  - Implement end-to-end tests with Cypress or Protractor for critical user journeys
+
+- **Internationalization & Accessibility:**
+  - Implement Angular i18n for multi-language support
+  - Use Angular CDK accessibility utilities and ARIA attributes
+  - Implement proper semantic HTML and keyboard navigation
+  - Use Angular Material components with accessibility features
+  - Test with screen readers and accessibility evaluation tools
+
+- **Build Optimization & Deployment:**
+  - Configure Angular CLI build optimizations and production builds
+  - Implement proper environment configurations and build targets
+  - Use Angular Universal for server-side rendering when needed
+  - Implement PWA features with Angular Service Worker
+  - Set up proper CI/CD pipelines with Angular CLI commands
+
+- **Code Organization & Structure:**
+  - Follow Angular style guide for file naming and folder structure
+  - Use feature modules for better code organization and tree-shaking
+  - Implement barrel exports (index.ts) for clean module imports
+  - Use TypeScript strict mode and proper type definitions
+  - Implement proper error handling with Angular's ErrorHandler
+
+- **Security Best Practices:**
+  - Implement proper HTTP client security with Angular HttpClient
+  - Use Angular's DomSanitizer for safe content rendering
+  - Implement CSRF protection and secure headers
+  - Use Angular's built-in XSS protection mechanisms
+  - Follow OWASP guidelines for Angular applications
+
+- **Angular Updates & Migration:**
+  - Stay current with Angular releases and follow migration guides
+  - Use Angular CLI update command for version upgrades
+  - Implement proper migration strategies for breaking changes
+  - Test thoroughly after major version updates
+  - Use Angular Language Service for better IDE support

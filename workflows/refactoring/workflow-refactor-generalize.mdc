@@ -1,0 +1,17 @@
+---
+alwaysApply: false
+description: "Generalizes successful fixes by finding and applying similar patterns consistently across the codebase"
+---
+
+prompt:
+  **Action:** Generalize and Refactor
+  **Context:** The fix we just implemented in @[path/to/reference-fix.jsx] is confirmed and working.
+
+  **Pattern to Find:**
+  [Describe the flawed logic or anti-pattern we need to eliminate. e.g., "Find all Axios API calls that access `response.data` without first checking if the `response` object is defined."]
+
+  **Refactoring Instruction:**
+  Apply the same robust logic from the reference fix to all identified locations across the codebase. Ensure the solution is consistent everywhere.
+
+  **Documentation (Optional):**
+  After applying the fixes, update @[path/to/docs.md] with a summary of the refactor.

@@ -1,0 +1,152 @@
+---
+alwaysApply: false
+description: "Comprehensive API development workflow covering design, implementation, documentation, and testing of REST and GraphQL APIs"
+---
+
+**Action:** Develop Production-Ready API
+
+**Please provide the API context:**
+- **API Type:** [REST / GraphQL / gRPC / WebSocket / Webhook]
+- **Purpose:** [Data access / Integration / Microservices communication / Public API]
+- **Scale:** [Internal / Partner integration / Public API / High-traffic]
+- **Security Requirements:** [Authentication / Authorization / Rate limiting / Data privacy]
+- **Technology Stack:** [Node.js / Python / Java / Go / .NET / PHP]
+
+**Instruction for the AI:**
+Act as a Senior API Architect and Backend Engineer. Your task is to design and implement production-ready APIs following industry best practices and standards.
+
+**API Design Principles:**
+
+1. **REST API Standards**
+   - Use RESTful resource naming conventions (/api/v1/users, /api/v1/posts)
+   - Implement proper HTTP status codes (200, 201, 400, 401, 404, 500)
+   - Use appropriate HTTP methods (GET, POST, PUT, PATCH, DELETE)
+   - Implement pagination for list endpoints
+   - Use filtering, sorting, and searching capabilities
+   - Implement proper error handling and validation
+
+2. **GraphQL API Standards**
+   - Design efficient schema with proper types and resolvers
+   - Implement query complexity analysis and rate limiting
+   - Use GraphQL best practices for mutations and subscriptions
+   - Implement proper error handling and field-level validation
+   - Design efficient data loaders to prevent N+1 queries
+   - Use schema stitching for microservices integration
+
+3. **API Security**
+   - Implement authentication (JWT, OAuth 2.0, API keys)
+   - Apply proper authorization and role-based access control
+   - Use HTTPS and TLS encryption for all communications
+   - Implement rate limiting and throttling
+   - Validate all inputs and sanitize data
+   - Use API gateways for centralized security
+   - Implement API versioning strategy
+
+4. **API Documentation**
+   - Create comprehensive OpenAPI/Swagger specifications
+   - Document all endpoints, parameters, and responses
+   - Provide request/response examples
+   - Include authentication and authorization guides
+   - Document error codes and troubleshooting
+   - Create interactive API documentation
+
+5. **API Testing**
+   - Implement unit tests for all API endpoints
+   - Create integration tests for API workflows
+   - Develop contract tests for API consumers
+   - Implement load testing for performance validation
+   - Create security tests for vulnerability assessment
+   - Develop API mocking for frontend development
+
+**Implementation Workflow:**
+
+**Phase 1: API Design & Planning**
+- Define API requirements and use cases
+- Design API architecture and data models
+- Create API specification (OpenAPI/Swagger)
+- Plan authentication and authorization strategy
+- Design error handling and response formats
+
+**Phase 2: Core Implementation**
+- Set up API framework and dependencies
+- Implement authentication and authorization middleware
+- Create database models and migrations
+- Implement core API endpoints and business logic
+- Add input validation and sanitization
+- Implement logging and monitoring
+
+**Phase 3: Advanced Features**
+- Implement rate limiting and throttling
+- Add API versioning support
+- Implement caching strategies
+- Add pagination and filtering
+- Create API documentation
+- Implement health checks and metrics
+
+**Phase 4: Testing & Validation**
+- Create comprehensive unit tests
+- Implement integration tests
+- Add API contract tests
+- Perform security testing
+- Conduct performance testing
+- Test API documentation
+
+**Phase 5: Deployment & Monitoring**
+- Set up production deployment pipeline
+- Configure API monitoring and alerting
+- Implement API analytics and metrics
+- Set up error tracking and logging
+- Create API maintenance procedures
+- Plan API versioning strategy
+
+**API Best Practices:**
+
+**Performance Optimization:**
+- Use database indexing and query optimization
+- Implement caching strategies (Redis, in-memory cache)
+- Use pagination for large datasets
+- Implement request compression
+- Use CDN for static assets
+- Optimize database queries and joins
+
+**Error Handling:**
+- Use consistent error response format
+- Provide meaningful error messages
+- Implement proper HTTP status codes
+- Log errors for debugging and monitoring
+- Handle timeouts and retries gracefully
+- Validate all inputs and provide clear validation messages
+
+**Security Implementation:**
+- Use HTTPS and TLS for all communications
+- Implement proper authentication and authorization
+- Validate and sanitize all user inputs
+- Use parameterized queries to prevent SQL injection
+- Implement rate limiting to prevent abuse
+- Use security headers (CORS, CSP, HSTS)
+
+**Monitoring & Observability:**
+- Implement comprehensive logging
+- Set up API metrics and monitoring
+- Create health check endpoints
+- Implement distributed tracing
+- Set up alerting for API issues
+- Monitor API performance and usage
+
+**Documentation Standards:**
+- Use OpenAPI 3.0 specification
+- Provide clear endpoint descriptions
+- Include request/response examples
+- Document authentication requirements
+- Create getting started guides
+- Maintain up-to-date documentation
+
+**Versioning Strategy:**
+- Use semantic versioning (v1, v2, v3)
+- Implement backward compatibility
+- Deprecate old versions gradually
+- Communicate breaking changes clearly
+- Support multiple versions simultaneously
+- Plan migration paths for consumers
+
+Acknowledge that production-ready API development has been initiated with comprehensive design, implementation, and testing strategies.

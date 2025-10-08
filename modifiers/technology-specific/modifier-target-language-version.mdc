@@ -1,0 +1,6 @@
+---
+alwaysApply: false
+description: "Ensures generated code is compatible with specific language versions, avoiding newer features"
+---
+prompt:
+  **Constraint:** All code you generate must be compatible with **[e.g., "Python 3.8," "ES2015 (ES6) JavaScript"]**. Do not use features from newer versions of the language.

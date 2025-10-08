@@ -1,0 +1,118 @@
+---
+alwaysApply: false
+description: "Comprehensive pre-deployment verification workflow combining multiple quality gates and security checks"
+---
+
+**Action:** Execute Production Deployment Checklist
+
+**Please provide deployment context:**
+
+- **Deployment Target:** [environment name, e.g., "production", "staging"]
+- **Changes Being Deployed:** @[path/to/changes] or [brief description]
+- **Risk Level:** [low / medium / high / critical]
+- **Rollback Plan:** [Brief description of rollback strategy]
+
+**Instruction for the AI:**
+Act as a DevOps engineer and quality assurance specialist performing final pre-deployment verification. This workflow ensures production readiness through systematic quality gates.
+
+---
+
+**Phase 1: Code Quality Verification**
+
+**STOP AND WAIT:** Run code quality checks on all modified files.
+
+**Verification Criteria:**
+1. **Linting & Formatting:** All code passes linting rules and formatting standards
+2. **Type Safety:** Type checking passes without errors (if applicable)
+3. **Logic Validation:** Code changes directly address the original requirements
+4. **Code Coverage:** Test coverage meets minimum thresholds (if applicable)
+
+**Expected Outcome:** ✅ Quality checks passed or ❌ Issues identified with specific remediation steps
+
+---
+
+**Phase 2: Security Mini-Audit**
+
+**STOP AND WAIT:** Perform security verification on security-sensitive changes.
+
+**Security Checks:**
+1. **Input Validation:** All external inputs are properly sanitized and validated
+2. **Authentication/Authorization:** Access controls are correctly implemented
+3. **Information Exposure:** No sensitive data is leaked in error messages or logs
+4. **Injection Prevention:** SQL, XSS, and other injection vulnerabilities are mitigated
+
+**Expected Outcome:** ✅ Security audit passed or ❌ Security issues identified with severity levels
+
+---
+
+**Phase 3: Configuration Path Verification**
+
+**STOP AND WAIT:** Validate all configuration references and paths.
+
+**Configuration Checks:**
+1. **Path Resolution:** All file paths and URLs resolve correctly
+2. **Environment Variables:** Required environment variables are documented and accessible
+3. **Configuration Loading:** Configuration files load without errors
+4. **Secret Management:** Sensitive configuration is properly secured
+
+**Expected Outcome:** ✅ Configuration verified or ❌ Configuration issues identified
+
+---
+
+**Phase 4: AI Output Quality Verification (if applicable)**
+
+**STOP AND WAIT:** If deployment includes AI-generated content, verify output quality.
+
+**Quality Criteria:**
+1. **Completeness:** All generated artifacts are complete and functional
+2. **Relevance & Customization:** Content is highly customized to requirements
+3. **Schema Compliance:** Output adheres to all specified schemas and constraints
+4. **Hallucination Check:** No irrelevant or fabricated content included
+
+**Expected Outcome:** ✅ High-quality output or ❌ Quality issues requiring regeneration
+
+---
+
+**Phase 5: ML System Integrity (if applicable)**
+
+**STOP AND WAIT:** If deploying ML components, verify system integrity.
+
+**Integrity Checks:**
+1. **Model Validation:** ML models produce expected outputs for known inputs
+2. **Data Pipeline Integrity:** Data processing pipelines are functioning correctly
+3. **Performance Baselines:** ML performance meets established thresholds
+4. **Bias & Fairness:** Models do not exhibit unexpected bias patterns
+
+**Expected Outcome:** ✅ ML integrity confirmed or ❌ Integrity issues identified
+
+---
+
+**Phase 6: Production Readiness Assessment**
+
+**STOP AND WAIT:** Perform final production readiness evaluation.
+
+**Readiness Criteria:**
+1. **Functional Testing:** Core functionality works as expected
+2. **Performance Testing:** System meets performance requirements under load
+3. **Compatibility Testing:** Changes are compatible with existing systems
+4. **Documentation:** Deployment and rollback procedures are documented
+5. **Monitoring:** Appropriate monitoring and alerting are in place
+6. **Business Logic:** Changes align with business requirements and user needs
+
+**Expected Outcome:** ✅ Ready for deployment or ❌ Deployment blocked with specific issues
+
+---
+
+**Phase 7: Deployment Approval & Sign-off**
+
+**Final Assessment:**
+- Risk level confirmation
+- Deployment approval recommendation
+- Any remaining concerns or mitigations required
+- Final sign-off checklist
+
+**Deployment Decision:** 🚀 **APPROVED** - Proceed with deployment
+                     ⚠️ **CONDITIONAL** - Deploy with additional monitoring
+                     ❌ **BLOCKED** - Address critical issues before deployment
+
+**[STOP AND WAIT FOR FINAL DEPLOYMENT APPROVAL]**

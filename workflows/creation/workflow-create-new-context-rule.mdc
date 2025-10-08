@@ -1,0 +1,31 @@
+---
+alwaysApply: false
+description: "Factory workflow for creating new context management rules with interactive prompts and proper structure"
+---
+
+This workflow helps you create new rules for managing the AI's state, memory, and focus.
+
+prompt:
+**Action:** Initiate the Context Rule Creation Factory Workflow
+
+**Please describe the new context rule:**
+
+- **The Rule's Purpose:** [What is the primary goal of this context rule? e.g., "To make the AI track progress on a multi-step task," "To establish a file as the absolute source of truth for the session."]
+- **The Interaction Flow:** [Describe how you want to interact with this rule. What information will you provide it? What should its response be?]
+
+**Instruction for the AI:**
+You will now generate a new, interactive `.cursorrules` file for a "Context Management" rule.
+
+---
+
+**Phase 1: Prompt Design**
+
+- **Design the Template:** Create an interactive prompt template that asks the user for the necessary inputs to set the context (e.g., the task list, the ground truth file).
+- **Define the AI's Response:** Specify how the AI should respond to acknowledge that the context has been set.
+
+---
+
+**Phase 2: Rule File Generation**
+
+- **Generate the File:** Create a new file named `context-[purpose_slug].cursorrules` or `state-[purpose_slug].cursorrules` containing the designed interactive prompt.
+- **Provide a Usage Example:** In your response, provide a clear example of how to use this new rule at the beginning of a session to set the stage for a task.

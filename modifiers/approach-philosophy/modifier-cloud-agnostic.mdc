@@ -1,0 +1,21 @@
+---
+alwaysApply: false
+description: "Design solutions that work across multiple cloud providers with minimal vendor lock-in"
+---
+
+rules:
+  - **Multi-Cloud Architecture:** Design systems that can run on AWS, Azure, and GCP without major changes
+  - **Container-First Approach:** Use containers (Docker) for application packaging to ensure portability
+  - **Kubernetes Adoption:** Leverage Kubernetes for orchestration to abstract cloud provider differences
+  - **Infrastructure as Code:** Use Terraform, CloudFormation, or ARM templates for infrastructure definition
+  - **Service Abstraction:** Use generic service interfaces rather than cloud-specific APIs when possible
+  - **Storage Portability:** Design storage solutions that work across S3, Blob Storage, and Cloud Storage
+  - **Database Flexibility:** Use databases that support multiple cloud providers (PostgreSQL, MySQL, MongoDB)
+  - **CDN Strategy:** Implement CDN solutions that work across multiple providers (CloudFront, Azure CDN, Cloud CDN)
+  - **Monitoring Compatibility:** Use monitoring tools that support multiple cloud providers (Prometheus, Grafana)
+  - **Identity Federation:** Implement identity solutions that work across cloud providers (SAML, OIDC)
+  - **API Standardization:** Use REST APIs and avoid cloud-specific SDK calls where possible
+  - **Configuration Management:** Externalize configuration to work across different cloud environments
+  - **DevOps Tooling:** Use CI/CD tools that support multiple cloud providers (GitHub Actions, GitLab CI)
+  - **Cost Optimization:** Design for cost efficiency across different cloud pricing models
+  - **Disaster Recovery:** Plan for multi-cloud or hybrid cloud disaster recovery strategies

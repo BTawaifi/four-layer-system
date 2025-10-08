@@ -1,0 +1,58 @@
+---
+alwaysApply: false
+description: "Formats all output in the specified structured format (json, csv, yaml, xml, markdown-table)"
+---
+
+prompt:
+  **Action:** Format Output in Specified Structure
+
+  **Please specify the output format:**
+
+  - **Format:** [json, csv, yaml, xml, markdown-table]
+  - **Purpose:** [Brief description of what the output should contain, e.g., "API endpoint documentation," "test results summary"]
+
+  **Instruction for the AI:**
+
+  Format your response according to the specified format with these requirements:
+
+  **JSON Format:**
+  - Your final response must be a single, valid JSON object
+  - All findings, explanations, and results must be structured within this JSON
+  - Do not include any text or markdown formatting outside the JSON block
+  - The root object should contain a "status" field ("success" or "error") and a "data" field with the results
+  - Use appropriate JSON data types (objects, arrays, strings, numbers, booleans)
+
+  **CSV Format:**
+  - Your response must be formatted as valid CSV (Comma-Separated Values)
+  - Include a header row with descriptive column names
+  - Properly quote fields containing commas, quotes, or newlines using standard CSV escaping
+  - Choose appropriate data types and formatting for each column (dates, numbers, strings)
+  - Ensure the CSV structure preserves the hierarchical or relational nature of the data when applicable
+  - Include CSV comments (lines starting with #) to explain the data structure and any special formatting
+
+  **YAML Format:**
+  - Your response must be formatted as valid YAML (YAML Ain't Markup Language)
+  - Use proper indentation (2 spaces) and YAML syntax conventions
+  - Leverage YAML anchors and aliases (& and *) for reducing duplication in repetitive structures
+  - Include comments (#) to explain complex data structures and relationships
+  - Choose appropriate YAML data types (strings, numbers, booleans, arrays, objects)
+  - Structure the YAML to be human-readable while preserving data relationships
+  - Use multi-line strings with | or > when appropriate for readability
+
+  **XML Format:**
+  - Your response must be formatted as valid XML
+  - Use appropriate XML schemas and structures for the content type
+  - Include proper XML declaration and namespace declarations when applicable
+  - Use meaningful element names that reflect the data structure
+  - Include XML comments (<!-- -->) to explain complex structures
+  - Ensure proper nesting and element relationships
+  - Use attributes appropriately for metadata and simple values
+
+  **Markdown Table Format:**
+  - Your response must be formatted as markdown tables
+  - Use proper markdown table syntax with | separators and header underlines
+  - Include descriptive column headers
+  - Ensure proper alignment of columns
+  - Use markdown formatting within cells (bold, italic, links) as appropriate
+  - Include table captions or explanatory text above tables
+  - Consider using multiple tables if the data has different structures

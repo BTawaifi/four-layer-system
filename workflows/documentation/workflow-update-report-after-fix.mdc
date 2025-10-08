@@ -1,0 +1,16 @@
+---
+alwaysApply: false
+description: "Updates technical reports to reflect resolved issues and improved system state after fixes are implemented"
+---
+
+**Action:** Update Report After Implementing Fixes
+
+**Please provide the context:**
+- **The Report to Update:** @[path/to/the/report.md]
+- **The Issues That Were Fixed:** [List the issue numbers or descriptions that are now resolved.]
+
+**Instruction for the AI:**
+Modify the provided report to reflect the completed work.
+1.  Change the status of the fixed issues to "✅ RESOLVED".
+2.  Add a brief explanation of the remedy that was implemented for each.
+3.  Update the executive summary and production readiness sections to reflect the new, improved state of the system.

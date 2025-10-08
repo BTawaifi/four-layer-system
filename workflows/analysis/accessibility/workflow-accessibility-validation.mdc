@@ -1,0 +1,61 @@
+---
+alwaysApply: false
+description: "Validation of accessibility fixes and compliance verification"
+---
+
+**Action:** Validate Accessibility Remediation
+
+**Please provide the validation context:**
+
+- **Remediation Report:** @[path/to/accessibility_remediation_report.md]
+- **Application/Component:** @[path/to/application]
+- **Target WCAG Level:** [A, AA, or AAA]
+- **Validation Scope:** [Fixed issues only / Regression testing / Full re-audit]
+
+**Instruction for the AI:**
+Act as an Accessibility Validation Specialist. Verify that implemented accessibility fixes work correctly and maintain compliance with WCAG guidelines.
+
+---
+
+**Phase 1: Remediation Testing**
+
+**Validation Activities:**
+1. **Fix Verification:** Test each remediated issue to confirm the fix addresses the original problem
+2. **Regression Testing:** Ensure changes don't break existing functionality
+3. **Cross-Browser Testing:** Validate across different browsers and assistive technologies
+4. **User Impact Assessment:** Confirm improvements benefit the intended user groups
+
+---
+
+**Phase 2: Compliance Verification**
+
+**Verification Checks:**
+1. **WCAG Conformance:** Confirm compliance with target WCAG level (A/AA/AAA)
+2. **Success Criteria:** Verify all relevant success criteria are met
+3. **Documentation Updates:** Ensure accessibility features are properly documented
+4. **Stakeholder Sign-off:** Prepare compliance documentation for stakeholders
+
+---
+
+**Phase 3: Ongoing Accessibility Program**
+
+**Program Components:**
+1. **Accessibility Guidelines:** Team standards and best practices
+2. **Training Program:** Developer and designer accessibility training
+3. **Quality Gates:** Accessibility checks in code review and QA processes
+4. **Monitoring & Reporting:** Ongoing accessibility metrics and compliance tracking
+5. **Vendor Assessment:** Accessibility evaluation for third-party components
+
+**Success Metrics:**
+- WCAG compliance level achieved and maintained
+- Accessibility bug rate in production (<5% of total bugs)
+- User satisfaction scores from accessibility user testing
+- Development team accessibility knowledge and confidence
+
+**Deliverables:**
+Generate a validation report in `accessibility_validation_report.md` with:
+- Verification results for each fix
+- Compliance status and remaining gaps
+- Updated accessibility metrics
+- Recommendations for ongoing maintenance
+- Program establishment roadmap

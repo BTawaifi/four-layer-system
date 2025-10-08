@@ -1,0 +1,21 @@
+---
+alwaysApply: false
+description: "Apply RESTful API design principles, proper resource modeling, and API best practices"
+---
+
+rules:
+  - **RESTful Resource Design:** Use nouns for resources, proper HTTP methods (GET, POST, PUT, PATCH, DELETE), and meaningful status codes
+  - **Consistent Naming:** Use lowercase, hyphen-separated URLs, consistent resource naming across endpoints
+  - **Proper HTTP Status Codes:** Use 200/201/204 for success, 400/422 for client errors, 401/403 for auth, 404 for not found, 500 for server errors
+  - **Pagination Standards:** Implement consistent pagination with page, limit, offset parameters and include pagination metadata
+  - **Filtering & Sorting:** Provide query parameters for filtering (status=active), sorting (sort=created_at), and field selection
+  - **API Versioning:** Include version in URL path (/api/v1/users) or headers (Accept: application/vnd.api.v1+json)
+  - **Error Response Format:** Use consistent error response structure with error codes, messages, and details
+  - **Request Validation:** Validate all inputs with clear error messages and proper field-level validation
+  - **Authentication Strategy:** Implement proper auth (JWT, OAuth2, API keys) with clear documentation
+  - **Rate Limiting:** Implement and document rate limiting with appropriate headers (X-RateLimit-*)
+  - **Content Negotiation:** Support multiple response formats (JSON, XML) based on Accept headers
+  - **Caching Headers:** Include appropriate cache control headers (ETag, Last-Modified, Cache-Control)
+  - **API Documentation:** Maintain comprehensive OpenAPI/Swagger documentation with examples
+  - **Security Best Practices:** Implement HTTPS, input sanitization, SQL injection prevention, XSS protection
+  - **Idempotency:** Design POST/PUT operations to be idempotent where appropriate

@@ -1,0 +1,46 @@
+---
+alwaysApply: false
+description: "Multi-phase hypothesis-driven debugging workflow with systematic testing and experimental validation"
+---
+
+**Action:** Initiate a Hypothesis-Driven Debugging Workflow
+
+**Please define the problem:**
+
+- **The Observed Anomaly:** [Describe the subtle, unexpected behavior, e.g., "The system's memory usage grows slowly over 24 hours and never decreases," "User session data occasionally becomes corrupted after the third page navigation."]
+- **The Primary Code Area:** @[path/to/the/suspected/code/area.ext]
+
+**Instruction for the AI:**
+You will now conduct a rigorous debugging session. You must stop and wait for my input at the designated checkpoints.
+
+---
+
+**Phase 1: Hypothesis Generation**
+
+- Based on the observed anomaly and the provided code, generate a list of 3 to 5 potential root causes (hypotheses).
+- For each hypothesis, describe the mechanism that would lead to the observed behavior.
+- Prioritize the list from most to least likely.
+
+**[STOP AND WAIT FOR ME TO SELECT A HYPOTHESIS TO TEST]**
+
+---
+
+**Phase 2: Experiment Design & Execution**
+
+- For the hypothesis I select, design a minimal, targeted experiment to prove or disprove it. The experiment could be:
+- Adding specific logging statements.
+- Writing a small, isolated test script.
+- Temporarily modifying a piece of logic.
+- **Crucially, explain what the expected outcome of the experiment will be if the hypothesis is TRUE, and what it will be if it is FALSE.**
+- [After I approve] Apply the changes needed for the experiment.
+
+**[STOP AND WAIT FOR ME TO RUN THE EXPERIMENT AND PROVIDE THE RESULTS/LOGS]**
+
+---
+
+**Phase 3: Conclusion & Remediation**
+
+- Analyze the results I provide from the experiment.
+- State whether the hypothesis was confirmed or refuted.
+- If confirmed, propose a permanent fix for the root cause.
+- If refuted, suggest which hypothesis we should test next.

@@ -1,0 +1,10 @@
+---
+alwaysApply: false
+description: "Enforces extremely detailed responses with comprehensive reasoning, step explanations, and inline code comments"
+---
+rules:
+  - Your final response must be extremely detailed. Explain your reasoning, the steps you took, and the trade-offs of your decisions. Include inline comments in any code you provide. No detail is too small.
+
+conflicts:
+  - **Critical Conflict**: Cannot be used with `modifier-concise-output` (directly contradictory output styles)
+  - See `modifier-compatibility-matrix` for complete conflict resolution guidelines

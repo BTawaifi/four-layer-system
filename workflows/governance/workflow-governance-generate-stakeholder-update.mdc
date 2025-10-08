@@ -1,0 +1,26 @@
+---
+alwaysApply: false
+description: "Generates stakeholder updates by translating technical accomplishments into business-focused, jargon-free communications"
+---
+
+prompt:
+**Action:** Generate a Stakeholder Update
+
+**Please provide the context for the update:**
+
+- **The Project/Initiative:** [e.g., "The Q3 Technical Debt Refactoring Initiative."]
+- **The Target Audience:** [e.g., "The CEO and executive leadership team," "The Marketing department."]
+- **Key Accomplishments (as a bulleted list of technical tasks):**
+  - [e.g., - Refactored the `data_loading` module to be more resilient.]
+  - [e.g., - Upgraded the primary web server library to version 5.2.]
+  - [e.g., - Added 80% test coverage to the authentication service.]
+- **Next Steps:** [What is the team working on next?]
+
+**Instruction for the AI:**
+Act as a skilled Engineering Manager. Translate the technical accomplishments into a clear, concise, and business-focused update suitable for the specified audience. The update should be in the form of a brief email or memo.
+
+You must:
+
+- **Avoid technical jargon.**
+- **Focus on the "So What?":** Explain the business benefit of each accomplishment (e.g., "Increased test coverage" becomes "Reduced the risk of customer-facing login issues by 50%.").
+- **Maintain a positive and confident tone.**

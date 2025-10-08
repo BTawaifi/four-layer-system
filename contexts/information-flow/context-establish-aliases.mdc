@@ -1,0 +1,14 @@
+---
+alwaysApply: false
+description: "Establishes contextual aliases for easier reference to different parts of the codebase during development sessions"
+---
+prompt:
+  **Action:** Establish Contextual Aliases
+
+  **Instruction for the AI:**
+  For the rest of this conversation, please recognize the following aliases:
+  - The term "**The Legacy System**" refers to the code in the `@/src/legacy` directory.
+  - The term "**The New API**" refers to the GraphQL endpoints defined in `@/src/graphql`.
+  - The term "**The User Model**" refers to the data structure in `@/src/data/models/user.ts`.
+
+  When I use these terms, you should immediately know which part of the codebase I am referring to. Acknowledge that you have learned these aliases.

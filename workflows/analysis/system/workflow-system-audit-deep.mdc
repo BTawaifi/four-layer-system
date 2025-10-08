@@ -1,0 +1,16 @@
+---
+alwaysApply: false
+description: "Multi-phase deep system audit workflow covering security, routing, data dependencies, and performance analysis"
+---
+  **Action:** Conduct a Deep System Audit
+  **Audit Type:** [security / routing / data-dependency / performance]
+
+  **Primary Source of Truth:**
+  Your analysis must be primarily grounded in the definitions and structures found in this file: @[path/to/data-source.json or relevant config file]
+
+  **Analysis Protocol:**
+  1.  **Phase 1 (Initial Scan):** Begin by performing a high-level scan based on the source of truth. Provide a summary of your initial findings, categorizing them by severity or type.
+  2.  **Phase 2 (Deep Dive):** After my review, I will instruct you to "dig deeper" into specific areas. At that point, you will cross-reference the initial findings with the implemented code in the relevant directories to find concrete examples and vulnerabilities.
+  3.  **Phase 3 (Final Report):** Once the analysis is complete, I will ask you to compile all findings into a comprehensive markdown report.
+
+  Begin Phase 1 now.

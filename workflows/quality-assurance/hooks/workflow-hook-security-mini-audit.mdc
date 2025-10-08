@@ -1,0 +1,19 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+prompt:
+  ---
+  **[POST-ACTION HOOK: Security Mini-Audit]**
+
+  **Instruction for the AI:**
+  The recent change was in a security-sensitive area of the code. Before we proceed, perform a quick security review.
+
+  1.  **Input Validation:** Does the new code properly sanitize and validate all external inputs to prevent injection attacks?
+  2.  **Authentication/Authorization:** Does the new code correctly check if the user is authenticated and authorized to perform the action?
+  3.  **Information Exposure:** Does the new code avoid leaking sensitive information in error messages or logs?
+
+  State your findings for these three points.
+
+  **[STOP AND WAIT FOR MY ACKNOWLEDGEMENT]**

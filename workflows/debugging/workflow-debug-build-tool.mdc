@@ -1,0 +1,22 @@
+---
+alwaysApply: false
+description: "Diagnoses build tool errors, provides specific fixes, and scans for similar issues across the codebase"
+---
+
+**Action:** Diagnose a Build Tool Error
+
+  **Please provide the context:**
+  - **The Build Tool:** [e.g., "Next.js 15.5.2 (Turbopack)"]
+  - **The Full Error Message:**
+    ```
+    [Paste the complete, unedited error message and stack trace here]
+    ```
+  - **The Suspected File/Operation:** [What were you doing when this happened? e.g., "Importing a JSON file for i18n."]
+  - **Architectural Hints (Optional):**
+    - Where are build configurations located? [e.g., "next.config.js"]
+    - What is the common way this operation is handled elsewhere in the app?
+
+  **Instruction for the AI:**
+  1.  **Diagnose Root Cause:** Based on the error message, explain the underlying issue with the build tool's expectation versus the code's implementation.
+  2.  **Propose a Specific Fix:** Provide the exact code modification needed to resolve the error in the suspected file.
+  3.  **Find All Similar Issues:** Scan the entire codebase for the same problematic pattern and list all affected files.

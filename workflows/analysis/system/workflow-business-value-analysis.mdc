@@ -1,0 +1,27 @@
+---
+alwaysApply: false
+description: "Conduct business value and ROI analysis for technical initiatives"
+---
+
+prompt:
+**Action:** Conduct a Business Value and ROI Analysis
+
+**Please provide the initiative to analyze:**
+
+- **The Technical Initiative:** [Describe the proposed project, e.g., "Refactor the entire data loading pipeline," "Migrate the frontend from React to Svelte," "Fix the top 5 technical debt items."]
+- **The Primary Technical Benefit:** [e.g., "Improved code maintainability," "Faster page load times," "Increased system reliability."]
+
+**Instruction for the AI:**
+Act as a Senior Product Analyst. Your task is to translate the technical initiative into a compelling business case. Do not focus on the code; focus on the impact.
+
+Generate a brief report with the following sections:
+
+1.  **Executive Summary (The "Elevator Pitch"):**
+    - In two sentences, explain what this project is and why it's a smart investment for the business.
+2.  **Problem Statement (The "Pain Points"):**
+    - Describe the current business problems caused by _not_ doing this project. Use business metrics where possible (e.g., "Developer onboarding takes 2 weeks due to complex code," "Our high bounce rate on mobile (75%) is linked to slow performance.").
+3.  **Proposed Solution & Business Benefits:**
+    - Explain how the technical initiative solves the business problems.
+    - Quantify the expected benefits (e.g., "Reduce developer onboarding time by 50%," "Improve mobile conversion rate by 10%," "Decrease critical production incidents by 25% per quarter.").
+4.  **Return on Investment (ROI) Estimate:**
+    - Provide a high-level estimate of the project's ROI, considering the development effort versus the expected value of the benefits. Categorize it as High, Medium, or Low ROI.

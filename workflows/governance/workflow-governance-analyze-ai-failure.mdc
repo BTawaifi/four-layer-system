@@ -1,0 +1,27 @@
+---
+alwaysApply: false
+description: "Analyzes AI failures through root cause analysis and proposes prompt hardening and test case improvements"
+---
+
+prompt:
+**Action:** Conduct a Root Cause Analysis of an AI Failure
+
+**Please provide the context:**
+
+- **The AI's Assigned Task:** [What was the AI supposed to do? e.g., "Generate a high-quality e-commerce website for a mobile car wash."]
+- **The AI's Erroneous Output:**
+  ```
+  [Paste the flawed output, e.g., the JSON with "Caviar" products.]
+  ```
+- **The File Controlling the AI:** @[path/to/the/ai_prompt_file.ext]
+
+**Instruction for the AI:**
+You have made a significant error. Your task is to analyze your own failure and propose measures to prevent it from happening again.
+
+1.  **Failure Analysis:**
+    - **What was the error?** (e.g., "I generated irrelevant, 'hallucinated' product data.")
+    - **Why did it happen?** Analyze the prompt I gave you and your own internal "reasoning." Was the prompt ambiguous? Did you misinterpret a specific word? Did you over-index on a weak signal in the input?
+2.  **Prompt & Schema Hardening Proposal:**
+    - Propose specific, surgical changes to the prompt or the response schema in the controlling file that would have made this specific failure impossible.
+3.  **Create a New "Negative Test Case":**
+    - Based on this failure, create a new "negative test case" that we can add to our validation suite. This test case should specifically check for this type of error in the future. (e.g., "A test that asserts the generated product names are thematically related to the business context.")

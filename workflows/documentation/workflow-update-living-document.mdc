@@ -1,0 +1,16 @@
+---
+alwaysApply: false
+description: "Updates living documentation to accurately reflect the current state of the codebase"
+---
+
+**Action:** Update Living Documentation
+
+**Please provide the context:**
+- **The Document to Update:** @[path/to/your/documentation.md]
+- **The Goal:** The provided document is potentially outdated. Your task is to remap it fully against the current state of the codebase.
+
+**Instruction for the AI:**
+1.  Read the target document to understand its intended structure and claims.
+2.  Scan the entire codebase to gather the current, accurate information.
+3.  Rewrite the target document in place, updating all sections to be 100% accurate.
+4.  Verify that all documented functions, modules, and dependencies match the current implementation.

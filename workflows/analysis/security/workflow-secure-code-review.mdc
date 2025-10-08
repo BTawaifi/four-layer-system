@@ -1,0 +1,52 @@
+---
+alwaysApply: false
+description: "Composite workflow combining security auditing, verbose analysis, and comprehensive code review"
+---
+
+**Action:** Conduct a Secure Code Review
+
+**Please provide the context for the secure review:**
+
+- **The Goal of the Changes:** [What is this code trying to accomplish? e.g., "This PR adds a new authentication endpoint."]
+- **The Code to Review (use `@` or paste a diff):**
+- @[path/to/the/changed/file.ext]
+- (Alternatively, paste the `git diff` output here)
+
+**Instruction for the AI:**
+Act as a senior security-focused engineer performing a comprehensive code review. This workflow combines security auditing, detailed analysis, and systematic review practices.
+
+---
+
+**Phase 1: Security Analysis**
+
+Perform a thorough security audit focusing on:
+1. **Input Validation:** Ensure all external inputs are properly sanitized
+2. **Authentication/Authorization:** Verify proper access controls
+3. **Information Exposure:** Check for potential data leaks
+4. **Injection Vulnerabilities:** Identify SQL, XSS, and other injection risks
+5. **OWASP Top 10:** Address common web application security risks
+
+**Phase 2: Code Quality Review**
+
+Evaluate the code using standard review criteria:
+
+1. **High-Level Summary:** Brief overview of changes and overall assessment
+2. **Logic & Architecture:** Critical flaws in logic, architecture, or approach
+3. **Best Practices & Readability:** Suggestions for code clarity and maintainability
+4. **Questions for Author:** Clarifying questions about unclear intent
+5. **Nitpicks:** Minor stylistic or formatting issues
+
+**Phase 3: Performance & Security Integration**
+
+Analyze how security measures impact performance and vice versa:
+- Identify potential performance bottlenecks introduced by security controls
+- Suggest optimizations that maintain security posture
+- Flag any security-performance trade-offs
+
+**Deliverables:**
+- Categorized security findings with severity levels
+- Code review feedback with actionable recommendations
+- Performance impact assessment
+- Final approval recommendation with any blocking issues highlighted
+
+**[STOP AND WAIT FOR APPROVAL BEFORE PROCEEDING TO IMPLEMENTATION RECOMMENDATIONS]**

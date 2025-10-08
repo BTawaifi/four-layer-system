@@ -1,0 +1,44 @@
+---
+alwaysApply: false
+description: "Workflow to standardize component output paths by centralizing configuration and removing hardcoded directories"
+---
+
+**Action:** Standardize Component Output Paths
+
+**Please provide the context:**
+- **The Component to Fix:** @[path/to/component_with_hardcoded_paths.ext]
+- **The Central Config File:** @[path/to/config.ext]
+- **The Goal:** This component writes output to a custom, hardcoded directory. It needs to be updated to use a centralized output path.
+
+**Instruction for the AI:**
+Act as a Code Refactoring Specialist. Your task is to systematically identify and replace hardcoded output paths with centralized configuration.
+
+**Implementation Steps:**
+
+1. **Analysis Phase:**
+   - Identify all hardcoded path references in the component
+   - Map existing output locations and their purposes
+   - Determine the appropriate central configuration approach
+
+2. **Configuration Setup:**
+   - Update the central config file to include output path definitions
+   - Add appropriate path variables (e.g., `OUT_DIR`, `LOG_DIR`, `CACHE_DIR`)
+   - Ensure configuration can be overridden by environment variables
+
+3. **Code Refactoring:**
+   - Import centralized output directory paths from the config file
+   - Replace hardcoded directory names with configuration variables
+   - Update all file write operations to use centralized paths
+
+4. **Testing & Validation:**
+   - Test all output operations with new path configuration
+   - Verify no functionality is broken by path changes
+   - Ensure configuration can be easily modified
+
+**Best Practices:**
+- Use relative paths when possible for portability
+- Provide sensible defaults in configuration
+- Document all output path variables clearly
+- Consider creating path utilities for common operations
+
+Acknowledge that the output path standardization workflow has been initialized.

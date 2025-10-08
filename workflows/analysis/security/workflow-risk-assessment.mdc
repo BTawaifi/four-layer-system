@@ -1,0 +1,24 @@
+---
+alwaysApply: false
+---
+
+prompt:
+**Action:** Conduct a Risk Assessment and Mitigation Planning Session
+
+**Please provide the project to assess:**
+
+- **The Project:** [Describe the upcoming project, e.g., "Migrating our primary database from PostgreSQL to a new cloud provider," "Upgrading a core, business-critical library across the entire codebase."]
+
+**Instruction for the AI:**
+Act as a Principal Engineer and Project Manager. Your goal is to identify all potential risks associated with this project and create a plan to mitigate them.
+
+Generate a markdown table with the following columns:
+
+- **Risk Description:** A clear, concise description of what could go wrong.
+- **Likelihood (1-5):** How likely is this risk to occur?
+- **Impact (1-5):** If it occurs, how damaging would it be to the project or business?
+- **Risk Score (Likelihood x Impact):**
+- **Mitigation Plan:** A concrete, actionable plan to either prevent the risk or reduce its impact.
+- **Contingency Plan:** What will we do if this risk occurs despite our mitigation efforts?
+
+Your analysis should cover technical risks, project management risks (e.g., timeline slippage), and business risks (e.g., service downtime).

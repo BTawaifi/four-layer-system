@@ -1,0 +1,161 @@
+---
+alwaysApply: false
+description: "Focused workflow for ML data preparation, pipeline development, and feature engineering"
+---
+
+**Action:** Prepare Data for Machine Learning
+
+**Please provide the data preparation context:**
+
+- **Data Sources:** [Databases / APIs / Files / Streams / Multiple Sources]
+- **Data Types:** [Tabular / Text / Images / Time Series / Mixed / Unstructured]
+- **Data Scale:** [Small (<1GB) / Medium (1GB-100GB) / Large (100GB-1TB) / Massive (1TB+)]
+- **Quality Issues:** [Missing Data / Outliers / Noise / Inconsistencies / None]
+- **Processing Requirements:** [Batch Only / Real-time / Hybrid / One-time]
+
+**Instruction for the AI:**
+Act as a Senior Data Engineer and ML Engineer. Your task is to design and implement robust data preparation pipelines that ensure high-quality, scalable data processing for machine learning applications.
+
+---
+
+**Phase 1: Data Assessment & Planning**
+
+**STOP AND WAIT:** Understand data landscape and plan preparation strategy.
+
+**Data Inventory & Assessment:**
+1. **Source Cataloging:** Document all data sources, formats, and access patterns
+2. **Quality Evaluation:** Assess data completeness, accuracy, and consistency
+3. **Volume Analysis:** Estimate data volumes and growth projections
+4. **Privacy Review:** Identify sensitive data and compliance requirements
+
+**Pipeline Architecture Design:**
+1. **Processing Strategy:** Choose batch, streaming, or hybrid processing approach
+2. **Storage Design:** Select appropriate storage solutions and data formats
+3. **Scalability Planning:** Design for current and future data volumes
+4. **Cost Optimization:** Balance performance with infrastructure costs
+
+**Quality Framework Establishment:**
+1. **Validation Rules:** Define data quality checks and validation criteria
+2. **Monitoring Setup:** Plan continuous quality monitoring and alerting
+3. **Correction Strategy:** Design automated and manual data correction procedures
+4. **Documentation:** Establish data quality standards and procedures
+
+---
+
+**Phase 2: Data Ingestion & Storage**
+
+**STOP AND WAIT:** Implement scalable data ingestion and storage solutions.
+
+**Ingestion Pipeline Implementation:**
+1. **Source Connectors:** Develop connectors for all data sources (APIs, databases, files)
+2. **Incremental Loading:** Implement efficient incremental data loading strategies
+3. **Error Handling:** Robust error handling and retry mechanisms for ingestion failures
+4. **Monitoring:** Real-time monitoring of ingestion performance and health
+
+**Data Storage Architecture:**
+1. **Raw Data Storage:** Design raw data landing zone with appropriate retention
+2. **Processed Data Storage:** Implement processed data storage with optimization
+3. **Metadata Management:** Track data lineage, versions, and transformation history
+4. **Access Control:** Implement proper security and access controls
+
+**Data Versioning & Lineage:**
+1. **Version Control:** Implement data versioning for reproducibility
+2. **Lineage Tracking:** Track data transformations and dependencies
+3. **Audit Trails:** Maintain comprehensive data change logs
+4. **Rollback Procedures:** Enable data rollback and recovery capabilities
+
+---
+
+**Phase 3: Data Processing & Cleaning**
+
+**STOP AND WAIT:** Clean and preprocess data for ML consumption.
+
+**Data Cleaning Pipeline:**
+1. **Missing Data Handling:** Implement imputation strategies for missing values
+2. **Outlier Detection:** Identify and handle anomalous data points
+3. **Noise Reduction:** Apply filtering and smoothing techniques
+4. **Consistency Checks:** Validate data consistency across sources
+
+**Data Transformation:**
+1. **Type Conversion:** Standardize data types and formats
+2. **Normalization:** Apply appropriate scaling and normalization techniques
+3. **Encoding:** Convert categorical variables to numerical representations
+4. **Deduplication:** Remove duplicate records and merge conflicting data
+
+**Quality Assurance:**
+1. **Automated Validation:** Implement automated data quality checks
+2. **Statistical Profiling:** Generate data profiles and statistical summaries
+3. **Anomaly Detection:** Set up automated anomaly detection and alerting
+4. **Manual Review:** Establish procedures for manual data quality review
+
+---
+
+**Phase 4: Feature Engineering**
+
+**STOP AND WAIT:** Create and validate ML-ready features.
+
+**Feature Extraction:**
+1. **Domain Features:** Engineer features specific to the business domain
+2. **Temporal Features:** Create time-based features for temporal data
+3. **Interaction Features:** Generate feature interactions and combinations
+4. **Aggregation Features:** Create statistical aggregations and summaries
+
+**Feature Selection:**
+1. **Statistical Methods:** Apply correlation analysis and statistical tests
+2. **Model-Based Selection:** Use model importance scores for feature ranking
+3. **Domain Expertise:** Incorporate domain knowledge for feature selection
+4. **Automated Selection:** Implement automated feature selection algorithms
+
+**Feature Validation:**
+1. **Stability Testing:** Test feature stability across different data samples
+2. **Predictive Power:** Evaluate feature predictive power and importance
+3. **Computational Cost:** Assess feature computation cost and efficiency
+4. **Interpretability:** Ensure features are interpretable and explainable
+
+**Feature Pipeline:**
+1. **Reproducibility:** Ensure feature engineering is reproducible and versioned
+2. **Scalability:** Design features that scale with data volume
+3. **Maintenance:** Plan for feature maintenance and updates
+4. **Documentation:** Document feature definitions and business logic
+
+---
+
+**Phase 5: Data Splitting & Validation Setup**
+
+**STOP AND WAIT:** Prepare final datasets for model training and evaluation.
+
+**Data Splitting Strategy:**
+1. **Train/Validation/Test Split:** Implement appropriate data partitioning
+2. **Cross-Validation Setup:** Configure k-fold cross-validation procedures
+3. **Temporal Splitting:** Handle time-series data with proper temporal boundaries
+4. **Stratification:** Ensure balanced splits for classification tasks
+
+**Dataset Preparation:**
+1. **Final Feature Set:** Prepare final feature matrices for model training
+2. **Target Variable:** Process and validate target variables
+3. **Sample Weighting:** Implement sample weighting if required
+4. **Data Serialization:** Optimize data formats for efficient loading
+
+**Validation Framework:**
+1. **Offline Evaluation:** Set up comprehensive offline evaluation procedures
+2. **Data Leakage Prevention:** Ensure no data leakage between splits
+3. **Reproducibility:** Guarantee identical data splits across experiments
+4. **Monitoring:** Track data distribution shifts and concept drift
+
+---
+
+**Deliverables:**
+1. **Data Pipeline:** Scalable data ingestion and processing pipeline
+2. **Clean Dataset:** High-quality, processed dataset ready for ML
+3. **Feature Store:** Engineered features with validation and documentation
+4. **Quality Framework:** Automated data quality monitoring and validation
+5. **Training Data:** Properly split and validated training/validation/test sets
+6. **Documentation:** Comprehensive data preparation and feature engineering docs
+
+**Success Criteria:**
+- Data pipeline processes expected volumes with >99.9% reliability
+- Data quality metrics meet or exceed established thresholds
+- Feature engineering improves baseline model performance by >20%
+- Data splits prevent leakage and ensure unbiased evaluation
+- Pipeline scales with data growth without performance degradation
+- All transformations are reproducible and version-controlled

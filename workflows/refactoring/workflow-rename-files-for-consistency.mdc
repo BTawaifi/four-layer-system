@@ -1,0 +1,13 @@
+---
+alwaysApply: false
+description: "Renames files for consistency and updates all code references to use the new filenames"
+---
+
+**Action:** Rename Files for Consistency
+
+**Please provide the context:**
+- **The Problem:** Files are named inconsistently, making them hard for downstream processes to find (e.g., `sarimax_optimized_forecast.csv` vs an expected `sarimax_forecast.csv`).
+- **The Files to Rename:** [List the files with their current and desired names.]
+
+**Instruction for the AI:**
+Perform the requested file rename operations. Verify that any code that references these files by name is also updated to use the new, consistent filenames.

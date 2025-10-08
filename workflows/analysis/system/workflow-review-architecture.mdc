@@ -1,0 +1,20 @@
+---
+alwaysApply: false
+description: "Architectural review workflow that evaluates design quality, scalability, maintainability, and security"
+---
+
+**Action:** Conduct an Architectural Review
+
+**Please define the scope:**
+- **The Component/System to Review:** @[path/to/the/file_or_directory]
+- **The Primary Goals of the Review (choose or add):**
+- [ ] Performance and Efficiency
+- [ ] Scalability and Future-Proofing
+- [ ] Readability and Maintainability
+- [ ] Security
+- [ ] Testability
+
+**Instruction for the AI:**act as a principal software architect. Review the provided code and generate a report that includes:
+1.  **Strengths:** What aspects of the current design are well-implemented and follow best practices?
+2.  **Areas for Improvement:** Identify specific architectural patterns, code structures, or logic flows that could be improved to better meet the review goals.
+3.  **Actionable Suggestions:** For each area of improvement, provide concrete, high-level suggestions for refactoring. Explain the trade-offs of your proposed changes.```

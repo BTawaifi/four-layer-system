@@ -1,0 +1,16 @@
+---
+alwaysApply: false
+description: "Debugs data corruption issues by tracing from source to UI and implementing defensive and root fixes"
+---
+
+*Action:** Debug and Sanitize Corrupted Data
+
+**Please describe the problem:**
+- **The Symptom:** [How is the corrupted data appearing in the UI? e.g., "A product's name is being split into individual characters," "User profiles are showing jumbled text."]
+- **The Component Displaying the Data:** @[path/to/the/ui/component.ext]
+- **The Suspected Data Source:** [Where does this data come from? e.g., "From a specific API endpoint," "From the `ecommerce_products` database table."]
+
+**Instruction for the AI:**
+1.  **Identify the Root Cause:** Trace the data from its source to the UI. Pinpoint where and why the data is being corrupted or misinterpreted.
+2.  **Implement Defensive Code:** Propose a robust fix within the UI component to filter, sanitize, and validate the incoming data, preventing the corrupted display.
+3.  **Suggest a Root Fix:** Recommend a strategy to clean the data at its source (e.g., a database cleanup script, an API validation layer) to prevent the issue from recurring.

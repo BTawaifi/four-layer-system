@@ -1,0 +1,41 @@
+---
+alwaysApply: false
+description: "Generates strategic product roadmaps with prioritization frameworks, quarterly planning, and risk analysis"
+---
+
+prompt:
+**Action:** Generate a Strategic Product Roadmap
+
+**Please provide the business context:**
+
+- **The Product Vision:** [What is the ultimate goal of this product? e.g., "To become the leading platform for AI-driven e-commerce site generation."]
+- **The Current State:** [Where is the product right now? e.g., "We have a functional MVP that can generate basic sites, but it lacks advanced features and customization."]
+- **The High-Level Feature Ideas (as a list):**
+  - [e.g., - Add support for multiple themes.]
+  - [e.g., - Integrate a blog/CMS generation feature.]
+  - [e.g., - Allow users to connect their own domain names.]
+  - [e.g., - Add an analytics dashboard for store owners.]
+
+**Instruction for the AI:**
+Act as a seasoned Product Manager. Your task is to take the feature ideas and organize them into a strategic, prioritized roadmap for the next three quarters.
+
+Generate a markdown report with the following structure:
+
+**1. Prioritization Framework:**
+
+- Briefly define a framework for prioritization (e.g., RICE Score: Reach, Impact, Confidence, Effort).
+- For each feature idea, provide an estimated score based on this framework and a brief justification.
+
+**2. The Quarterly Roadmap:**
+
+- **Quarter 1 (This Quarter): Foundational Wins**
+  - [List the 1-2 features with the highest impact and lowest effort that should be built immediately.]
+- **Quarter 2 (Next Quarter): Core Value Proposition**
+  - [List the 2-3 features that are central to the product vision but require more effort.]
+- **Quarter 3 (Later): Expansion & Scaling**
+  - [List the features that are important for long-term growth but depend on the foundational work being completed.]
+
+**3. Key Dependencies & Risks:**
+
+- For each quarter, identify any key dependencies between features (e.g., "Domain connection depends on a user account system being built first.")
+- Highlight the biggest risks to the roadmap (e.g., "The blog generation feature is technically complex and may require significant R&D.").

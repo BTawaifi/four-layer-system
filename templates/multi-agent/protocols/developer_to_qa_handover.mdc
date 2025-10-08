@@ -1,0 +1,227 @@
+---
+alwaysApply: false
+description: "Standardized handover protocol from development to QA testing phase"
+template_type: "agent-transition-protocol"
+template_purpose: "dev-to-qa-transition"
+---
+
+# Developer to QA Handover Protocol
+**Transition Type:** Development → Quality Assurance
+**Typical Duration:** 2-4 hours for review and knowledge transfer
+**Quality Gate:** Code Complete → Testing Ready
+
+## Protocol Overview
+
+This protocol ensures smooth transition from development completion to QA testing by establishing clear testing scope, environment readiness, and quality expectations.
+
+## Pre-Handover Developer Responsibilities
+
+### Code and Documentation Preparation
+**Deliverable Checklist:**
+- [ ] All code changes committed and pushed to feature branch
+- [ ] Unit tests written and passing (minimum 80% coverage)
+- [ ] Code documentation updated (inline comments, README updates)
+- [ ] API documentation generated and accessible
+- [ ] Database migrations tested and documented
+- [ ] Configuration files updated for all environments
+
+### Testing Environment Setup
+**Environment Readiness:**
+- [ ] Feature branch deployed to testing environment
+- [ ] Test data prepared and loaded
+- [ ] External service integrations configured
+- [ ] Monitoring and logging enabled
+- [ ] Performance baselines established
+
+### Known Issues and Limitations
+**Issue Documentation:**
+- [ ] Known bugs documented with severity levels
+- [ ] Workarounds for unresolved issues noted
+- [ ] Technical debt items flagged for future cleanup
+- [ ] Performance limitations acknowledged
+- [ ] Browser compatibility notes included
+
+## Handover Meeting Agenda
+
+### 30-Minute Structured Handover Session
+
+#### 1. Feature Overview (5 minutes)
+**Developer Presents:**
+- Feature scope and business requirements
+- Technical implementation approach
+- Architecture decisions and trade-offs
+- Integration points with existing systems
+
+#### 2. Code Walkthrough (10 minutes)
+**Developer Demonstrates:**
+- Key code changes and new components
+- Important algorithms or business logic
+- Configuration and deployment changes
+- Testing approach and coverage
+
+#### 3. Testing Scope Discussion (10 minutes)
+**Collaborative Planning:**
+- QA identifies primary testing scenarios
+- Edge cases and error conditions reviewed
+- Performance and security testing requirements
+- Automation opportunities discussed
+
+#### 4. Questions and Clarifications (5 minutes)
+**Open Discussion:**
+- QA asks clarification questions
+- Developer addresses concerns
+- Action items assigned with owners
+- Follow-up communication plan established
+
+## Post-Handover Documentation
+
+### Testing Scope Document
+```
+testing_scope_[feature_name]_[date].md
+```
+
+**Required Sections:**
+- **In-Scope Testing:** Functionality to be tested
+- **Out-of-Scope Testing:** Known limitations or future work
+- **Test Environment:** Specific environment details
+- **Test Data:** Sample data and edge cases
+- **Success Criteria:** Definition of done for testing
+
+### Defect Classification Guidelines
+**Severity Levels:**
+- **Critical:** System crash, data loss, security breach
+- **Major:** Core functionality broken, significant user impact
+- **Minor:** Cosmetic issues, minor functionality problems
+- **Trivial:** Very minor issues with minimal impact
+
+**Classification Examples:**
+- UI text cutoff → Minor
+- Payment processing failure → Critical
+- Slow page load (3+ seconds) → Major
+- Misspelled word in help text → Trivial
+
+## QA Testing Readiness Checklist
+
+### Functional Testing Readiness
+- [ ] All user stories implemented and demonstrable
+- [ ] Happy path scenarios working end-to-end
+- [ ] Error handling implemented and testable
+- [ ] Data validation working correctly
+- [ ] Business rules enforced properly
+
+### Non-Functional Testing Readiness
+- [ ] Performance benchmarks established
+- [ ] Security measures implemented
+- [ ] Accessibility standards met (if applicable)
+- [ ] Mobile responsiveness verified (if applicable)
+- [ ] Cross-browser compatibility confirmed
+
+### Test Automation Readiness
+- [ ] API tests automated where applicable
+- [ ] Regression test suite updated
+- [ ] Test data generation automated
+- [ ] CI/CD pipeline includes automated tests
+- [ ] Performance test scripts prepared
+
+## Communication Protocols
+
+### During Testing Phase
+**Daily Standup Format:**
+- What was tested yesterday
+- What will be tested today
+- Any blocking issues or questions
+- Test progress and completion estimates
+
+**Issue Reporting:**
+- Use standardized defect tracking system
+- Include steps to reproduce, expected vs actual results
+- Attach screenshots, logs, or other evidence
+- Tag with appropriate severity and component labels
+
+### Escalation Paths
+**For Technical Questions:**
+1. QA → Developer (direct communication)
+2. If unresolved → Tech lead or architect
+3. If architectural issue → Product owner involvement
+
+**For Scope Questions:**
+1. QA → Developer for clarification
+2. If scope disagreement → Product owner decision
+3. Document decision and update requirements
+
+## Quality Gates and Acceptance Criteria
+
+### Development Completion Criteria
+**Code Quality Gates:**
+- [ ] Code review completed with approval
+- [ ] Automated tests passing
+- [ ] Security scan clean (no critical vulnerabilities)
+- [ ] Performance benchmarks met
+- [ ] Documentation updated and reviewed
+
+### QA Acceptance Criteria
+**Testing Completion Gates:**
+- [ ] All planned test cases executed
+- [ ] Critical and major defects resolved
+- [ ] Regression testing completed
+- [ ] User acceptance testing passed
+- [ ] Performance requirements validated
+
+## Risk Mitigation
+
+### Common Transition Risks
+**Risk: Incomplete Testing Scope**
+- **Mitigation:** Detailed scope document with examples
+- **Detection:** QA review and approval of scope
+- **Recovery:** Scope clarification meeting within 24 hours
+
+**Risk: Environment Issues**
+- **Mitigation:** Pre-handover environment validation
+- **Detection:** QA environment smoke testing
+- **Recovery:** Environment fix coordination with DevOps
+
+**Risk: Knowledge Gaps**
+- **Mitigation:** Structured handover meeting and documentation
+- **Detection:** QA questions and clarification requests
+- **Recovery:** Additional knowledge transfer sessions
+
+## Success Metrics
+
+### Transition Quality Metrics
+- **Handover Duration:** <2 hours for standard features
+- **Question Resolution:** <24 hours for all clarification requests
+- **Testing Start Delay:** <4 hours from handover completion
+- **Defect Classification Agreement:** >95% between developer and QA
+
+### Process Efficiency Metrics
+- **Time to First Defect:** <24 hours from testing start
+- **Defect Clustering:** <20% of defects in single component
+- **Regression Test Pass Rate:** >98% on initial run
+- **UAT Preparation Time:** <4 hours for standard features
+
+## Template Usage Instructions
+
+### For Developers
+1. Complete all pre-handover checklist items
+2. Prepare testing scope document in advance
+3. Be available for handover meeting and follow-up questions
+4. Address defects promptly and maintain open communication
+
+### For QA Testers
+1. Review handover documentation before meeting
+2. Prepare testing questions and scope concerns
+3. Validate testing environment readiness
+4. Provide clear, detailed defect reports
+
+### For Team Leads
+1. Ensure handover meetings are scheduled and attended
+2. Monitor transition quality and address bottlenecks
+3. Track metrics and identify improvement opportunities
+4. Facilitate communication between developers and QA
+
+---
+
+**Protocol Version:** 1.0
+**Applicability:** Web applications, APIs, mobile apps, desktop software
+**Customization:** Adapt checklist items for specific technology stacks
+**Integration:** Works with session state and quality monitoring templates

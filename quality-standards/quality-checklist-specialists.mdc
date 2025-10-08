@@ -1,0 +1,246 @@
+---
+alwaysApply: false
+description: "Quality checklist for specialist role definitions ensuring consistent depth and completeness"
+template_type: "quality-assurance"
+template_purpose: "content-standardization"
+---
+
+# Specialist Quality Checklist
+**Layer:** Specialists
+**Purpose:** Ensure consistent depth and completeness across all specialist definitions
+**Last Updated:** September 22, 2025
+
+## Executive Summary
+This checklist ensures specialist definitions provide comprehensive, actionable guidance while maintaining consistent structure and quality across all programming languages, cloud platforms, data/AI roles, business functions, and infrastructure specialties.
+
+---
+
+## 1. YAML Frontmatter Compliance
+**Purpose:** Ensure proper metadata and discoverability
+
+### Required Fields
+- [ ] `alwaysApply: false` (specialists are role-based)
+- [ ] `description`: Clear, specific description of expertise area (20-50 words)
+- [ ] `ide_compatibility` (if applicable): Cursor IDE optimization notes
+- [ ] `cursor_limitations` (if applicable): Session-based constraint considerations
+
+### Quality Standards
+- [ ] Description accurately reflects scope without being overly broad
+- [ ] Keywords included for searchability
+- [ ] No conflicting or redundant descriptions
+
+---
+
+## 2. Persona Definition
+**Purpose:** Establish clear role identity and context
+
+### Structure Requirements
+- [ ] Opening statement clearly defines the specialist type and experience level
+- [ ] Geographic/cultural context appropriate for target audience
+- [ ] Technology ecosystem clearly defined
+- [ ] Production experience level specified
+
+### Content Depth
+- [ ] 3-5 major competency areas outlined
+- [ ] Specific technologies mentioned with version awareness where applicable
+- [ ] Industry experience examples provided
+- [ ] Career progression context included
+
+---
+
+## 3. Core Competencies Section
+**Purpose:** Define the specialist's primary skills and knowledge areas
+
+### Structure Requirements
+- [ ] Clear hierarchical organization (major areas with sub-bullets)
+- [ ] Logical grouping of related competencies
+- [ ] Progressive complexity (basic to advanced skills)
+
+### Content Completeness
+- [ ] At least 4-6 major competency categories
+- [ ] Each category has 3-8 specific skills/knowledge areas
+- [ ] Technology stack clearly defined
+- [ ] Industry best practices included
+- [ ] Common pitfalls and solutions addressed
+
+### Quality Validation
+- [ ] No redundant or overlapping competencies
+- [ ] Skills are current and relevant (not outdated)
+- [ ] Appropriate depth for senior-level specialist
+- [ ] Measurable or demonstrable competencies
+
+---
+
+## 4. Development Approach Section
+**Purpose:** Define how the specialist approaches problem-solving and implementation
+
+### Structure Requirements
+- [ ] Clear section separation for different aspects
+- [ ] Practical guidelines over theoretical concepts
+- [ ] Technology-specific approaches where relevant
+
+### Content Standards
+- [ ] Problem-solving methodology clearly articulated
+- [ ] Code quality and maintainability principles defined
+- [ ] Collaboration and communication approaches specified
+- [ ] Risk management and decision-making frameworks included
+
+### Implementation Guidance
+- [ ] Specific tools and techniques recommended
+- [ ] Common patterns and anti-patterns identified
+- [ ] Performance and scalability considerations addressed
+- [ ] Security and reliability principles included
+
+---
+
+## 5. Key Guidelines Section
+**Purpose:** Provide actionable rules and best practices
+
+### Structure Requirements
+- [ ] Bullet-point format for easy scanning
+- [ ] Prioritized by importance or frequency
+- [ ] Cross-referenced with core competencies
+
+### Content Quality
+- [ ] 8-15 specific, actionable guidelines
+- [ ] Each guideline includes rationale or benefit
+- [ ] Technology-specific best practices included
+- [ ] Measurable or verifiable standards
+
+### Practical Application
+- [ ] Guidelines applicable to real-world scenarios
+- [ ] Examples of proper vs improper application
+- [ ] Exception conditions clearly stated
+- [ ] Evolution path for guideline adoption
+
+---
+
+## 6. Technology Version Awareness
+**Purpose:** Ensure currency and future-proofing
+
+### Version Management
+- [ ] Current stable versions specified
+- [ ] Deprecation warnings for outdated technologies
+- [ ] Migration paths from legacy technologies
+- [ ] Future version considerations included
+
+### Ecosystem Awareness
+- [ ] Related tools and frameworks mentioned
+- [ ] Integration patterns with other technologies
+- [ ] Community and ecosystem considerations
+- [ ] Learning resources and progression paths
+
+---
+
+## 7. Related Rules Integration
+**Purpose:** Connect specialists with complementary modifiers, contexts, and workflows
+
+### Cross-Reference Requirements
+- [ ] **Modifiers:** 2-4 relevant modifiers with brief explanations
+- [ ] **Workflows:** 2-4 applicable workflows with use cases
+- [ ] **Contexts:** 1-2 relevant contexts for session management
+
+### Integration Quality
+- [ ] Cross-references are accurate and functional
+- [ ] Explanations clarify why the relationships exist
+- [ ] Examples of combined usage provided
+- [ ] No circular or inappropriate references
+
+---
+
+## 8. Content Quality Metrics
+**Purpose:** Ensure overall content excellence
+
+### Readability Standards
+- [ ] Flesch-Kincaid grade level appropriate for technical audience (10-14)
+- [ ] Consistent terminology throughout
+- [ ] Clear section transitions and logical flow
+- [ ] Appropriate use of technical jargon with explanations
+
+### Completeness Validation
+- [ ] No major competency gaps for the specialist type
+- [ ] Technology coverage appropriate for domain
+- [ ] Practical examples included where beneficial
+- [ ] Future considerations and evolution paths addressed
+
+### Accuracy Verification
+- [ ] Technical information verified against current standards
+- [ ] Code examples functional (if included)
+- [ ] Tool and technology recommendations current
+- [ ] Contact information and resources valid
+
+---
+
+## 9. Maintenance and Evolution
+**Purpose:** Ensure long-term value and relevance
+
+### Currency Requirements
+- [ ] Review cycle defined (quarterly/semi-annual/annual)
+- [ ] Technology update triggers identified
+- [ ] Community feedback integration process
+- [ ] Version history and change documentation
+
+### Evolution Planning
+- [ ] Future technology trends considered
+- [ ] Extensibility for new tools/frameworks
+- [ ] Backward compatibility considerations
+- [ ] Deprecation and migration guidelines
+
+---
+
+## Quality Score Calculation
+
+### Scoring Rubric
+- **Complete (90-100%)**: All sections fully addressed with high-quality content
+- **Satisfactory (75-89%)**: All sections addressed with good quality content
+- **Needs Improvement (60-74%)**: Most sections addressed but gaps in depth or quality
+- **Insufficient (0-59%)**: Major sections missing or significant quality issues
+
+### Quality Dimensions
+1. **Completeness**: 25% - All required sections and content elements present
+2. **Depth**: 25% - Appropriate detail level for senior specialist guidance
+3. **Accuracy**: 20% - Technical information correct and current
+4. **Usability**: 15% - Content structured for practical application
+5. **Integration**: 15% - Effective cross-references and relationships
+
+### Review Process
+- **Self-Review**: Author checklist completion before submission
+- **Peer Review**: Domain expert validation of technical content
+- **Quality Review**: Standards compliance and consistency check
+- **Integration Review**: Cross-reference validation and workflow compatibility
+
+---
+
+## Specialist-Specific Quality Notes
+
+### Programming Language Specialists
+- Include version-specific considerations
+- Cover both library ecosystem and language features
+- Address performance optimization patterns
+- Include testing and debugging approaches
+
+### Cloud Platform Specialists
+- Specify supported services and integration patterns
+- Include cost optimization and security considerations
+- Address multi-cloud and hybrid scenarios
+- Cover deployment and operational patterns
+
+### Data/AI Specialists
+- Include specific algorithm and model knowledge
+- Address data quality and preparation requirements
+- Cover evaluation and validation methodologies
+- Include ethical AI and bias considerations
+
+### Business/UX Specialists
+- Include methodology frameworks (agile, design thinking)
+- Address stakeholder management and communication
+- Cover research methods and validation techniques
+- Include accessibility and inclusive design principles
+
+### Infrastructure Specialists
+- Include specific tool and platform knowledge
+- Address security and compliance requirements
+- Cover monitoring and troubleshooting approaches
+- Include scalability and performance optimization
+
+This checklist ensures all specialists provide consistent, comprehensive, and actionable guidance while maintaining appropriate depth for their domain expertise.

@@ -1,0 +1,66 @@
+---
+alwaysApply: false
+description: "Comprehensive workflow progress tracking system combining initialization, commands, and usage patterns"
+---
+
+prompt:
+  **Action:** Initialize Comprehensive Workflow Progress Tracking
+
+  **Please provide the workflow context:**
+
+  - **Workflow Name:** [e.g., "ML System Audit & Remediation", "Feature Development Pipeline"]
+  - **Total Phases:** [Number of phases in the workflow]
+  - **Current Phase:** [Current phase number/name, or "Not Started"]
+  - **Primary Goal:** [Brief description of the overall objective]
+  - **Success Criteria:** [Measurable outcomes for completion]
+  - **Key Deliverables:** [List of expected outputs or artifacts]
+  - **Estimated Timeline:** [Duration or key milestones, optional]
+  - **Risk Factors:** [Potential obstacles or challenges, optional]
+
+  **Instruction for the AI:**
+
+  You are now operating in **Comprehensive Workflow Progress Tracking Mode**. Your responses should:
+
+  1. **Track Progress**: Maintain awareness of current phase, timeline, risks, and overall progress
+  2. **Phase Management**: Understand phase transitions, dependencies, and completion criteria
+  3. **Status Updates**: Provide clear progress indicators and status summaries in responses
+  4. **Goal Alignment**: Ensure all actions contribute to the primary objective
+  5. **Completion Validation**: Verify deliverables meet success criteria
+
+  **Context Maintenance:**
+  - Reference current phase and progress in relevant responses
+  - Track completion of deliverables and milestones
+  - Suggest next steps based on current state
+  - Flag deviations from planned workflow, timeline slippage, or emerging risks
+
+  **Progress Indicators:**
+  - Include phase status in response headers (e.g., "Phase 2/5: Implementation - 40% Complete")
+  - Show completion percentages and timeline adherence
+  - Highlight upcoming milestones and critical paths
+  - Display risk status and mitigation progress
+
+  **Interactive Commands:**
+  When operating in this mode, support these commands for workflow management:
+
+  **@workflow-status** - Returns current progress summary with all key metrics
+  **@phase-complete [notes]** - Marks current phase complete and advances workflow
+  **@phase-update [phase-number] [description]** - Updates current phase information
+  **@blocker [description]** - Reports obstacles and suggests mitigation strategies
+  **@timeline-check** - Evaluates schedule adherence and provides timeline updates
+  **@deliverable-check [item]** - Validates completion of specific deliverables
+  **@risk-assessment** - Evaluates current risk status and provides recommendations
+  **@workflow-pause [reason]** - Temporarily pauses workflow tracking
+  **@workflow-resume** - Resumes previously paused workflow tracking
+  **@context-clear-workflow** - Terminates workflow tracking completely
+
+  **Usage Examples:**
+  - Initialize: Provide workflow name, phases, goals, and criteria
+  - Track Progress: Use @workflow-status to check current state
+  - Update Status: Use @phase-complete when finishing phases
+  - Handle Issues: Use @blocker for obstacles and @risk-assessment for risk management
+  - Timeline Management: Use @timeline-check to monitor schedule adherence
+
+  **Termination:**
+  Context remains active until explicitly cleared with @context-clear-workflow or workflow completion.
+
+  Acknowledge that comprehensive workflow progress tracking has been initialized with full command support.

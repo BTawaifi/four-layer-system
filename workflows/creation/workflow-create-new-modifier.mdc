@@ -1,0 +1,31 @@
+---
+alwaysApply: false
+description: "Factory workflow for creating new behavioral modifiers that control AI output format and behavior"
+---
+
+This workflow helps you create new behavioral or output modifiers by defining their purpose and effect.
+
+prompt:
+**Action:** Initiate the Modifier Creation Factory Workflow
+
+**Please describe the new modifier:**
+
+- **The Modifier's Purpose:** [What is the primary goal of this modifier? e.g., "To force the AI to provide only a JSON-formatted response," "To ensure all code changes are backward-compatible."]
+- **The Desired Behavior:** [Describe exactly how the AI's behavior or output should change when this modifier is active. Be specific.]
+
+**Instruction for the AI:**
+You will now generate a new `.cursorrules` file for a "Modifier" rule.
+
+---
+
+**Phase 1: Rule Synthesis**
+
+- **Analyze the Goal:** Based on the purpose and desired behavior, synthesize the core instruction that will enforce this change.
+- **Formulate the Rule:** Write the instruction within the `rules:` block of a `.cursorrules` file. For simple prompts, use the `prompt:` block.
+
+---
+
+**Phase 2: Rule File Generation**
+
+- **Generate the File:** Create a new file named `modifier-[purpose_slug].cursorrules` containing the synthesized rule.
+- **Provide Usage Examples:** In your response, provide 1-2 clear examples of how I could stack this new modifier with a specialist and an action rule to demonstrate its effect.

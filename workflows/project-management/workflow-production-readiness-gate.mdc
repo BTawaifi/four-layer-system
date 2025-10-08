@@ -1,0 +1,219 @@
+---
+alwaysApply: false
+description: "Production readiness assessment combining quality assurance, code health analysis, and performance validation"
+---
+
+**Action:** Execute Production Readiness Assessment
+
+**Please define the assessment scope:**
+
+- **System/Component:** @[path/to/system/or/component]
+- **Assessment Type:** [Pre-deployment / Pre-release / Continuous Monitoring]
+- **Environment Target:** [Development / Staging / Production]
+- **Business Criticality:** [Low / Medium / High / Critical]
+- **Timeline Requirements:** [Expedited / Standard / Comprehensive]
+
+**Instruction for the AI:**
+Act as a Production Readiness Review Board conducting a comprehensive assessment to determine if the system is ready for production deployment. This workflow combines quality assurance expertise, systematic reasoning, code health analysis, and performance validation to ensure production readiness across all critical dimensions.
+
+---
+
+**Phase 1: Quality Assurance Assessment**
+
+**STOP AND WAIT:** Conduct thorough QA evaluation and testing validation.
+
+**Testing Dimensions:**
+1. **Functional Testing:** Feature completeness, business logic correctness, user acceptance criteria
+2. **Integration Testing:** Component interactions, API contracts, data flow validation
+3. **Regression Testing:** Existing functionality preservation, backward compatibility
+4. **Performance Testing:** Load testing, stress testing, endurance validation
+5. **Security Testing:** Vulnerability assessment, penetration testing, compliance validation
+6. **Usability Testing:** User experience validation, accessibility compliance
+7. **Cross-browser/Cross-platform Testing:** Compatibility across target environments
+
+---
+
+**Phase 2: Code Health & Type Safety Audit**
+
+**STOP AND WAIT:** Perform comprehensive code quality analysis.
+
+**Code Quality Assessment:**
+
+**Critical Issues (Blockers):**
+- Linting violations and syntax errors
+- Critical security vulnerabilities
+- Memory leaks and resource leaks
+- Race conditions and concurrency issues
+
+**High Priority Issues:**
+- Type safety gaps (implicit `any`, loose type definitions)
+- Missing error handling and exception management
+- Poor test coverage for critical paths
+- Performance bottlenecks and inefficient algorithms
+
+**Medium Priority Issues:**
+- Code maintainability concerns (high cyclomatic complexity)
+- Magic strings/numbers requiring constants
+- Inconsistent coding standards and patterns
+- Missing documentation for complex logic
+
+**Low Priority Issues:**
+- Code style and formatting inconsistencies
+- Minor optimization opportunities
+- Documentation completeness
+
+---
+
+**Phase 3: Performance Critical Analysis**
+
+**STOP AND WAIT:** Evaluate system performance and scalability.
+
+**Performance Assessment:**
+1. **Computational Complexity:** Algorithm efficiency analysis with Big O notation
+2. **Memory Usage:** Heap allocation, garbage collection impact, memory leaks
+3. **I/O Operations:** Database queries, network calls, file system operations
+4. **Concurrency:** Thread safety, deadlock prevention, resource contention
+5. **Scalability:** Horizontal/vertical scaling capabilities, bottleneck identification
+6. **Resource Optimization:** CPU utilization, memory efficiency, storage optimization
+
+**Performance Benchmarks:**
+- Response time requirements (p95, p99 latency targets)
+- Throughput requirements (requests per second, data processing rates)
+- Resource utilization limits (CPU, memory, storage thresholds)
+- Error rates and failure tolerance (MTTR, MTBF targets)
+
+---
+
+**Phase 4: Production Environment Validation**
+
+**STOP AND WAIT:** Assess production deployment readiness.
+
+**Infrastructure & Deployment:**
+1. **Configuration Management:** Environment-specific configurations, secrets management
+2. **Monitoring & Observability:** Logging, metrics, alerting, tracing implementation
+3. **Disaster Recovery:** Backup strategies, failover mechanisms, data recovery procedures
+4. **Security Hardening:** Network security, access controls, encryption implementation
+5. **Scalability Planning:** Auto-scaling configuration, load balancing, capacity planning
+6. **Operational Runbooks:** Deployment procedures, troubleshooting guides, incident response
+
+---
+
+**Phase 5: Risk Assessment & Mitigation**
+
+**STOP AND WAIT:** Evaluate deployment risks and mitigation strategies.
+
+**Risk Analysis:**
+1. **Technical Risks:** Architecture weaknesses, integration points, dependency vulnerabilities
+2. **Operational Risks:** Deployment complexity, monitoring gaps, support readiness
+3. **Business Risks:** Feature incomplete, user impact, revenue/cost implications
+4. **Compliance Risks:** Regulatory requirements, data privacy, security standards
+5. **Performance Risks:** Scalability limitations, resource constraints, user experience impact
+
+**Mitigation Strategies:**
+- Rollback procedures and feature flags
+- Gradual rollout strategies (canary deployments, blue-green deployments)
+- Monitoring and alerting thresholds
+- Support team readiness and escalation procedures
+- Contingency planning and risk mitigation measures
+
+---
+
+**Final Assessment: Production Readiness Report**
+
+Generate a comprehensive readiness assessment report with:
+
+## Executive Summary
+- **Readiness Status:** [Ready for Production / Conditional Approval / Not Ready]
+- **Confidence Level:** [High / Medium / Low] with rationale
+- **Critical Blockers:** Issues requiring immediate resolution
+- **Conditional Approvals:** Requirements for deployment with restrictions
+
+## Quality Assurance Results
+### Functional Completeness
+- Test coverage metrics and gap analysis
+- Critical functionality validation status
+- User acceptance testing results
+
+### Integration & Compatibility
+- API contract compliance
+- Third-party integration validation
+- Cross-system compatibility assessment
+
+## Code Health Assessment
+### Type Safety Score
+- TypeScript/Java strict typing compliance
+- Runtime error prevention measures
+- Type-related vulnerability assessment
+
+### Code Quality Metrics
+- Cyclomatic complexity analysis
+- Maintainability index scores
+- Technical debt quantification
+
+## Performance Analysis
+### Benchmark Results
+- Response time distributions (p50, p95, p99)
+- Throughput and concurrency limits
+- Resource utilization under load
+
+### Scalability Assessment
+- Horizontal scaling capabilities
+- Database performance under load
+- Caching and optimization effectiveness
+
+## Security & Compliance
+### Vulnerability Assessment
+- OWASP Top 10 compliance status
+- Security scanning results
+- Encryption and data protection validation
+
+### Compliance Status
+- GDPR/HIPAA/SOC2 requirements
+- Industry-specific regulatory compliance
+- Data privacy and security measures
+
+## Infrastructure & Operations
+### Deployment Readiness
+- CI/CD pipeline validation
+- Infrastructure as Code compliance
+- Configuration management assessment
+
+### Monitoring & Alerting
+- Observability implementation completeness
+- Alert threshold configuration
+- Incident response procedure validation
+
+## Risk Assessment & Mitigation
+### Deployment Risks
+- Identified risk factors with probability/impact ratings
+- Mitigation strategies and contingency plans
+- Rollback and recovery procedures
+
+### Operational Risks
+- Support team readiness assessment
+- Knowledge transfer completion
+- Documentation adequacy evaluation
+
+## Recommendations & Action Items
+### Pre-Deployment Requirements
+- Critical issues requiring immediate resolution
+- Recommended improvements for stability
+- Performance optimization opportunities
+
+### Post-Deployment Monitoring
+- Key metrics to monitor during rollout
+- Alert thresholds and escalation procedures
+- Success criteria and rollback triggers
+
+### Future Improvements
+- Technical debt items for future sprints
+- Scalability enhancements roadmap
+- Security hardening opportunities
+
+## Final Decision
+- **Deployment Approval:** [Approved / Conditionally Approved / Rejected]
+- **Deployment Strategy:** Recommended rollout approach
+- **Monitoring Requirements:** Post-deployment oversight needs
+- **Follow-up Review:** Timeline for reassessment if conditionally approved
+
+**Deliverable:** `production_readiness_assessment_[component]_[date].md` with complete evaluation and actionable recommendations.

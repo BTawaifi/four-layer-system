@@ -1,0 +1,250 @@
+---
+alwaysApply: false
+description: "Quality checklist for workflow definitions ensuring consistent structure, clarity, and practical value"
+template_type: "quality-assurance"
+template_purpose: "content-standardization"
+---
+
+# Workflow Quality Checklist
+**Layer:** Workflows
+**Purpose:** Ensure workflows provide clear, actionable guidance with proper structure and quality
+**Last Updated:** September 22, 2025
+
+## Executive Summary
+This checklist ensures workflow definitions provide structured, practical guidance for complex development tasks while maintaining consistent quality across all workflow types (analysis, creation, debugging, development, documentation, etc.).
+
+---
+
+## 1. YAML Frontmatter Compliance
+**Purpose:** Ensure proper metadata and workflow discoverability
+
+### Required Fields
+- [ ] `alwaysApply: false` (workflows are task-specific)
+- [ ] `description`: Clear workflow purpose and scope (30-60 words)
+- [ ] `ide_compatibility` (recommended): Cursor IDE optimization notes
+- [ ] `cursor_limitations` (recommended): Session-based constraint considerations
+
+### Metadata Quality
+- [ ] Description accurately reflects workflow scope and value
+- [ ] Keywords included for searchability within workflow category
+- [ ] No conflicting descriptions with other workflows
+
+---
+
+## 2. Action Statement Structure
+**Purpose:** Provide clear workflow invocation and context
+
+### Format Requirements
+- [ ] `**Action:**` followed by imperative verb describing the workflow task
+- [ ] Parameter specification format using `[Parameter Name]: [Options/Description]`
+- [ ] 3-6 key parameters that define workflow scope and constraints
+- [ ] Logical parameter grouping and sequencing
+
+### Parameter Quality
+- [ ] Parameters are essential for workflow execution (not optional preferences)
+- [ ] Parameter options are concrete and actionable
+- [ ] Default values suggested where appropriate
+- [ ] Parameter interactions and dependencies noted
+
+---
+
+## 3. AI Instruction Quality
+**Purpose:** Ensure clear guidance for AI execution
+
+### Structure Standards
+- [ ] `**Instruction for the AI:**` clearly separates human and AI sections
+- [ ] Role definition appropriate for workflow complexity
+- [ ] Success criteria explicitly stated
+- [ ] Quality expectations clearly defined
+
+### Content Completeness
+- [ ] Specific deliverables listed with format expectations
+- [ ] Quality standards and validation criteria included
+- [ ] Edge cases and error handling guidance provided
+- [ ] Timeline or complexity considerations mentioned
+
+---
+
+## 4. Phase Structure and Logic
+**Purpose:** Ensure logical workflow decomposition and execution flow
+
+### Phase Design Standards
+- [ ] 3-8 phases with clear progression from planning to completion
+- [ ] Each phase has specific, achievable objectives
+- [ ] Phase dependencies clearly articulated
+- [ ] `**STOP AND WAIT:**` used appropriately for critical decision points
+
+### Phase Quality Validation
+- [ ] Phase objectives are measurable and verifiable
+- [ ] Phase outputs clearly defined and connected to next phase
+- [ ] Phase time estimates realistic (30-120 minutes typical)
+- [ ] Phase failure modes and recovery paths considered
+
+---
+
+## 5. Content Depth and Practicality
+**Purpose:** Ensure workflows provide actionable, detailed guidance
+
+### Task Specificity
+- [ ] Each phase includes 3-8 specific, actionable tasks
+- [ ] Tasks include concrete steps, not just high-level guidance
+- [ ] Tool recommendations include specific commands or approaches
+- [ ] Examples provided for complex or ambiguous tasks
+
+### Deliverable Clarity
+- [ ] File names and formats specified for all outputs
+- [ ] Quality criteria defined for each deliverable
+- [ ] Integration points with other workflows noted
+- [ ] Version control and organization guidance included
+
+---
+
+## 6. Cursor IDE Compatibility
+**Purpose:** Ensure workflows work effectively within IDE constraints
+
+### Session Management
+- [ ] Workflow designed for 30-120 minute session completion
+- [ ] Clear stopping points that preserve context
+- [ ] File-based state management for multi-session workflows
+- [ ] Token efficiency considerations addressed
+
+### Context Preservation
+- [ ] File-based outputs that survive session boundaries
+- [ ] Clear state indicators for workflow resumption
+- [ ] Intermediate deliverables that maintain context
+- [ ] Recovery procedures for interrupted workflows
+
+---
+
+## 7. Cross-Layer Integration
+**Purpose:** Ensure workflows leverage the full four-layer system
+
+### Rule Orchestration
+- [ ] Specialists referenced with specific roles and responsibilities
+- [ ] Modifiers suggested for behavior customization
+- [ ] Contexts used for session management and goal setting
+- [ ] Integration examples show combined rule usage
+
+### Integration Quality
+- [ ] Rule combinations justified with clear benefits
+- [ ] Alternative approaches considered
+- [ ] Integration patterns explained with examples
+- [ ] No inappropriate or conflicting rule combinations
+
+---
+
+## 8. Quality Assurance Integration
+**Purpose:** Include validation and quality checkpoints
+
+### Built-in Validation
+- [ ] Quality checkpoints at phase completions
+- [ ] Success criteria defined for workflow completion
+- [ ] Error detection and correction guidance
+- [ ] Review and validation procedures included
+
+### Practical Validation
+- [ ] Testable acceptance criteria for deliverables
+- [ ] Quality metrics appropriate for workflow type
+- [ ] Review checklists for stakeholders
+- [ ] Continuous improvement feedback mechanisms
+
+---
+
+## 9. Documentation and Maintenance
+**Purpose:** Ensure long-term workflow value and evolution
+
+### Usage Documentation
+- [ ] Workflow benefits clearly articulated
+- [ ] Prerequisites and preparation steps listed
+- [ ] Common pitfalls and solutions documented
+- [ ] Customization guidelines for different contexts
+
+### Maintenance Planning
+- [ ] Technology update triggers identified
+- [ ] Review cycle recommendations
+- [ ] Version compatibility considerations
+- [ ] Deprecation and migration guidance
+
+---
+
+## 10. Content Quality Metrics
+**Purpose:** Ensure overall workflow excellence
+
+### Structural Quality
+- [ ] Logical flow from initiation to completion
+- [ ] Consistent formatting and terminology
+- [ ] Appropriate level of detail throughout
+- [ ] Clear section transitions and organization
+
+### Practical Value
+- [ ] Workflow addresses real development challenges
+- [ ] Tasks are implementable with provided guidance
+- [ ] Time estimates accurate for experienced practitioners
+- [ ] Business value clearly connected to technical execution
+
+### Technical Accuracy
+- [ ] Tool and technology recommendations current
+- [ ] Code examples functional and best-practice compliant
+- [ ] Integration patterns technically sound
+- [ ] Security and performance considerations included
+
+---
+
+## Quality Score Calculation
+
+### Scoring Framework
+- **Excellent (90-100%)**: Complete, well-structured workflow ready for production use
+- **Good (75-89%)**: Solid workflow with minor gaps or improvements needed
+- **Needs Work (60-74%)**: Functional but requires significant refinement
+- **Insufficient (0-59%)**: Major structural or content issues requiring rewrite
+
+### Quality Dimensions (Weighted)
+1. **Structure & Clarity**: 20% - Logical organization and clear communication
+2. **Practical Value**: 25% - Actionable guidance with real implementation steps
+3. **Technical Quality**: 20% - Accurate, current technical information
+4. **IDE Compatibility**: 15% - Effective design for Cursor IDE constraints
+5. **Integration**: 10% - Proper use of four-layer system components
+6. **Completeness**: 10% - All required sections and quality elements present
+
+### Review Process
+- **Author Self-Review**: Complete checklist before submission
+- **Peer Technical Review**: Domain expert validation of technical content
+- **Workflow Logic Review**: Ensure logical flow and practical applicability
+- **Integration Review**: Validate cross-layer rule combinations
+- **IDE Compatibility Review**: Test workflow within Cursor IDE constraints
+
+---
+
+## Workflow Category-Specific Standards
+
+### Analysis Workflows
+- Include evidence-based validation requirements
+- Specify analysis depth and scope boundaries
+- Include risk assessment and mitigation guidance
+- Provide clear reporting formats and structures
+
+### Creation Workflows
+- Include iterative refinement and validation cycles
+- Specify quality gates between creation phases
+- Include testing and validation integration
+- Provide rollback and error recovery procedures
+
+### Debugging Workflows
+- Include systematic problem isolation techniques
+- Specify data collection and analysis methods
+- Include communication protocols for issue reporting
+- Provide resolution validation and verification steps
+
+### Development Workflows
+- Include planning, execution, and delivery phases
+- Specify integration and testing requirements
+- Include stakeholder communication protocols
+- Provide success metrics and completion criteria
+
+### Documentation Workflows
+- Include audience analysis and content structuring
+- Specify review and validation processes
+- Include maintenance and update procedures
+- Provide publication and distribution guidance
+
+This checklist ensures all workflows provide consistent, high-quality guidance while maintaining practical value and effective integration with the four-layer system and Cursor IDE environment.

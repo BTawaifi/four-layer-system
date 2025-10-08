@@ -1,0 +1,135 @@
+---
+alwaysApply: false
+description: "Comprehensive code review workflow combining senior engineering perspective, security analysis, and detailed feedback"
+---
+
+**Action:** Conduct Comprehensive Code Review
+
+**Please provide the code review context:**
+
+- **The Goal of the Changes:** [What is this code trying to accomplish? e.g., "This PR adds a new caching layer to the API."]
+- **The Code to Review (use `@` or paste a diff):** @[path/to/the/changed/file.ext]
+- **Review Depth:** [Basic / Comprehensive / Security-Focused]
+- **Timeline:** [Expedited / Standard / Thorough]
+- **Stakeholder Context:** [Who will use this code? What are the business requirements?]
+
+**Instruction for the AI:**
+Act as a Senior Software Engineering Team conducting a comprehensive code review. You will analyze the code from multiple perspectives: technical excellence, security, maintainability, and business alignment. This workflow combines senior engineering expertise with security-focused analysis and detailed, constructive feedback.
+
+---
+
+**Phase 1: Code Overview & Context Understanding**
+
+**STOP AND WAIT:** Analyze the change scope and business context.
+
+**Initial Assessment:**
+1. **Functional Analysis:** Understand what the code does and how it fits into the larger system
+2. **Architecture Impact:** Evaluate how changes affect system design and scalability
+3. **Business Alignment:** Assess whether the implementation meets business requirements
+4. **Risk Assessment:** Identify potential impact on system stability and performance
+
+---
+
+**Phase 2: Technical Excellence Review**
+
+**STOP AND WAIT:** Evaluate code quality and engineering practices.
+
+**Quality Dimensions:**
+1. **Code Structure & Design:** SOLID principles, design patterns, separation of concerns
+2. **Readability & Maintainability:** Naming conventions, documentation, complexity
+3. **Performance Considerations:** Algorithm efficiency, resource usage, scalability
+4. **Error Handling:** Exception management, logging, failure recovery
+5. **Testing Strategy:** Unit tests, integration tests, edge cases coverage
+
+---
+
+**Phase 3: Security Analysis**
+
+**STOP AND WAIT:** Conduct thorough security review.
+
+**Security Assessment:**
+1. **Input Validation:** SQL injection, XSS, command injection prevention
+2. **Authentication & Authorization:** Access controls, session management, privilege escalation
+3. **Data Protection:** Encryption, secure storage, information leakage prevention
+4. **Secure Coding:** Buffer overflows, race conditions, secure API usage
+5. **Compliance:** GDPR, HIPAA, or other regulatory requirements
+
+---
+
+**Phase 4: Integration & System Impact**
+
+**STOP AND WAIT:** Evaluate broader system implications.
+
+**System Considerations:**
+1. **Dependencies:** Impact on other components and services
+2. **Database Changes:** Schema modifications, migrations, data integrity
+3. **API Contracts:** Interface changes, versioning, backward compatibility
+4. **Monitoring & Observability:** Logging, metrics, alerting requirements
+5. **Deployment Considerations:** Rollback strategy, feature flags, canary deployment
+
+---
+
+**Phase 5: Documentation & Knowledge Transfer**
+
+**STOP AND WAIT:** Ensure proper documentation and knowledge sharing.
+
+**Documentation Requirements:**
+1. **Code Comments:** Inline documentation, complex logic explanations
+2. **API Documentation:** Endpoint documentation, parameter descriptions
+3. **Architecture Documentation:** Design decisions, trade-offs, constraints
+4. **Runbooks:** Deployment procedures, troubleshooting guides, maintenance tasks
+
+---
+
+**Final Report: Comprehensive Code Review**
+
+Generate a detailed review document with the following structure:
+
+## Executive Summary
+- Overall assessment (Approve / Request Changes / Reject)
+- Critical issues requiring immediate attention
+- Timeline recommendations for fixes
+
+## Detailed Findings
+
+### 🔴 Critical Issues (Blockers)
+- **Security Vulnerabilities:** [Detailed descriptions with exploit scenarios]
+- **System Stability:** [Issues that could cause outages or data loss]
+- **Architecture Violations:** [Fundamental design problems]
+
+### 🟡 High Priority Issues (Fix Before Merge)
+- **Code Quality:** [Maintainability and performance concerns]
+- **Security Weaknesses:** [Non-critical security improvements]
+- **Testing Gaps:** [Missing test coverage for important functionality]
+
+### 🟢 Medium Priority Issues (Address Soon)
+- **Best Practices:** [Code style and convention improvements]
+- **Performance Optimizations:** [Non-critical performance enhancements]
+- **Documentation:** [Missing or incomplete documentation]
+
+### 🔵 Low Priority Issues (Technical Debt)
+- **Minor Improvements:** [Code style, naming, formatting]
+- **Future Considerations:** [Scalability or maintainability improvements]
+
+## Security Analysis Summary
+- Vulnerability assessment results
+- Compliance status
+- Recommended security improvements
+
+## Performance Impact Assessment
+- Computational complexity analysis
+- Memory usage evaluation
+- Scalability considerations
+
+## Recommendations
+- Prioritized action items
+- Suggested refactoring approaches
+- Testing requirements
+- Documentation updates needed
+
+## Approval Decision
+- Final recommendation with rationale
+- Required conditions for approval
+- Follow-up review requirements
+
+**Deliverable:** `comprehensive_code_review_[pr_number].md` with complete analysis and actionable feedback.

@@ -1,0 +1,23 @@
+---
+alwaysApply: false
+description: "Structured code review workflow that provides categorized feedback on logic, architecture, best practices, and style"
+---
+
+**Action:** Conduct an Automated Code Review
+
+**Please provide the context for the review:**
+
+- **The Goal of the Changes:** [What is this code trying to accomplish? e.g., "This PR adds a new caching layer to the API."]
+- **The Code to Review (use `@` or paste a diff):**
+- @[path/to/the/changed/file.ext]
+- (Alternatively, paste the `git diff` output here)
+
+**Instruction for the AI:**
+
+Act as a senior engineer performing a code review. Your feedback must be constructive and categorized. Generate a single markdown review document with the following sections:
+
+1.  **High-Level Summary:** A brief overview of the changes and your overall assessment (e.g., "Looks good, just a few minor nits," "This is a good start, but has some major architectural concerns").
+2.  **Logic & Architecture (Blocking Issues 🟥):** Identify any critical flaws in the logic, architecture, or approach that must be addressed before merging. (e.g., race conditions, security vulnerabilities, incorrect algorithm).
+3.  **Best Practices & Readability (Suggestions 🟨):** Suggest improvements related to best practices, code clarity, naming, and maintainability that are not critical but would improve the code.
+4.  **Questions for the Author (Questions ❓):** Ask clarifying questions about parts of the code that are unclear or whose intent is not obvious.
+5.  **Nitpicks (Minor Comments 🟩):** Point out any minor stylistic issues, typos, or formatting inconsistencies.

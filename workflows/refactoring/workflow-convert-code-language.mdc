@@ -1,0 +1,19 @@
+---
+alwaysApply: false
+description: "Converts code between languages or dialects while preserving core logic and functionality"
+---
+
+**Action:** Convert Code from One Language/Dialect to Another
+
+**Please provide the context:**
+- **The Source Code:** @[path/to/source_code.ext]
+- **The Source Language:** [e.g., "TypeScript"]
+- **The Target Language:** [e.g., "JavaScript (ES Module)"]
+- **The Goal:** The code needs to be converted to run in a different environment that doesn't support the source language natively.
+
+**Instruction for the AI:**
+Transpile or convert the source code into the target language. Ensure that:
+- All syntax is valid in the target language.
+- Type annotations are removed (if converting from TS to JS).
+- Module import/export syntax is corrected for the target environment.
+- The core logic and functionality remain identical.

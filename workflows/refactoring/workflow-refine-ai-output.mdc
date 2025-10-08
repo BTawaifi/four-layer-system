@@ -1,0 +1,20 @@
+---
+alwaysApply: false
+description: "Refines AI-generated output by enhancing prompts, strengthening schemas, and adding negative constraints"
+---
+
+**Action:** Refine and Correct AI-Generated Output
+
+**Please provide the context:**
+- **The Goal of the AI:** [What was the AI supposed to generate? e.g., "A high-quality, fully functional e-commerce website for a mobile car wash."]
+- **The Flawed AI Output:**
+```    [Paste the problematic generated content here, e.g., the generated JSON, HTML, or text.]
+```
+- **The File Controlling the AI:** @[path/to/the/ai_prompt_or_flow.ext]
+- **The Core Problem:** [Describe why the output is wrong, e.g., "The AI generated irrelevant products like 'Caviar'," "The output is a low-quality, incomplete HTML shell, not a full website."]
+
+**Instruction for the AI:**
+Modify the controlling file to fix the output. Your modifications should focus on:
+1.  **Enhancing the Prompt:** Add explicit, detailed instructions and constraints to guide the AI toward the desired quality.
+2.  **Strengthening the Schema:** Adjust the output schema to enforce required fields and prevent invalid or incomplete data.
+3.  **Adding Negative Constraints:** Explicitly tell the AI what **not** to do (e.g., "Do NOT generate any products," "Do NOT use placeholder text.").

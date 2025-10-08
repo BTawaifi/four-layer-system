@@ -1,0 +1,6 @@
+---
+alwaysApply: false
+description: "Ensures AI asks clarifying questions when requests are ambiguous rather than making assumptions"
+---
+rules:
+  - If any part of my request is ambiguous or could be interpreted in multiple ways, you must stop and ask clarifying questions before proceeding. Do not make assumptions.

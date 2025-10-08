@@ -1,0 +1,125 @@
+---
+alwaysApply: false
+description: "Comprehensive workflow for integrating third-party APIs with proper error handling, testing, and documentation"
+---
+
+**Action:** Execute Third-Party API Integration
+
+**Please provide the integration details:**
+
+- **API Provider:** [Name of the API/service being integrated, e.g., "Stripe Payment API", "GitHub REST API"]
+- **Integration Purpose:** [What business functionality does this enable?]
+- **API Documentation:** @[path/to/api/documentation] or [URL to API docs]
+- **Authentication Method:** [API Key, OAuth, JWT, etc.]
+- **Data Flow:** [How data will flow between your system and the API]
+
+**Instruction for the AI:**
+Act as a Backend Integration Specialist focusing on reliable, secure, and maintainable API integrations. This workflow ensures third-party API integrations are production-ready with proper error handling and monitoring.
+
+---
+
+**Phase 1: API Analysis & Planning**
+
+**STOP AND WAIT:** Analyze the API documentation and plan the integration approach.
+
+**Planning Activities:**
+1. **API Contract Review:** Understand endpoints, request/response formats, rate limits, and authentication
+2. **Integration Architecture:** Design client libraries, error handling, and retry mechanisms
+3. **Security Assessment:** Evaluate authentication methods and data protection requirements
+4. **Testing Strategy:** Plan unit tests, integration tests, and mocking strategies
+5. **Monitoring Plan:** Define health checks, error tracking, and performance monitoring
+
+**Deliverables:** Integration design document with architectural decisions
+
+---
+
+**Phase 2: Client Implementation**
+
+**STOP AND WAIT:** Implement the API client with proper error handling and logging.
+
+**Implementation Requirements:**
+1. **HTTP Client Setup:** Configure timeouts, connection pooling, and SSL settings
+2. **Authentication:** Implement secure credential management and token refresh
+3. **Request/Response Handling:** Parse responses, handle different content types, validate schemas
+4. **Error Handling:** Comprehensive error categorization and user-friendly error messages
+5. **Rate Limiting:** Implement respectful rate limiting and backoff strategies
+6. **Logging:** Structured logging for debugging and monitoring
+
+**Expected Outcome:** Functional API client ready for testing
+
+---
+
+**Phase 3: Error Handling & Resilience**
+
+**STOP AND WAIT:** Implement robust error handling and resilience patterns.
+
+**Resilience Patterns:**
+1. **Retry Logic:** Exponential backoff for transient failures
+2. **Circuit Breaker:** Prevent cascade failures during API outages
+3. **Fallback Strategies:** Graceful degradation when API is unavailable
+4. **Timeout Management:** Appropriate timeouts for different operations
+5. **Idempotency:** Ensure safe retry of operations where applicable
+
+**Error Categories:**
+- Network errors (timeouts, connection failures)
+- Authentication errors (invalid credentials, expired tokens)
+- Rate limiting (429 responses)
+- API errors (4xx client errors, 5xx server errors)
+- Data validation errors (malformed responses)
+
+---
+
+**Phase 4: Testing & Validation**
+
+**STOP AND WAIT:** Create comprehensive tests and validate the integration.
+
+**Testing Strategy:**
+1. **Unit Tests:** Test client methods with mocked responses
+2. **Integration Tests:** Test against sandbox/development API environments
+3. **Error Scenario Tests:** Test all error conditions and edge cases
+4. **Load Tests:** Validate performance under expected load
+5. **Contract Tests:** Ensure API responses match expected schemas
+
+**Validation Criteria:**
+- All tests pass with good coverage (>80%)
+- Error handling works for all documented scenarios
+- Performance meets requirements (response times, throughput)
+
+---
+
+**Phase 5: Documentation & Deployment**
+
+**STOP AND WAIT:** Document the integration and prepare for deployment.
+
+**Documentation Requirements:**
+1. **API Reference:** Document all methods, parameters, and response formats
+2. **Usage Examples:** Provide code examples for common use cases
+3. **Troubleshooting Guide:** Document common issues and resolution steps
+4. **Operational Runbook:** Monitoring, alerting, and incident response procedures
+5. **Maintenance Guide:** Update procedures and deprecation handling
+
+**Deployment Checklist:**
+- Environment-specific configuration (dev/staging/prod API keys)
+- Monitoring dashboards and alerts configured
+- Rollback procedures documented
+- Team training completed
+
+---
+
+**Phase 6: Production Monitoring Setup**
+
+**STOP AND WAIT:** Configure production monitoring and alerting.
+
+**Monitoring Setup:**
+1. **Health Checks:** API connectivity and response time monitoring
+2. **Error Tracking:** Log aggregation and error rate monitoring
+3. **Performance Metrics:** Response times, throughput, and success rates
+4. **Business Metrics:** Track usage patterns and business impact
+5. **Alerting Rules:** Define thresholds for different severity levels
+
+**Success Metrics:**
+- API response time < 500ms (95th percentile)
+- Error rate < 1%
+- Uptime > 99.9% (accounting for planned maintenance)
+
+**[INTEGRATION COMPLETE - READY FOR PRODUCTION DEPLOYMENT]**

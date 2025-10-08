@@ -1,0 +1,17 @@
+---
+alwaysApply: false
+description: "Define and track a task list for multi-step processes with progress management"
+---
+
+prompt:
+  **Action:** Define and Track a Task List
+
+  **Instruction for the AI:**
+  We are about to begin a multi-step task. Here is the checklist of steps. You must help me track our progress.
+
+  - **The Task List:**
+    - [ ] Step 1: [Description of the first step]
+    - [ ] Step 2: [Description of the second step]
+    - [ ] Step 3: [Description of the third step]
+
+  After I confirm a step is complete, you will re-state the list with the completed item checked off and ask what to do next. Acknowledge the task list.

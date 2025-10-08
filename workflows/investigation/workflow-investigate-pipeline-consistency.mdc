@@ -1,0 +1,18 @@
+---
+alwaysApply: false
+description: "Investigates end-to-end pipeline consistency by tracing data flow and identifying discrepancies across stages"
+---
+
+**Action:** Investigate End-to-End Pipeline Consistency
+
+**Please define the scope:**
+- **The Pipeline to Investigate:** [e.g., "The machine learning training and backtesting pipeline."]
+- **The Core Question:** [e.g., "Is the dataset used for model training identical to the dataset used during backtesting?"]
+- **Key Stages to Examine:** [List the stages, e.g., "Data Ingestion, Feature Engineering, Model Training, Evaluation, Forecasting."]
+
+**Instruction for the AI:**
+Conduct a comprehensive, exploratory investigation of the specified pipeline. Trace the data and logic flow through each stage to answer the core question. Produce a formal report with:
+1.  **Executive Summary:** A concise answer to the core question.
+2.  **Findings by Stage:** A detailed list of any discrepancies, mismatches, or potential data leakage points found.
+3.  **Root Cause Analysis:** For any critical issues, explain the mechanism of failure.
+4.  **Recommendations:** Actionable steps to remediate the findings.

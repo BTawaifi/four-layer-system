@@ -1,0 +1,59 @@
+---
+alwaysApply: false
+description: "Accessibility issue remediation, prioritization, and implementation of fixes"
+---
+
+**Action:** Remediate Accessibility Issues
+
+**Please provide the remediation context:**
+
+- **Testing Report:** @[path/to/accessibility_testing_report.md]
+- **Application/Component:** @[path/to/application]
+- **Priority Level:** [Critical issues only / High and Medium / All issues]
+- **Timeline:** [Immediate fixes / Phased approach / Full remediation]
+
+**Instruction for the AI:**
+Act as an Accessibility Remediation Specialist. Focus on implementing fixes for identified accessibility issues while maintaining functionality and user experience.
+
+---
+
+**Phase 1: Issue Prioritization & Impact Analysis**
+
+**Issue Severity Levels:**
+1. **Critical (Blocker):** Prevents users with disabilities from completing tasks
+   - Missing form labels, broken keyboard navigation, inaccessible authentication
+
+2. **High:** Significantly impairs but doesn't completely prevent task completion
+   - Poor color contrast, missing alt text, unclear error messages
+
+3. **Medium:** Causes some difficulty but workarounds exist
+   - Inconsistent heading hierarchy, redundant links, unclear focus indicators
+
+4. **Low:** Minor inconvenience, doesn't significantly impact usability
+   - Missing language attributes, suboptimal ARIA usage
+
+**Impact Assessment:** Consider user group affected, frequency of encounter, and business criticality
+
+---
+
+**Phase 2: Remediation Planning & Implementation**
+
+**Remediation Strategies:**
+1. **Quick Wins:** Simple changes with immediate impact (alt text, labels, basic ARIA)
+2. **Component Updates:** Modify reusable components for accessibility compliance
+3. **Design System Updates:** Update design patterns and component libraries
+4. **Process Improvements:** Integrate accessibility into development workflow
+
+**Implementation Priority:**
+- Address critical issues immediately
+- Create accessibility checklist for code reviews
+- Train development team on accessibility best practices
+- Establish accessibility testing in CI/CD pipeline
+
+**Deliverables:**
+Generate a remediation report in `accessibility_remediation_report.md` with:
+- Prioritized list of issues with severity levels
+- Implementation plan and timeline
+- Code changes and component updates
+- Testing validation approach
+- Success metrics and compliance verification

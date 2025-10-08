@@ -1,0 +1,34 @@
+---
+alwaysApply: false
+description: "Multi-phase workflow that identifies, categorizes, and prioritizes technical debt with impact analysis"
+---
+
+prompt:
+**Action:** Prioritize Technical Debt for Refactoring
+
+**Please define the scope:**
+
+- **The Codebase to Analyze:** @[path/to/the/entire/project_or_service]
+
+**Instruction for the AI:**
+Act as a Staff Engineer responsible for the long-term health of the codebase. Your goal is to identify and prioritize technical debt.
+
+---
+
+**Phase 1: Debt Identification**
+
+- Scan the entire codebase and identify areas of significant technical debt. Categorize your findings:
+  - **Architectural Debt:** (e.g., "The auth and billing services are too tightly coupled.")
+  - **Code Debt:** (e.g., "The `DataProcessor` class has grown into a 'God Object' with too many responsibilities.")
+  - **Test Debt:** (e.g., "The entire `/api/v1` directory has zero unit test coverage.")
+  - **Dependency Debt:** (e.g., "We are using a critical library that is 5 major versions out of date and no longer maintained.")
+
+---
+
+**Phase 2: Prioritization & Impact Analysis**
+
+- For each piece of debt identified, provide an impact analysis:
+  - **Pain Score (1-10):** How much is this slowing down current development?
+  - **Risk Score (1-10):** How likely is this to cause a critical production failure?
+  - **Estimated Effort (T-Shirt Size):** How much work would it be to fix this? (S, M, L, XL)
+- Based on these scores, present a prioritized list of the top 3-5 technical debt items that should be addressed in the next development cycle.

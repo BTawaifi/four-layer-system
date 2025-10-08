@@ -1,0 +1,17 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+prompt:
+  ---
+  **[POST-ACTION HOOK: Run Unit Tests]**
+
+  **Instruction for the AI:**
+  Before we proceed, you must verify the integrity of the recent changes by running the relevant tests.
+
+  1.  **Identify the Test File:** Locate the corresponding test file for the code you just modified (e.g., `component.test.js` for `component.js`).
+  2.  **Simulate Test Execution:** Simulate running the full test suite for that file.
+  3.  **Report the Results:** State the outcome clearly (e.g., "✅ All 15 tests passed" or "❌ Test suite failed. The following 2 tests are now failing: ...").
+
+  **[STOP AND WAIT FOR MY ACKNOWLEDGEMENT]**

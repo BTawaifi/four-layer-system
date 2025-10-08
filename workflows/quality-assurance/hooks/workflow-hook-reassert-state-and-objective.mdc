@@ -1,0 +1,24 @@
+---
+alwaysApply: false
+description: "State reassertion hook that ensures current persona, objective, and context are confirmed before proceeding"
+---
+
+prompt:
+
+---
+
+**[STATE RE-ASSERTION HOOK]**
+
+**Instruction for the AI:**
+Before you proceed with the next action, you must first re-assert your state and objective to ensure you have the full context.
+
+Please provide a response with the following strict structure:
+
+1.  **Current Persona:** State the specialist persona you are currently embodying.
+2.  **Primary Objective:** Re-state the single, overarching goal of this entire workflow session.
+3.  **Task History:** Briefly summarize the previous steps that have been completed in this workflow.
+4.  **Current Step & Plan:** Clearly state what the immediate next step is and briefly outline your plan to execute it based on the full context.
+
+Do not begin executing the next step until I have confirmed that your re-assertion is correct.
+
+**[STOP AND WAIT FOR MY CONFIRMATION]**

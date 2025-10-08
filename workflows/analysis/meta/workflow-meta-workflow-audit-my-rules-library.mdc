@@ -1,0 +1,207 @@
+---
+alwaysApply: false
+description: "Comprehensive audit of the entire rules system (specialists, modifiers, contexts, workflows) for health, redundancy, and improvement opportunities"
+ide_compatibility: "⚠️ EXTENDED ANALYSIS - Multi-phase audit workflow with substantial output. Use @context-workflow-progress-tracker for session management."
+cursor_limitations: "Complex analysis may generate significant context. Execute phases incrementally to manage token consumption and context accumulation."
+---
+
+prompt:
+**Action:** Conduct a Comprehensive Health Check on My Rules System
+
+**Please define the scope:**
+
+- **The System to Analyze:** @[path/to/rules-system] (should contain specialists/, modifiers/, contexts/, workflows/ directories)
+- **Audit Depth:** [Full System Audit / Specific Layer Only / Comparative Analysis]
+- **Focus Areas:** [All Areas / Redundancy Only / Composition Only / Code Quality Only / IDE Compatibility Only]
+- **IDE Environment:** [Cursor IDE / Generic LLM / Other] (important for compatibility assessment)
+
+**Instruction for the AI:**
+Act as a Senior System Architect and AI Workflow Specialist. Your task is to perform a comprehensive audit of the entire rules system to identify opportunities for improvement, refactoring, and optimization across all rule types.
+
+**CRITICAL: IDE Compatibility & Multi-Agent Orchestration**
+
+- **Cursor IDE Reality:** Acknowledge that context is NOT cleared - work within accumulation limitations
+- **Multi-Agent Support:** Rules must support orchestrated multi-agent workflows in Cursor
+- **Token Management:** Assess and optimize for real-world token constraints
+- **Session Boundaries:** Ensure rules work across multiple Cursor sessions and agent handovers
+- **File-Based Communication:** Verify support for inter-agent file-based communication patterns
+
+---
+
+**Phase 1: System Overview & Inventory**
+
+**STOP AND WAIT:** Complete system analysis and provide overview.
+
+1. **Structure Analysis:** Document the current organization of specialists, modifiers, contexts, and workflows
+2. **File Organization:** Identify files that may be in incorrect folders and suggest proper organization
+   - Check if workflow files belong in the correct category subfolders (analysis/, creation/, debugging/, etc.)
+   - Verify specialists are properly categorized by domain
+   - Ensure modifiers are correctly placed and not duplicated
+   - Validate context files are in appropriate locations
+3. **Coverage Assessment:** Evaluate completeness across different domains and technologies
+4. **Quality Metrics:** Assess documentation quality, structure consistency, and maintenance status
+
+---
+
+**Phase 2: Cross-Layer Analysis**
+
+**STOP AND WAIT:** Analyze relationships and dependencies across layers.
+
+1. **Inter-Layer Dependencies:** Identify how specialists, modifiers, contexts, and workflows interact
+2. **Composition Patterns:** Analyze common combinations and usage patterns
+3. **Integration Gaps:** Find areas where layers could work better together
+4. **API Consistency:** Evaluate consistency of interfaces and usage patterns across layers
+
+---
+
+**Phase 2.5: IDE Compatibility Assessment**
+
+**STOP AND WAIT:** Evaluate system compatibility with Cursor IDE limitations.
+
+**IDE Limitation Analysis:**
+
+1. **Context Window Management:** Assess how rules handle Cursor's accumulating context
+2. **Token Efficiency:** Evaluate token usage patterns and optimization opportunities
+3. **Multi-Agent Orchestration:** Verify support for coordinated multi-agent workflows
+4. **Session Boundaries:** Check ability to work across multiple Cursor sessions
+5. **File-Based Communication:** Assess inter-agent communication through files
+6. **Progressive Documentation:** Evaluate incremental documentation capabilities
+7. **Quality Monitoring:** Check continuous quality assurance across sessions
+8. **Agent Handover:** Evaluate seamless context transfer between agents
+
+**IDE Compatibility Checklist:**
+
+- Rules avoid assumptions about context clearing capabilities
+- Token-efficient analysis patterns are implemented
+- Multi-agent orchestration patterns are supported
+- File-based context management is enabled
+- Progressive documentation strategies are available
+- Quality monitoring across session boundaries is maintained
+- Agent handover protocols are established
+
+---
+
+**Phase 3: Detailed Health Assessment**
+
+Generate a comprehensive report with the following sections:
+
+**1. Redundancy Analysis:**
+
+- **Cross-Layer Redundancy:** Are there overlapping functionalities across specialists, modifiers, contexts, or workflows?
+- **Within-Layer Redundancy:** Do multiple rules in the same layer serve similar purposes?
+- **Content Duplication:** Is there repeated content that could be consolidated?
+- **Merge Recommendations:** Propose consolidation strategies for redundant elements
+
+**2. Composition Opportunities:**
+
+- **Common Patterns:** Identify frequently used combinations of rules across layers
+- **Workflow Encapsulation:** Suggest new workflows that combine multiple specialists/modifiers
+- **Context Integration:** Propose contexts that work well with specific specialist combinations
+- **Modifier Chains:** Identify beneficial sequences of modifiers for different use cases
+
+**3. Rule "Code Smells":**
+
+- **Size & Complexity:** Identify overly long or complex rules that should be broken down
+- **Specificity Issues:** Find rules that are too narrow and could be made more generic
+- **Maintenance Burden:** Flag rules that are hard to maintain or update
+- **Documentation Quality:** Assess clarity, completeness, and structure of rule documentation
+
+**4. Missing Pieces & Gaps:**
+
+- **Technology Coverage:** Identify underrepresented technologies or domains
+- **Workflow Types:** Suggest missing workflow categories or patterns
+- **Modifier Needs:** Propose new modifiers for common behavioral patterns
+- **Context Opportunities:** Identify scenarios needing specialized contexts
+- **Specialist Gaps:** Find domain expertise that's missing from the specialist library
+
+**5. File Organization & Structure:**
+
+- **Incorrect File Locations:** Identify files that belong in different folders based on their content and purpose
+- **Suggested File Movements:** Provide specific recommendations for moving files, e.g.:
+  - Move analysis workflows from root workflows/ to workflows/analysis/
+  - Move security-related specialists to appropriate categories
+  - Consolidate duplicate modifiers or move misfiled ones
+- **Folder Structure Optimization:** Suggest improvements to the overall directory organization
+- **Naming Convention Violations:** Flag files that don't follow proper naming patterns (specialist-_.mdc, modifier-_.mdc, etc.)
+
+**6. Quality & Consistency Issues:**
+
+- **Documentation Standards:** Assess adherence to documentation conventions
+- **Naming Conventions:** Review consistency of rule naming and categorization
+- **Structure Consistency:** Evaluate consistent formatting and organization across all files
+- **Content Quality:** Check for completeness, clarity, and accuracy of rule descriptions
+
+**7. Performance & Scalability:**
+
+- **System Performance:** Evaluate how well the system scales with more rules
+- **Maintenance Overhead:** Assess long-term maintenance burden
+- **Update Frequency:** Consider how often rules need updating
+- **Integration Complexity:** Evaluate complexity of using multiple rules together
+
+**8. IDE Compatibility & Multi-Agent Orchestration:**
+
+- **Cursor IDE Limitations:** Verify rules work within Cursor's context window constraints
+- **Token Management:** Assess token efficiency and context accumulation patterns
+- **Multi-Agent Support:** Ensure rules support orchestrated multi-agent workflows
+- **Context Management:** Evaluate context switching and session management capabilities
+- **File-Based Communication:** Check support for inter-agent file-based communication
+- **Session Boundaries:** Assess ability to work across multiple Cursor sessions
+- **Hallucination Prevention:** Verify evidence-based analysis patterns
+- **Progressive Documentation:** Check incremental documentation capabilities
+- **Agent Handover:** Evaluate seamless context transfer between agents
+- **Quality Monitoring:** Assess continuous quality assurance across agent boundaries
+
+---
+
+**Phase 4: Recommendations & Roadmap**
+
+**STOP AND WAIT:** Review analysis and provide prioritized recommendations.
+
+**Immediate Actions (High Priority):**
+
+- **IDE Compatibility Fixes:** Update rules that assume context clearing capabilities
+- **Multi-Agent Orchestration:** Implement file-based agent communication patterns
+- **Token Management:** Add token-efficient analysis patterns to complex workflows
+- File organization fixes: Move misfiled rules to correct directories
+- Critical fixes and consolidations that provide immediate value
+- Quick wins that improve system health with minimal effort
+- Naming convention corrections for consistency
+
+**Short-Term Improvements (1-4 weeks):**
+
+- **Context Management Tools:** Enhance @context-cursor-session-management capabilities
+- **Agent Handover Protocols:** Implement standardized agent transition patterns
+- **Progressive Documentation:** Add file-based context management to all major workflows
+- Medium-priority enhancements and refactoring opportunities
+- Rule updates and quality improvements
+
+**Long-Term Strategic Changes (1-3 months):**
+
+- **Multi-Agent Orchestration Framework:** Develop comprehensive agent coordination system
+- **IDE-Optimized Architecture:** Redesign system around Cursor's actual capabilities
+- **Session Persistence:** Implement advanced session management and recovery
+- Major restructuring and new rule development
+- System architecture improvements and scalability enhancements
+
+**Implementation Priority Matrix:**
+
+- **Impact vs Effort Analysis:** Prioritize changes by business value and implementation cost
+- **Dependency Mapping:** Identify changes that must happen in sequence
+- **Risk Assessment:** Evaluate risks and mitigation strategies for each recommendation
+
+---
+
+**Phase 5: Implementation Planning**
+
+**STOP AND WAIT:** Final approval of implementation plan.
+
+**Deliverables:**
+
+1. **Comprehensive Audit Report:** `system_health_audit_[date].md` with complete analysis
+2. **IDE Compatibility Report:** `ide_compatibility_assessment_[date].md` with Cursor IDE limitations analysis
+3. **Multi-Agent Orchestration Guide:** `multi_agent_orchestration_[date].md` with agent coordination patterns
+4. **File Organization Plan:** Specific recommendations for moving files to correct directories
+5. **Prioritized Action Items:** Ranked list of recommended changes with rationale
+6. **Implementation Roadmap:** Timeline and dependencies for system improvements
+7. **Success Metrics:** How to measure the impact of implemented changes
+8. **Maintenance Guidelines:** Ongoing practices to preserve system health

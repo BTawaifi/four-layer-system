@@ -1,0 +1,55 @@
+---
+alwaysApply: false
+description: "Multi-phase workflow that diagnoses and fixes AI hallucinations through iterative prompt engineering and schema improvements"
+---
+
+**Action:** Initiate an AI Output Quality Improvement Workflow
+
+**Please define the AI task:**
+
+- **The AI's Goal:** [e.g., "To generate a high-quality, fully functional e-commerce website for a given business context."]
+- **The File Controlling the AI:** @[path/to/the/ai_prompt_and_schema_file.ext]
+- **The Input That Causes Bad Output:**
+
+```
+[Provide the exact input (business context, product list, etc.) that leads to the poor result.]
+```
+
+**Instruction for the AI:**
+You will now execute an iterative workflow to diagnose and fix poor AI-generated content. You must stop and wait for my input at designated checkpoints.
+
+---
+
+**Phase 1: Baseline Generation & Quality Assessment**
+
+- **Action for User:** Please run the AI generation with the provided input and paste the full, raw output below.
+
+**[STOP AND WAIT FOR YOU TO PASTE THE AI'S OUTPUT]**
+
+- **AI Analysis:** I will now review the provided output and identify the specific quality failures. My analysis will cover:
+- **Content Relevance:** Is the content customized to the input, or is it generic/hallucinated (e.g., "Caviar" for a car wash)?
+- **Completeness:** Is the output a full, functional artifact, or an incomplete shell (e.g., missing JS/CSS)?
+- **Schema Compliance:** Does the output adhere to the required data schema?
+
+---
+
+**Phase 2: Propose and Implement Fixes**
+
+- Based on the quality failures, I will propose specific changes to the controlling file. The changes will focus on:
+- **Prompt Engineering:** Adding stronger, more explicit instructions and negative constraints.
+- **Schema Hardening:** Making optional fields required or tightening validation rules.
+- **Action for User:** Please review and approve the proposed changes.
+
+**[STOP AND WAIT FOR YOUR APPROVAL OF THE PROPOSED FIXES]**
+
+- **AI Action:** I will now apply the approved changes to the file.
+
+---
+
+**Phase 3: Verification Run**
+
+- **Action for User:** Please re-run the AI generation with the _same input_ as Phase 1. Paste the new output below.
+
+**[STOP AND WAIT FOR YOU TO PASTE THE NEW OUTPUT]**
+
+- **AI Conclusion:** I will analyze the new output. If the quality is now acceptable, the workflow is complete. If not, we will repeat Phase 2 with more targeted fixes.

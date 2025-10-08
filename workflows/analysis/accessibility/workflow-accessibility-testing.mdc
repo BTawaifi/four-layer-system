@@ -1,0 +1,56 @@
+---
+alwaysApply: false
+description: "Automated and manual accessibility testing using WCAG guidelines and assistive technologies"
+---
+
+**Action:** Conduct Accessibility Testing (Automated & Manual)
+
+**Please provide the testing context:**
+
+- **Application/Component:** @[path/to/application] or [component description]
+- **Audit Plan:** @[path/to/accessibility_audit_plan.md] (from planning phase)
+- **Target WCAG Level:** [A, AA, or AAA]
+- **Testing Scope:** [Full application / Specific components / Regression testing]
+
+**Instruction for the AI:**
+Act as an Accessibility Testing Specialist. Execute comprehensive accessibility testing using both automated tools and manual assistive technology evaluation.
+
+---
+
+**Phase 1: Automated Accessibility Testing**
+
+**Automated Checks:**
+1. **HTML Validation:** Semantic markup, heading hierarchy, and document structure
+2. **Color Contrast:** Text and background color ratios (4.5:1 for normal text, 3:1 for large text)
+3. **Alt Text:** Missing or inadequate alternative text for images and media
+4. **Form Labels:** Properly associated labels and form controls
+5. **Keyboard Navigation:** Focus management and keyboard accessibility
+6. **ARIA Compliance:** Proper use of ARIA attributes and landmark roles
+
+**Tools to Use:** axe-core, WAVE, Lighthouse Accessibility, pa11y, or similar automated testing tools
+
+---
+
+**Phase 2: Manual Accessibility Testing**
+
+**Manual Testing Areas:**
+1. **Screen Reader Testing:** NVDA, JAWS, VoiceOver - navigation, content announcement, form interaction
+2. **Keyboard-Only Navigation:** Tab order, focus indicators, keyboard shortcuts, modal dialogs
+3. **Voice Control:** Dragon NaturallySpeaking or similar voice control software
+4. **Zoom/Magnification:** 200% zoom testing, reflow at 400% zoom
+5. **Color Blindness Simulation:** Deuteranopia, protanopia, tritanopia testing
+6. **Motor Impairment Simulation:** Reduced dexterity, precision testing
+
+**Testing Scenarios:**
+- Form completion and submission
+- Multi-step processes and wizards
+- Error handling and validation
+- Dynamic content and single-page applications
+
+**Deliverables:**
+Generate a comprehensive testing report in `accessibility_testing_report.md` with:
+- Automated testing results with severity levels
+- Manual testing findings and observations
+- Screenshots or detailed descriptions of issues
+- WCAG guideline references for each finding
+- Recommended remediation approaches

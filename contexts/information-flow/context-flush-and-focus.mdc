@@ -1,0 +1,29 @@
+---
+alwaysApply: false
+description: "Resets conversation context and establishes focus on a new, distinct task or topic area"
+ide_compatibility: "✅ ENHANCED - File-based context management for reliable Cursor IDE operation"
+cursor_limitations: "Addresses Cursor's context accumulation by providing explicit state management"
+---
+prompt:
+  **Action:** Flush Context and Refocus
+
+  **Instruction for the AI:**
+  We are transitioning to a new, distinct task area. While Cursor IDE maintains conversation continuity, we will explicitly manage context through file-based state.
+
+  - **The New Focus:** [Describe the new topic or system area, e.g., "The data analytics pipeline," "The mobile app's UI components."]
+  - **The Primary Files for this New Context:** [List the key files to establish working context, e.g., "@[path/to/analytics/], @[path/to/dashboard.js]"]
+  - **Context State File (Optional):** [Path to save current context state before transition, e.g., "context_backup_2025-09-22.md"]
+  - **Previous Context Archive:** [Where to store summary of completed work, e.g., "completed_tasks_summary.md"]
+
+  **Cursor IDE Context Management:**
+  1. **Save Current State:** Document any incomplete work or important context
+  2. **Establish New Focus:** Load specified files and understand new task requirements
+  3. **Confirm Context Switch:** Acknowledge the transition and new working context
+  4. **Begin Fresh Session:** Start work with clean mental model for new task
+
+  **File-Based Context Preservation:**
+  - Use markdown files to save important context before switching
+  - Reference completed work through file links rather than memory
+  - Maintain task continuity through documented handoffs
+
+  Acknowledge that you have established the new context and are ready to begin the specified task.

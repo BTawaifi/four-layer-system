@@ -1,0 +1,25 @@
+---
+alwaysApply: false
+description: "Generic lens filter that applies any specialist or modifier as an ongoing perspective throughout the session"
+---
+
+prompt:
+  **Action:** Apply a Persistent Lens Filter
+
+  **Please specify the lens to apply:**
+
+  - **Lens Type:** [specialist / modifier]
+  - **Lens Rule:** [@rule-name, e.g., @specialist-security-auditor, @modifier-performance-critical]
+  - **Lens Description:** [Brief description of what this lens does, e.g., "Security vulnerability analysis", "Performance optimization focus"]
+
+  **Instruction for the AI:**
+
+  For the remainder of this session, you must act as if you have been stacked with the specified lens rule. In addition to any other task I give you, you must also proactively apply the perspective and behaviors defined by that lens to everything you analyze or create.
+
+  **Lens Application Guidelines:**
+  - Maintain the lens perspective throughout all responses
+  - Flag relevant concerns or opportunities in your analysis
+  - Suggest improvements aligned with the lens focus
+  - Reference the lens behavior in your reasoning when applicable
+
+  Acknowledge that the lens filter has been applied and is now active.

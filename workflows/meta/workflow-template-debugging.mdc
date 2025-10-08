@@ -1,0 +1,200 @@
+---
+alwaysApply: false
+description: "Template for debugging workflows - provides consistent structure for investigating and resolving system issues, bugs, and performance problems"
+---
+
+**Action:** [Specific Debugging Task - e.g., "Investigate Production API Outage"]
+
+**Please provide the debugging context:**
+
+- **Issue Type:** [Bug / Performance / Security / Configuration / Deployment / Data Corruption]
+- **Severity Level:** [Critical / High / Medium / Low / Cosmetic]
+- **Affected Systems:** [Production / Staging / Development / Specific Components]
+- **Impact Assessment:** [User Impact / Business Impact / System Stability / Data Integrity]
+- **Timeframe:** [When issue started, frequency, patterns observed]
+- **Available Data:** [Logs, metrics, error messages, reproduction steps, environment details]
+
+**Instruction for the AI:**
+Act as a Senior [Domain] Debugger and Systems Analyst. Follow a systematic, evidence-based approach to identify root causes, implement fixes, and prevent recurrence. Prioritize business impact and system stability throughout the investigation.
+
+---
+
+**Phase 1: Issue Triage & Initial Assessment**
+
+**STOP AND WAIT:** Complete initial assessment and determine investigation approach.
+
+**[Issue Characterization]**
+1. **Symptom Documentation:** Document all observed symptoms, error messages, and user reports
+2. **Impact Quantification:** Assess and quantify the business and technical impact
+3. **Pattern Analysis:** Identify patterns in occurrence (time, user, environment, data)
+4. **Reproducibility Testing:** Attempt to reproduce the issue in controlled environments
+
+**[Initial Investigation]**
+1. **Log Analysis:** Review application, system, and infrastructure logs
+2. **Metrics Review:** Examine relevant metrics and monitoring dashboards
+3. **Configuration Check:** Verify system and application configurations
+4. **Recent Changes:** Identify recent deployments, configuration changes, or updates
+
+**Deliverables:**
+- Issue characterization document with symptoms and impact assessment
+- Initial investigation findings and potential contributing factors
+- Reproduction steps (if successful) or blocking factors
+- Investigation plan with prioritized hypotheses to test
+
+---
+
+**Phase 2: Systematic Investigation**
+
+**STOP AND WAIT:** Conduct thorough investigation following scientific debugging methodology.
+
+**[Hypothesis Development]**
+1. **Root Cause Hypotheses:** Develop clear, testable hypotheses about root causes
+2. **Evidence Requirements:** Define what evidence would confirm or refute each hypothesis
+3. **Investigation Plan:** Create systematic testing plan for each hypothesis
+4. **Prioritization:** Rank hypotheses by likelihood and investigation difficulty
+
+**[Evidence Collection]**
+1. **Instrumentation:** Add logging, metrics, or debugging tools as needed
+2. **Isolated Testing:** Test hypotheses in isolated, controlled environments
+3. **Data Analysis:** Analyze logs, metrics, and system state systematically
+4. **Expert Consultation:** Engage relevant domain experts for complex issues
+
+**Deliverables:**
+- Hypothesis testing results with evidence for each investigated cause
+- Detailed investigation log documenting all steps and findings
+- Additional monitoring or logging implemented for data collection
+- Refined understanding of issue scope and characteristics
+
+---
+
+**Phase 3: Root Cause Identification**
+
+**STOP AND WAIT:** Identify definitive root cause(s) with supporting evidence.
+
+**[Root Cause Analysis]**
+1. **Evidence Synthesis:** Combine all investigation findings into coherent explanation
+2. **Causal Chain:** Map out the complete chain of events leading to the issue
+3. **Contributing Factors:** Identify all contributing factors and their roles
+4. **Validation Testing:** Validate root cause hypothesis through targeted testing
+
+**[Impact Analysis]**
+1. **Scope Assessment:** Determine full scope of systems and data affected
+2. **Data Integrity:** Assess any data corruption or loss implications
+3. **Recovery Requirements:** Determine what recovery actions are needed
+4. **Prevention Needs:** Identify systemic issues requiring preventive measures
+
+**Deliverables:**
+- Root cause analysis report with evidence-based conclusions
+- Causal chain diagram and timeline of events
+- Impact assessment with scope and severity evaluation
+- Recovery plan outline with immediate action items
+
+---
+
+**Phase 4: Solution Development & Testing**
+
+**STOP AND WAIT:** Develop and validate comprehensive solution approach.
+
+**[Solution Design]**
+1. **Fix Development:** Design technical solution addressing root cause
+2. **Recovery Procedures:** Develop procedures to restore affected systems
+3. **Prevention Measures:** Design systemic changes to prevent recurrence
+4. **Rollback Plan:** Prepare rollback procedures for solution deployment
+
+**[Solution Validation]**
+1. **Unit Testing:** Test individual solution components in isolation
+2. **Integration Testing:** Test solution in staging environment with production data
+3. **Load Testing:** Validate solution performance under production-like conditions
+4. **Regression Testing:** Ensure solution doesn't introduce new issues
+
+**Deliverables:**
+- Complete solution package with code, configuration, and deployment scripts
+- Comprehensive test results validating solution effectiveness
+- Recovery procedures tested and documented
+- Rollback procedures prepared and validated
+
+---
+
+**Phase 5: Deployment & Verification**
+
+**STOP AND WAIT:** Deploy solution and verify complete resolution.
+
+**[Controlled Deployment]**
+1. **Deployment Planning:** Plan phased rollout with monitoring and rollback readiness
+2. **Change Management:** Follow change management processes for production deployment
+3. **Communication:** Notify stakeholders of deployment schedule and expectations
+4. **Monitoring Setup:** Enhance monitoring for solution effectiveness validation
+
+**[Post-Deployment Verification]**
+1. **Immediate Verification:** Confirm solution resolves the reported issue
+2. **Extended Monitoring:** Monitor system stability over time
+3. **User Validation:** Confirm issue resolution from user perspective
+4. **Performance Validation:** Ensure solution doesn't introduce performance issues
+
+**Deliverables:**
+- Successful deployment report with timeline and any issues encountered
+- Post-deployment verification results and monitoring data
+- User confirmation of issue resolution
+- Performance impact assessment and optimization recommendations
+
+---
+
+**Phase 6: Prevention & Knowledge Sharing**
+
+**STOP AND WAIT:** Implement preventive measures and share learnings.
+
+**[Prevention Implementation]**
+1. **Systemic Fixes:** Implement changes to prevent similar issues in the future
+2. **Monitoring Enhancements:** Add monitoring and alerting for early detection
+3. **Process Improvements:** Update processes and procedures based on lessons learned
+4. **Training Updates:** Update team training materials with new insights
+
+**[Knowledge Sharing]**
+1. **Incident Report:** Create comprehensive incident report for organizational learning
+2. **Documentation Updates:** Update runbooks and troubleshooting guides
+3. **Team Training:** Conduct post-mortem sessions and training sessions
+4. **Knowledge Base:** Add resolution to organizational knowledge base
+
+**Deliverables:**
+- Prevention measures implemented and validated
+- Updated monitoring and alerting systems
+- Comprehensive incident report and post-mortem analysis
+- Updated documentation and training materials
+
+---
+
+**Success Criteria:**
+- ✅ Root cause definitively identified with supporting evidence
+- ✅ Solution successfully deployed and verified in production
+- ✅ Issue completely resolved with no recurrence during observation period
+- ✅ Prevention measures implemented to reduce future risk
+- ✅ Knowledge shared across organization to improve collective capability
+- ✅ Documentation updated to prevent similar issues in the future
+
+**Quality Gates:**
+- **Evidence-Based:** All conclusions supported by verifiable evidence and testing
+- **Peer Review:** Critical findings and solutions reviewed by relevant experts
+- **Testing Rigor:** Solutions tested across multiple environments and scenarios
+- **Documentation:** All steps, findings, and solutions thoroughly documented
+- **Communication:** Stakeholders informed throughout process with appropriate detail
+
+**Time Management:**
+- **Initial Response:** Issue acknowledged and initial assessment within 1 hour (critical/high)
+- **Root Cause:** Root cause identified within 24 hours (critical), 72 hours (high)
+- **Solution Development:** Working solution developed within defined SLA
+- **Resolution:** Issue resolved within agreed timeframe with stakeholder approval
+- **Prevention:** Prevention measures implemented within 1-2 weeks of resolution
+
+**Escalation Triggers:**
+- **Scope Expansion:** Issue affects more systems or users than initially assessed
+- **Business Impact:** Issue causes significant business disruption or data loss
+- **Technical Complexity:** Issue involves complex interactions or unknown systems
+- **Resource Constraints:** Investigation requires specialized expertise not available
+- **SLA Breach:** Resolution timeline exceeds agreed service level agreements
+
+**Template Customization Notes:**
+- Adapt investigation phases based on specific debugging domain (code, infrastructure, data, etc.)
+- Modify timeframes and escalation triggers based on organizational SLAs
+- Update quality gates to match team processes and standards
+- Customize deliverables based on organizational reporting requirements
+- Adjust success criteria based on issue severity and business impact

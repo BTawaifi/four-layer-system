@@ -1,0 +1,17 @@
+---
+alwaysApply: false
+description: "Implements remedies from technical reports by validating claims and applying minimal, safe fixes"
+---
+
+**Action:** Implement Remedies from a Report
+
+**Please provide the context:**
+- **The Report with Findings:** @[path/to/the/report.md]
+- **The Issues to Fix:** [List the specific issue numbers or descriptions to address, e.g., "Fix Issue #2 (Feature Engineering) and Issue #6 (File Location Mismatches)."]
+
+**Instruction for the AI:**
+For each specified issue, implement the minimal, safest remedy required to resolve it.
+1.  Validate the claim in the report against the code.
+2.  Apply the necessary code changes.
+3.  Run a linter or type-checker on the modified files to ensure code quality.
+4.  Provide a summary of the important edits made for each issue.

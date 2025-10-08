@@ -1,0 +1,56 @@
+---
+alwaysApply: false
+description: "Comprehensive workflow that audits code health, type safety, maintainability, and documentation quality"
+---
+
+prompt:
+**Action:** Initiate a Comprehensive Code Health & Type Safety Audit
+
+**Please define the scope of the audit:**
+
+- **The Target Code:** @[path/to/the/file_or_directory/to_audit]
+- **The Language/Environment:** [e.g., "TypeScript with React," "Python with MyPy," "JavaScript with JSDoc"]
+
+**Instruction for the AI:**
+You are now a Static Analysis Expert. Your goal is to perform a deep audit of the provided code to ensure it is clean, maintainable, and maximally type-safe. You must not suggest any functional or logical changes, only improvements to code quality and type safety.
+
+Generate a single markdown report named `[target_name]_health_audit.md` with the following sections:
+
+---
+
+**1. Linting & Formatting Violations (Critical 🟥)**
+
+- Scan the code for any violations of standard linting and formatting rules (e.g., unused variables, incorrect indentation, inconsistent style).
+- List each violation with the file path, line number, and a brief description of the rule being broken.
+
+---
+
+**2. Type Safety Gaps (High 🟧)**
+
+- **Implicit `any` / Untyped Variables:** Find all instances where a variable, function parameter, or return value has an implicit or explicit `any` type (or equivalent in other languages).
+- **Loose Type Definitions:** Identify any types that are too broad (e.g., `object`, `Array<any>`) and could be made more specific.
+- **Missing Type Assertions:** Find places where type assertions or checks could prevent potential runtime errors (e.g., checking if an object is null before accessing its properties).
+- For each gap, provide the file path, line number, and a suggestion for a more specific type.
+
+---
+
+**3. Maintainability & "Code Smells" (Medium 🟨)**
+
+- **High Cyclomatic Complexity:** Identify any functions that are overly complex (e.g., with deep nesting or too many `if/else` branches) and suggest simplification.
+- **Magic Strings/Numbers:** Find any hardcoded strings or numbers that should be extracted into named constants.
+- **Potential Null Pointer Errors:** Highlight any code paths where a variable could be `null` or `undefined` at runtime, leading to a crash.
+- **Poor Naming:** List any variables or functions with ambiguous or unclear names.
+
+---
+
+**4. JSDoc / Docstring Health (Low 🟩)**
+
+- **Missing Documentation:** Find all public functions or classes that are missing documentation blocks.
+- **Out-of-Sync Documentation:** Identify any documentation where the described parameters or return values do not match the actual function signature.
+
+---
+
+**5. Executive Summary & Health Score**
+
+- Provide a brief, high-level summary of the code's overall health.
+- Give a "Type Safety Score" on a scale from A+ (fully typed, no `any`) to F (no types, many potential runtime errors).

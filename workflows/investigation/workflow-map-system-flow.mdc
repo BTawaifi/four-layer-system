@@ -1,0 +1,18 @@
+---
+alwaysApply: false
+description: "Maps complete system workflows by tracing components, inputs/outputs, and external interactions"
+---
+
+**Action:** Map a Complete System Workflow
+
+**Please define the scope:**
+- **The System/Feature to Map:** [e.g., "The user registration and onboarding process," "The e-commerce order fulfillment pipeline."]
+- **The Starting Point (Optional Entry File):** @[path/to/the/start/of/the/flow.ext]
+- **Key Areas of Interest:** [What specific aspects are most important? e.g., "Focus on the data flow and database interactions," "Detail the AI integration points and prompts used."]
+
+**Instruction for the AI:**
+Trace the specified workflow from start to finish. Generate a comprehensive report in markdown that breaks down the system into its core stages. For each stage, describe:
+- The primary components/files involved.
+- The inputs it receives and the outputs it produces.
+- Any interactions with external services (APIs, databases, etc.).
+- Key business logic or decision points.

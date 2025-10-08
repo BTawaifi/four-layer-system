@@ -1,0 +1,23 @@
+---
+alwaysApply: false
+description: "Creates Architectural Decision Records documenting key technical decisions with context, consequences, and alternatives"
+---
+
+prompt:
+  **Action:** Create an Architectural Decision Record (ADR)
+
+  **Please provide the context for the decision:**
+  - **The Problem/Context:** [What problem or situation forced us to make a decision? e.g., "Our current monolith architecture is becoming difficult to scale."]
+  - **The Decision That Was Made:** [What was the final decision? e.g., "We have decided to migrate to a microservices architecture, starting with the notification service."]
+  - **The Options Considered (and why they were rejected):**
+    - [e.g., - Option 1: Continue with the monolith. Rejected because it hinders team autonomy.]
+    - [e.g., - Option 2: Refactor the monolith into modules. Rejected because it doesn't solve the deployment bottleneck.]
+
+  **Instruction for the AI:**
+  Generate a new markdown file named `adr-XXXX-[decision_title].md` using a standard ADR template. The file must include:
+  1.  **Title:** A short, descriptive title for the decision.
+  2.  **Status:** (Proposed, Accepted, Deprecated) - Set to "Accepted".
+  3.  **Context:** A detailed explanation of the problem being solved.
+  4.  **Decision:** A clear statement of the chosen solution.
+  5.  **Consequences:** A list of the positive and negative consequences of this decision (e.g., "Positive: Teams can deploy independently. Negative: Increased operational complexity.").
+  6.  **Options Considered:** A section detailing the other options that were evaluated and the reasons they were not chosen.

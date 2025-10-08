@@ -1,0 +1,140 @@
+---
+alwaysApply: false
+description: "Template for session state files used in multi-agent Cursor IDE workflows"
+template_type: "multi-agent-communication"
+template_purpose: "session-state-management"
+---
+
+# Session State Template
+**Session ID:** [SESSION_ID]
+**Timestamp:** [YYYY-MM-DDTHH:MM:SSZ]
+**Current Agent:** [AGENT_NAME_OR_ROLE]
+**Phase:** [CURRENT_PHASE]
+**Quality Score:** [X/10]
+
+## Session Overview
+**Primary Goal:** [Brief description of overall objective]
+**Current Status:** [Brief status summary]
+**Next Milestone:** [Next major deliverable or checkpoint]
+**Risk Level:** [Low/Medium/High] - [Brief explanation]
+
+## Active Context Files
+- `session_[session_id]_context.md`: Main session context and requirements
+- `findings_[agent]_[topic].md`: Agent-specific analysis results
+- `artifacts/[filename]`: Generated code, configs, or documentation
+- `pending_tasks.md`: Remaining work items and priorities
+
+## Agent Handover Information
+
+### Current Agent Status
+**Agent Role:** [e.g., "Security Auditor", "Backend Developer", "QA Tester"]
+**Completed Work:** [Bullet list of major accomplishments]
+**Key Findings:** [Important discoveries or decisions made]
+**Blockers Identified:** [Any issues preventing progress]
+
+### Next Agent Requirements
+**Required Agent:** [Next agent needed, e.g., "@specialist-frontend-developer"]
+**Handover Context:** [What the next agent needs to know]
+**Priority Tasks:** [Top 3 items for next agent to focus on]
+**Estimated Effort:** [Time estimate for next phase]
+
+### File-Based Context Transfer
+**State Files to Review:**
+- [ ] `session_[session_id]_context.md` - Updated requirements and constraints
+- [ ] `findings_[current_agent]_summary.md` - Key results and recommendations
+- [ ] `artifacts/` - Generated deliverables and documentation
+
+**Context Preservation:**
+- [ ] All important decisions documented in files
+- [ ] Code artifacts saved with clear naming conventions
+- [ ] Test results and validation evidence preserved
+- [ ] Future work clearly outlined and prioritized
+
+## Quality Assurance Checkpoints
+
+### Pre-Handover Validation
+- [ ] All deliverables meet quality standards
+- [ ] File references are accurate and accessible
+- [ ] Context summary is complete and clear
+- [ ] Next steps are well-defined and actionable
+
+### Session Continuity Assurance
+- [ ] Critical context preserved in files (not just memory)
+- [ ] Handover instructions are unambiguous
+- [ ] Agent transition path is clearly marked
+- [ ] Quality monitoring continues across handovers
+
+## Communication Protocol
+
+### File Naming Convention
+```
+session_[SESSION_ID]_[AGENT_ROLE]_[TIMESTAMP].md
+findings_[AGENT_ROLE]_[TOPIC]_[TIMESTAMP].md
+artifacts/[COMPONENT]_[VERSION]_[TYPE].ext
+```
+
+### Directory Structure
+```
+cursor_sessions/
+├── [session_id]/
+│   ├── session_state_[timestamp].md
+│   ├── findings/
+│   │   ├── findings_[agent1]_[topic].md
+│   │   └── findings_[agent2]_[topic].md
+│   ├── artifacts/
+│   │   ├── code/
+│   │   ├── docs/
+│   │   └── configs/
+│   └── quality/
+│       └── quality_checks_[timestamp].md
+```
+
+### Agent Communication Guidelines
+1. **Always Read Session State First:** Review current context before starting work
+2. **Update State on Completion:** Modify session state with your contributions
+3. **Preserve Context in Files:** Save important information to files, not just conversation
+4. **Clear Handover Instructions:** Make next steps explicit and actionable
+5. **Quality Documentation:** Include validation evidence and testing results
+
+## Emergency Protocols
+
+### Session Recovery
+**If session state is corrupted:**
+1. Check most recent backup in `cursor_sessions/[session_id]/backups/`
+2. Reconstruct from individual agent finding files
+3. Use quality checkpoints to validate recovered state
+
+### Agent Unavailability
+**If next agent is not available:**
+1. Document current state comprehensively in files
+2. Provide alternative agent suggestions with skill mapping
+3. Include detailed context for any agent to continue
+
+### Quality Failure
+**If quality standards not met:**
+1. Document specific failures and root causes
+2. Provide remediation recommendations
+3. Flag session for additional quality review
+4. Suggest alternative approaches if needed
+
+## Template Usage Instructions
+
+### For Current Agent (Before Handover)
+1. Update all status fields with current information
+2. Review and update quality checkpoints
+3. Ensure all file references are accurate
+4. Write clear, actionable handover instructions
+
+### For Next Agent (After Handover)
+1. Read session overview and current status
+2. Review all active context files
+3. Check quality assurance checkpoints
+4. Acknowledge understanding of handover context
+
+### For Session Coordinator
+1. Monitor session state updates across agents
+2. Ensure quality checkpoints are maintained
+3. Facilitate smooth transitions between agents
+4. Maintain overall project timeline and goals
+
+This template ensures reliable multi-agent collaboration in Cursor IDE by providing structured file-based communication and clear handover protocols.

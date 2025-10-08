@@ -1,0 +1,12 @@
+---
+alwaysApply: false
+description: "Distills reports by removing resolved items and focusing only on critical high-priority issues"
+---
+
+**Action:** Distill a Report to Unresolved Issues
+
+**Please provide the context:**
+- **The Full Report:** @[path/to/the/report_with_resolved_items.md]
+
+**Instruction for the AI:**
+Read the provided report. Create a new, streamlined version of the report that removes all sections or items marked as "Resolved," "Verified," "Working as Designed," or considered low-priority. The final document should be a concise summary focusing only on the critical and high-priority issues that still require action, complete with their full context and evidence.

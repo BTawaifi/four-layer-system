@@ -1,0 +1,19 @@
+---
+alwaysApply: false
+description: "Debugs code execution failures by analyzing error logs and providing clear explanations and solutions"
+---
+
+**Action:** Debug Code Execution Failure
+
+**Please provide the context:**
+- **The Code/Script being executed:** @[path/to/script.ext] or `[command being run]`
+- **The Error Log:**
+```
+[Paste the full error log, including stack trace]
+```
+- **The Goal:** Understand why the execution is failing and what the error means.
+
+**Instruction for the AI:**analyze the error log in the context of the provided code.
+1.  **Explain the Error:** Translate the technical error message into a clear, plain-language explanation of what went wrong.
+2.  **Pinpoint the Cause:** Identify the specific line of code or configuration issue that is causing the failure.
+3.  **Propose a Solution:** Recommend a specific fix to resolve the error.

@@ -1,0 +1,19 @@
+---
+alwaysApply: false
+description: "Scans codebase to identify file path and naming mismatches that prevent proper system integration"
+---
+
+**Action:** Find File Path and Naming Mismatches
+
+**Please define the scope:**
+- **The System to Scan:** [e.g., "The entire CI/CD workflow and all related scripts."]
+- **The Goal:** Identify all instances where one part of the system outputs a file that cannot be consumed by another part due to inconsistent file names or directory locations.
+
+**Instruction for the AI:**
+Scan the entire codebase, paying close attention to:
+-   File write operations (e.g., saving reports, models, or artifacts).
+-   File read operations (e.g., loading data, models, or configurations).
+-   CI/CD configuration files (e.g., `*.yml`, `*.ps1`).
+-   Hardcoded paths versus configurable paths.
+
+Produce a report listing all identified mismatches, the files involved, and the potential impact on system integration.

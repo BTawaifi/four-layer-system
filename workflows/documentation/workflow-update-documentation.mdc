@@ -1,0 +1,14 @@
+---
+alwaysApply: false
+description: "Updates technical documentation to reflect completed tasks and maintain current status"
+---
+  **Action:** Update Technical Documentation
+  **Target Document:** @[path/to/document.md]
+
+  **Context:**
+  The following tasks have just been completed:
+  - [Brief description of task 1]
+  - [Brief description of task 2]
+
+  **Instruction:**
+  Update the target document to reflect these changes. Mark the relevant items as ✅ COMPLETED, add a concise summary of the implementation for each, and ensure the document's status is current.

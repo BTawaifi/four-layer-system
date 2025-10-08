@@ -1,0 +1,20 @@
+---
+alwaysApply: false
+description: "Analyzes AI interactions to identify patterns, bottlenecks, and propose optimized workflows and rule enhancements"
+---
+
+prompt:
+**Action:** Analyze and Optimize My AI Interaction Workflow
+
+**Please provide the context:**
+
+- **The Task I Just Completed:** [Briefly describe the goal of the conversation we just had, e.g., "We just finished a full audit and remediation of the ML pipeline."]
+- **Our Conversation History:** (The AI should implicitly use the current conversation as context).
+
+**Instruction for the AI:**
+Act as a "Workflow Optimization Specialist." Your goal is to make my interactions with you more efficient. Analyze our entire conversation for the task I just described and answer the following:
+
+1.  **Pattern Recognition:** Identify the repetitive patterns in my prompts. Did I repeatedly ask for the same kind of information or perform the same sequence of actions?
+2.  **Workflow Bottlenecks:** Where did our workflow slow down? Were there steps where I had to provide a lot of corrective feedback or re-explain context?
+3.  **New Rule Proposal:** Based on your analysis, propose a **new, single, complex workflow `.cursorrules` file** that would have automated the entire task we just completed. This new rule should encapsulate the full, ideal process, reducing the number of steps I had to take manually.
+4.  **Existing Rule Enhancements:** Suggest any improvements to my existing library of rules (Specialists, Modifiers, Hooks) that would have made this process smoother.

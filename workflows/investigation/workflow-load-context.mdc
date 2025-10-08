@@ -1,0 +1,22 @@
+---
+alwaysApply: false
+description: "Loads and ingests context materials including files, logs, and focus areas for subsequent analysis"
+---
+
+**Action:** Load Context for Analysis
+
+**Please review the following materials:**
+- **Relevant Files (use `@`):**
+- @[path/to/primary_file.ext]
+- @[path/to/secondary_file.ext]
+- ...
+
+- **Relevant Data/Logs (paste below):**
+```
+[Paste any relevant logs, git diffs, architectural notes, or user reports here.]
+```
+
+- **Key Areas to Focus On:** [Direct the AI's attention to specific functions, classes, or sections within the provided context.]
+
+**Instruction for the AI:**
+Thoroughly read and ingest all the context provided above. Do not take any action yet. Simply confirm that you have read and understood all the provided materials and are ready for the next instruction.

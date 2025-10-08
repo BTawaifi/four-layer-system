@@ -1,0 +1,41 @@
+---
+alwaysApply: false
+description: "Multi-phase workflow that analyzes code and generates comprehensive documentation for onboarding"
+---
+
+**Action:** Initiate an Onboarding and Documentation Workflow
+
+**Please provide the context:**
+
+- **The Code to Onboard:** @[path/to/the/undocumented_feature_or_module.ext]
+- **The Target Audience for the Documentation:** [e.g., "A new junior developer," "A senior architect," "A product manager."]
+
+**Instruction for the AI:**
+You will analyze the provided code and generate a complete set of documentation artifacts to make it easy to understand, use, and maintain.
+
+---
+
+**Phase 1: Code Analysis and Mapping**
+
+- Read the provided code and generate a `CODEBASE_MAP.md` for it.
+- The map should detail:
+  - The public functions/classes and their purpose.
+  - The key data structures it uses.
+  - Its primary dependencies and interactions with other parts of the system.
+
+---
+
+**Phase 2: Inline Documentation**
+
+- Add inline documentation (e.g., JSDoc, Python Docstrings) to the source code itself.
+- Document the purpose, parameters, and return values for all public-facing functions and methods.
+
+---
+
+**Phase 3: High-Level README Generation**
+
+- Create a `README.md` file for the feature.
+- The README should be written for the specified target audience and include:
+  - A high-level explanation of what the feature does.
+  - Simple, clear instructions on how to set up and run it.
+  - A practical code example of how to use it.

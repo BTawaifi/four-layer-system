@@ -1,0 +1,217 @@
+---
+alwaysApply: false
+description: "Comprehensive performance profiling workflow identifying bottlenecks and optimization opportunities"
+---
+
+**Action:** Conduct Comprehensive Performance Profiling
+
+**Please define the profiling scope:**
+
+- **Application/Component:** @[path/to/application] or [component description]
+- **Performance Goals:** [Response time targets, throughput requirements, resource limits]
+- **Profiling Environment:** [Development / Staging / Production / Load Testing]
+- **Key User Journeys:** [Critical paths and high-traffic scenarios to analyze]
+- **Performance Metrics:** [CPU, Memory, Network, Disk I/O, Response Times]
+
+**Instruction for the AI:**
+Act as a Performance Engineering Specialist conducting a comprehensive performance analysis to identify bottlenecks, inefficiencies, and optimization opportunities. This workflow combines systematic profiling, benchmarking, and optimization recommendations across all application layers.
+
+---
+
+**Phase 1: Performance Requirements & Baseline**
+
+**STOP AND WAIT:** Establish performance requirements and current baseline metrics.
+
+**Requirements Analysis:**
+1. **Business Requirements:** Define acceptable response times, throughput targets, and user experience expectations
+2. **Technical Constraints:** Identify infrastructure limitations, scaling requirements, and resource budgets
+3. **Success Criteria:** Establish measurable performance goals (p95, p99 latency, error rates, resource utilization)
+4. **User Journey Mapping:** Identify critical user flows and performance-sensitive operations
+
+**Baseline Measurement:**
+- Establish current performance metrics across all layers
+- Document existing bottlenecks and performance issues
+- Create performance regression tests and monitoring baselines
+
+---
+
+**Phase 2: Application Layer Profiling**
+
+**STOP AND WAIT:** Profile application code and identify hotspots.
+
+**Code-Level Analysis:**
+1. **CPU Profiling:** Identify computational bottlenecks using profilers (Chrome DevTools, VisualVM, PyCharm profiler)
+2. **Memory Analysis:** Detect memory leaks, excessive allocations, and garbage collection inefficiencies
+3. **I/O Profiling:** Analyze database queries, network calls, and file system operations
+4. **Threading Analysis:** Identify concurrency issues, lock contention, and thread safety problems
+
+**Framework-Specific Profiling:**
+- React/Vue/Angular: Component rendering performance, reconciliation overhead, bundle size analysis
+- Backend: Request processing, serialization/deserialization, middleware performance
+- Database: Query execution plans, connection pooling, index utilization
+
+---
+
+**Phase 3: Infrastructure & System Profiling**
+
+**STOP AND WAIT:** Analyze infrastructure performance and resource utilization.
+
+**System-Level Analysis:**
+1. **Server Resources:** CPU utilization, memory usage, disk I/O patterns, network throughput
+2. **Database Performance:** Query execution times, connection pooling, cache hit ratios, replication lag
+3. **Network Performance:** Latency analysis, bandwidth utilization, CDN effectiveness
+4. **Caching Layer:** Cache hit rates, cache invalidation patterns, cache storage efficiency
+
+**Scalability Assessment:**
+- Load testing with various user concurrency levels
+- Stress testing to identify breaking points
+- Capacity planning and resource provisioning analysis
+- Auto-scaling configuration and effectiveness evaluation
+
+---
+
+**Phase 4: User Experience Performance**
+
+**STOP AND WAIT:** Evaluate end-to-end user experience performance.
+
+**Frontend Performance:**
+1. **Core Web Vitals:** Largest Contentful Paint (LCP), First Input Delay (FID), Cumulative Layout Shift (CLS)
+2. **Bundle Analysis:** JavaScript/CSS bundle sizes, code splitting effectiveness, lazy loading implementation
+3. **Asset Optimization:** Image optimization, font loading, third-party script impact
+4. **Rendering Performance:** Time to interactive, smooth scrolling, animation performance
+
+**Real User Monitoring:**
+- Session recording and heatmaps for user interaction patterns
+- Error tracking and JavaScript error rates
+- Performance monitoring across different devices and network conditions
+
+---
+
+**Phase 5: Performance Optimization Recommendations**
+
+**STOP AND WAIT:** Develop prioritized optimization roadmap.
+
+**Optimization Strategies:**
+1. **Quick Wins:** Low-effort, high-impact optimizations (caching, compression, basic query optimization)
+2. **Architectural Improvements:** System design changes for better performance (microservices, CQRS, event sourcing)
+3. **Code Optimizations:** Algorithm improvements, data structure optimizations, memory management enhancements
+4. **Infrastructure Optimizations:** Scaling improvements, resource optimization, CDN implementation
+
+**Implementation Roadmap:**
+- Prioritized list of performance improvements with effort vs. impact analysis
+- Timeline and resource requirements for each optimization
+- Risk assessment and rollback plans for performance changes
+- Success metrics and monitoring requirements
+
+---
+
+**Final Assessment: Performance Profiling Report**
+
+Generate a comprehensive performance analysis report with:
+
+## Executive Summary
+- **Performance Status:** Current performance health assessment
+- **Critical Issues:** Performance bottlenecks requiring immediate attention
+- **Optimization Potential:** Estimated performance improvement opportunities
+- **Business Impact:** User experience and business metric implications
+
+## Current Performance Baseline
+### Application Metrics
+- Response time distributions (p50, p95, p99)
+- Error rates and failure patterns
+- Throughput and concurrency limits
+- Resource utilization (CPU, memory, disk, network)
+
+### User Experience Metrics
+- Core Web Vitals scores
+- Time to interactive measurements
+- Bundle size and loading performance
+- Mobile/desktop performance comparison
+
+## Performance Bottlenecks Identified
+### Code-Level Issues
+- Inefficient algorithms and data structures
+- Memory leaks and excessive allocations
+- Database query optimization opportunities
+- Frontend rendering and JavaScript performance issues
+
+### Infrastructure Issues
+- Resource constraints and scaling limitations
+- Network latency and bandwidth issues
+- Database performance and connection pooling problems
+- Caching inefficiencies and cache miss patterns
+
+### Architecture Issues
+- Monolithic design limitations
+- Synchronous processing bottlenecks
+- State management inefficiencies
+- Third-party service dependencies
+
+## Optimization Recommendations
+### Immediate Actions (Low Effort, High Impact)
+- Database query optimization and indexing improvements
+- Caching implementation and configuration
+- Static asset optimization and CDN implementation
+- Basic code optimizations (loops, algorithms)
+
+### Short-Term Improvements (1-4 weeks)
+- Code refactoring for performance bottlenecks
+- Database schema and query optimizations
+- Frontend bundle optimization and code splitting
+- Infrastructure scaling and resource optimization
+
+### Medium-Term Enhancements (1-3 months)
+- Architectural improvements (microservices, event-driven design)
+- Advanced caching strategies and data partitioning
+- Performance monitoring and alerting implementation
+- Automated performance testing and regression detection
+
+### Long-Term Strategic Improvements (3+ months)
+- Technology stack modernization
+- Complete system redesign for performance
+- Advanced optimization techniques (machine learning, predictive scaling)
+- Performance culture and development practices
+
+## Implementation Roadmap
+### Phase 1: Quick Wins (Week 1-2)
+- Priority optimizations with immediate impact
+- Low-risk changes with measurable improvements
+- Performance monitoring baseline establishment
+
+### Phase 2: Core Optimizations (Weeks 3-8)
+- Major performance bottleneck resolution
+- System architecture improvements
+- Advanced optimization techniques implementation
+
+### Phase 3: Advanced Optimizations (Months 3-6)
+- Cutting-edge performance techniques
+- Predictive scaling and auto-optimization
+- Performance culture establishment
+
+## Success Metrics & Monitoring
+### Key Performance Indicators
+- Response time improvements (target reductions)
+- Error rate reductions and availability improvements
+- Resource utilization optimization targets
+- User experience and business metric improvements
+
+### Monitoring Implementation
+- Application performance monitoring (APM) tools
+- Real user monitoring (RUM) implementation
+- Synthetic monitoring and automated testing
+- Alert thresholds and incident response procedures
+
+## Risk Assessment & Mitigation
+### Implementation Risks
+- Performance regression during optimization
+- System instability from configuration changes
+- User experience disruption during deployment
+- Resource cost increases from scaling improvements
+
+### Mitigation Strategies
+- Comprehensive testing before production deployment
+- Gradual rollout with feature flags and canary deployments
+- Performance monitoring and automated rollback triggers
+- Change management and stakeholder communication
+
+**Deliverable:** `performance_profiling_report_[component]_[date].md` with complete analysis, recommendations, and implementation roadmap.

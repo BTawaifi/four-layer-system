@@ -1,0 +1,17 @@
+---
+alwaysApply: false
+description: "Creates new workflow rules for automating repetitive tasks with interactive prompts and sequential execution"
+---
+
+**Action:** Create a New Workflow Rule
+
+**Please describe the repetitive task you want to automate:**
+- **The Goal of the Workflow:** [e.g., "To quickly onboard a new microservice to our standard CI/CD pipeline."]
+- **The Sequence of Steps (one per line):**
+	- [e.g., 1. Create a default `Dockerfile`.]
+	- [e.g., 2. Create a standard `Jenkinsfile` template.]
+	- [e.g., 3. Add the new service to our monitoring configuration file.]
+	- [e.g., 4. Generate a basic `README.md` with setup instructions.]
+
+**Instruction for the AI:**
+Based on the described workflow, generate a new, generic `.cursorrules` file named `workflow_[goal_name].cursorrules`. The rule should be interactive, prompting the user for any necessary inputs (like the service name) and then executing the steps in the correct sequence.

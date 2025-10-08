@@ -1,0 +1,14 @@
+---
+alwaysApply: false
+description: "Re-verifies previous audit findings to determine if they're bugs or intentional design choices"
+---
+action: Re-verify a Previous Audit Finding
+Please provide the context:
+The Original Issue: [State the finding that needs re-verification, e.g., "The system has redundant data caching under multiple symbol variants."]
+The Core Question: Is this behavior truly a bug, or is it an intentional design choice with a specific benefit?
+
+Instruction for the AI:act as an independent auditor. Re-investigate the system's actual behavior related to the original issue. Your report should follow this strict format:
+Corrected Understanding: Contrast the original assessment with the new, verified understanding.
+Evidence of Actual Behavior: Provide concrete proof (architectural reasoning, code logic, test results) that supports your new conclusion.
+Benefits of the Design (if applicable): If the behavior is intentional, explain the benefits (e.g., robustness, performance).
+Final Assessment & Recommendation: State your final decision (e.g., "Working as Designed") and recommend the next action (e.g., "Document this behavior and close the issue").

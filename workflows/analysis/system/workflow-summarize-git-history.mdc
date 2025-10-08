@@ -1,0 +1,17 @@
+---
+alwaysApply: false
+description: "Analyzes git commit history and provides narrative summaries of file evolution and key changes"
+---
+
+**Action:** Analyze and Summarize Git History
+
+**Please provide the context:**
+- **The File in Question:** [What file are we analyzing? e.g., "src/api/auth.js"]
+- **The Goal of the Analysis:** [What do you want to understand? e.g., "Why was this file changed so frequently last month?", "Who were the key contributors to this feature?", "Summarize the evolution of this component."]
+- **The Git Log Output:** (Run `git log -- [path/to/file]` in your terminal and paste the output below)
+```
+[Paste the full `git log` output here]
+```
+
+**Instruction for the AI:**
+Read the provided git log and synthesize a human-readable summary that addresses the analysis goal. Your summary should be in narrative form, highlighting key commits, major changes, and the overall story of the file's development.

@@ -1,0 +1,6 @@
+---
+alwaysApply: false
+description: "Ensures all code changes maintain full backward compatibility with existing API, function signatures, and observable behavior"
+---
+rules:
+  - Any code changes you propose must be fully backward-compatible. The public API, function signatures, and observable behavior of the modified code must remain identical to the original.

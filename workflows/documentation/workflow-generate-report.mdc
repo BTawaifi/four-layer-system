@@ -1,0 +1,21 @@
+---
+alwaysApply: false
+description: "Generates comprehensive technical reports from codebase analysis with structured sections"
+---
+
+**Action:** Generate a Technical Report from Codebase
+
+**Please define the report:**
+
+- **The Report's Topic:** [e.g., "Implementation Plan for the New API," "Q3 Refactoring Summary," "Onboarding Guide for the Notification Service."]
+- **The Source Context:** [List the files or directories the AI should use as its primary source of information, e.g., "@[src/services/notifications/]", "@[api/v2/routes.js]"]
+
+- **The Required Sections (one per line):**
+  - [e.g., 1. Overview]
+  - [e.g., 2. Core Components and their Responsibilities]
+  - [e.g., 3. Data Models]
+  - [e.g., 4. Key Logic Flows]
+  - [e.g., 5. Potential Risks or Areas for Improvement]
+
+**Instruction for the AI:**
+Create a new markdown file named `[topic_name_report].md`. Populate it with detailed information gathered from the source context, structuring the content according to the required sections I have defined.

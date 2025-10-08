@@ -1,0 +1,248 @@
+---
+alwaysApply: false
+description: "Advanced context for managing complex multi-session workflows within Cursor IDE constraints"
+ide_compatibility: "✅ OPTIMIZED - Designed specifically for Cursor IDE session management"
+cursor_limitations: "Manages context window limitations through progressive state management"
+---
+
+# Cursor IDE Session Workflow Manager Context
+
+**Action:** Initialize Advanced Session Workflow Management
+
+**Please define the workflow context:**
+
+- **Workflow Name:** [Descriptive name for the multi-session workflow]
+- **Total Estimated Sessions:** [Number of Cursor IDE sessions required, e.g., "3-5 sessions"]
+- **Primary Objective:** [Core goal that spans all sessions]
+- **Success Criteria:** [Measurable outcomes for workflow completion]
+- **Session Time Limit:** [Typical session duration, e.g., "60-90 minutes"]
+- **Complexity Level:** [Simple/Moderate/Complex/Critical - affects state management intensity]
+
+**Instruction for the AI:**
+You are now operating within the **Cursor IDE Session Workflow Manager Context**. This context provides advanced session management capabilities specifically designed for Cursor IDE's context accumulation and token limitations.
+
+## Core Capabilities
+
+### Session State Management
+**Automatic State Tracking:**
+- Session progress automatically tracked and preserved
+- Context compression applied when approaching token limits
+- File-based state persistence across IDE sessions
+- Recovery mechanisms for interrupted workflows
+
+### Context Optimization
+**Intelligent Context Handling:**
+- Progressive context loading based on current session needs
+- Automatic context compression for long-running workflows
+- Token usage monitoring with optimization suggestions
+- Memory-efficient state representations
+
+### Multi-Session Coordination
+**Workflow Continuity:**
+- Seamless transition between Cursor IDE sessions
+- State preservation that survives IDE restarts
+- Progress tracking with visual indicators
+- Dependency management across session boundaries
+
+## Context Commands & Protocols
+
+### Session Management Commands
+When using this context, the following commands are available:
+
+**@session-status** - Displays current workflow progress, session metrics, and next steps
+**@session-save [description]** - Manually saves current session state with description
+**@session-resume [session_id]** - Resumes a previously saved workflow session
+**@session-compress** - Compresses current context to reduce token usage
+**@session-split [reason]** - Splits current session when approaching limits
+**@session-complete [outcome]** - Marks session complete with outcome summary
+
+### Quality Assurance Commands
+**@quality-check** - Runs automated quality validation on current work
+**@quality-report** - Generates quality assessment report for session
+**@quality-improve [aspect]** - Provides specific improvement suggestions
+
+### Recovery Commands
+**@recovery-point [label]** - Creates a recovery point with custom label
+**@recovery-restore [label]** - Restores to specified recovery point
+**@recovery-list** - Lists all available recovery points
+
+## Session Structure Protocol
+
+### Session Initialization (First 10 minutes)
+1. **Context Loading:** Load previous session state or initialize new workflow
+2. **Objective Review:** Confirm current session objectives and priorities
+3. **Resource Check:** Verify access to required files and tools
+4. **Progress Assessment:** Review progress toward overall workflow goals
+
+### Session Execution (Core Work Time)
+1. **Task Execution:** Work on planned tasks with quality checkpoints
+2. **State Preservation:** Regular state saves (every 15-20 minutes)
+3. **Token Monitoring:** Watch for approaching context limits
+4. **Quality Validation:** Apply quality checks at natural stopping points
+
+### Session Completion (Final 15 minutes)
+1. **Work Validation:** Ensure session objectives achieved
+2. **State Preservation:** Comprehensive state save with next session plan
+3. **Quality Assessment:** Generate quality report for completed work
+4. **Transition Planning:** Prepare clear objectives for next session
+
+## Context Optimization Strategies
+
+### Token Efficiency Patterns
+**Automatic Optimizations:**
+- Context summarization when approaching 70% token capacity
+- Progressive detail reduction for completed sections
+- File-based reference replacement for detailed content
+- Automatic cleanup of temporary working data
+
+**Manual Optimization Commands:**
+- `@compress-context [level]` - Apply compression with specified intensity
+- `@summarize-completed` - Replace detailed completed sections with summaries
+- `@archive-session-data` - Move completed work to archive files
+
+### Memory Management
+**Context Size Monitoring:**
+- Real-time token usage display
+- Automatic warnings at 50%, 75%, and 90% capacity
+- Compression suggestions based on content type
+- Session splitting recommendations
+
+**Smart Context Loading:**
+- Load only relevant context for current session phase
+- Lazy loading of reference materials
+- Automatic cleanup of unused context elements
+- Progressive context building as work advances
+
+## Workflow Continuity Features
+
+### Session State Persistence
+**Comprehensive State Tracking:**
+```
+Session State Structure:
+├── session_metadata.json (session info, timestamps, quality scores)
+├── current_context.md (active working context)
+├── completed_work/ (finished deliverables)
+├── pending_tasks.md (next session priorities)
+├── quality_reports/ (validation results)
+└── recovery_points/ (manual save points)
+```
+
+### Session Recovery Mechanisms
+**Automatic Recovery:**
+- Session state automatically saved every 10 minutes
+- Crash recovery with minimal work loss
+- State validation on session resume
+- Automatic conflict resolution for concurrent edits
+
+**Manual Recovery Options:**
+- Recovery to any saved state point
+- Selective state restoration (preserve some changes, revert others)
+- State diff viewing to understand changes
+- Recovery testing in isolated environment
+
+## Quality Integration
+
+### Automated Quality Checks
+**Continuous Validation:**
+- Real-time quality scoring during session work
+- Automatic detection of common quality issues
+- Quality trend monitoring across sessions
+- Predictive quality suggestions
+
+**Session Quality Gates:**
+- Quality assessment required for session completion
+- Minimum quality thresholds for workflow progression
+- Quality improvement recommendations
+- Quality history tracking for process improvement
+
+### Quality Reporting
+**Comprehensive Reports:**
+- Session quality metrics and trends
+- Quality issue identification and resolution tracking
+- Quality improvement recommendations
+- Predictive quality analysis for future sessions
+
+## Advanced Features
+
+### Multi-Agent Coordination
+**Agent State Sharing:**
+- Shared session state across multiple agents
+- Agent handover protocols with state preservation
+- Collaborative quality assessment
+- Agent contribution tracking and attribution
+
+### Performance Analytics
+**Workflow Metrics:**
+- Session duration and productivity tracking
+- Token usage optimization analysis
+- Quality improvement velocity measurement
+- Workflow completion prediction and optimization
+
+### Adaptive Optimization
+**Learning Systems:**
+- Automatic optimization based on usage patterns
+- Personalized recommendations for workflow efficiency
+- Predictive session planning based on historical data
+- Continuous improvement of optimization algorithms
+
+## Usage Examples
+
+### Example 1: Complex System Architecture Design
+```
+Session 1: Requirements analysis and context establishment (60 min)
+Session 2: Component design and data architecture (75 min)  
+Session 3: Integration patterns and security (60 min)
+Session 4: Implementation planning and validation (45 min)
+```
+
+**Context Management:**
+- Automatic state compression between sessions
+- Progressive loading of design artifacts
+- Quality checkpoints at each architectural milestone
+- Recovery points at major design decisions
+
+### Example 2: Large-Scale Code Refactoring
+```
+Session 1: Impact analysis and planning (90 min)
+Session 2: Core refactoring implementation (75 min)
+Session 3: Testing and validation (60 min)
+Session 4: Deployment and monitoring (45 min)
+```
+
+**Optimization Features:**
+- Token monitoring with automatic context summarization
+- File-based code change tracking
+- Quality validation of refactored code
+- Recovery mechanisms for complex refactoring operations
+
+## Context Termination
+
+### Clean Context Exit
+**Session Completion:**
+1. Final quality assessment and reporting
+2. Comprehensive state preservation
+3. Workflow completion documentation
+4. Context cleanup and optimization
+
+### Emergency Termination
+**Unexpected Session End:**
+1. Automatic state preservation (last 10 minutes of work)
+2. Recovery point creation at interruption
+3. Minimal context loss through compression
+4. Clear resumption instructions for next session
+
+## Integration with Other Contexts
+
+### Compatible Contexts
+- `@context-workflow-progress-tracker` - Enhanced progress tracking
+- `@context-state-set-primary-goal` - Goal alignment across sessions
+- `@context-flush-and-focus` - Session boundary management
+
+### Context Stacking
+- Can be combined with domain-specific contexts
+- Maintains compatibility with existing workflow patterns
+- Provides foundation for advanced multi-context workflows
+
+---
+
+This context provides comprehensive session management specifically optimized for Cursor IDE's constraints, enabling complex workflows that would otherwise be impossible within single session limitations.

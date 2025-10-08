@@ -1,0 +1,27 @@
+---
+alwaysApply: false
+description: "Surgical bug diagnosis workflow that analyzes evidence and provides precise fixes with improved error handling"
+---
+
+**Action:** Bug Report & Diagnosis
+**Observed Behavior:** [Describe the bug concisely, e.g., "The application crashes when uploading a profile picture."]
+
+**Grounding Context:**
+
+- **Component:** @[path/to/component.jsx]
+- **URL:** [URL where the bug occurs]
+- **User Role:** [e.g., school_teacher]
+
+**Grounding Evidence:**
+
+- **Console Error Log:**
+  ```
+  [Paste the full, relevant error log here]
+  ```
+- **API Response / Network Error:**
+  ```
+  [Paste the JSON response or network error message here]
+  ```
+
+**Analysis Request:**
+Based _only_ on the provided evidence, diagnose the root cause of this issue. Propose a precise code fix that resolves the immediate problem and improves resilience (e.g., better error handling, null checks).

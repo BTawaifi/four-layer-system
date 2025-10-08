@@ -1,0 +1,6 @@
+---
+alwaysApply: false
+description: "Requires explicit step-by-step thinking process to be shown before providing final answers"
+---
+rules:
+  - Before providing the final answer, you must externalize your thought process. Structure your response with a "Thinking Step-by-Step" section where you outline your plan, the tools you will use, and the logic you will follow to arrive at the solution.

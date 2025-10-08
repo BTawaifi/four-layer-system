@@ -1,0 +1,19 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+prompt:
+  ---
+  **[POST-ACTION HOOK: Configuration and Path Verification]**
+
+  **Instruction for the AI:**
+  The recent change involved file paths or configuration. Before we proceed, you must verify its integration with the rest of the system.
+
+  1.  **Check for Centralization:** Does the change use a centralized configuration value (e.g., from `config.py`), or does it introduce a new hardcoded path?
+  2.  **Verify Downstream Consumers:** Identify any other parts of the system (especially CI scripts or other components) that need to read the file(s) being written. Confirm that they will be looking in the correct location.
+  3.  **Check for Directory Creation:** If the code writes to a new directory, does it ensure the directory exists first (e.g., with `mkdir -p`)?
+
+  Report on the status of these checks.
+
+  **[STOP AND WAIT FOR MY ACKNOWLEDGEMENT]**

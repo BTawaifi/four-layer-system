@@ -1,0 +1,287 @@
+---
+alwaysApply: false
+description: "Composite workflow demonstrating effective orchestration of multiple specialists, modifiers, and contexts for full-stack web application development"
+ide_compatibility: "⚠️ HIGH CONTEXT USAGE - May exceed Cursor IDE context window. Use progressive phases and consider multi-agent execution. Monitor token consumption."
+cursor_limitations: "Context accumulation may cause issues in long sessions. Consider using @context-workflow-progress-tracker for session management."
+---
+
+**Action:** Develop Complete Full-Stack Web Application
+
+**Please define the application requirements:**
+
+- **Application Type:** [SaaS Platform / E-commerce / Social Network / Dashboard / API Service / Mobile-Web Hybrid]
+- **Technology Stack:** [Frontend + Backend + Database, e.g., "React/Next.js + Node.js/Express + PostgreSQL"]
+- **Scale Expectations:** [MVP / Small Business / Enterprise / High-Traffic Platform]
+- **Timeline:** [2 weeks / 1-3 months / 3-6 months / 6+ months]
+- **Team Size:** [Solo Developer / Small Team (2-5) / Large Team (5+) / Distributed Team]
+- **Special Requirements:** [Real-time features / High security / Performance critical / Mobile first]
+
+**Instruction for the AI:**
+Act as a Senior Full-Stack Architect and Technical Lead. Your task is to orchestrate a complete development process using the four-layer system effectively. This workflow demonstrates how to combine multiple specialists, modifiers, and contexts to deliver production-ready software. Each phase integrates different rules to address specific aspects of development.
+
+---
+
+**Phase 1: Project Foundation & Architecture**
+
+**STOP AND WAIT:** Establish solid architectural foundation using multiple rule combinations.
+
+**Rule Orchestration:**
+```
+@context-state-set-primary-goal
+- Primary Goal: "Deliver a scalable, maintainable full-stack application that meets all requirements within timeline and budget"
+
+@specialist-senior-software-engineer @modifier-think-step-by-step
+- Define system architecture, component boundaries, and technology choices
+- Design API contracts and data models
+- Establish coding standards and development practices
+
+@specialist-backend-developer @specialist-frontend-developer @modifier-conservative-mode
+- Collaboratively design the full-stack architecture
+- Define clear separation of concerns between frontend and backend
+- Establish consistent data contracts and communication protocols
+```
+
+**Key Deliverables:**
+1. **Architecture Decision Records (ADRs)** documenting technology choices
+2. **API specification** with clear endpoints and data contracts
+3. **Component diagrams** showing system structure and data flow
+4. **Development environment setup** with consistent tooling
+
+---
+
+**Phase 2: Backend Development & API Implementation**
+
+**STOP AND WAIT:** Build robust backend foundation with integrated quality practices.
+
+**Rule Orchestration:**
+```
+@workflow-api-development
+- Implement RESTful/GraphQL APIs following industry standards
+- Design database schema and implement data access layers
+- Set up authentication and authorization systems
+
+@specialist-backend-developer @modifier-production-ml-mindset @modifier-performance-critical
+- Optimize database queries and API response times
+- Implement comprehensive error handling and logging
+- Design for horizontal scalability and fault tolerance
+
+@specialist-security-auditor @modifier-verbose-output
+- Conduct security review of authentication and authorization
+- Identify potential security vulnerabilities in API design
+- Implement security headers and input validation
+
+@workflow-cicd-pipeline-setup
+- Establish automated testing and deployment pipelines
+- Set up code quality gates and security scanning
+- Configure staging and production environments
+```
+
+**Key Deliverables:**
+1. **Functional API endpoints** with comprehensive documentation
+2. **Database schema** with migrations and seed data
+3. **Authentication system** with secure token management
+4. **Automated test suite** covering unit and integration tests
+5. **Deployment pipeline** with staging and production environments
+
+---
+
+**Phase 3: Frontend Development & User Experience**
+
+**STOP AND WAIT:** Create engaging user interfaces with performance and accessibility focus.
+
+**Rule Orchestration:**
+```
+@specialist-frontend-developer @specialist-ux-designer @modifier-mobile-first
+- Design responsive user interfaces prioritizing mobile experience
+- Implement component architecture following design system principles
+- Ensure accessibility compliance (WCAG 2.1 AA standards)
+
+@specialist-react-best-practices @modifier-performance-critical
+- Optimize React component rendering and state management
+- Implement code splitting and lazy loading for performance
+- Use modern React patterns (hooks, context, suspense)
+
+@specialist-nextjs-developer @modifier-think-step-by-step
+- Implement server-side rendering and static generation where appropriate
+- Optimize for Core Web Vitals (LCP, FID, CLS)
+- Set up proper routing and navigation patterns
+
+@context-filter-apply-lens @specialist-qa-tester
+- Apply performance lens to identify frontend bottlenecks
+- Conduct accessibility audit and implement fixes
+- Perform cross-browser compatibility testing
+```
+
+**Key Deliverables:**
+1. **Responsive user interface** working across all device sizes
+2. **Component library** with consistent design and behavior
+3. **Optimized performance** meeting Core Web Vitals targets
+4. **Accessibility compliance** verified through automated and manual testing
+5. **Progressive Web App features** for enhanced user experience
+
+---
+
+**Phase 4: Integration, Testing & Quality Assurance**
+
+**STOP AND WAIT:** Ensure seamless integration and comprehensive quality validation.
+
+**Rule Orchestration:**
+```
+@workflow-comprehensive-testing-strategy @modifier-verbose-output
+- Design comprehensive testing strategy covering all layers
+- Implement end-to-end tests validating complete user journeys
+- Set up performance and load testing environments
+
+@specialist-qa-tester @specialist-devops-engineer @modifier-experimental-mode
+- Establish test automation framework and CI/CD integration
+- Implement contract testing between frontend and backend
+- Set up monitoring and alerting for production issues
+
+@workflow-secure-code-review @modifier-concise-output
+- Conduct thorough security review of the entire application
+- Identify and remediate security vulnerabilities
+- Ensure compliance with security best practices
+
+@workflow-production-readiness-checklist
+- Validate all production readiness requirements
+- Conduct final performance and security assessments
+- Prepare deployment and rollback procedures
+```
+
+**Key Deliverables:**
+1. **Comprehensive test suite** with high code coverage
+2. **Automated testing pipeline** integrated with CI/CD
+3. **Security audit results** with all identified issues resolved
+4. **Performance benchmarks** meeting or exceeding requirements
+5. **Production deployment plan** with monitoring and rollback procedures
+
+---
+
+**Phase 5: Deployment, Monitoring & Optimization**
+
+**STOP AND WAIT:** Successfully deploy and establish production monitoring and optimization.
+
+**Rule Orchestration:**
+```
+@specialist-devops-engineer @workflow-cicd-pipeline-setup
+- Deploy application to production environment
+- Configure production infrastructure and scaling rules
+- Set up monitoring, logging, and alerting systems
+
+@specialist-senior-software-engineer @modifier-performance-critical
+- Optimize application performance based on production metrics
+- Implement caching strategies and database optimizations
+- Fine-tune infrastructure configuration for cost efficiency
+
+@context-workflow-progress-tracker @modifier-think-step-by-step
+- Track post-deployment performance and user feedback
+- Monitor system health and identify optimization opportunities
+- Plan iterative improvements based on production insights
+
+@workflow-production-deployment-checklist
+- Validate production deployment success
+- Conduct post-deployment security and performance verification
+- Establish ongoing maintenance and monitoring procedures
+```
+
+**Key Deliverables:**
+1. **Production deployment** successfully serving real users
+2. **Monitoring dashboard** with key performance indicators
+3. **Alerting system** for critical issues and performance degradation
+4. **Optimization roadmap** based on production metrics
+5. **Maintenance procedures** for ongoing system health
+
+---
+
+**Phase 6: Documentation & Knowledge Transfer**
+
+**STOP AND WAIT:** Complete comprehensive documentation and team knowledge transfer.
+
+**Rule Orchestration:**
+```
+@specialist-technical-writer @workflow-update-documentation
+- Create comprehensive API documentation and developer guides
+- Document system architecture and deployment procedures
+- Establish runbooks for common operations and troubleshooting
+
+@workflow-meta-workflow-synchronize-project-knowledge
+- Transfer knowledge from development to operations team
+- Document lessons learned and best practices discovered
+- Establish procedures for ongoing knowledge management
+
+@context-establish-aliases
+- Create aliases for commonly used rule combinations
+- Document effective rule orchestration patterns
+- Establish reusable templates for similar future projects
+```
+
+**Key Deliverables:**
+1. **Complete documentation package** for development and operations
+2. **Runbooks and procedures** for system maintenance
+3. **Knowledge base** with solutions to common issues
+4. **Team training materials** for new team members
+5. **Project retrospective** with lessons learned
+
+---
+
+**Success Metrics & Validation:**
+
+**Technical Success:**
+- ✅ Application meets all functional and non-functional requirements
+- ✅ Performance targets achieved (response times, throughput, scalability)
+- ✅ Security audit passed with no critical vulnerabilities
+- ✅ Code coverage > 80% with comprehensive test suite
+- ✅ Accessibility compliance verified (WCAG 2.1 AA)
+
+**Operational Success:**
+- ✅ Successful production deployment with zero-downtime
+- ✅ Monitoring and alerting systems operational
+- ✅ Automated deployment pipeline established
+- ✅ Documentation complete and accessible to all stakeholders
+- ✅ Team knowledge transfer completed
+
+**Business Success:**
+- ✅ Project delivered within timeline and budget
+- ✅ User acceptance testing passed
+- ✅ Production stability maintained (uptime > 99.9%)
+- ✅ Performance meets user expectations
+- ✅ Scalability demonstrated under expected load
+
+---
+
+**Rule Combination Patterns Demonstrated:**
+
+1. **Context + Specialists:** Using contexts to set goals and focus, combined with domain specialists
+2. **Multiple Specialists:** Coordinating frontend, backend, and DevOps specialists for full-stack work
+3. **Modifiers + Workflows:** Applying modifiers to adjust behavior of complex workflows
+4. **Workflow Orchestration:** Using multiple workflows together for comprehensive coverage
+5. **Iterative Refinement:** Building upon previous phases with increasingly specific rule combinations
+
+## Token Efficiency Guidelines
+
+**Cursor IDE Context Management:**
+- Execute phases incrementally to manage context window usage
+- Use @context-workflow-progress-tracker to maintain session continuity
+- Save intermediate results to files rather than relying on conversation memory
+- Consider multi-agent execution for complex phases to distribute token consumption
+
+**Optimization Strategies:**
+- Focus on one architectural layer per session (frontend/backend/infrastructure)
+- Use file-based communication between phases
+- Implement progressive documentation to maintain context without memory burden
+- Break complex requirements into smaller, focused sessions
+
+**Token Consumption Estimates:**
+- **Phase 1 (Architecture):** ~2,000-3,000 tokens
+- **Phase 2 (Backend):** ~4,000-6,000 tokens
+- **Phase 3 (Frontend):** ~4,000-6,000 tokens
+- **Phase 4 (Integration):** ~3,000-5,000 tokens
+- **Phase 5 (Deployment):** ~2,000-4,000 tokens
+
+## Related Rules
+- **Specialists:** @specialist-frontend-developer, @specialist-backend-developer, @specialist-devops-engineer
+- **Modifiers:** @modifier-react-best-practices, @modifier-api-design, @modifier-performance-critical, @modifier-mobile-first
+- **Contexts:** @context-state-set-primary-goal, @context-workflow-progress-tracker
+- **Workflows:** @workflow-generate-tests (for testing), @workflow-security-audit (for security review)
+
+This workflow serves as a template for orchestrating complex development projects using the four-layer system's full capabilities.

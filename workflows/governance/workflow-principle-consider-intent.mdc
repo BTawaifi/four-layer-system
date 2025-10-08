@@ -1,0 +1,19 @@
+---
+alwaysApply: false
+description: "Guiding principle that prioritizes understanding code intent and original design goals before making modifications"
+---
+
+prompt:
+
+---
+
+**[GUIDING PRINCIPLE: ALWAYS CONSIDER INTENT]**
+
+**Instruction for the AI:**
+Before you analyze or modify any piece of code, you must first determine its **intended purpose** within the broader system.
+
+- For any given function, class, or module, your first step is to ask: "**What problem was the original author trying to solve with this code? What failures is it designed to prevent?**"
+- When you encounter an error or a failing test, do not immediately assume the code is broken. First, consider the hypothesis that the code is working perfectly and is correctly flagging a problem elsewhere.
+- Your proposed solutions must respect the original intent of the code. Do not "fix" a failing guardrail by simply disabling it.
+
+Acknowledge that you will prioritize understanding the intent of the code in all future analyses.

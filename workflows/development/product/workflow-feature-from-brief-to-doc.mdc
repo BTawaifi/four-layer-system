@@ -1,0 +1,46 @@
+---
+alwaysApply: false
+description: "Complete feature development workflow from brief to implementation, testing, and documentation"
+---
+
+**Action:** Initiate a Full Feature Generation Workflow
+
+**Please provide the feature brief:**
+
+- **The Feature Name:** [e.g., "User Profile Avatar Upload"]
+- **The Core Requirements (as a list):**
+- [e.g., - Users must be able to select a JPG or PNG file.]
+- [e.g., - The file size limit is 2MB.]
+- [e.g., - The image should be stored in our cloud storage bucket.]
+- [e.g., - The user's profile should update with the new avatar URL.]
+
+**Instruction for the AI:**
+You will now generate all necessary artifacts for this new feature in a sequential, four-phase process.
+
+---
+
+**Phase 1: Architectural Plan**
+
+- Create a new file named `[feature_name]_plan.md`.
+- In this file, outline the technical plan: the files to be created/modified, the function signatures, the data schema changes, and any necessary API endpoints.
+
+---
+
+**Phase 2: Test Suite Generation**
+
+- Based on the plan, create a new test file `[feature_name].test.ext`.
+- Write a comprehensive suite of tests (unit, integration) that cover all the requirements from the brief. The tests should fail initially.
+
+---
+
+**Phase 3: Code Implementation**
+
+- Write the actual application code for the feature.
+- Your implementation must satisfy all the requirements and make all the tests from Phase 2 pass.
+
+---
+
+**Phase 4: Documentation**
+
+- Create a new file `[feature_name]_README.md`.
+- Write clear, concise documentation for the new feature, explaining how it works and how to use it, intended for other developers.

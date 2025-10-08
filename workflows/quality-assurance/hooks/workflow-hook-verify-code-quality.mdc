@@ -1,0 +1,17 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+prompt:
+  ---
+  **[POST-ACTION HOOK: Code Quality Verification]**
+
+  **Instruction for the AI:**
+  Before we proceed, you must perform the following verification steps on the file(s) you just edited:
+
+  1.  **Run a Linter & Formatter:** Analyze the modified code for any linting errors or style guide violations. Report the results (e.g., "✅ Lint check passed" or "❌ Lint check failed with the following errors...").
+  2.  **Run a Type-Checker:** If applicable, analyze the modified code for any type errors. Report the results.
+  3.  **Confirm Logic:** In one sentence, confirm that the changes you made directly and completely address the original goal of the modification.
+
+  **[STOP AND WAIT FOR MY ACKNOWLEDGEMENT]**

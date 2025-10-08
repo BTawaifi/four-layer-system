@@ -1,0 +1,245 @@
+---
+alwaysApply: false
+description: "Context for monitoring and optimizing token usage in complex Cursor IDE workflows"
+ide_compatibility: "✅ OPTIMIZED - Real-time token monitoring and automatic optimization"
+cursor_limitations: "Addresses token consumption challenges in long-running sessions"
+---
+
+# Token Efficiency Manager Context
+
+**Action:** Initialize Token Usage Monitoring and Optimization
+
+**Please define the token management parameters:**
+
+- **Workflow Complexity:** [Low/Medium/High/Critical - affects monitoring intensity]
+- **Expected Session Duration:** [30/60/90/120+ minutes]
+- **Token Budget:** [Conservative/Standard/Aggressive - optimization aggressiveness]
+- **Content Type:** [Documentation/Code/Analysis/Design - affects optimization strategies]
+- **Quality Priority:** [Speed/Quality/Balanced - optimization vs quality trade-offs]
+
+**Instruction for the AI:**
+You are now operating within the **Token Efficiency Manager Context**. This context provides real-time token monitoring, automatic optimization suggestions, and intelligent context management to maximize productivity within Cursor IDE's token constraints.
+
+## Token Monitoring System
+
+### Real-Time Tracking
+**Automatic Monitoring:**
+- Continuous token usage tracking during session
+- Real-time display of token consumption metrics
+- Predictive analysis of remaining session capacity
+- Automatic warnings at predefined usage thresholds
+
+### Usage Visualization
+**Token Metrics Display:**
+```
+Current Usage: 2,847 / 4,096 tokens (69%)
+Session Efficiency: 87% (tokens per minute)
+Projected Completion: 78% confidence
+Optimization Suggestions: 3 available
+```
+
+### Threshold Alerts
+**Automatic Notifications:**
+- **50% Usage:** Efficiency assessment and minor optimization suggestions
+- **75% Usage:** Active optimization recommendations and context compression
+- **90% Usage:** Critical optimization with session splitting recommendations
+- **95% Usage:** Emergency measures and immediate action required
+
+## Optimization Strategies
+
+### Context Compression Techniques
+
+#### Progressive Summarization
+**Automatic Compression:**
+- Completed sections summarized to key points
+- Detailed implementation replaced with high-level descriptions
+- Code examples converted to pseudocode representations
+- Reference materials moved to external files
+
+#### Intelligent Prioritization
+**Content Preservation Logic:**
+- Critical decision points and architectural choices preserved in detail
+- Implementation details compressed based on usage frequency
+- Quality-critical sections maintained at full fidelity
+- Redundant information automatically consolidated
+
+### Token-Efficient Communication Patterns
+
+#### Structured Response Formats
+**Optimization Templates:**
+- Bullet-point summaries instead of narrative explanations
+- Table-based comparisons for complex decisions
+- Reference links to detailed documentation
+- Progressive disclosure of information depth
+
+#### Content Chunking
+**Session-Based Delivery:**
+- Break complex explanations into digestible segments
+- Provide overview first, details on request
+- Use file-based detailed information storage
+- Maintain context through structured references
+
+## Session Management Integration
+
+### Session Boundary Optimization
+**Smart Session Planning:**
+- Automatic session duration recommendations based on complexity
+- Token budget allocation across planned session activities
+- Progress checkpoint planning to minimize context loss
+- Session splitting suggestions when approaching limits
+
+### Recovery Point Management
+**Token-Efficient Recovery:**
+- Minimal context storage for recovery points
+- Incremental state saving to reduce overhead
+- Selective recovery options (full state vs key decisions)
+- Recovery point compression for long-term storage
+
+## Quality Preservation Protocols
+
+### Optimization Quality Gates
+**Quality Assurance:**
+- Automatic quality checks before applying optimizations
+- Preservation of critical quality elements during compression
+- Quality impact assessment for optimization suggestions
+- Minimum quality thresholds for different content types
+
+### Content Fidelity Maintenance
+**Quality Preservation Rules:**
+- Never compress active working context without user approval
+- Maintain full fidelity for decision-making content
+- Preserve original detail in file-based archives
+- Quality validation after each optimization cycle
+
+## Advanced Optimization Features
+
+### Predictive Optimization
+**Machine Learning-Enhanced:**
+- Historical usage pattern analysis for optimization recommendations
+- Predictive token consumption modeling for complex tasks
+- Personalized optimization preferences based on usage history
+- Adaptive optimization aggressiveness based on success rates
+
+### Multi-Modal Optimization
+**Content-Type Specific:**
+- **Code:** Syntax highlighting removal, comment preservation, algorithm summarization
+- **Documentation:** Section folding, example minimization, reference externalization
+- **Analysis:** Finding prioritization, evidence consolidation, recommendation focusing
+- **Design:** Decision preservation, alternative minimization, implementation deferral
+
+## Command Interface
+
+### Token Management Commands
+**@token-status** - Display current token usage and optimization suggestions
+**@token-compress [level]** - Apply context compression (low/medium/high)
+**@token-split** - Prepare for session splitting with optimized handoff
+**@token-optimize [target]** - Optimize context for specific target (speed/quality/balance)
+**@token-project [activity]** - Estimate token cost for planned activity
+
+### Quality Commands
+**@quality-preserve [section]** - Mark section as quality-critical (no compression)
+**@quality-check** - Validate quality impact of current optimizations
+**@quality-restore** - Restore compressed sections to full fidelity
+
+### Session Commands
+**@session-split [reason]** - Initiate controlled session splitting
+**@session-save [compression]** - Save session with specified compression level
+**@session-resume [optimization]** - Resume with optimization preferences
+
+## Usage Scenarios
+
+### Scenario 1: Complex Code Review (High Token Usage)
+```
+Initial Setup: @context-token-efficiency-manager with High complexity, 90-minute session
+Monitoring: Real-time token tracking with 75% threshold alert
+Optimization: Automatic context compression of reviewed code sections
+Result: Extended session capability with preserved review quality
+```
+
+### Scenario 2: Documentation Writing (Progressive Building)
+```
+Initial Setup: @context-token-efficiency-manager with Medium complexity, 60-minute session
+Strategy: Progressive disclosure with file-based detailed storage
+Optimization: Reference externalization for comprehensive examples
+Result: Complete documentation workflow within session constraints
+```
+
+### Scenario 3: Architecture Design (Decision Preservation)
+```
+Initial Setup: @context-token-efficiency-manager with Critical complexity, 120-minute session
+Priority: Preserve all architectural decisions at full detail
+Optimization: Compress implementation details and alternatives
+Result: Complete architectural design with full decision traceability
+```
+
+## Performance Analytics
+
+### Efficiency Metrics
+**Token Efficiency Score:** Ratio of useful output to token consumption
+**Session Completion Rate:** Percentage of planned work completed
+**Optimization Success Rate:** Effectiveness of applied optimizations
+**Quality Preservation Score:** Quality maintenance through optimizations
+
+### Trend Analysis
+**Usage Pattern Recognition:**
+- Identify high-token activities for process optimization
+- Track optimization effectiveness across different content types
+- Monitor quality impact of various compression strategies
+- Predictive modeling for session planning
+
+## Integration with Workflows
+
+### Workflow Compatibility
+**Enhanced Workflow Execution:**
+- Automatic token monitoring for all workflow types
+- Optimization suggestions based on workflow phase
+- Quality preservation aligned with workflow requirements
+- Session boundary optimization for multi-phase workflows
+
+### Progressive Workflow Support
+**Session-Spanning Workflows:**
+- Token budgeting across multiple sessions
+- State compression for workflow continuity
+- Quality maintenance across session boundaries
+- Recovery optimization for interrupted workflows
+
+## Emergency Protocols
+
+### Critical Token Situations
+**Approaching 95% Capacity:**
+1. Immediate context compression with quality preservation
+2. Emergency session splitting preparation
+3. Critical content isolation and protection
+4. User notification with action recommendations
+
+### Session Recovery
+**Post-Optimization Recovery:**
+1. Quality validation of compressed content
+2. Selective restoration of critical sections
+3. User approval for permanent compression decisions
+4. Documentation of optimization impact
+
+## Best Practices
+
+### Optimization Guidelines
+1. **Plan Ahead:** Set token budgets for complex activities
+2. **Quality First:** Never compromise critical quality elements
+3. **Progressive Disclosure:** Use overview-detail patterns
+4. **File-Based Storage:** Move detailed content to files
+5. **Regular Monitoring:** Check token status frequently
+
+### Quality Preservation
+1. **Identify Critical Content:** Mark quality-critical sections explicitly
+2. **Validate Optimizations:** Always check quality impact before applying
+3. **Maintain Fidelity:** Preserve original detail in archives
+4. **User Control:** Allow user approval for significant optimizations
+
+### Session Management
+1. **Proactive Planning:** Anticipate token needs for session activities
+2. **Regular Checkpoints:** Save state at natural work boundaries
+3. **Quality Gates:** Validate work quality before major optimizations
+4. **Recovery Planning:** Always have recovery options available
+
+---
+
+This context provides comprehensive token management and optimization capabilities specifically designed for Cursor IDE's constraints, enabling complex workflows that maintain quality while maximizing productive session time.

@@ -1,0 +1,18 @@
+---
+alwaysApply: false
+description: "Validates assumptions about system behavior against the actual codebase with evidence-based confirmation"
+---
+
+**Action:** Validate Assumptions Against the Codebase
+
+**Please provide the context:**
+
+- **The System/Feature to Validate:** [e.g., "The user authentication system," "The invoicing module."]
+
+- **Assumptions to Validate (one per line):**
+  - [e.g., The system uses JWT for session management.]
+  - [e.g., All database queries are handled through an ORM.]
+  - [e.g., An invoice can only be deleted by the user who created it.]
+
+**Instruction for the AI:**
+For each assumption listed, analyze the codebase to determine if it is **Confirmed** or **Inaccurate**. If an assumption is inaccurate, please explain the actual implementation and cite the relevant file(s) and line number(s) as evidence.

@@ -1,0 +1,42 @@
+---
+alwaysApply: false
+description: "Multi-phase triage workflow that distinguishes between stale data issues and genuine architectural bugs"
+---
+
+
+**Action:** Initiate a "Stale Data vs. Bug" Triage Workflow
+
+**Please define the problem:**
+- **The System Experiencing Failure:** [e.g., "The ML model training and backtesting pipeline."]
+- **The Observed Error:** [Describe the failure, e.g., "The pipeline is failing with data shape mismatches and broadcasting errors."]
+- **The Data Cache Location:** [Where is the system's cached data stored? e.g., "In the `/data_cache` directory."]
+- **The Data Refresh Script/Command:** [What command should be run to fetch fresh data? e.g., "`python scripts/fetch_fresh_data.py`"]
+
+**Instruction for the AI:**
+You will now execute a triage workflow to determine if the root cause is stale data or a core architectural bug. You must stop and wait for my input at the designated checkpoints.
+
+---
+**Phase 1: Initial Hypothesis & Fresh Data Run**
+- **Hypothesis:** The primary hypothesis is that the observed errors are caused by stale, inconsistent, or incomplete data in the cache.
+- **Action for User:** Please execute the following commands to clear the existing cache and run the pipeline with fresh data:
+```bash
+# Step 1: Back up the old cache (safety first)
+mv [Data Cache Location] [Data Cache Location]_backup
+
+# Step 2: Run the data refresh process
+[Data Refresh Script/Command]
+```
+
+**[STOP AND WAIT FOR YOU TO RUN THE COMMANDS AND CONFIRM IF THE ORIGINAL ERROR IS RESOLVED OR STILL PERSISTS]**
+
+---
+**Phase 2: Analysis & Conclusion**
+- **Analyze the Outcome:** I will analyze the outcome you provide.
+
+- **If the Error is RESOLVED:**
+-   **Conclusion:** The root cause was data staleness. The core architecture is sound.
+-   **Next Steps:** Generate recommendations to prevent future staleness, such as implementing automated data freshness checks, data versioning, and improving cache management.
+
+- **If the Error PERSISTS:**
+-   **Conclusion:** The root cause is likely a genuine architectural bug, not just stale data.
+-   **Next Steps:** Initiate the `@workflow-audit-to-remediation` to conduct a deep-dive investigation into the system's logic to find the underlying bug.

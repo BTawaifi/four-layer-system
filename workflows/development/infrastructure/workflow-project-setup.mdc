@@ -1,0 +1,27 @@
+---
+alwaysApply: false
+description: "Generates complete project starter repositories with structure, dependencies, configuration, and documentation"
+---
+
+**Action:** Automate Project Setup and Onboarding
+
+**Please describe the project to be created:**
+
+- **The Project Name:** [e.g., "notification-service"]
+- **The Technology Stack (as a list):**
+- [e.g., - Language: Go]
+- [e.g., - Framework: Gin]
+- [e.g., - Database: PostgreSQL]
+- [e.g., - Containerization: Docker]
+- [e.g., - CI/CD: GitHub Actions]
+
+**Instruction for the AI:**
+Generate a complete starter repository for this project as a set of files. The generated files must include:
+
+1.  **Project Structure:** A standard directory layout for the chosen stack (e.g., `/cmd`, `/internal`, `/pkg` for Go).
+2.  **Dependency Management:** A `go.mod`, `package.json`, or `requirements.txt` file with common libraries for the stack.
+3.  **Configuration:** A default `.env.example` and a configuration loader.
+4.  **Boilerplate Code:** A "Hello, World" entry point (`main.go` or `index.js`) and a basic health check endpoint.
+5.  **Containerization:** A multi-stage `Dockerfile` optimized for production.
+6.  **CI/CD Pipeline:** A basic `.github/workflows/ci.yml` file that runs linting and builds the application.
+7.  **Documentation:** A `README.md` file with setup and run instructions for a new developer.

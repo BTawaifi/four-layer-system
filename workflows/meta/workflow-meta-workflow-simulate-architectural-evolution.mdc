@@ -1,0 +1,28 @@
+---
+alwaysApply: false
+description: "Simulates architectural evolution by analyzing future business requirements and evaluating options with stress testing and pro/con analysis"
+---
+
+prompt:
+**Action:** Simulate an Architectural Evolution
+
+**Please provide the context:**
+
+- **The Current Architecture:** [Describe the current state, e.g., "A monolithic Python backend with a React frontend."]
+- **The Future Business Requirement:** [What is a major new requirement on the horizon? e.g., "We need to support real-time collaboration features for 10,000 concurrent users," "We need to expand into three new international regions with different data residency laws."]
+- **The Architectural Options to Consider (at least two):**
+  - [e.g., - Option A: Break out a new microservice for the real-time features.]
+  - [e.g., - Option B: Integrate a third-party real-time service like Ably or Pusher into the monolith.]
+
+**Instruction for the AI:**
+Act as a Chief Architect. Analyze the future business requirement and evaluate the proposed architectural options against it.
+
+Generate a report that includes:
+
+1.  **Stress Test Analysis:** For each option, describe how it would handle the new requirement. Where are the likely stress points or bottlenecks?
+2.  **Pro/Con Analysis:** Create a markdown table comparing the options across several axes:
+    - Development Velocity (How fast can we build it?)
+    - Operational Complexity (How hard is it to run and maintain?)
+    - Scalability (How well does it handle future growth?)
+    - Cost (What are the infrastructure and development costs?)
+3.  **Final Recommendation:** Based on the analysis, recommend one of the options and provide a clear justification for your choice.

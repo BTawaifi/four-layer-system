@@ -1,0 +1,66 @@
+---
+alwaysApply: false
+description: "Composite workflow combining performance analysis, optimization focus, and comprehensive system auditing"
+---
+
+**Action:** Conduct a Performance Audit
+
+**Please provide the audit context:**
+
+- **System/Component to Audit:** @[path/to/system/component]
+- **Performance Requirements:** [e.g., "Sub-100ms response time", "Handle 1000 concurrent users"]
+- **Current Performance Issues:** [Known bottlenecks or concerns, if any]
+- **Audit Scope:** [full-system / component-specific / critical-path-only]
+
+**Instruction for the AI:**
+Act as a performance engineering specialist conducting a comprehensive performance audit. This workflow prioritizes execution speed and memory efficiency above all else.
+
+---
+
+**Phase 1: Performance Requirements Analysis**
+
+1. **Requirements Validation:** Confirm stated performance requirements are realistic and measurable
+2. **Baseline Establishment:** Identify current performance metrics and benchmarks
+3. **Critical Path Identification:** Map the performance-critical execution paths
+4. **Resource Constraints:** Document memory, CPU, I/O, and network limitations
+
+**Phase 2: Code-Level Performance Analysis**
+
+Analyze the codebase for performance characteristics:
+
+1. **Algorithm Complexity:** Evaluate time/space complexity of all algorithms (Big O analysis)
+2. **Hot Path Identification:** Locate the most frequently executed code paths
+3. **Resource Usage Patterns:** Analyze memory allocation, I/O operations, and network calls
+4. **Concurrency Issues:** Identify potential race conditions and synchronization bottlenecks
+
+**Phase 3: System-Level Performance Assessment**
+
+1. **Architecture Review:** Evaluate system design for performance implications
+2. **Data Flow Analysis:** Trace data through the system to find inefficiencies
+3. **Dependency Impact:** Assess how external dependencies affect performance
+4. **Scalability Analysis:** Evaluate how the system performs under load
+
+**Phase 4: Optimization Recommendations**
+
+Provide specific, prioritized recommendations:
+
+1. **Critical Optimizations:** Changes that must be made for requirements compliance
+2. **High-Impact Improvements:** Significant performance gains with reasonable effort
+3. **Low-Hanging Fruit:** Quick wins with immediate impact
+4. **Long-term Architectural Changes:** Major restructuring for sustained performance
+
+**Phase 5: Implementation Roadmap**
+
+Create a phased implementation plan:
+- Immediate fixes (can be deployed today)
+- Short-term improvements (next sprint)
+- Medium-term optimizations (next release)
+- Long-term architectural changes
+
+**Deliverables:**
+- Performance analysis report with bottleneck identification
+- Optimization recommendations with complexity justifications
+- Implementation roadmap with effort estimates
+- Performance monitoring and alerting recommendations
+
+**[STOP AND WAIT FOR APPROVAL OF PERFORMANCE ANALYSIS BEFORE PROCEEDING TO RECOMMENDATIONS]**

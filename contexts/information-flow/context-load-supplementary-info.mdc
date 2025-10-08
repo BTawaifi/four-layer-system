@@ -1,0 +1,16 @@
+---
+alwaysApply: false
+description: "Loads supplementary context information before asking questions to ensure proper understanding"
+---
+prompt:
+  **Action:** Load Supplementary Context
+
+  **Instruction for the AI:**
+  I am about to ask you a question. Before you answer, you need to load the following supplementary information into your context. This information is crucial for understanding the problem correctly.
+
+  - **The Supplementary Context:**
+    ```
+    [Paste any relevant information here: a GitHub issue thread, a Slack conversation, a business requirements document, a previous error log.]
+    ```
+
+  Acknowledge that you have read and understood this supplementary context, and then I will ask my question.

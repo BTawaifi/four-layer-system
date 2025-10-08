@@ -1,0 +1,235 @@
+---
+alwaysApply: false
+description: "Complete example of multi-agent workflow using the communication templates"
+template_type: "multi-agent-communication"
+template_purpose: "workflow-example"
+---
+
+# Multi-Agent Session Workflow Example
+**Scenario:** Full-Stack E-commerce Feature Development
+**Session ID:** ecommerce_checkout_2025_0922_001
+**Duration:** 3 days
+**Agents Involved:** Product Manager, Backend Developer, Frontend Developer, QA Tester
+
+## Session Overview
+
+This example demonstrates how to use the multi-agent communication templates for a complete development workflow. The scenario involves implementing a new checkout feature for an e-commerce platform, requiring coordination between multiple specialized agents.
+
+## Phase 1: Requirements & Planning (Agent: Product Manager)
+
+### Session State File Created
+```
+session_ecommerce_checkout_2025_0922_001_state.md
+```
+
+**Content using session_state_template.mdc:**
+- **Primary Goal:** Implement secure checkout flow with payment processing
+- **Current Status:** Requirements gathering phase
+- **Next Milestone:** Technical specification approval
+- **Required Agent:** Backend Developer
+
+### Findings Documentation
+```
+findings_product_manager_requirements_2025-09-22.md
+```
+
+**Key findings documented:**
+- Payment security requirements (PCI compliance)
+- User experience requirements (conversion optimization)
+- Integration requirements (existing payment gateways)
+- Performance requirements (sub-3-second load times)
+
+## Phase 2: Backend Implementation (Agent: Backend Developer)
+
+### Session State Update
+**Updated session_state_template.mdc:**
+- **Current Agent:** Backend Developer
+- **Phase:** Implementation
+- **Progress Status:** 40% complete
+- **Next Agent:** Frontend Developer
+
+### Handover to Frontend Developer
+```
+handover_backend_to_frontend_2025-09-22.md
+```
+
+**Using handover_protocol_template.mdc:**
+- **Completed Work:** API endpoints, payment processing logic, database schema
+- **Key Deliverables:** `artifacts/api_checkout_v1.0/`, `artifacts/models_payment.py`
+- **Next Priorities:** Frontend integration, UI implementation
+- **Technical Context:** OAuth2 flow, JWT token handling, payment webhook processing
+
+### Quality Monitoring Checkpoint
+```
+quality_session_ecommerce_checkout_2025-09-22.md
+```
+
+**Assessment using quality_monitoring_template.mdc:**
+- **Code Quality:** 9/10 (comprehensive error handling, security measures)
+- **Documentation:** 8/10 (API docs complete, some integration docs pending)
+- **Test Coverage:** 7/10 (unit tests complete, integration tests in progress)
+
+## Phase 3: Frontend Integration (Agent: Frontend Developer)
+
+### Session State Continuation
+**Agent reads and updates session state:**
+- Reviews backend deliverables
+- Acknowledges handover protocol
+- Updates progress to 60% complete
+
+### Findings and Implementation Notes
+```
+findings_frontend_integration_2025-09-23.md
+```
+
+**Frontend-specific findings:**
+- UI/UX consistency with existing design system
+- Mobile responsiveness requirements
+- Accessibility compliance (WCAG 2.1 AA)
+- Performance optimization opportunities
+
+### Quality Validation
+**Frontend quality assessment:**
+- Component testing completed
+- Accessibility audit passed
+- Performance benchmarks met
+- Cross-browser compatibility verified
+
+## Phase 4: Testing & Validation (Agent: QA Tester)
+
+### Comprehensive Quality Review
+```
+quality_final_validation_2025-09-23.md
+```
+
+**End-to-end quality assessment:**
+- **Functional Testing:** All user flows validated
+- **Security Testing:** Penetration testing completed
+- **Performance Testing:** Load testing passed benchmarks
+- **Integration Testing:** All system components working together
+- **User Acceptance Testing:** Stakeholder approval received
+
+### Final Session State
+```
+session_ecommerce_checkout_2025_0922_001_final.md
+```
+
+**Completion status:**
+- **Overall Progress:** 100% complete
+- **Quality Score:** 9/10
+- **Deliverables:** All requirements met, feature ready for production
+- **Risk Assessment:** Low - all critical issues resolved
+
+## File Structure Example
+
+```
+cursor_sessions/
+├── ecommerce_checkout_2025_0922_001/
+│   ├── session_state_initial.md
+│   ├── session_state_backend_complete.md
+│   ├── session_state_frontend_complete.md
+│   ├── session_state_final.md
+│   ├── findings/
+│   │   ├── findings_product_manager_requirements.md
+│   │   ├── findings_backend_architecture.md
+│   │   ├── findings_frontend_integration.md
+│   │   └── findings_qa_validation.md
+│   ├── artifacts/
+│   │   ├── api/
+│   │   │   ├── checkout_endpoints.py
+│   │   │   └── payment_processor.py
+│   │   ├── frontend/
+│   │   │   ├── checkout_component.tsx
+│   │   │   └── payment_form.tsx
+│   │   └── docs/
+│   │       ├── api_documentation.md
+│   │       └── user_guide.md
+│   ├── quality/
+│   │   ├── quality_backend_review.md
+│   │   ├── quality_frontend_review.md
+│   │   └── quality_final_validation.md
+│   └── handovers/
+│       ├── handover_pm_to_backend.md
+│       ├── handover_backend_to_frontend.md
+│       └── handover_frontend_to_qa.md
+```
+
+## Timeline and Communication Flow
+
+### Day 1: Planning Phase
+1. **Product Manager** creates initial session state and requirements findings
+2. **Handover** to Backend Developer with detailed specifications
+3. **Quality checkpoint** established for API design standards
+
+### Day 2: Implementation Phase
+1. **Backend Developer** reviews handover, implements APIs and logic
+2. **Creates findings** documenting architectural decisions and trade-offs
+3. **Quality monitoring** validates security and performance standards
+4. **Handover** to Frontend Developer with API documentation and test endpoints
+
+### Day 3: Integration and Testing Phase
+1. **Frontend Developer** integrates with backend APIs, implements UI
+2. **Creates findings** for UX improvements and accessibility enhancements
+3. **Quality validation** ensures responsive design and performance
+4. **Handover** to QA Tester with complete implementation and test scenarios
+
+### Day 3 (Evening): Validation and Closure
+1. **QA Tester** executes comprehensive testing suite
+2. **Quality monitoring** final assessment and stakeholder sign-off
+3. **Session closure** with all deliverables documented and approved
+
+## Key Success Factors Demonstrated
+
+### Effective Communication
+- **Structured Templates:** Consistent format across all agent interactions
+- **File-Based Context:** All critical information preserved in accessible files
+- **Clear Handovers:** Specific instructions and priorities for each agent
+- **Quality Gates:** Validation at each transition point
+
+### Quality Maintenance
+- **Continuous Monitoring:** Quality assessed at each phase transition
+- **Evidence Preservation:** Test results and validation evidence saved
+- **Standards Compliance:** Consistent application of coding and documentation standards
+- **Risk Management:** Proactive identification and mitigation of issues
+
+### Process Efficiency
+- **Parallel Work:** Agents can work simultaneously on different aspects
+- **Incremental Delivery:** Work completed and validated in phases
+- **Knowledge Transfer:** Clear documentation enables easy handoffs
+- **Scalability:** Process works for 2-agent or 10-agent collaborations
+
+## Lessons Learned and Best Practices
+
+### What Worked Well
+1. **Template Discipline:** Using standardized templates ensured consistency
+2. **File-Based Communication:** No information lost in conversation memory
+3. **Quality Gates:** Caught issues early rather than at the end
+4. **Clear Ownership:** Each agent knew exactly what they were responsible for
+
+### Areas for Improvement
+1. **Template Customization:** Consider domain-specific template variations
+2. **Automation Opportunities:** Some quality checks could be automated
+3. **Training Investment:** Initial template learning curve for new agents
+4. **Tool Integration:** Better integration with project management tools
+
+### Recommended Enhancements
+1. **Template Library:** Expand templates for different project types
+2. **Quality Dashboard:** Real-time quality metrics visualization
+3. **Automated Validation:** CI/CD integration for quality checks
+4. **Knowledge Base:** Repository of successful patterns and solutions
+
+## Template Usage Quick Start
+
+### For New Multi-Agent Sessions
+1. Copy `session_state_template.mdc` and customize for your project
+2. Create initial findings using `findings_template.mdc`
+3. Use `handover_protocol_template.mdc` for agent transitions
+4. Apply `quality_monitoring_template.mdc` at each quality gate
+
+### Integration with Existing Workflows
+1. Add template references to your existing workflow documentation
+2. Train team members on template usage and best practices
+3. Establish quality standards and validation procedures
+4. Monitor effectiveness and iterate on the process
+
+This example demonstrates how the multi-agent communication templates enable effective collaboration in Cursor IDE, ensuring quality, continuity, and successful project delivery across multiple specialized agents.

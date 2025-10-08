@@ -1,0 +1,40 @@
+---
+alwaysApply: false
+description: "Factory workflow that analyzes codebases to create new specialist personas with appropriate competencies and behaviors"
+---
+
+prompt:
+**Action:** Initiate the Specialist Creation Factory Workflow
+
+**Please define the new specialist:**
+
+- **The Specialist's Title:** [What is the professional title for this expert? e.g., "API Security Specialist," "Real-time Data Processing Engineer," "E-commerce Template Engine Developer."]
+- **The Domain of Expertise (the code they are an expert on):** @[path/to/the/code/directory_or_key_file.ext]
+- **The Core Task of this Domain:** [What is the primary responsibility of this part of the codebase? e.g., "To handle all user authentication and authorization," "To ingest and process streaming financial data," "To dynamically generate HTML/CSS/JS from templates and AI-generated parameters."]
+
+**Instruction for the AI:**
+You will now analyze the specified domain and generate a new `.cursorrules` file for a specialist who is an expert in it. You must stop and wait for my approval at the designated checkpoint.
+
+---
+
+**Phase 1: Deep Code Analysis & Competency Extraction**
+
+- **Analyze the Codebase:** Thoroughly read and analyze the provided code in the "Domain of Expertise."
+- **Identify Core Competencies:** Based on your analysis, extract a list of the key skills, technologies, architectural patterns, and domain-specific knowledge required to work on this code. Examples:
+  - _Technologies:_ "Expert in Next.js, Zod for validation, Genkit for AI orchestration."
+  - _Patterns:_ "Understands multi-phase AI pipelines (Plan -> Design -> Generate)."
+  - _Domain Knowledge:_ "Expert in mitigating AI hallucinations and ensuring content quality."
+- **Identify Default Behaviors:** Observe the code's style and structure to infer the ideal "way of thinking" for an expert in this area (e.g., "Prioritizes schema validation at every step," "Thinks in terms of data flow through a pipeline," "Is obsessed with the quality of AI-generated output.").
+
+**[STOP AND WAIT FOR MY APPROVAL OF THE EXTRACTED COMPETENCIES AND BEHAVIORS]**
+
+---
+
+**Phase 2: Specialist `.cursorrules` File Generation**
+
+- **Synthesize the Persona:** Based on the approved competencies and behaviors, synthesize a complete persona description for the new specialist.
+- **Generate the Rule File:** Create a new file named `specialist-[title_slug].cursorrules`. The file must contain the new `persona:` definition, including:
+  - The specialist's title and a high-level description.
+  - A bulleted list under "**Your Core Competencies**".
+  - A bulleted list under "**Your Default Behavior**".
+- **Provide Usage Examples:** In your response, provide 2-3 clear examples of how I could stack this new specialist with existing action rules to solve common problems within their domain.

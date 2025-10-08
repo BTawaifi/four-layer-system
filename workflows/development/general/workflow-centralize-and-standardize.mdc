@@ -1,0 +1,33 @@
+---
+alwaysApply: false
+description: "Multi-phase workflow that discovers, centralizes, and standardizes inconsistent elements across the codebase"
+---
+
+**Action:** Initiate a Centralization and Standardization Workflow
+
+**Please define the target for standardization:**
+
+- **The Inconsistent Element:** [e.g., "Output file paths," "Database connection strings," "API keys."]
+- **The Desired "Single Source of Truth":** [Where should the correct value be defined? e.g., "A new constant `OUT_DIR` in a central `config.py` file."]
+- **The Scope of the Search:** [Where should I look for inconsistencies? e.g., "The entire codebase, including CI scripts."]
+
+**Instruction for the AI:**
+You will now find all instances of the inconsistent element and refactor them to use a single, centralized source of truth.
+
+---
+
+**Phase 1: Discovery and Reporting**
+
+- Scan the entire codebase within the defined scope.
+- Find and list every file and line number that contains a hardcoded or inconsistent version of the target element.
+- Group the findings by their variation.
+
+**[STOP AND WAIT FOR MY APPROVAL OF THE DISCOVERY LIST]**
+
+---
+
+**Phase 2: Implementation**
+
+- **Create the Single Source of Truth:** If it doesn't already exist, create or modify the specified central configuration file and add the standardized value.
+- **Refactor All Instances:** Go through the approved list from Phase 1 and replace every hardcoded instance with a reference to the new, centralized value.
+- **Provide a Summary:** List all the files that were modified.

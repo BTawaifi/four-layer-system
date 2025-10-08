@@ -1,0 +1,85 @@
+---
+alwaysApply: false
+description: "Documents modifier compatibility and conflict resolution guidelines for the rules system"
+---
+
+# Modifier Compatibility Matrix
+
+This document outlines known conflicts between modifiers and provides guidance for resolution. Modifiers that cannot be applied together are marked with conflict levels:
+
+- **🚫 Critical Conflict**: Mutually exclusive - will produce contradictory behavior
+- **⚠️ Potential Conflict**: May conflict depending on context - requires careful consideration
+- **✅ Compatible**: Can be used together without issues
+
+## Critical Conflicts
+
+### Output Style Conflicts
+| Modifier A | Modifier B | Conflict Level | Resolution |
+|------------|------------|----------------|------------|
+| `modifier-concise-output` | `modifier-verbose-output` | 🚫 Critical | Choose one based on user preference. Default to concise for technical queries, verbose for learning contexts. |
+
+### Approach Philosophy Conflicts
+| Modifier A | Modifier B | Conflict Level | Resolution |
+|------------|------------|----------------|------------|
+| `modifier-conservative-mode` | `modifier-experimental-mode` | 🚫 Critical | Choose based on project phase: conservative for production systems, experimental for R&D/prototyping. |
+
+## Potential Conflicts
+
+### Performance vs. Simplicity Trade-offs
+| Modifier A | Modifier B | Conflict Level | Resolution |
+|------------|------------|----------------|------------|
+| `modifier-performance-critical` | `modifier-prioritize-simplicity` | ⚠️ Potential | Performance-critical takes precedence for hot paths. Use complexity analysis to justify trade-offs. Apply simplicity to non-critical sections. |
+
+### Quality vs. Speed Conflicts
+| Modifier A | Modifier B | Conflict Level | Resolution |
+|------------|------------|----------------|------------|
+| `modifier-production-ml-mindset` | `modifier-experimental-mode` | ⚠️ Potential | Production mindset should override experimental mode for production deployments. Use experimental mode only for research phases. |
+
+## Compatibility Guidelines
+
+### Recommended Combinations
+
+**Web Development Stack:**
+- ✅ `modifier-react-best-practices` + `modifier-mobile-first` + `modifier-performance-critical`
+- ✅ `modifier-angular-standards` + `modifier-conservative-mode` + `modifier-prioritize-simplicity`
+
+**API Development Stack:**
+- ✅ `modifier-api-design` + `modifier-think-step-by-step` + `modifier-verbose-output`
+- ✅ `modifier-cloud-agnostic` + `modifier-backward-compatible` + `modifier-conservative-mode`
+
+**Data Science Stack:**
+- ✅ `modifier-production-ml-mindset` + `modifier-experimental-mode` + `modifier-think-step-by-step`
+- ✅ `modifier-performance-critical` + `modifier-prioritize-simplicity` (with complexity justification)
+
+### Conflict Prevention Rules
+
+1. **Single Output Style**: Never apply both `concise-output` and `verbose-output` simultaneously
+2. **Philosophy Alignment**: Ensure conservative vs experimental modes align with project phase
+3. **Context Awareness**: Performance-critical should only apply to actual performance bottlenecks
+4. **Documentation**: Always document when overriding conflicts for auditability
+
+### Automatic Conflict Detection
+
+When multiple modifiers are applied, the system should:
+
+1. **Validate Compatibility**: Check for critical conflicts and prevent application
+2. **Warn on Potential Issues**: Alert users to potential conflicts with resolution guidance
+3. **Suggest Alternatives**: Provide compatible modifier alternatives
+4. **Document Overrides**: Require explicit justification when allowing conflicts
+
+### Implementation Notes
+
+**For Rule Authors:**
+- Document any known conflicts in modifier descriptions
+- Provide clear guidance on appropriate use cases
+- Consider creating composite modifiers for common compatible combinations
+
+**For Rule Consumers:**
+- Review modifier combinations before application
+- Consider project context when resolving conflicts
+- Document reasoning when allowing potential conflicts
+
+**For System Operators:**
+- Implement validation logic to prevent critical conflicts
+- Provide conflict resolution guidance in UI
+- Monitor for frequently conflicting modifier combinations

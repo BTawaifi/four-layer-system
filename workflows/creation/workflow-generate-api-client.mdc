@@ -1,0 +1,41 @@
+---
+alwaysApply: false
+description: "Multi-phase workflow that generates production-ready API clients from OpenAPI/Swagger specifications"
+---
+
+**Action:** Generate an API Client/SDK
+
+**Please provide the API specification:**
+
+- **The API Specification (provide one):**
+  - @[path/to/openapi_or_swagger.json]
+  - (Alternatively, paste the raw JSON/YAML spec here)
+  - (Or, if no spec, provide a list of API endpoints with methods, URLs, request bodies, and example responses)
+  - **The Target Language/Framework:** [e.g., "TypeScript with Axios," "Python with Requests," "Go"]
+
+**Instruction for the AI:**
+You will now generate a complete, production-ready API client.
+
+---
+
+**Phase 1: Type & Interface Generation**
+
+- Based on the API specification, generate all necessary type definitions or interfaces for the request bodies and response payloads.
+
+---
+
+**Phase 2: Client Method Implementation**
+
+- Create a client class or set of functions.
+- For each endpoint in the specification, implement a corresponding method (e.g., `getUser(id)`, `createPost(postData)`).
+- Each method should handle making the HTTP request, managing authentication (via a configurable token), and returning the typed response.
+- Include robust error handling for non-2xx responses.
+
+---
+
+**Phase 3: Documentation and Usage Example**
+
+- Generate a `README.md` file for the new client.
+- The documentation must include:
+  - How to install and initialize the client.
+  - A clear, simple usage example for at least one of the primary methods.

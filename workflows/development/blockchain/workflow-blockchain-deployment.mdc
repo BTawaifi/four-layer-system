@@ -1,0 +1,190 @@
+---
+alwaysApply: false
+description: "Focused workflow for deploying blockchain applications with infrastructure setup, monitoring, and production readiness"
+---
+
+**Action:** Deploy Blockchain Application to Production
+
+**Please provide the deployment context:**
+
+- **Application Type:** [Smart Contracts / dApp / DeFi Protocol / NFT Platform / DAO]
+- **Target Networks:** [Mainnet / Testnet / Multi-chain Deployment]
+- **Infrastructure Needs:** [Basic Deployment / Full Infrastructure / Enterprise Setup]
+- **Monitoring Requirements:** [Basic Health Checks / Comprehensive Monitoring / Enterprise Observability]
+
+**Instruction for the AI:**
+Act as a Senior DevOps Engineer and Blockchain Infrastructure Specialist. Your task is to guide secure, scalable deployment of blockchain applications with robust infrastructure and monitoring.
+
+---
+
+**Phase 1: Pre-Deployment Preparation**
+
+**STOP AND WAIT:** Prepare contracts and infrastructure for production deployment.
+
+**Contract Verification:**
+1. **Source Verification:** Prepare contracts for block explorer verification
+2. **Security Audit:** Ensure recent security audit completion and remediation
+3. **Test Coverage:** Confirm comprehensive test coverage and successful testnet deployment
+4. **Documentation:** Complete contract documentation and API specifications
+
+**Network Selection:**
+1. **Mainnet Choice:** Select appropriate mainnet based on requirements (Ethereum, Polygon, BSC, etc.)
+2. **Layer 2 Consideration:** Evaluate layer 2 solutions for cost and performance
+3. **Multi-chain Strategy:** Plan deployment across multiple networks if required
+4. **Testnet Validation:** Confirm successful testnet operation and user testing
+
+**Infrastructure Planning:**
+1. **Node Infrastructure:** Plan RPC endpoints, archive nodes, and backup systems
+2. **Storage Solutions:** Design IPFS/Arweave integration for off-chain data
+3. **Oracle Networks:** Select and integrate price feeds and external data sources
+4. **Backup Strategy:** Implement contract state backups and recovery procedures
+
+---
+
+**Phase 2: Smart Contract Deployment**
+
+**STOP AND WAIT:** Deploy contracts to production networks with verification.
+
+**Deployment Execution:**
+1. **Multi-Sig Setup:** Configure multi-signature wallets for secure deployment
+2. **Proxy Deployment:** Deploy upgradeable proxy contracts if applicable
+3. **Contract Deployment:** Execute contract deployment with proper constructor parameters
+4. **Initialization:** Run contract initialization and setup functions
+
+**Verification Process:**
+1. **Source Verification:** Verify contract source code on block explorers
+2. **Deployment Verification:** Confirm successful deployment and correct initialization
+3. **Function Testing:** Test critical contract functions on mainnet
+4. **Integration Testing:** Verify contract interactions with external systems
+
+**Upgradeability Setup:**
+1. **Proxy Configuration:** Set up proxy patterns for future upgrades
+2. **Ownership Transfer:** Transfer contract ownership to governance or multi-sig
+3. **Timelock Implementation:** Configure timelocks for critical parameter changes
+4. **Upgrade Testing:** Test upgrade mechanisms and rollback procedures
+
+---
+
+**Phase 3: Infrastructure Setup**
+
+**STOP AND WAIT:** Establish production infrastructure and monitoring systems.
+
+**Node Infrastructure:**
+1. **RPC Endpoints:** Set up reliable RPC endpoints with load balancing
+2. **Archive Nodes:** Configure archive nodes for historical data access
+3. **Backup Systems:** Implement redundant node infrastructure
+4. **Failover Mechanisms:** Set up automatic failover and disaster recovery
+
+**Indexing Solutions:**
+1. **The Graph Setup:** Deploy subgraphs for efficient contract data querying
+2. **Custom Indexing:** Implement custom indexing solutions if needed
+3. **Caching Layer:** Set up Redis or similar for query result caching
+4. **API Optimization:** Optimize query performance and response times
+
+**Oracle Integration:**
+1. **Price Feed Setup:** Integrate Chainlink or similar price oracles
+2. **Data Verification:** Implement oracle data validation and fallback mechanisms
+3. **Update Monitoring:** Set up monitoring for oracle data freshness
+4. **Cost Optimization:** Optimize oracle query costs and gas usage
+
+**Decentralized Storage:**
+1. **IPFS Setup:** Configure IPFS nodes and pinning services
+2. **Arweave Integration:** Set up Arweave for permanent data storage
+3. **Metadata Storage:** Plan NFT metadata and contract documentation storage
+4. **CDN Integration:** Set up distributed content delivery
+
+---
+
+**Phase 4: Monitoring & Observability**
+
+**STOP AND WAIT:** Implement comprehensive monitoring and alerting systems.
+
+**On-Chain Monitoring:**
+1. **Transaction Monitoring:** Track contract interactions and transaction volumes
+2. **Health Checks:** Monitor contract states and critical parameters
+3. **Anomaly Detection:** Set up alerts for unusual transaction patterns
+4. **Gas Usage Tracking:** Monitor gas consumption and cost optimization
+
+**Infrastructure Monitoring:**
+1. **Node Health:** Monitor RPC endpoint availability and performance
+2. **System Metrics:** Track CPU, memory, and disk usage
+3. **Network Latency:** Monitor blockchain network performance
+4. **Error Tracking:** Implement comprehensive error logging and alerting
+
+**Application Monitoring:**
+1. **API Performance:** Monitor endpoint response times and error rates
+2. **User Metrics:** Track active users, transactions, and engagement
+3. **Economic Metrics:** Monitor TVL, volume, and protocol health
+4. **Security Events:** Set up alerts for suspicious activities
+
+**Alert Configuration:**
+1. **Critical Alerts:** Immediate notification for system failures
+2. **Performance Alerts:** Warnings for degraded performance
+3. **Security Alerts:** Immediate response for security incidents
+4. **Business Alerts:** Notifications for business metric changes
+
+---
+
+**Phase 5: Security & Access Control**
+
+**STOP AND WAIT:** Implement production security measures and access controls.
+
+**Access Management:**
+1. **Multi-Sig Configuration:** Set up multi-signature controls for critical operations
+2. **Role-Based Access:** Implement proper access controls for different user types
+3. **Key Management:** Secure private key management and rotation procedures
+4. **Emergency Access:** Plan emergency access procedures for critical situations
+
+**Security Measures:**
+1. **Contract Monitoring:** Continuous monitoring for security vulnerabilities
+2. **Intrusion Detection:** Set up alerts for suspicious contract interactions
+3. **Rate Limiting:** Implement rate limiting to prevent abuse
+4. **Backup Security:** Secure backup and recovery procedures
+
+**Incident Response:**
+1. **Response Procedures:** Document incident response and recovery procedures
+2. **Communication Plan:** Plan stakeholder communication during incidents
+3. **Recovery Testing:** Test backup and recovery procedures regularly
+4. **Post-Mortem Process:** Implement post-incident analysis and improvement
+
+---
+
+**Phase 6: Performance Optimization & Scaling**
+
+**STOP AND WAIT:** Optimize performance and prepare for scale.
+
+**Performance Analysis:**
+1. **Gas Optimization:** Analyze and optimize contract gas usage
+2. **Query Optimization:** Optimize database queries and API performance
+3. **Caching Strategy:** Implement effective caching for frequently accessed data
+4. **Load Testing:** Conduct load testing under expected production conditions
+
+**Scaling Preparation:**
+1. **Infrastructure Scaling:** Plan for increased load and user growth
+2. **Network Optimization:** Optimize for specific blockchain network characteristics
+3. **Cost Optimization:** Implement cost-effective scaling strategies
+4. **Performance Monitoring:** Set up continuous performance monitoring
+
+**Documentation & Handover:**
+1. **Runbooks:** Create operational runbooks and troubleshooting guides
+2. **Monitoring Dashboards:** Set up monitoring dashboards for operations team
+3. **Contact Lists:** Establish contact lists for support and maintenance
+4. **Knowledge Transfer:** Complete knowledge transfer to operations team
+
+---
+
+**Deliverables:**
+1. **Production Deployment:** Successfully deployed contracts on target networks
+2. **Infrastructure Setup:** Complete production infrastructure with redundancy
+3. **Monitoring Systems:** Comprehensive monitoring and alerting infrastructure
+4. **Security Framework:** Access controls and security monitoring systems
+5. **Documentation:** Operational runbooks and troubleshooting guides
+6. **Performance Baseline:** Established performance metrics and optimization measures
+
+**Success Criteria:**
+- Contracts successfully deployed and verified on all target networks
+- Infrastructure handles expected load with <1% downtime
+- Monitoring detects and alerts on all critical system events
+- Security measures prevent unauthorized access and attacks
+- Performance meets or exceeds target metrics
+- Operations team fully trained on system maintenance and monitoring

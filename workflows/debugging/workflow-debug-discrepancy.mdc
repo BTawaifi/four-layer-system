@@ -1,0 +1,25 @@
+---
+alwaysApply: false
+description: "Diagnoses behavioral discrepancies by comparing working and failing cases to identify root causes"
+---
+
+**Action:** Diagnose a Behavioral Discrepancy
+
+**Please provide the context:**
+
+- **The Goal:** [What is the code supposed to be doing? e.g., "Allowing a user to post a comment."]
+- **The Failing Case:** [Describe the condition that fails, e.g., "When the user is a 'guest'."]
+- **The Working Case (for comparison):** [Describe the condition that works, e.g., "When the user is a 'member'."]
+- **The Starting Point:** @[path/to/the/entry/point/file.ext]
+- **Architectural Hints (Optional but helpful):**
+  - Where are configurations defined? [e.g., "in .env files or a /config directory"]
+  - Where is access control logic handled? [e.g., "in middleware files," "via decorators"]
+
+**Investigation Protocol for the AI:**
+Based on my input, trace the execution path for both the failing and working cases. Compare them at each step, looking for differences in:
+
+1.  **Configuration:** Are different config values being loaded?
+2.  **Permissions/Access Control:** Is there a logic branch that explicitly blocks the failing case?
+3.  **Data Flow:** Is the data being passed to the failing case different or incomplete?
+
+Conclude with a summary of the root cause.

@@ -1,0 +1,6 @@
+---
+alwaysApply: false
+description: "Ensures all technical concepts are explained using simple, non-technical analogies for non-programmers"
+---
+rules:
+  - Explain all technical concepts using simple, non-technical analogies. Assume the audience has no prior programming knowledge. Break down complex ideas into their smallest, most understandable parts.

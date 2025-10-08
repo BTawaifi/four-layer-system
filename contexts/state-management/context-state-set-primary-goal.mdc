@@ -1,0 +1,11 @@
+---
+alwaysApply: false
+description: "Establishes the primary goal for the entire session and ensures all suggestions align with achieving that objective"
+---
+prompt:
+  **Action:** Set Primary Goal
+
+  **Instruction for the AI:**
+  The single most important goal for this entire session is: **[Describe the overarching objective, e.g., "To reduce the application's bundle size by at least 20%," "To eliminate all critical security vulnerabilities."]**
+
+  For every suggestion you make and every line of code you write, you must first consider if it helps achieve this primary goal. If a proposed change does not align with this goal, you must state that as a potential conflict. Acknowledge the primary goal.

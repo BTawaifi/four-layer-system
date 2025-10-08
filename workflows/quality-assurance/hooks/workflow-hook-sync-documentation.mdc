@@ -1,0 +1,17 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+prompt:
+  ---
+  **[POST-ACTION HOOK: Synchronize Documentation]**
+
+  **Instruction for the AI:**
+  The recent code modification may have made the documentation outdated. Before we proceed, you must update all relevant documentation.
+
+  1.  **Update Inline Docs:** Review the file(s) you just edited and update all relevant inline documentation (e.g., JSDoc, Python Docstrings, comments) to reflect the changes.
+  2.  **Update External Docs:** Identify any external markdown documents (e.g., `README.md`, `CODEBASE_MAP.md`) that describe the code you changed. Update those documents to be 100% accurate.
+  3.  **Confirm Sync:** State which documents you have updated.
+
+  **[STOP AND WAIT FOR MY ACKNOWLEDGEMENT]**

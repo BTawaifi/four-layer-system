@@ -1,0 +1,13 @@
+---
+alwaysApply: false
+description: "Searches and analyzes previously loaded context to perform specific tasks and generate formatted results"
+---
+
+**Action:** Search and Analyze the Loaded Context
+
+**Please perform the following analysis:**
+- **The Specific Task:** [What is the precise action to take? e.g., "Find all instances of the deprecated function `XYZ`," "Compare the logic in the two provided files and highlight the differences," "Summarize the root cause of the error in the log file."]
+- **The Desired Output Format:** [How should the results be presented? e.g., "A numbered list of all affected files," "A markdown table comparing the two versions," "A narrative summary of your findings."]
+
+**Instruction for the AI:**
+Using **only** the context I have already provided in this session, execute the specific task and present the results in the desired format.

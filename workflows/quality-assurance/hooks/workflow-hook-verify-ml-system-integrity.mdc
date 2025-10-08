@@ -1,0 +1,61 @@
+---
+globs: *.py
+description: "Verifies that code changes maintain ML system integrity and performance"
+---
+
+rules:
+**Post-Action Hook: ML System Integrity Verification**
+
+After any code modification that affects ML components, perform the following verification steps:
+
+1. **Data Pipeline Integrity Check**
+   - Verify that data loading and preprocessing pipelines still function correctly
+   - Check for any changes in data schema or feature engineering that could affect model inputs
+   - Ensure temporal ordering is preserved in all data operations
+
+2. **Model Compatibility Assessment**
+   - Confirm that model interfaces and APIs remain consistent
+   - Verify that saved models can still be loaded and used
+   - Check that model serialization/deserialization works correctly
+
+3. **Statistical Validation Preservation**
+   - Ensure statistical tests (stationarity, heteroscedasticity, etc.) still pass
+   - Verify that cross-validation strategies maintain temporal integrity
+   - Confirm that evaluation metrics are calculated consistently
+
+4. **Performance Regression Detection**
+   - Run baseline performance tests to detect significant drops in accuracy
+   - Check for memory usage regressions or performance degradation
+   - Verify that inference latency remains within acceptable bounds
+
+5. **Configuration Consistency**
+   - Ensure all configuration parameters are still valid and properly typed
+   - Check that environment-specific settings are correctly handled
+   - Verify that feature flags and optional dependencies work as expected
+
+6. **Error Handling Verification**
+   - Test that error recovery mechanisms still function properly
+   - Verify circuit breakers and fallback strategies work correctly
+   - Check that logging and monitoring systems capture new error conditions
+
+7. **Integration Testing**
+   - Run integration tests to ensure component interactions work correctly
+   - Verify that API contracts between components are maintained
+   - Check that external service integrations remain functional
+
+8. **Documentation Synchronization**
+   - Ensure code changes are reflected in documentation
+   - Update API documentation if interfaces changed
+   - Verify that configuration documentation matches implementation
+
+**Integrity Check Summary:**
+- [ ] Data pipeline integrity verified
+- [ ] Model compatibility confirmed
+- [ ] Statistical validation preserved
+- [ ] No performance regressions detected
+- [ ] Configuration consistency maintained
+- [ ] Error handling verified
+- [ ] Integration tests passed
+- [ ] Documentation synchronized
+
+**[STOP AND WAIT FOR MY ACKNOWLEDGEMENT THAT THE INTEGRITY CHECK IS COMPLETE]**

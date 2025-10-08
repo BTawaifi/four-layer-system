@@ -1,0 +1,38 @@
+---
+alwaysApply: false
+description: "Multi-phase workflow that organizes files into logical directory structures and updates import paths"
+---
+
+**Action:** Initiate an Automated Codebase Tidying Workflow
+
+**Please define the scope:**
+
+- **The Files/Directory to Tidy:** [Provide a list of `@` mentioned files or a single directory, e.g., `@*`, `@[src/]`]
+- **The Goal of the Tidy:** [What is the desired outcome? e.g., "Organize these files into a standard feature-based structure," "Group all utility functions, hooks, and components into their respective folders."]
+
+**Instruction for the AI:**
+You will now analyze the provided files and organize them into a clean, logical directory structure. You must stop and wait for my approval before executing the file movements.
+
+---
+
+**Phase 1: Analysis and Organization Plan**
+
+- **Analyze File Purpose:** Read the content of every file in the scope. Based on the code, file names, and any stacked specialist persona, determine the primary purpose of each file (e.g., "UI Component," "API Route," "Utility Function," "Configuration," "Test File").
+- **Propose a Directory Structure:** Based on your analysis, propose a new, clean directory structure.
+- **Create a Move Plan:** Present the organization plan as a clear list of "move" operations.
+  ```
+  Example Move Plan:
+  - MOVE src/components/Button.jsx -> src/components/ui/Button.jsx
+  - MOVE src/utils/formatDate.js -> src/lib/utils/dates/formatDate.js
+  - MOVE src/pages/api/login.js -> src/app/api/auth/login/route.js
+  ```
+
+**[STOP AND WAIT FOR MY APPROVAL OF THE MOVE PLAN. I may edit the plan before approval.]**
+
+---
+
+**Phase 2: Execution**
+
+- **Execute the File Operations:** Once I approve the plan, execute all the specified `MOVE` and `CREATE DIRECTORY` operations.
+- **Update Import Paths (if applicable):** After moving the files, scan the codebase and automatically update any import/require statements that are now broken because of the file moves.
+- **Provide a Summary:** List all the operations that were successfully completed.

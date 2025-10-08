@@ -1,0 +1,23 @@
+---
+alwaysApply: false
+description: "Onboards AI assistants to new codebases by generating comprehensive CliffsNotes with architecture, modules, and conventions"
+---
+
+prompt:
+**Action:** Onboard a New AI Assistant to the Codebase
+
+**Please define the scope:**
+
+- **The Codebase to Learn:** @[path/to/the/entire/project]
+
+**Instruction for the AI:**
+You are a new AI assistant joining this project. Your first task is to get up to speed. To do this, you will read the entire codebase and generate a set of "CliffsNotes" for yourself that you can use as a reference for all future tasks.
+
+Generate a single, comprehensive markdown file named `AI_ONBOARDING_NOTES.md`. The file must contain the following sections:
+
+1.  **Project Overview:** A one-paragraph summary of what this project does.
+2.  **Core Architecture:** A high-level description of the main architectural pattern (e.g., Monolith, Microservices, Serverless) and the primary technologies used.
+3.  **Key Modules & Their Responsibilities:** A bulleted list of the most important directories or modules and a one-sentence description of what each one is responsible for.
+4.  **"Single Source of Truth" Files:** A list of the most critical configuration files or schema definitions that I should always consult before making changes (e.g., `config.py`, `api_schema.json`).
+5.  **How to Run This Project:** A summary of the essential commands needed to install dependencies, run tests, and start the development server.
+6.  **Implicit Conventions & "Gotchas":** Based on your reading of the code, are there any unwritten rules, common patterns, or tricky "gotchas" that a new developer should be aware of?

@@ -1,0 +1,20 @@
+---
+alwaysApply: false
+description: "Refines code components by improving quality and functionality while maintaining specified constraints"
+---
+
+**Action:** Refine a Code Component
+
+**Please provide the context:**
+
+- **The Target Code:** @[path/to/your/code/file.ext]
+- **The High-Level Goal:** [Describe the desired outcome, e.g., "Improve readability and performance," "Modernize the UI layout," "Simplify the business logic."]
+
+- **Mandatory Constraints (one per line):**
+  - [e.g., The public API of this class must not change.]
+  - [e.g., All output must be in JSON format.]
+  - [e.g., The solution must not introduce new external dependencies.]
+  - [e.g., The UI must remain fully responsive.]
+
+**Request for the AI:**
+Rewrite or provide suggestions for the target code to achieve the stated goal while strictly adhering to all constraints.

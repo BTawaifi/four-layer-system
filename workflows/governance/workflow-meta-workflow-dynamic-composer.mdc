@@ -1,0 +1,33 @@
+---
+alwaysApply: false
+description: "Dynamically composes custom workflows by sequencing existing specialists, workflows, and rules to achieve complex goals"
+---
+
+prompt:
+**Action:** Compose a Dynamic Workflow
+
+**Please define the high-level objective:**
+
+- **The Ultimate Goal:** [Describe a complex, multi-stage goal, e.g., "A junior developer has submitted a pull request for a new, untested feature. I need you to perform a full review, fix any issues, harden it for production, and then document it."]
+- **The Starting Context:** @[path/to/the/pull_request/code]
+
+**Instruction for the AI:**
+Act as a Senior Tech Lead. Your first task is to create a custom, step-by-step workflow plan to achieve the ultimate goal. You must construct this plan by selecting and sequencing the appropriate rules from our existing library of specialists, workflows, hooks, and principles.
+
+---
+
+**Phase 1: Workflow Plan Generation**
+
+- Analyze the ultimate goal and the provided context.
+- Generate a numbered list of steps that represents the optimal plan to achieve the goal. Each step must be a specific, invocable command using our existing `.cursorrules`.
+- Provide a brief justification for why each step is necessary and why it's in that specific order.
+
+**[STOP AND WAIT FOR MY APPROVAL OF THE CUSTOM WORKFLOW PLAN]**
+
+---
+
+**Phase 2: Guided Execution**
+
+- After I approve the plan, you will begin executing the workflow one step at a time.
+- You will state which step you are about to execute, then perform it.
+- You must stop and wait for my confirmation after each step is complete before proceeding to the next one.

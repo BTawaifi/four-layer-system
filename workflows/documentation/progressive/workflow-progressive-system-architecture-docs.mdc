@@ -1,0 +1,299 @@
+---
+alwaysApply: false
+description: "Progressive system architecture documentation workflow that builds comprehensive architectural documentation across multiple focused sessions"
+---
+
+**Action:** Develop Comprehensive System Architecture Documentation Progressively
+
+**Please define the system architecture scope:**
+
+- **System Name:** [Name of the system or application]
+- **Architecture Type:** [Monolithic / Microservices / Serverless / Hybrid]
+- **Documentation Audience:** [Technical Team / Stakeholders / New Hires / Auditors]
+- **Current Architecture State:** [Greenfield / Brownfield / Major Refactor]
+- **Timeline Constraints:** [Immediate / 3 months / 6 months / Ongoing]
+
+**Instruction for the AI:**
+You will develop comprehensive system architecture documentation through progressive, focused sessions. Each session builds upon previous work while maintaining clear session boundaries for effective Cursor IDE usage. Use file-based state management to preserve architectural context and decisions across sessions.
+
+---
+
+## Session 1: Architecture Vision & Context (45-60 minutes)
+**Focus:** Establish architectural foundation and business alignment
+**Deliverable:** `arch_[system]_vision_context_[date].md`
+
+### Phase 1.1: Business & Technical Context
+**STOP AND WAIT:** Establish clear architectural context before detailed design
+
+**Documentation Tasks:**
+1. **Business Context & Requirements**
+   - Business objectives and success criteria
+   - Key stakeholders and their concerns
+   - Functional and non-functional requirements
+   - Constraints and assumptions
+
+2. **System Scope & Boundaries**
+   - System purpose and responsibilities
+   - Interface definitions with external systems
+   - Data ownership and sovereignty boundaries
+   - Operational boundaries and SLAs
+
+3. **Quality Attributes & Architectural Drivers**
+   - Performance, scalability, and reliability requirements
+   - Security and compliance needs
+   - Maintainability and extensibility goals
+   - Cost and operational efficiency targets
+
+**Session Quality Checkpoint:**
+- [ ] Business alignment clearly documented
+- [ ] System boundaries well-defined
+- [ ] Architectural drivers prioritized
+- [ ] Context file saved with session state
+
+---
+
+## Session 2: Component & Data Architecture (60-75 minutes)
+**Focus:** Define system components and data architecture
+**Deliverable:** `arch_[system]_components_data_[date].md`
+**Dependencies:** Session 1 context document
+
+### Phase 2.1: Component Architecture Definition
+**STOP AND WAIT:** Complete component architecture before data modeling
+
+**Documentation Tasks:**
+1. **System Decomposition**
+   - Major system components and their responsibilities
+   - Component interaction patterns and protocols
+   - Component boundaries and encapsulation
+   - Deployment and scaling considerations
+
+2. **Technology Stack & Infrastructure**
+   - Technology selections and justification
+   - Infrastructure requirements and patterns
+   - Cloud/platform architecture decisions
+   - DevOps and deployment architecture
+
+3. **Data Architecture Fundamentals**
+   - Core data entities and relationships
+   - Data storage patterns and technologies
+   - Data flow and integration patterns
+   - Data quality and governance approach
+
+**Progressive Architecture Development:**
+- [ ] Component architecture documented and validated
+- [ ] Technology decisions justified and documented
+- [ ] Data architecture foundation established
+- [ ] Session state updated with component relationships
+
+---
+
+## Session 3: Detailed Data & Integration Architecture (60-75 minutes)
+**Focus:** Deep-dive into data models and system integrations
+**Deliverable:** `arch_[system]_data_integration_[date].md`
+**Dependencies:** Session 2 component architecture
+
+### Phase 3.1: Data Architecture Deep-Dive
+**STOP AND WAIT:** Complete data architecture before integration design
+
+**Documentation Tasks:**
+1. **Detailed Data Models**
+   - Entity-relationship diagrams and schemas
+   - Data validation rules and constraints
+   - Data lifecycle management (creation, updates, archival)
+   - Performance optimization strategies
+
+2. **Data Integration Patterns**
+   - API design and contract specifications
+   - Event-driven architecture patterns
+   - Data synchronization and consistency approaches
+   - Legacy system integration strategies
+
+3. **Security & Compliance Architecture**
+   - Data security and privacy controls
+   - Authentication and authorization patterns
+   - Audit logging and monitoring
+   - Compliance requirement implementation
+
+**Architecture Validation:**
+- [ ] Data models complete and normalized appropriately
+- [ ] Integration patterns well-defined and scalable
+- [ ] Security architecture addresses all requirements
+- [ ] Architecture decisions documented with rationale
+
+---
+
+## Session 4: Runtime & Deployment Architecture (45-60 minutes)
+**Focus:** Define operational architecture and deployment patterns
+**Deliverable:** `arch_[system]_runtime_deployment_[date].md`
+**Dependencies:** Sessions 2-3 architecture definitions
+
+### Phase 4.1: Runtime Architecture & Operations
+**STOP AND WAIT:** Complete operational architecture before deployment design
+
+**Documentation Tasks:**
+1. **Runtime Architecture Patterns**
+   - Application runtime environments and configurations
+   - Service mesh and network architecture
+   - Monitoring, logging, and observability patterns
+   - Performance tuning and optimization approaches
+
+2. **Deployment & Release Architecture**
+   - CI/CD pipeline architecture and patterns
+   - Environment management and promotion strategies
+   - Rollback and disaster recovery procedures
+   - Configuration management and secrets handling
+
+3. **Operational Architecture**
+   - Incident response and troubleshooting procedures
+   - Capacity planning and scaling strategies
+   - Backup and recovery architecture
+   - Cost optimization and resource management
+
+**Operational Readiness:**
+- [ ] Runtime architecture supports operational requirements
+- [ ] Deployment patterns enable reliable releases
+- [ ] Operational procedures well-documented
+- [ ] Cost and performance trade-offs analyzed
+
+---
+
+## Session 5: Architecture Validation & Decision Documentation (45-60 minutes)
+**Focus:** Validate architecture against requirements and document decisions
+**Deliverable:** `arch_[system]_validation_decisions_[date].md`
+**Dependencies:** All previous architecture sessions
+
+### Phase 5.1: Architecture Validation & ADR Documentation
+**STOP AND WAIT:** Complete validation before final documentation assembly
+
+**Documentation Tasks:**
+1. **Architecture Decision Records (ADRs)**
+   - Document all major architectural decisions
+   - Include decision context, options considered, and rationale
+   - Define decision consequences and risk mitigation
+   - Establish review and change management processes
+
+2. **Requirements Traceability & Validation**
+   - Map architectural elements to business requirements
+   - Validate quality attribute achievement
+   - Identify requirement gaps or conflicts
+   - Document assumptions and constraints validation
+
+3. **Risk Assessment & Mitigation**
+   - Technical risks and mitigation strategies
+   - Operational risks and contingency plans
+   - Business risks and impact assessments
+   - Risk monitoring and management approaches
+
+**Final Architecture Review:**
+- [ ] All major decisions documented in ADRs
+- [ ] Requirements traceability established
+- [ ] Risk assessment comprehensive and actionable
+- [ ] Architecture ready for implementation guidance
+
+---
+
+## Session 6: Implementation Guidance & Documentation Assembly (45-60 minutes)
+**Focus:** Create implementation guides and assemble final documentation
+**Deliverable:** Complete architecture documentation package
+**Dependencies:** All architecture sessions complete
+
+### Phase 6.1: Implementation Enablement
+**STOP AND WAIT:** Complete implementation guidance before publication
+
+**Final Documentation Tasks:**
+1. **Implementation Roadmaps**
+   - Development phase planning and sequencing
+   - Component implementation priorities
+   - Integration milestone definitions
+   - Risk mitigation timelines
+
+2. **Developer Guidelines & Standards**
+   - Architecture compliance guidelines
+   - Coding standards and patterns
+   - Testing and quality assurance approaches
+   - Review and validation procedures
+
+3. **Documentation Assembly & Publishing**
+   - Compile all architecture documents into coherent package
+   - Create executive summaries and detailed references
+   - Establish documentation maintenance processes
+   - Configure access controls and distribution
+
+**Publication Readiness:**
+- [ ] Implementation guidance complete and actionable
+- [ ] Developer guidelines clear and comprehensive
+- [ ] Documentation package assembled and validated
+- [ ] Maintenance processes established and documented
+
+---
+
+## Progressive Architecture Documentation Benefits
+
+### Session-Based Architecture Development
+- **Focused Depth:** Each session allows deep exploration of specific architectural concerns
+- **Context Preservation:** File-based state maintains architectural consistency across sessions
+- **Incremental Validation:** Each session includes architectural review and validation
+- **Flexible Scheduling:** Architecture work can be distributed across available time blocks
+
+### Architecture Quality Assurance
+- **Layered Understanding:** Business context first, then technical details progressively
+- **Cross-Session Validation:** Each session reviews alignment with previous architectural decisions
+- **Practical Implementation:** Architecture validated against implementation feasibility
+- **Risk Management:** Progressive identification and mitigation of architectural risks
+
+### Cursor IDE Compatibility Features
+- **Token Optimization:** Smaller sessions prevent context window limitations
+- **Memory Management:** File-based architecture reduces conversation memory burden
+- **Session Continuity:** Clear architectural state enables seamless continuation
+- **Quality Monitoring:** Built-in checkpoints ensure architectural integrity
+
+## Architecture State Management
+
+### Session Progress Tracking
+Central state file structure:
+```markdown
+# Architecture Documentation State
+**System:** [System Name]
+**Last Session:** [Session Number - Description]
+**Architecture Maturity:** [X% Complete]
+**Next Session Focus:** [Brief description]
+**Open Architectural Issues:** [Bullet list]
+**Quality Validation:** [Pass/Fail with details]
+```
+
+### Architecture Decision Log
+Maintain running log of decisions:
+```markdown
+# Architecture Decision Log
+## Decision [N]: [Brief Title]
+**Date:** [YYYY-MM-DD]
+**Context:** [Decision background and requirements]
+**Options Considered:** [List of alternatives evaluated]
+**Decision:** [Chosen approach with rationale]
+**Consequences:** [Impact and risk assessment]
+**Status:** [Proposed/Accepted/Implemented/Deprecated]
+```
+
+## Customization for Different System Types
+
+### Monolithic System Architecture
+- **Focus Areas:** Internal structure, data architecture, deployment patterns
+- **Session Adjustments:** Combine sessions 2-3, emphasize internal component relationships
+- **Documentation Emphasis:** Code organization, testing strategies, refactoring approaches
+
+### Microservices Architecture
+- **Focus Areas:** Service boundaries, API contracts, distributed system patterns
+- **Session Adjustments:** Expand session 3 for inter-service communication patterns
+- **Documentation Emphasis:** Service mesh, distributed transactions, operational complexity
+
+### Serverless Architecture
+- **Focus Areas:** Function design, event-driven patterns, cost optimization
+- **Session Adjustments:** Emphasize session 4 runtime and operational considerations
+- **Documentation Emphasis:** Event sourcing, function composition, performance profiling
+
+### Legacy System Modernization
+- **Focus Areas:** Migration strategies, data integration, risk management
+- **Session Adjustments:** Add session for migration planning and rollback strategies
+- **Documentation Emphasis:** Incremental migration, data consistency, business continuity
+
+This progressive workflow enables comprehensive system architecture documentation while maintaining focus and quality within Cursor IDE's session-based constraints.

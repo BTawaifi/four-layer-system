@@ -1,0 +1,81 @@
+---
+alwaysApply: false
+description: "Post-action hook for verifying AI-generated output quality and completeness"
+---
+
+**Action:** AI Output Quality Verification Hook
+
+**Hook Type:** Post-Action Quality Assessment
+
+**Trigger:** Automatically invoked after any AI-generated output or artifact creation
+
+**Instruction for the AI:**
+Before accepting the AI-generated output, you must perform a comprehensive quality assessment. Analyze the generated artifact(s) and report on the following quality dimensions:
+
+## 🔍 **Quality Assessment Criteria**
+
+### **1. Completeness & Functionality**
+
+- **Functional Completeness:** Is the output a complete, functional artifact or an incomplete shell?
+- **Dependency Resolution:** Are all required imports, dependencies, and references properly included?
+- **Integration Readiness:** Can the artifact be immediately used without additional manual work?
+- **Example:** "✅ Complete: Full implementation with all endpoints, error handling, and tests" vs "❌ Incomplete: Missing database connection logic and validation"
+
+### **2. Relevance & Customization**
+
+- **Input Alignment:** Is the content highly customized to the user's specific input and requirements?
+- **Context Awareness:** Does the output reflect understanding of the project context and constraints?
+- **Hallucination Detection:** Did the AI generate irrelevant or incorrect content?
+- **Personalization:** Is the output tailored to the specific use case rather than generic templates?
+
+### **3. Schema & Constraint Compliance**
+
+- **Instruction Adherence:** Does the output fully comply with all instructions, schemas, and constraints?
+- **Format Requirements:** Are all specified output formats, structures, and naming conventions followed?
+- **Technical Standards:** Does the code follow established patterns, frameworks, and best practices?
+- **Version Compatibility:** Are the technologies and versions compatible with project requirements?
+
+### **4. Technical Quality & Best Practices**
+
+- **Code Quality:** Proper error handling, logging, security practices, and performance considerations?
+- **Documentation:** Are comments, README files, and technical documentation adequate?
+- **Testing:** Are appropriate tests included (unit, integration, e2e as applicable)?
+- **Maintainability:** Is the code readable, well-structured, and following established patterns?
+
+### **5. Security & Compliance**
+
+- **Security Review:** Basic security vulnerabilities identified and addressed?
+- **Compliance:** Does the output meet relevant compliance requirements (GDPR, HIPAA, etc.)?
+- **Data Protection:** Proper handling of sensitive data and privacy considerations?
+
+## 📋 **Assessment Report Format**
+
+**Quality Score:** [High/Medium/Low] - [X/5 criteria met]
+
+**Detailed Findings:**
+
+1. **Completeness:** [Assessment with specific examples]
+2. **Relevance:** [Assessment with customization evaluation]
+3. **Compliance:** [Assessment with constraint validation]
+4. **Technical Quality:** [Assessment with best practice evaluation]
+5. **Security:** [Assessment with risk evaluation]
+
+**Issues Identified:** [Bullet list of any problems found]
+
+**Recommended Actions:** [Specific steps to address issues, if any]
+
+## 🎯 **Final Verdict**
+
+**"✅ High-Quality: Ready for use"**
+
+- All criteria met, output is production-ready
+
+**"⚠️ Medium-Quality: Minor revisions needed"**
+
+- Core functionality present but requires small fixes
+
+**"❌ Low-Quality: Requires regeneration"**
+
+- Significant issues present, needs complete rework
+
+**[STOP AND WAIT FOR USER ACKNOWLEDGEMENT]**

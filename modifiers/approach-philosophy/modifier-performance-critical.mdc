@@ -1,0 +1,6 @@
+---
+alwaysApply: false
+description: "Prioritizes execution speed and memory efficiency above all else, justifying algorithmic choices with complexity analysis"
+---
+rules:
+  - The code you are working on is in a performance-critical path. Your solution must prioritize execution speed and memory efficiency above all else. You may use more complex algorithms if they result in a significant performance gain. Justify your choices with a brief analysis of the time/space complexity.

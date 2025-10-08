@@ -1,0 +1,154 @@
+---
+alwaysApply: false
+description: "Focused workflow for developing user-friendly Web3 frontend applications with wallet integration and blockchain interactions"
+---
+
+**Action:** Develop Web3 Frontend Application
+
+**Please provide the dApp frontend context:**
+
+- **Application Type:** [DeFi Dashboard / NFT Marketplace / DAO Interface / Wallet App / Gaming dApp]
+- **Primary Blockchain:** [Ethereum / Polygon / BSC / Solana / Multi-chain]
+- **Wallet Integration:** [MetaMask Only / Multi-wallet / WalletConnect / Custom Wallet]
+- **Complexity Level:** [Simple Interface / Complex Dashboard / Full dApp Suite]
+
+**Instruction for the AI:**
+Act as a Senior Web3 Frontend Developer and UX Designer. Your task is to guide the development of intuitive, secure Web3 interfaces that provide seamless blockchain interactions and excellent user experience.
+
+---
+
+**Phase 1: Web3 Integration Architecture**
+
+**STOP AND WAIT:** Establish Web3 connectivity and wallet integration foundation.
+
+**Wallet Integration Setup:**
+1. **Provider Configuration:** Set up ethers.js, web3.js, or solana/web3.js providers
+2. **Wallet Detection:** Implement wallet browser extension detection and connection
+3. **Multi-wallet Support:** Enable MetaMask, Coinbase Wallet, WalletConnect, and others
+4. **Network Management:** Handle network switching and multi-chain support
+
+**Connection Management:**
+1. **Connection States:** Implement connecting, connected, and disconnected states
+2. **Error Handling:** Handle connection failures, network errors, and user rejection
+3. **Persistence:** Maintain wallet connection across page refreshes
+4. **Security:** Implement proper key management and transaction signing
+
+**Contract Integration:**
+1. **Contract ABIs:** Load and manage smart contract interfaces
+2. **Contract Instances:** Create contract instances for different networks
+3. **Method Calls:** Implement read and write contract interactions
+4. **Event Listening:** Set up real-time event monitoring and updates
+
+---
+
+**Phase 2: User Interface & Experience Design**
+
+**STOP AND WAIT:** Design intuitive interfaces for complex Web3 interactions.
+
+**Web3 UX Patterns:**
+1. **Wallet Connection Flow:** Design clear wallet selection and connection process
+2. **Transaction Feedback:** Implement transaction pending, success, and failure states
+3. **Gas Estimation:** Show gas costs and allow fee customization
+4. **Error Communication:** Provide clear, actionable error messages
+
+**Component Architecture:**
+1. **Reusable Components:** Build wallet connection, transaction, and balance components
+2. **State Management:** Implement Redux/Zustand for complex application state
+3. **Loading States:** Design skeleton screens and loading indicators
+4. **Responsive Design:** Ensure mobile-friendly interfaces and touch interactions
+
+**User Flow Design:**
+1. **Onboarding:** Create smooth onboarding for Web3 newcomers
+2. **Transaction Flows:** Design multi-step transaction processes with confirmation
+3. **Portfolio Views:** Implement balance and transaction history displays
+4. **Settings Management:** Allow network switching and preference configuration
+
+---
+
+**Phase 3: State Management & Data Handling**
+
+**STOP AND WAIT:** Implement robust state management for blockchain data.
+
+**Blockchain State:**
+1. **Balance Tracking:** Monitor user token and NFT balances across networks
+2. **Transaction History:** Fetch and display transaction history and status
+3. **Contract State:** Track important contract variables and user positions
+4. **Price Feeds:** Integrate price data for value calculations
+
+**Application State:**
+1. **Connection State:** Track wallet connection and network status
+2. **User Preferences:** Store UI preferences and network selections
+3. **Transaction Queue:** Manage pending and recent transactions
+4. **Error State:** Handle and display application and blockchain errors
+
+**Data Synchronization:**
+1. **Real-time Updates:** Implement event listeners for state changes
+2. **Polling Strategies:** Set up efficient polling for balance updates
+3. **Caching:** Implement local storage for frequently accessed data
+4. **Offline Handling:** Design graceful degradation for network issues
+
+---
+
+**Phase 4: Security & Performance Optimization**
+
+**STOP AND WAIT:** Implement security measures and optimize performance.
+
+**Security Implementation:**
+1. **Input Validation:** Validate all user inputs and contract interactions
+2. **Transaction Safety:** Implement transaction simulation and safety checks
+3. **Key Security:** Never log or expose private keys in frontend code
+4. **HTTPS Enforcement:** Ensure secure connections for all Web3 interactions
+
+**Performance Optimization:**
+1. **Bundle Splitting:** Implement code splitting for large Web3 libraries
+2. **Lazy Loading:** Load components and routes on demand
+3. **Image Optimization:** Optimize NFT images and media assets
+4. **Caching Strategy:** Implement aggressive caching for contract data
+
+**Error Handling:**
+1. **User-Friendly Errors:** Convert technical errors to understandable messages
+2. **Recovery Flows:** Provide clear paths for error recovery
+3. **Fallback States:** Design fallback UI for failed blockchain interactions
+4. **Logging:** Implement proper error logging without exposing sensitive data
+
+---
+
+**Phase 5: Testing & Deployment**
+
+**STOP AND WAIT:** Test thoroughly and prepare for production deployment.
+
+**Testing Strategy:**
+1. **Unit Testing:** Test individual components and Web3 interactions
+2. **Integration Testing:** Test full user flows and contract interactions
+3. **E2E Testing:** Implement Cypress or Playwright for critical user journeys
+4. **Wallet Testing:** Test with multiple wallet types and network conditions
+
+**Deployment Preparation:**
+1. **Build Optimization:** Configure production builds with minification
+2. **CDN Strategy:** Set up efficient content delivery for global users
+3. **IPFS Deployment:** Consider decentralized hosting for censorship resistance
+4. **Domain Setup:** Configure ENS domains or traditional DNS
+
+**Monitoring Setup:**
+1. **Error Tracking:** Implement error monitoring and alerting
+2. **Performance Monitoring:** Track page load times and Web3 interaction speeds
+3. **User Analytics:** Monitor user behavior and conversion funnels
+4. **Uptime Monitoring:** Ensure high availability and quick issue resolution
+
+---
+
+**Deliverables:**
+1. **Web3 Frontend:** Fully functional dApp interface with wallet integration
+2. **Component Library:** Reusable Web3 components for common interactions
+3. **State Management:** Robust state handling for blockchain data
+4. **Security Measures:** Input validation and transaction safety checks
+5. **Testing Suite:** Comprehensive test coverage for critical functionality
+6. **Deployment Assets:** Optimized production build and deployment scripts
+
+**Success Criteria:**
+- Seamless wallet connection across major providers
+- Intuitive transaction flows with clear feedback
+- Fast loading times despite heavy Web3 library dependencies
+- Comprehensive error handling with user-friendly messages
+- Mobile-responsive design working on all devices
+- Security best practices preventing common Web3 vulnerabilities

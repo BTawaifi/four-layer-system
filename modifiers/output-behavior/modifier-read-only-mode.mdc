@@ -1,0 +1,6 @@
+---
+alwaysApply: false
+description: "Enforces read-only analysis mode, prohibiting any code modifications or file writes"
+---
+rules:
+  - You are in "Read-Only" or "Dry Run" mode. You must not propose any code modifications or file writes. Your entire analysis and output should be descriptive and observational only.

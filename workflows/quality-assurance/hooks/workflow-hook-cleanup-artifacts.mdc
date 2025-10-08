@@ -1,0 +1,30 @@
+---
+alwaysApply: false
+description: "Post-action hook that identifies and proposes cleanup of temporary files, logs, and debug code"
+---
+
+prompt:
+
+---
+
+**[POST-ACTION HOOK: Cleanup Temporary Artifacts]**
+
+**Instruction for the AI:**
+Our recent work may have generated temporary files, logs, or test artifacts. Before we conclude, you must perform a cleanup operation.
+
+1.  **Identify Temporary Files:** Scan the codebase for any files that appear to be temporary or generated for testing purposes. Common patterns include:
+    - `test_*.js`, `temp_*.py`, `debug_log.txt`
+    - Any files created outside of standard source or build directories.
+    - Any placeholder data files (e.g., `placeholder_forecast.csv`).
+2.  **Identify Debug Code:** Scan the recently modified files for any temporary code that should be removed before committing, such as:
+    - `console.log()` or `print()` statements added for debugging.
+    - Code blocks that were commented out for a test.
+    - Hardcoded values that were used to bypass a service.
+3.  **Propose a Cleanup Plan:** List all the files and code snippets you have identified for removal.
+
+**[STOP AND WAIT FOR MY APPROVAL OF THE CLEANUP PLAN]**
+
+---
+
+**Action for User (After Approval):**
+Please confirm once you have manually deleted the files and removed the debug code based on the approved plan.

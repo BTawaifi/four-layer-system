@@ -1,0 +1,32 @@
+---
+alwaysApply: false
+description: "Debugs UI element visibility issues by analyzing conditional rendering logic and state dependencies"
+---
+
+**Action:** Debug UI Element Visibility
+
+**Please provide the context:**
+
+- **The Missing Element:** [Describe the UI element, e.g., "The 'Save Changes' button," "The 'Admin Dashboard' link in the nav bar."]
+- **The Parent Component:** @[path/to/the/component/where/it/should/appear.ext]
+- **The Expected Behavior:** [Under what conditions should this element be visible? e.g., "It should appear only for users who are logged in."]
+- **Current State (Optional):** [Paste any relevant state variables or props, e.g., the `currentUser` object, `formState`.]
+
+**Instruction for the AI:**analyze the target component and trace all logic that controls the rendering of the specified element. Pinpoint the exact conditional check (e.g., `if` statement, ternary operator, `&&` condition) that is currently evaluating to false and preventing the element from being displayed. 9. The Universal Codebase Auditor
+Use this to perform a high-level, read-only analysis of your code for specific quality attributes.
+File: audit-codebase.cursorrules
+code
+.cursorrules
+prompt:
+**Action:** Conduct a Read-Only Codebase Audit
+
+**Please provide the audit parameters:**
+
+- **The Audit Focus:** [e.g., Security Vulnerabilities / Performance Bottlenecks / Accessibility (a11y) Issues / Adherence to a Style Guide]
+- **The Scope of the Audit:** [Specify directories or files, e.g., "The entire `/src/api` directory," "@[path/to/a/critical/file.js]"]
+
+**Mandatory Constraint:**
+You must **not** propose any code changes or edits. This is a read-only analysis.
+
+**Instruction for the AI:**
+Scan the code within the specified scope and generate a report that identifies potential issues related to the audit focus. Categorize the findings by severity (e.g., Critical, High, Medium, Low) and for each issue, explain the potential impact and cite the exact file and line number.

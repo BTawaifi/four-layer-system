@@ -1,0 +1,6 @@
+---
+alwaysApply: false
+description: "Ensures the simplest working solution is chosen, prioritizing readability and maintainability over complexity"
+---
+rules:
+  - When faced with multiple solutions, always choose the simplest one that works. Prioritize readability and maintainability over clever or complex optimizations unless explicitly told otherwise. Avoid adding new dependencies if possible.

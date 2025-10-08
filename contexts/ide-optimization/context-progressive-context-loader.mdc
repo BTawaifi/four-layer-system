@@ -1,0 +1,275 @@
+---
+alwaysApply: false
+description: "Context for intelligent loading and management of large information contexts across Cursor IDE sessions"
+ide_compatibility: "✅ OPTIMIZED - Progressive loading prevents context overflow and enables complex workflows"
+cursor_limitations: "Manages context window limitations through intelligent loading and compression"
+---
+
+# Progressive Context Loader Context
+
+**Action:** Initialize Intelligent Context Loading and Management
+
+**Please define the context loading parameters:**
+
+- **Context Size:** [Small/Medium/Large/XL - affects loading strategy]
+- **Context Type:** [Codebase/Documentation/Research/Design - determines loading patterns]
+- **Session Focus:** [Exploration/Analysis/Implementation/Review - prioritizes loading]
+- **Loading Priority:** [Breadth/Depth/Balanced - affects information distribution]
+- **Update Frequency:** [Static/Dynamic/Frequently Changing - affects refresh strategy]
+
+**Instruction for the AI:**
+You are now operating within the **Progressive Context Loader Context**. This context provides intelligent management of large information contexts, preventing overflow while ensuring all relevant information is available when needed.
+
+## Context Loading Architecture
+
+### Intelligent Loading Strategy
+**Adaptive Context Management:**
+- Progressive loading based on current task requirements
+- Context compression for completed or less relevant sections
+- Priority-based information surfacing
+- Automatic context refresh based on usage patterns
+
+### Context Layer Management
+**Hierarchical Context Structure:**
+- **Core Context:** Essential information always loaded (10-20% of total)
+- **Active Context:** Currently relevant information (20-30% of total)
+- **Reference Context:** On-demand accessible information (40-50% of total)
+- **Archive Context:** Historical or completed information (10-20% of total)
+
+## Loading Commands & Controls
+
+### Context Loading Commands
+**@context-load [scope] [priority]** - Load specific context scope with priority level
+**@context-compress [level]** - Compress context to specified level (light/medium/heavy)
+**@context-refresh [section]** - Refresh specific context section
+**@context-prioritize [topic]** - Increase priority for specific topic area
+**@context-archive [section]** - Move section to archive for space optimization
+
+### Context Query Commands
+**@context-status** - Display current context loading status and usage
+**@context-search [query]** - Search across all context layers
+**@context-summarize [section]** - Generate summary of specific section
+**@context-relate [topic]** - Find related information across context layers
+
+### Context Management Commands
+**@context-save [name]** - Save current context configuration
+**@context-restore [name]** - Restore saved context configuration
+**@context-optimize** - Automatically optimize context for current task
+**@context-cleanup** - Remove unused or outdated context elements
+
+## Progressive Loading Patterns
+
+### Task-Based Loading
+**Exploration Phase:**
+- Load high-level overviews and navigation structures
+- Progressive detail loading based on areas of interest
+- Keep exploration history for backtracking
+- Minimal detail retention for unvisited areas
+
+**Analysis Phase:**
+- Load detailed information for analysis target
+- Maintain comparison context for multiple options
+- Progressive loading of supporting evidence
+- Context compression of unrelated areas
+
+**Implementation Phase:**
+- Load detailed specifications and requirements
+- Maintain reference to design decisions
+- Progressive loading of implementation details
+- Context cleanup of exploration artifacts
+
+### Session-Based Loading
+**Session Start:**
+- Load core context and previous session state
+- Refresh high-priority information
+- Load session-specific context based on planned activities
+
+**Session Mid-Point:**
+- Assess context usage and effectiveness
+- Load additional context for emerging needs
+- Compress or archive completed work sections
+
+**Session End:**
+- Preserve essential context for next session
+- Archive completed work with compression
+- Prepare context loading plan for next session
+
+## Context Compression Strategies
+
+### Intelligent Compression
+**Content-Type Specific:**
+- **Code:** Remove comments, compress whitespace, summarize functions
+- **Documentation:** Convert detailed sections to summaries with references
+- **Analysis:** Preserve conclusions, compress supporting evidence
+- **Design:** Keep decisions, compress alternative evaluations
+
+### Quality-Preserving Compression
+**Critical Content Protection:**
+- Never compress active working context without confirmation
+- Preserve all decision-making information at full detail
+- Maintain quality-critical sections in uncompressed form
+- Provide compression impact assessment before application
+
+### Compression Levels
+**Light Compression (20-30% reduction):**
+- Remove redundant information
+- Summarize completed sections
+- Externalize detailed examples
+- Consolidate similar information
+
+**Medium Compression (40-50% reduction):**
+- Convert detailed explanations to summaries
+- Archive completed work sections
+- Externalize comprehensive documentation
+- Preserve only essential active information
+
+**Heavy Compression (60-70% reduction):**
+- Minimal context retention for critical path only
+- Extensive archiving of non-essential information
+- Summary-only representation of completed work
+- Emergency measures for context overflow prevention
+
+## Context Search and Discovery
+
+### Intelligent Search
+**Context-Aware Search:**
+- Search across all context layers simultaneously
+- Prioritize results based on current task relevance
+- Provide contextual snippets with source references
+- Learn from search patterns to improve future results
+
+### Progressive Information Discovery
+**Layered Information Access:**
+- **Overview First:** High-level information for initial understanding
+- **Detail on Demand:** Progressive loading of detailed information
+- **Related Information:** Automatic suggestion of related content
+- **Context Building:** Intelligent assembly of comprehensive context
+
+## Performance Optimization
+
+### Loading Performance
+**Efficient Context Management:**
+- Lazy loading of non-immediate information
+- Predictive loading based on usage patterns
+- Background context preparation
+- Minimal loading overhead for core operations
+
+### Memory Management
+**Context Size Optimization:**
+- Automatic cleanup of unused context elements
+- Size monitoring with optimization recommendations
+- Context defragmentation for efficient access
+- Memory usage reporting and alerts
+
+## Quality Assurance Integration
+
+### Context Quality Monitoring
+**Automatic Validation:**
+- Context completeness checking for current task
+- Information freshness assessment
+- Reference accuracy verification
+- Context relevance evaluation
+
+### Quality Preservation
+**Context Integrity:**
+- Validation of compressed content accuracy
+- Preservation of critical quality elements
+- Quality impact assessment for loading decisions
+- User approval for significant context changes
+
+## Integration with Other Contexts
+
+### Compatible Contexts
+- `@context-cursor-session-workflow-manager` - Session-based context coordination
+- `@context-token-efficiency-manager` - Token-aware context management
+- `@context-workflow-progress-tracker` - Progress-aware context loading
+- `@context-state-set-primary-goal` - Goal-aligned context prioritization
+
+### Context Orchestration
+**Multi-Context Workflows:**
+- Automatic context switching based on task requirements
+- Context state preservation across context changes
+- Integrated context management for complex workflows
+- Unified context status reporting
+
+## Usage Examples
+
+### Example 1: Large Codebase Analysis
+```
+Initial Load: Core architecture and navigation structures
+Task Focus: Load detailed code for specific component analysis
+Progressive: Load related components as analysis expands
+Compression: Archive analyzed components with summary preservation
+```
+
+### Example 2: Comprehensive Documentation Review
+```
+Initial Load: Table of contents and key sections
+Progressive: Load detailed sections based on review priorities
+Context: Maintain comparison context for multiple documents
+Archive: Compress reviewed sections while preserving key findings
+```
+
+### Example 3: Complex Design Process
+```
+Initial Load: Requirements and constraints
+Progressive: Load design alternatives and evaluation criteria
+Context: Maintain decision history and rationale
+Compression: Archive evaluated alternatives, preserve final design
+```
+
+## Emergency Context Management
+
+### Context Overflow Prevention
+**Automatic Protection:**
+- Early warning system for approaching context limits
+- Automatic compression of low-priority content
+- Emergency archiving of non-essential information
+- User notification with recovery recommendations
+
+### Context Recovery
+**State Restoration:**
+- Multiple recovery points for different context states
+- Selective restoration of critical context elements
+- Context validation after recovery operations
+- Minimal disruption recovery processes
+
+## Monitoring and Analytics
+
+### Context Performance Metrics
+**Loading Efficiency:**
+- Context loading time and success rates
+- Information retrieval speed and accuracy
+- Context compression effectiveness
+- User satisfaction with context availability
+
+### Usage Pattern Analysis
+**Learning Systems:**
+- Identify frequently accessed information patterns
+- Optimize loading strategies based on usage history
+- Predictive loading for common task sequences
+- Continuous improvement of context management
+
+## Best Practices
+
+### Context Loading Guidelines
+1. **Plan Ahead:** Define context requirements before starting complex tasks
+2. **Progressive Approach:** Load information as needed rather than all at once
+3. **Quality First:** Never compromise critical information access
+4. **Regular Assessment:** Monitor context effectiveness and adjust loading strategies
+
+### Context Management Principles
+1. **Relevance Focus:** Keep most relevant information in active context
+2. **Progressive Disclosure:** Provide overview first, details on demand
+3. **Quality Preservation:** Maintain information integrity during optimization
+4. **User Control:** Allow user override of automatic context decisions
+
+### Performance Optimization
+1. **Efficient Loading:** Use lazy loading and predictive prefetching
+2. **Smart Compression:** Apply compression based on content type and usage
+3. **Regular Cleanup:** Remove outdated or unused context elements
+4. **Monitoring Integration:** Track performance and optimize based on data
+
+---
+
+This context provides sophisticated management of large information contexts, enabling complex workflows that would otherwise exceed Cursor IDE's context limitations while maintaining information accessibility and quality.

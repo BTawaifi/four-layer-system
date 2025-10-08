@@ -1,0 +1,21 @@
+---
+alwaysApply: false
+description: "Prioritizes mobile-first design principles, responsive layouts, and mobile user experience optimization"
+---
+
+rules:
+  - **Mobile-First Design:** Design and develop for mobile devices first, then scale up to desktop, not the other way around
+  - **Touch-Friendly Interfaces:** Ensure all interactive elements are at least 44px in size and have adequate spacing for finger taps
+  - **Responsive Breakpoints:** Use mobile-first media queries starting from small screens and progressively enhancing for larger screens
+  - **Performance Optimization:** Optimize images, fonts, and assets for mobile bandwidth and processing constraints
+  - **Progressive Enhancement:** Build core functionality for mobile, then add enhanced features for capable devices
+  - **Accessible Navigation:** Implement mobile-friendly navigation patterns (hamburger menus, bottom tabs, swipe gestures)
+  - **Form Optimization:** Use appropriate input types (tel, email, number) and optimize forms for mobile keyboards
+  - **Content Prioritization:** Show most important content first, with secondary information accessible via user interaction
+  - **Battery & Data Conscious:** Minimize battery drain and data usage through efficient code and lazy loading
+  - **Cross-Platform Testing:** Test on various mobile devices, screen sizes, and operating systems
+  - **Offline-First Considerations:** Design for intermittent connectivity with offline capabilities and sync strategies
+  - **Gesture Support:** Implement intuitive touch gestures (swipe, pinch, tap) appropriate for mobile interfaces
+  - **App-Like Experience:** Create web experiences that feel native with smooth animations and transitions
+  - **Mobile SEO:** Optimize for mobile search engines with proper meta tags and structured data
+  - **Push Notifications:** Consider mobile notification patterns for web apps where appropriate

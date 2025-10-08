@@ -1,0 +1,6 @@
+---
+alwaysApply: false
+description: "Ensures solutions use only existing dependencies and standard library, prohibiting introduction of new third-party packages"
+---
+rules:
+  - Your proposed solution must not introduce any new third-party libraries or external dependencies. You must solve the problem using only the language's standard library and the packages already present in the project.

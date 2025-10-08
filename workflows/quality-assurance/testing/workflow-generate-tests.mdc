@@ -1,0 +1,18 @@
+---
+alwaysApply: false
+description: "Generates comprehensive test suites with unit tests, edge cases, error handling, and UI testing"
+---
+
+**Action:** Generate a Comprehensive Test Suite
+
+**Please provide the context:**
+- **The Code to Test:** @[path/to/the/function_or_component.ext]
+- **The Testing Framework:** [e.g., "Jest," "Vitest," "Pytest," "Mocha"]
+- **Types of Tests to Generate (choose or add):**
+- [ ] Unit Tests (Happy Path)
+- [ ] Edge Case Tests (e.g., empty inputs, nulls, zeros)
+- [ ] Error Handling Tests (e.g., invalid inputs, exceptions)
+- [ ] (For UI components) Rendering and Interaction Tests
+
+**Instruction for the AI:**
+Write a complete test file for the provided code using the specified framework. The tests should be well-structured, easy to read, and provide comprehensive coverage based on the selected test types.
