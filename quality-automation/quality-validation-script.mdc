@@ -523,12 +523,24 @@ def calculate_quality_distribution(self, results):
     scores = [result['score']['total_score'] for result in results]
 
     distribution = {
-        'excellent': len([s for s in scores if s >= 9.0]),  # 9.0-10.0
-        'good': len([s for s in scores if 8.0 <= s < 9.0]),  # 8.0-8.9
-        'satisfactory': len([s for s in scores if 7.0 <= s < 8.0]),  # 7.0-7.9
-        'needs_improvement': len([s for s in scores if 6.0 <= s < 7.0]),  # 6.0-6.9
-        'insufficient': len([s for s in scores if s < 6.0])  # 0.0-5.9
+        'excellent': 0,  # 9.0-10.0
+        'good': 0,  # 8.0-8.9
+        'satisfactory': 0,  # 7.0-7.9
+        'needs_improvement': 0,  # 6.0-6.9
+        'insufficient': 0  # 0.0-5.9
     }
+
+    for s in scores:
+        if s >= 9.0:
+            distribution['excellent'] += 1
+        elif s >= 8.0:
+            distribution['good'] += 1
+        elif s >= 7.0:
+            distribution['satisfactory'] += 1
+        elif s >= 6.0:
+            distribution['needs_improvement'] += 1
+        else:
+            distribution['insufficient'] += 1
 
     return {
         'distribution': distribution,
