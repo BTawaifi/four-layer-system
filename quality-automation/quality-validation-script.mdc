@@ -78,7 +78,7 @@ class QualityValidator:
 
 ##### Specialist Validator
 ```python
-class SpecialistValidator:
+class SpecialistValidator(BaseValidator):
     def validate(self, content):
         results = {}
 
@@ -116,7 +116,7 @@ class SpecialistValidator:
 
 ##### Workflow Validator
 ```python
-class WorkflowValidator:
+class WorkflowValidator(BaseValidator):
     def validate(self, content):
         results = {}
 
@@ -274,161 +274,167 @@ class ImprovementGenerator:
 
 #### Required Fields Check
 ```python
-def validate_yaml_frontmatter(self, content):
-    """Validate required YAML frontmatter fields"""
-    required_fields = ['alwaysApply', 'description']
+class BaseValidator:
+    def validate_yaml_frontmatter(self, content):
+        """Validate required YAML frontmatter fields"""
+        required_fields = ['alwaysApply', 'description']
 
-    try:
-        frontmatter = self.extract_frontmatter(content)
+        try:
+            frontmatter = self.extract_frontmatter(content)
 
-        missing_fields = []
-        for field in required_fields:
-            if field not in frontmatter:
-                missing_fields.append(field)
+            missing_fields = []
+            for field in required_fields:
+                if field not in frontmatter:
+                    missing_fields.append(field)
 
-        return {
-            'passed': len(missing_fields) == 0,
-            'details': f"Missing required fields: {missing_fields}" if missing_fields else "All required fields present",
-            'missing_fields': missing_fields
-        }
-    except Exception as e:
-        return {
-            'passed': False,
-            'details': f"YAML parsing error: {str(e)}",
-            'error': str(e)
-        }
+            return {
+                'passed': len(missing_fields) == 0,
+                'details': f"Missing required fields: {missing_fields}" if missing_fields else "All required fields present",
+                'missing_fields': missing_fields
+            }
+        except Exception as e:
+            return {
+                'passed': False,
+                'details': f"YAML parsing error: {str(e)}",
+                'error': str(e)
+            }
 ```
 
 #### Field Type Validation
 ```python
-def validate_yaml_field_types(self, content):
-    """Validate YAML field types and formats"""
-    expected_types = {
-        'alwaysApply': bool,
-        'description': str
-    }
-
-    try:
-        frontmatter = self.extract_frontmatter(content)
-
-        type_errors = []
-        for field, expected_type in expected_types.items():
-            if field in frontmatter:
-                if not isinstance(frontmatter[field], expected_type):
-                    type_errors.append(f"{field}: expected {expected_type.__name__}, got {type(frontmatter[field]).__name__}")
-
-        return {
-            'passed': len(type_errors) == 0,
-            'details': f"Type errors: {type_errors}" if type_errors else "All field types correct",
-            'type_errors': type_errors
+class BaseValidator(BaseValidator): # Extending previous block conceptually
+    def validate_yaml_field_types(self, content):
+        """Validate YAML field types and formats"""
+        expected_types = {
+            'alwaysApply': bool,
+            'description': str
         }
-    except Exception as e:
-        return {
-            'passed': False,
-            'details': f"Validation error: {str(e)}",
-            'error': str(e)
-        }
+
+        try:
+            frontmatter = self.extract_frontmatter(content)
+
+            type_errors = []
+            for field, expected_type in expected_types.items():
+                if field in frontmatter:
+                    if not isinstance(frontmatter[field], expected_type):
+                        type_errors.append(f"{field}: expected {expected_type.__name__}, got {type(frontmatter[field]).__name__}")
+
+            return {
+                'passed': len(type_errors) == 0,
+                'details': f"Type errors: {type_errors}" if type_errors else "All field types correct",
+                'type_errors': type_errors
+            }
+        except Exception as e:
+            return {
+                'passed': False,
+                'details': f"Validation error: {str(e)}",
+                'error': str(e)
+            }
 ```
 
 ### Content Structure Validation
 
 #### Markdown Syntax Check
 ```python
-def validate_markdown_syntax(self, content):
-    """Validate markdown syntax and structure"""
-    issues = []
+class BaseValidator(BaseValidator):
+    def validate_markdown_syntax(self, content):
+        """Validate markdown syntax and structure"""
+        issues = []
 
-    # Check for proper header hierarchy
-    headers = re.findall(r'^(#{1,6})\s+(.+)$', content, re.MULTILINE)
-    for level, text in headers:
-        level_num = len(level)
-        if level_num > 6:
-            issues.append(f"Header level {level_num} exceeds maximum of 6")
+        # Check for proper header hierarchy
+        headers = re.findall(r'^(#{1,6})\s+(.+)$', content, re.MULTILINE)
+        for level, text in headers:
+            level_num = len(level)
+            if level_num > 6:
+                issues.append(f"Header level {level_num} exceeds maximum of 6")
 
-    # Check for proper link syntax
-    links = re.findall(r'\[([^\]]+)\]\(([^)]+)\)', content)
-    for text, url in links:
-        if not url.startswith(('http', 'https', '#', '@')):
-            issues.append(f"Invalid link URL format: {url}")
+        # Check for proper link syntax
+        links = re.findall(r'\[([^\]]+)\]\(([^)]+)\)', content)
+        for text, url in links:
+            if not url.startswith(('http', 'https', '#', '@')):
+                issues.append(f"Invalid link URL format: {url}")
 
-    return {
-        'passed': len(issues) == 0,
-        'details': f"Found {len(issues)} markdown issues" if issues else "Markdown syntax valid",
-        'issues': issues
-    }
+        return {
+            'passed': len(issues) == 0,
+            'details': f"Found {len(issues)} markdown issues" if issues else "Markdown syntax valid",
+            'issues': issues
+        }
 ```
 
 #### Cross-Reference Validation
 ```python
-def validate_cross_references(self, content):
-    """Validate cross-references to other rules"""
-    references = re.findall(r'@([a-z-]+)', content)
-    invalid_refs = []
+class BaseValidator(BaseValidator):
+    def validate_cross_references(self, content):
+        """Validate cross-references to other rules"""
+        references = re.findall(r'@([a-z-]+)', content)
+        invalid_refs = []
 
-    for ref in references:
-        if not self.is_valid_rule_reference(ref):
-            invalid_refs.append(ref)
+        for ref in references:
+            if not self.is_valid_rule_reference(ref):
+                invalid_refs.append(ref)
 
-    return {
-        'passed': len(invalid_refs) == 0,
-        'details': f"Found {len(invalid_refs)} invalid cross-references" if invalid_refs else "All cross-references valid",
-        'invalid_references': invalid_refs
-    }
+        return {
+            'passed': len(invalid_refs) == 0,
+            'details': f"Found {len(invalid_refs)} invalid cross-references" if invalid_refs else "All cross-references valid",
+            'invalid_references': invalid_refs
+        }
 ```
 
 ### Layer-Specific Validation
 
 #### Specialist Content Validation
 ```python
-def validate_specialist_competencies(self, content):
-    """Validate specialist competencies section"""
-    # Check for required competency categories
-    required_categories = ['Core Competencies', 'Key Guidelines']
+class BaseValidator(BaseValidator):
+    def validate_specialist_competencies(self, content):
+        """Validate specialist competencies section"""
+        # Check for required competency categories
+        required_categories = ['Core Competencies', 'Key Guidelines']
 
-    content_sections = self.extract_sections(content)
-    missing_sections = []
+        content_sections = self.extract_sections(content)
+        missing_sections = []
 
-    for category in required_categories:
-        if category.lower() not in [s.lower() for s in content_sections]:
-            missing_sections.append(category)
+        for category in required_categories:
+            if category.lower() not in [s.lower() for s in content_sections]:
+                missing_sections.append(category)
 
-    # Check competency depth
-    competencies_section = self.extract_section(content, 'Core Competencies')
-    competency_count = len(re.findall(r'^- ', competencies_section))
+        # Check competency depth
+        competencies_section = self.extract_section(content, 'Core Competencies')
+        competency_count = len(re.findall(r'^- ', competencies_section))
 
-    return {
-        'passed': len(missing_sections) == 0 and competency_count >= 8,
-        'details': f"Missing sections: {missing_sections}, Found {competency_count} competencies (need 8+)" if missing_sections or competency_count < 8 else "Competencies section complete and comprehensive",
-        'missing_sections': missing_sections,
-        'competency_count': competency_count
-    }
+        return {
+            'passed': len(missing_sections) == 0 and competency_count >= 8,
+            'details': f"Missing sections: {missing_sections}, Found {competency_count} competencies (need 8+)" if missing_sections or competency_count < 8 else "Competencies section complete and comprehensive",
+            'missing_sections': missing_sections,
+            'competency_count': competency_count
+        }
 ```
 
 #### Workflow Structure Validation
 ```python
-def validate_workflow_phases(self, content):
-    """Validate workflow phase structure"""
-    # Extract phase information
-    phases = re.findall(r'### Phase \d+', content)
-    phase_count = len(phases)
+class BaseValidator(BaseValidator):
+    def validate_workflow_phases(self, content):
+        """Validate workflow phase structure"""
+        # Extract phase information
+        phases = re.findall(r'### Phase \d+', content)
+        phase_count = len(phases)
 
-    # Check for STOP AND WAIT patterns
-    stop_wait_count = len(re.findall(r'STOP AND WAIT', content))
+        # Check for STOP AND WAIT patterns
+        stop_wait_count = len(re.findall(r'STOP AND WAIT', content))
 
-    # Validate phase completeness
-    complete_phases = 0
-    for phase in phases:
-        phase_content = self.extract_phase_content(content, phase)
-        if self.is_phase_complete(phase_content):
-            complete_phases += 1
+        # Validate phase completeness
+        complete_phases = 0
+        for phase in phases:
+            phase_content = self.extract_phase_content(content, phase)
+            if self.is_phase_complete(phase_content):
+                complete_phases += 1
 
-    return {
-        'passed': phase_count >= 3 and stop_wait_count >= 2 and complete_phases == phase_count,
-        'details': f"Found {phase_count} phases, {stop_wait_count} STOP AND WAIT statements, {complete_phases}/{phase_count} complete phases",
-        'phase_count': phase_count,
-        'stop_wait_count': stop_wait_count,
-        'complete_phases': complete_phases
-    }
+        return {
+            'passed': phase_count >= 3 and stop_wait_count >= 2 and complete_phases == phase_count,
+            'details': f"Found {phase_count} phases, {stop_wait_count} STOP AND WAIT statements, {complete_phases}/{phase_count} complete phases",
+            'phase_count': phase_count,
+            'stop_wait_count': stop_wait_count,
+            'complete_phases': complete_phases
+        }
 ```
 
 ---
@@ -437,54 +443,55 @@ def validate_workflow_phases(self, content):
 
 ### Dimension-Based Scoring
 ```python
-def calculate_quality_score(self, validation_results, layer_type):
-    """Calculate comprehensive quality score"""
+class QualityScorer:
+    def calculate_quality_score(self, validation_results, layer_type):
+        """Calculate comprehensive quality score"""
 
-    # Initialize dimension scores
-    dimensions = {
-        'completeness': {'score': 0, 'max': 0},
-        'depth': {'score': 0, 'max': 0},
-        'accuracy': {'score': 0, 'max': 0},
-        'usability': {'score': 0, 'max': 0},
-        'integration': {'score': 0, 'max': 0}
-    }
+        # Initialize dimension scores
+        dimensions = {
+            'completeness': {'score': 0, 'max': 0},
+            'depth': {'score': 0, 'max': 0},
+            'accuracy': {'score': 0, 'max': 0},
+            'usability': {'score': 0, 'max': 0},
+            'integration': {'score': 0, 'max': 0}
+        }
 
-    # Map validation results to dimensions
-    dimension_mapping = self.get_dimension_mapping(layer_type)
+        # Map validation results to dimensions
+        dimension_mapping = self.get_dimension_mapping(layer_type)
 
-    for check_name, check_result in validation_results.items():
-        if check_name in dimension_mapping:
-            dimension = dimension_mapping[check_name]
-            dimensions[dimension]['max'] += 1
-            if check_result['passed']:
-                dimensions[dimension]['score'] += 1
+        for check_name, check_result in validation_results.items():
+            if check_name in dimension_mapping:
+                dimension = dimension_mapping[check_name]
+                dimensions[dimension]['max'] += 1
+                if check_result['passed']:
+                    dimensions[dimension]['score'] += 1
 
-    # Calculate dimension percentages
-    dimension_scores = {}
-    for dimension, scores in dimensions.items():
-        if scores['max'] > 0:
-            dimension_scores[dimension] = (scores['score'] / scores['max']) * 10
-        else:
-            dimension_scores[dimension] = 0
+        # Calculate dimension percentages
+        dimension_scores = {}
+        for dimension, scores in dimensions.items():
+            if scores['max'] > 0:
+                dimension_scores[dimension] = (scores['score'] / scores['max']) * 10
+            else:
+                dimension_scores[dimension] = 0
 
-    # Apply dimension weights
-    weights = {
-        'completeness': 0.25,
-        'depth': 0.25,
-        'accuracy': 0.20,
-        'usability': 0.15,
-        'integration': 0.15
-    }
+        # Apply dimension weights
+        weights = {
+            'completeness': 0.25,
+            'depth': 0.25,
+            'accuracy': 0.20,
+            'usability': 0.15,
+            'integration': 0.15
+        }
 
-    total_score = sum(dimension_scores[dimension] * weights[dimension]
-                     for dimension in dimension_scores.keys())
+        total_score = sum(dimension_scores[dimension] * weights[dimension]
+                         for dimension in dimension_scores.keys())
 
-    return {
-        'total_score': round(total_score, 1),
-        'dimension_scores': {k: round(v, 1) for k, v in dimension_scores.items()},
-        'weights': weights,
-        'grade': self.get_grade(total_score)
-    }
+        return {
+            'total_score': round(total_score, 1),
+            'dimension_scores': {k: round(v, 1) for k, v in dimension_scores.items()},
+            'weights': weights,
+            'grade': self.get_grade(total_score)
+        }
 ```
 
 ---
@@ -493,27 +500,28 @@ def calculate_quality_score(self, validation_results, layer_type):
 
 ### Validation Report Generation
 ```python
-def generate_validation_report(self, results, output_format='json'):
-    """Generate comprehensive validation report"""
+class QualityReporter:
+    def generate_validation_report(self, results, output_format='json'):
+        """Generate comprehensive validation report"""
 
-    report = {
-        'summary': {
-            'total_files': len(results),
-            'timestamp': datetime.now().isoformat(),
-            'validation_version': '1.0'
-        },
-        'quality_distribution': self.calculate_quality_distribution(results),
-        'top_issues': self.identify_top_issues(results),
-        'improvement_suggestions': self.aggregate_improvements(results),
-        'detailed_results': results
-    }
+        report = {
+            'summary': {
+                'total_files': len(results),
+                'timestamp': datetime.now().isoformat(),
+                'validation_version': '1.0'
+            },
+            'quality_distribution': self.calculate_quality_distribution(results),
+            'top_issues': self.identify_top_issues(results),
+            'improvement_suggestions': self.aggregate_improvements(results),
+            'detailed_results': results
+        }
 
-    if output_format == 'json':
-        return json.dumps(report, indent=2)
-    elif output_format == 'markdown':
-        return self.generate_markdown_report(report)
-    else:
-        return report
+        if output_format == 'json':
+            return json.dumps(report, indent=2)
+        elif output_format == 'markdown':
+            return self.generate_markdown_report(report)
+        else:
+            return report
 ```
 
 ### Quality Distribution Analysis
@@ -550,7 +558,6 @@ def calculate_quality_distribution(self, results):
             'min': min(scores),
             'max': max(scores)
         }
-    }
 ```
 
 ---
@@ -608,34 +615,35 @@ fi
 
 ### Watch Mode for Development
 ```python
-def watch_mode(self, directory_path):
-    """Monitor directory for file changes and validate automatically"""
-    import time
-    from watchdog.observers import Observer
-    from watchdog.events import FileSystemEventHandler
+class QualityValidator:
+    def watch_mode(self, directory_path):
+        """Monitor directory for file changes and validate automatically"""
+        import time
+        from watchdog.observers import Observer
+        from watchdog.events import FileSystemEventHandler
 
-    class ValidationHandler(FileSystemEventHandler):
-        def on_modified(self, event):
-            if event.src_path.endswith('.mdc'):
-                print(f"Validating {event.src_path}...")
-                result = validator.validate_file(event.src_path)
-                if result['score']['total_score'] < 7.0:
-                    print(f"⚠️  Quality issues detected in {event.src_path}")
-                    print(f"   Score: {result['score']['total_score']}/10")
-                else:
-                    print(f"✅ {event.src_path} passed quality validation")
+        class ValidationHandler(FileSystemEventHandler):
+            def on_modified(self, event):
+                if event.src_path.endswith('.mdc'):
+                    print(f"Validating {event.src_path}...")
+                    result = validator.validate_file(event.src_path)
+                    if result['score']['total_score'] < 7.0:
+                        print(f"⚠️  Quality issues detected in {event.src_path}")
+                        print(f"   Score: {result['score']['total_score']}/10")
+                    else:
+                        print(f"✅ {event.src_path} passed quality validation")
 
-    observer = Observer()
-    observer.schedule(ValidationHandler(), directory_path, recursive=True)
-    observer.start()
+        observer = Observer()
+        observer.schedule(ValidationHandler(), directory_path, recursive=True)
+        observer.start()
 
-    try:
-        while True:
-            time.sleep(1)
-    except KeyboardInterrupt:
-        observer.stop()
+        try:
+            while True:
+                time.sleep(1)
+        except KeyboardInterrupt:
+            observer.stop()
 
-    observer.join()
+        observer.join()
 ```
 
 ---
