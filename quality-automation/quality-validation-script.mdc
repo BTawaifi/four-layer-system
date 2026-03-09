@@ -32,6 +32,10 @@ python quality_validation.py --report --output quality_report_2025-09-22.json
 
 #### 1. Quality Validator Class
 ```python
+import json
+import re
+from datetime import datetime
+
 class QualityValidator:
     def __init__(self, config_path="quality_config.json"):
         self.config = self.load_config(config_path)
